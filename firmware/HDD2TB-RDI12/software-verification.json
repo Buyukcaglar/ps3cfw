@@ -1,0 +1,408 @@
+{
+  "passed": true,
+  "evidence": [
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/ids-build-v2/result.json",
+      "sha256": "3e2766f9daa5b31dae04264c9a65c61503a39a70eaea341fd84b5ada743b201f"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/information-core-tests-v3/result.json",
+      "sha256": "e004d317239ff727650e5208bf086f024d9667a589a144addc0a9b372662113f"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verification-v2/result.json",
+      "sha256": "95039ddfce4b389bebebcef3d78b549510d2a834504b074c01dd187b7738bd0f"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/printf-composed-v4/result.json",
+      "sha256": "f56ff442ba7b21feaa63b97ee3a0be8b3586cedbf7a20cafe35b9bd9ba5e30a1"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/clone-tests-v1/result.json",
+      "sha256": "fd0ac557b39bc91f76881fa0e5b74fa164b7fdae7b0ad8c9913df1340edfb032"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/guards-v2/result.json",
+      "sha256": "61ba22af0834941b9c2a27e77ee11049b814db000078f6c7b9d97ca559739c41"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/lower-guards-v2/result.json",
+      "sha256": "9f55b45d044b4afe282f0c6fe6454aa3994f6687f19c8b39c13e88e4b7edb763"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/p8-guards-v1/result.json",
+      "sha256": "5f3d3ed9e68ef820754f035b4ed0dc4df00a9bcee8c19c6e058d0e2d7320736f"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/initialization-cleanup-v1/result.json",
+      "sha256": "32cb2305a9a70fc473abca0e16d145c6661e8e63d2092551a9ffb20268d7b6f3"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/lower-protocol-v3/result.json",
+      "sha256": "13b51506bc1d43bdc9b201c06f91ac6c7c673608303df87001123b396d87e9c3"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/combined-reader-v1/result.json",
+      "sha256": "bbba0ee708211360fdc6532e239f735e8e9694fb09bab27847ebec67ce1a7fa0"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/receipt-reader-audit-v1/result.json",
+      "sha256": "50f176174134141449c58d13e7d1aa31c33a31a1e1e6ef812ebd7ce364385a64"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/resource-proof-v3/result.json",
+      "sha256": "62abeb70ef33a1c2ec6c964a1052595696e244f11c1c429bef29b89ccfe896a6"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/printf-create-tests-v1/result.json",
+      "sha256": "f44660a7f8a3b73856c2820c19560e6857215352a5a0eb6f8f88e04336029e71"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/printf-scope-proof-v2/result.json",
+      "sha256": "ffacfe612a4621c4e966ad62ca8dc9238a9e0605a460cc680ffce2fcd9dce934"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/printf-reader-tests-v1/result.json",
+      "sha256": "b320df95d01a08f1d840ad53bd71d1cd26706784a5f43fdf87a45778f12a77d9"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/arm-guards-v1/result.json",
+      "sha256": "94f529e5ea4ddc06d9aabb5fb3161ceac6f929c0c56fc70d0fd6e803fc54c5e4"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/reproduction-v1/result.json",
+      "sha256": "71c9181c6c2dde51ef8b64ce7881501e19e1731f943ed784c1aa772eed309499"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/SELF-v1/result.json",
+      "sha256": "697077300c14ff20ff243ae1b36a7de7bee7600e731c5feea044ca7762febe24"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/package-audit-v1/result.json",
+      "sha256": "1f6ee3aadcad4fc9e3dcd5db492a7c5b7139186c7255e6e3b03b394e669501d4"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/authority.json",
+      "sha256": "ba713a640d2e2e5a27508fbf8af0b21e05a00f754554e70f8c6d667a4de223c3"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/entry-custody.json",
+      "sha256": "6da00160b6b2098cfcdb25b481ad1a2fd9d335ac2662a4e3c6d6d60ebcd751e8"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/initializer-source-v1/result.json",
+      "sha256": "c84b347a8deca7c6e4fd4a63f5bd4d05ea785e9c399fb8986a9094d731d6de1a"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/ONCE-OWNERSHIP-RESOURCE-REVIEW-v1.json",
+      "sha256": "db0045e40e027edcce7a14631900389ec9e7eef3004b24ad57c0f518101c2c99"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/ALIAS-CENSUS-v1.json",
+      "sha256": "4a8a7ca33904456a27474f498b8f7649466c2e492e911890531de9219fb6b469"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/RESOURCE-AND-CLEANUP-REGISTER-v10.json",
+      "sha256": "ca4d425b64f5f64b5bd8513d2c025ec80772546c49c7c143d21bff5082e2a72c"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/OFFLINE-DISPOSITION-v1.txt",
+      "sha256": "9243f44a1d1fb89e039a78b8981d41d41c7e8b8c48c763a73822d7e2a76ac275"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/census_aliases_v1.py",
+      "sha256": "d8359a08f6226e14326c2d2d8a868943fdce7e93b3f99bb1438cbbbb2573e951"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/derive_sources_v1.py",
+      "sha256": "667341a49bc17b15d9416a173276c44442a1f5a9d1cfa34f98fc328e9bde64c6"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_composed_create_v1.py",
+      "sha256": "3e62d632e12e700bbe42deb758fecab7a265c3484013de6fc75f373b8139fdfa"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_composed_create_v2.py",
+      "sha256": "40bbe8cf196f5676f90434608ab6816022bb13f744c961d0bb041b38c6a93238"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_composed_create_v3.py",
+      "sha256": "09b6ba2041e4831033491b75f571cc06dc3c144518e40f3967547de20521a677"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_composed_create_v4.py",
+      "sha256": "e9f2c0fc07f38bda45e9da0eda2f4ddb8b3bf2b9bcf9a2f5c20f9916b7687f4b"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_scope_v2.py",
+      "sha256": "e2d32bd172ebd19ce39a4d3e2377d351ca86865d7ce3c509a78f1cd0796be940"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_tests_v1.py",
+      "sha256": "ec312bbe0c260cbcb9459bba5de472f4e4f1d4a6d61fbe92540dbfc3ceb22b1a"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/prepare_tests_v2.py",
+      "sha256": "a522270ddccc7032fe587fd866607366800efd309bc6238b794599f3262fa6f0"
+    },
+    {
+      "path": "analysis/dev006/rdi12-diagnosis-v1/review_once_ownership_v1.py",
+      "sha256": "2b00a981cb7f0d952cc9c7fc3b6d8fe0c574daf4915c4731bef742946fee6a12"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/audit_firmware_v1.py",
+      "sha256": "5e5ed541b1e42597cfc43a97be9e907c80982b69b1dd9e192616b52f20f70ae0"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/audit_receipt_readers_v1.py",
+      "sha256": "a4a590d8f6d88b033d767229b06c6c017c597c4b7c62f05b5cde578544178047"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/audit_review_packet_v1.py",
+      "sha256": "b2813e8815e33f2669c6d5dfc76a72bd3dd1f88c1d9949b46441e4221b87418e"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/build_candidate_elf_v2.py",
+      "sha256": "6cdfb6aca090e516ee1e0c0a82d12f325e7383798df9babb73c864c599346331"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/build_firmware_v1.py",
+      "sha256": "9a6251fe66a382dbcc7712eb91cb8cee2403ad3476a615cebd2715d57bc75aed"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/build_ids_core_v2.py",
+      "sha256": "d1c98a9f0e5604319116f8cef341121e8f40464475b22978a14ccd90445f8e75"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/capture_compiled_frames_v2.py",
+      "sha256": "8f45581f8c5211b068de47446466610edaac0775e3c27c01fe4ed86abefa307b"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/clone_cpu_v1.py",
+      "sha256": "953b5d9ea15babd70d01b3f7c99b99f3f7a2d5d1eea774dfada9780e9b35f49d"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/extension_v1.py",
+      "sha256": "71d4658c6d23a61bb7aa49284be26541ba534e79fe1a19a9d20c648c184c185f"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/ids_cpu_v2.py",
+      "sha256": "56c0d575a8f6797e0936fb6da892123c1aad03ddcc98297a2ef13e82e98213c4"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/ids_extension.inc",
+      "sha256": "98db7f1ca4dce97a2b73ddd7f4d89db6a5232c99f019f3b85f58b9dd184772a4"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/image_assembler.py",
+      "sha256": "88af6aa13b8667c4089f4daee586a98d119e22800ad67da6e2f4133767a193b0"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/info_host_mock_v2.inc",
+      "sha256": "019d033eb57df3234e5da10fbe57263c27008cdd3ea4483acc13dce40b0e7688"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/link_payload_v1.py",
+      "sha256": "12c30103588234fd1c3daa09ae3a649725ee217fa86cfd2f5b8b49b2d536ec71"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/objects.c",
+      "sha256": "bf0a9392e2a096624f491d975d7d9fd0eb8fa14e6b362f3d6801efdebad33ae0"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/objects.h",
+      "sha256": "feb98701cf3e5a1e65234b1c68dba0f1a00a4e0a5018af4b98b6446d7e7823f2"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/prepare_review_packet_v1.py",
+      "sha256": "4181017c7c9d3acedb31ac890b0fb76caa005bcfe42669395ee5cdc2120439bf"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/printf_extension_v1.py",
+      "sha256": "3acda501b17dbf4703d0b2877894ff5ea430047d50945a8ed7c3427be92baadc"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/prove_ids_resources_v3.py",
+      "sha256": "d7c5fdca04218a49ef0f1b72c8a89fd24f8d3187b5ce757288f9a5a8fab42dcc"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/prove_printf_scope_v1.py",
+      "sha256": "60803721a0382adff9a1978b5acfe7c4a7481b5fa3162e3f7610923579d0e620"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/prove_printf_scope_v2.py",
+      "sha256": "d6b8cc7a493b8e2ada68b491a9080033b6626211a99b65e3b6e5c32b52af4307"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/query_stubs.S",
+      "sha256": "b27dffd3c8f376f4c0de881a12e62fbde57e70eca315fb4cb82ffdc9d33e9c30"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_all_v1.py",
+      "sha256": "b3ee2a42866c4fab0903381e56717dda477ede67794b273db4b5523e4d490b65"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_ids_v1.py",
+      "sha256": "99c7fea58448e2b9ba7ee17cba99698ee2718ea04335043c180d67bb3cf9da10"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_lower_v1.py",
+      "sha256": "3beaca8d31888bae6fccc473c50f5173823c36a7eef1f0487b6761a4c9ebf95a"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_lower_v2.py",
+      "sha256": "91f09f2433fdeaf28b24e77f6ecff1cfa563bc15b176253ccc5a37bd88adeae1"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_lower_v3.py",
+      "sha256": "3b446addbc1e2c9642f874f625aae3b8151a3c592cc80e0393e3aecf66a38066"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_rdi12_v1.py",
+      "sha256": "bb7cf96828aebb40201cbd003328bbf73a75aa6af2bc6f73571d76ea7fff87b2"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_rdi12_v2.py",
+      "sha256": "18ece9c64d09f654cf62b3c5507841866691ffa80ff3ae925471d4f429332178"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_rdi12_v3.py",
+      "sha256": "78a76266b165564c66e2f69796a06c4b983caccba7b6b9cdb7700b9855754f00"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/reproduce_v1.py",
+      "sha256": "15d32c1131f8da04db76d1a308da044b30fad0af37c85e36f85bbf7aeeed9aa3"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/run_offline_checks_v1.py",
+      "sha256": "06e5a397b7da421d7239db266ef9e667f1cbe2c952fee0c0f1570a417d42827f"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_arm_guards_v1.py",
+      "sha256": "b34473928c3c91d86442bca474768d4927ad8c4f1e3718473b0923a540ebef8b"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_clones_v1.py",
+      "sha256": "b48f58b29de2829ef500d7d36c5b0b459b59dc548ad181a3cb9bcf6e4c3a3113"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_combined_reader_v1.py",
+      "sha256": "a985862892e979975eb31d4849a2eb18eb998ec76ca67d97eeffa106d45af522"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_information_core_v3.py",
+      "sha256": "b86a41ff0c5d76af04676ebd314deea32ededb1ed89b80eaff957d5d2d7a7ace"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_initialization_cleanup_v1.py",
+      "sha256": "b46d85fac41a1a9f14648fa34f95a2d7ec7487afd24aca37ebce7a40cae5e1ea"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_lower_guards_v2.py",
+      "sha256": "4e5798851c615d1670e73181ca8c173101aced7d49702ae0cfb887b291dc5d99"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_lower_protocol_v3.py",
+      "sha256": "f4459407457d98f25349cb85278d475dc3c163c3db9586c416b4787ecf1b4dd8"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_p8_guards_v1.py",
+      "sha256": "ee3ea604ef688ab4d74455eaa969efd87d6f904ad1edfe636d6c942c153ca5ec"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_printf_classification_v1.py",
+      "sha256": "fecce0aa156d73d4fafa5a2fb0cd3c8fc56723335cf2b161b6b8cb031940e37e"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/test_printf_create_v1.py",
+      "sha256": "9b5f4964905d87cceb865990bb684dcf5f6aeb66f7ec6b28a17c1fad111d7527"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verify_guards_v2.py",
+      "sha256": "9325a6db1489f352fc43cc70551ec7926a8d28c8c7deaba153cb8d0a1047c6fe"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verify_printf_composed_v1.py",
+      "sha256": "17c456bd5035f5605c800f61ac2ca2ba8e9b9e728ee8af2bd5ae56171be7fe2c"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verify_printf_composed_v2.py",
+      "sha256": "905c41e316e948dc2e8e93710fe5919e250af868235142ab418c4282af640983"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verify_printf_composed_v3.py",
+      "sha256": "7263288ab54e528d0225b091eceef0c0f931cbcf0096778fea441e43fcf855cf"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verify_printf_composed_v4.py",
+      "sha256": "bab6375f2c2bcd6d7fbbfadd3942c56094bf8c394847c468c5e7a1546b69aa73"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/verify_route_v2.py",
+      "sha256": "2aaf44f35de5068606d75633bbacbff6ece5228746c6693975df32b082a0e12a"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/wrap_modules_v1.py",
+      "sha256": "e733f183a1f94f59740f2156b60c11198b829dd7f0c14007a242323c59ac8995"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_all_v1.py",
+      "sha256": "b3ee2a42866c4fab0903381e56717dda477ede67794b273db4b5523e4d490b65"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_rdi12_v3.py",
+      "sha256": "78a76266b165564c66e2f69796a06c4b983caccba7b6b9cdb7700b9855754f00"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_rdi12_v2.py",
+      "sha256": "18ece9c64d09f654cf62b3c5507841866691ffa80ff3ae925471d4f429332178"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_lower_v3.py",
+      "sha256": "3b446addbc1e2c9642f874f625aae3b8151a3c592cc80e0393e3aecf66a38066"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_lower_v2.py",
+      "sha256": "91f09f2433fdeaf28b24e77f6ecff1cfa563bc15b176253ccc5a37bd88adeae1"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_lower_v1.py",
+      "sha256": "3beaca8d31888bae6fccc473c50f5173823c36a7eef1f0487b6761a4c9ebf95a"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/read_ids_v1.py",
+      "sha256": "99c7fea58448e2b9ba7ee17cba99698ee2718ea04335043c180d67bb3cf9da10"
+    },
+    {
+      "path": "analysis/dev006/rdi12-preparation-v1/build-v2/manifest.json",
+      "sha256": "830568a00e8fd75b3f9ffa8c1deb0634f5c124814012519d6aa731ae350b6ed2"
+    }
+  ],
+  "composedRoutes": 6,
+  "composedInstructions": 91873368,
+  "hostInformationCases": 25,
+  "compiledInformationCases": 4,
+  "printfCreateCases": 52,
+  "printfReaderCases": 52,
+  "printfSemanticRefusals": 14,
+  "armCases": 20,
+  "privateOriginalWordsVerified": 210,
+  "guards": 90,
+  "privateDeleteCloneCases": 22,
+  "lowerGuards": 42,
+  "p8Guards": 54,
+  "initializationErrorCases": 12,
+  "strictProtocolRefusals": 44,
+  "exportCases": 7,
+  "conditionalWorkerStack": 579184,
+  "conditionalSlack": 76064,
+  "conditionalOnly": true,
+  "extraStaticBSS": 0,
+  "extraExplicitObserverSyscalls": 0,
+  "originalClockSyscallCopiedUnchanged": true,
+  "twoELFAndPUPBuildsEqual": true,
+  "separateCryptoScopeAudit": true,
+  "nativeExecution": false,
+  "hardware_tested": false,
+  "stable": false
+}

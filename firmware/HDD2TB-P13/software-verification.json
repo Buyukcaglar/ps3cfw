@@ -1,0 +1,148 @@
+{
+  "candidate": "HDD2TB-P13",
+  "candidate_sha256": "652c0c0312cd51283473e653df6e2cdfd874a674f6fb7e83979c45d28fed066d",
+  "candidate_size": 215765852,
+  "build_manifest_sha256": "4f2d9ce33475ddb81718237658f74d022681e280c8dce384d062045c891a1e9d",
+  "software_gates": {
+    "two_complete_PUP_SELF_manifest_builds_byte_identical": true,
+    "594_actual_instruction_cases_passed": true,
+    "negative_reader_seeks_stop_further_reads_and_reseeks_return_nonzero_clear_IO_success": true,
+    "successful_seek_reader_behavior_and_P12_setup_failure_guards_differentially_preserved": true,
+    "three_hook48byte_delta_branch_link_relocation_scope_reviewed": true,
+    "separate_package_crypto_and_four_base_loaded_delta_audit_passed": true,
+    "CoreOS_versions_sysconf_budget_observer_and_prior_helpers_preserved": true,
+    "prior_originals_media_evidence_and_authority_preserved": true,
+    "bounded_Lexar_install_boot_readback_protocol_reviewed": true
+  },
+  "review_reports": [
+    {
+      "path": "research/dev006-p13-read-seek-review.md",
+      "sha256": "0e5aae0dfdf771702629830163a759485f957ef70eeac7e67cad40ec11679e03"
+    },
+    {
+      "path": "analysis/p13-review/final-audit.json",
+      "sha256": "343f42470fb2d7bf1468db3eea63c17e004ca50f71895ba54ec54006f33705ae"
+    },
+    {
+      "path": "analysis/p13-review/reproducibility.json",
+      "sha256": "b0cb59d0ebcef76c8329f8333a375c69b01d672ce1492753fab48e8ed57f5bf4"
+    },
+    {
+      "path": "analysis/dev006/p13-read-delta/review.json",
+      "sha256": "e4199f4bcaba13a659e608b87cd016cf7bfc440a5f9f1e6c4081cae5b176e4a0"
+    },
+    {
+      "path": "analysis/dev006/p13-read-seek-v1/manifest.json",
+      "sha256": "24c48f72798e40df1ef2f3e603efe92a5a8c7983a476922887bec2dc71fd259c"
+    },
+    {
+      "path": "analysis/dev006/p13-read-seek-v1/helper.txt",
+      "sha256": "d05b1ecc148baca8f20cf0df1b2448d0d258259aa00c2fe2ef22a11c3018660a"
+    },
+    {
+      "path": "analysis/dev006/p13-read-seek-model-v3/result.json",
+      "sha256": "dd894467debd3498d68cfb2b4374b008d3c30abd3859ed602a24cd1b536e9805"
+    },
+    {
+      "path": "analysis/dev006/p13-read-model-v2-provenance.json",
+      "sha256": "5a2ab53c827535f8b10eab61360e3337a46be1948b75fc7157bda0af8d7e8efe"
+    },
+    {
+      "path": "analysis/dev006/p13-read-model-v3-provenance.json",
+      "sha256": "96b16f8ea0019cfd37c9f84f914e019f9a8c00ddcba9c1b9d37cb2aa075a94d9"
+    },
+    {
+      "path": "analysis/dev006/p12-read-seek-failure-v1/result.json",
+      "sha256": "95ee93886380e53a522f2c8e5d98a5c6394e63a5f0697d1c9fdad54200bf13ca"
+    },
+    {
+      "path": "analysis/dev006/p12_read_seek_cpu.py",
+      "sha256": "bc3f45605b73b9130111519c04f7f120640882c880569f892e9cb7c7f958fffc"
+    },
+    {
+      "path": "analysis/dev006/model_p12_read_seek_failure.py",
+      "sha256": "352c389fad57b6bab0d11311c3d7365f36c52f989a30b075cd1c6ea776d252ce"
+    },
+    {
+      "path": "analysis/dev006/prepare_p13_read_seek_guard.py",
+      "sha256": "5a3d740bdc777b63f965763a44e54ac38b014e017190f5fa748d7851d482d595"
+    },
+    {
+      "path": "analysis/dev006/model_p13_read_seek.py",
+      "sha256": "415c30cdcce3a738fb261c67203f4f2ff851c98bf58fb06a29b15fbbc7abc689"
+    },
+    {
+      "path": "analysis/dev006/model_p13_read_seek_v2.py",
+      "sha256": "7727e1337d93a449acada1db18c0db01910669543e41f16aee9509497910f344"
+    },
+    {
+      "path": "analysis/dev006/model_p13_read_seek_v3.py",
+      "sha256": "09f1914ca9835c86354bd53eb6c54852443aa65f943e6f963761961b2a1e474f"
+    },
+    {
+      "path": "analysis/dev006/prepare_p13_model_v3.py",
+      "sha256": "732d8cddcc4ac88af6538c6956f6ee5b1c1f99304f5b23e9b2546405155afc84"
+    },
+    {
+      "path": "analysis/dev006/audit_p13_read_delta.py",
+      "sha256": "d2906dd900320aa6b1ed46ccba0672ef4782eb5c6edf43cc91d4256df4148e03"
+    },
+    {
+      "path": "analysis/dev006/prepare_p13_builder.py",
+      "sha256": "62ac68aaf4b1f09bbc034c3cac408f8d7272e0ebd9e546a4f19010dc8c249c89"
+    },
+    {
+      "path": "analysis/dev006/p13-builder-provenance.json",
+      "sha256": "8909e324c3a34ba1683a51b170918e2d4fb869ce1575cbb668597a16a87d7f5a"
+    },
+    {
+      "path": "analysis/dev006/audit_p13.py",
+      "sha256": "d66f74a8275b88ef0a979dc68499390a0a3f7bb8be7065e80a54b045b5b19e9a"
+    },
+    {
+      "path": "tools/build_hdd2tb_p13.py",
+      "sha256": "b057ab59e35b03372da88d386c0c03b53a2b3928e071ff12441a1da71c2bec53"
+    },
+    {
+      "path": "tools/build_hdd2tb_p1.py",
+      "sha256": "fe4cde05884e5dcf8f9b399ee85c7835801d17c3cd390d187e749fbb20d75499"
+    },
+    {
+      "path": "tools/build_hdd2tb_p5.py",
+      "sha256": "31590ec7d90766f601f96a2dbdec67d1d992234caac47c53286e6da233c63534"
+    },
+    {
+      "path": "tools/Capture-HW002AH-InstalledUtility.py",
+      "sha256": "b7d5447b67a4225c2cd3742a401ac53874481ccfa2e378d20dec6504f40a121f"
+    },
+    {
+      "path": "observations/HW002AH/read-review.json",
+      "sha256": "9bfb244c8e0651cc977d1645d888fa0145494a6d2f1ed03906352376c48f9531"
+    },
+    {
+      "path": "observations/HW002AH/reader-provenance.json",
+      "sha256": "cfefb719b5609356758f529490ada52f06d356a6aaa0465ed49c55f835364bb2"
+    },
+    {
+      "path": "observations/HW002AG/independent-verification.json",
+      "sha256": "424f7b91a4d036c303d67c7194eff52022f3bde88c307cfdd517fadd8be00194"
+    }
+  ],
+  "hardware_protocol": {
+    "path": "candidates/HDD2TB-P13/HW002AH.md",
+    "sha256": "ff07880d50c0b0c31ffba0afaecfca7873f9b2fe9cfb7e69383ee647b9b0c033",
+    "results": "candidates/HDD2TB-P13/HW002AH-RESULTS.txt",
+    "revision": 1
+  },
+  "review_provenance": "Primary agent separate instruction, byte/relocation and package/crypto implementations; no independent human/subagent review claimed",
+  "software_release_approved": true,
+  "software_release_approval_scope": "Exact P13 guarded F stage/full readback without firmware backup; user HW002AH Recovery6 installation/XMB/capacity/ordinaryrestart on fitted disposable Lexar, then one fixed installed SELF GET after human report. No manual checker, fault, game, disk swap or populated repair.",
+  "remaining_limits": {
+    "hardware_installation_tested": false,
+    "real_seek_read_or_allocation_failure_tested": false,
+    "whole_native_peak_headroom_teardown_all_callers_or_cleanup_proven": false,
+    "populated_nearfull_repair_recovery_or_fullcapacity_qualified": false,
+    "stable_support": false,
+    "Sony_authenticity_claim": false
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "action": "capture_once",
+  "plan_sha256": "model",
+  "replay_forbidden": true,
+  "owner_XMB_return": true
+}

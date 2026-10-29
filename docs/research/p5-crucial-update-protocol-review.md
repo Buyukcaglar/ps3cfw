@@ -1,0 +1,9 @@
+# P5 Crucial Recovery-update protocol revision
+
+The user explicitly chose to keep the already formatted Crucial fitted and install P5 through Recovery option6, to test the 2TB update path directly. This supersedes the working1TB installation/control sequence; no additional permission or disk swap is required. No P5 hardware result has yet been reported.
+
+The exact PUP, decoded code, build manifest and offline software gates are unchanged. Protocol revision2 records PUP detection, preparation, restart, installation, errors/percentages and subsequent clean boot/shutdown/power-on. It omits the separate P5 working1TB control and does not count a successful update as repair or general migration qualification. Update internals/checker coverage remain incompletely mapped, so the protocol does not promise no checker runs inside the updater. Explicit manual repair, rebuild, format, stress and deliberate interruption remain outside this test. An active update must not be interrupted.
+
+Primary-agent protocol review: appropriate as the user's next experimental hardware test on the already experimental Crucial. The previously reported P4 Crucial XMB/restart and HW002A allocation/free results support proceeding, but do not predict update success or establish durability. Any new error is recorded at its actual phase; no automatic retries/drive changes.
+
+Earlier local protocol/results/verification copies are preserved under analysis/p5-review/pre-crucial-revision-*. No firmware is read from, copied from or backed up on F:. The firmware file remains the same previously staged SHA25650cd0445ec64b801dbd6775fd8f448f61e91fd481ce50a73d54ddb2918281fd1. No rebuild or restaging is needed for this document-only change. Historical release-checkpoint.json remains immutable; release-checkpoint-v2.json binds current documents.

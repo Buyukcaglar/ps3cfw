@@ -1,0 +1,202 @@
+HDD2TB-RDI12 -- EXACT FINITE SPARE-PNY PLAN, REVIEW ONLY
+
+RDI11 remains installed and unchanged. No staging, drive movement, USB/device/
+network or console action is released by this packet. Exact owner approval of
+this candidate and plan is required before fresh preservation or staging.
+
+1. Exact candidate and bounded question
+PUP 215774556B SHA256 2a1e3738a687a9e2114c7b45cd0a09b039bb473c79cb9872aa8a871e88ce091a.
+Source-plan 4016e70c4ea98f44b2e5419d5a3aaa68c26819a447f8952ae14cd3464cc7e65b; nonce20dc1401/TAG5244494c/MAGIC5244493c.
+P13/4.93 parent; only sysconf and libfs_utility_init flash members change. Whole
+VSH, CoreOS, Cobra and all other flash bytes match P13. Formatter255->256 remains.
+No production allocator, admission or cleanup guard is activated.
+
+RDI11 observed first printf initialization across once615f94. RDI12 privately
+copies both qualified printf frontends, once and initializer:210 original words,
+unchanged except branch relocation/trampolines and two observers around the
+initializer's ORIGINAL mutex-create helper60d078 call at source615e9c. Shared
+VSH and original create/lock/formatter helpers remain unchanged. The original
+clock147 syscall is copied as an original initializer effect, not a new query.
+Atomic ldarx/stdcx/interlock span contains no inserted instruction. No warmup,
+forced mutex destruction, shared patch or changed native error policy.
+
+Only original expected printf/vprintf PC616ee0/616d5c,TOC6f5558, matching full
+incoming CTR/PC, existing active tagged owner record and same nonzero full64-bit
+TLS worker are admitted. Unknown first provider records metadata, executes the
+original target once and consumes the observation. All inputs/results, original
+native effect order and public ABI were compared in the typed model. This is
+not a native firmware/kernel or concurrency proof.
+
+Armed AFTER worker-entry event6 until first eligible ingress or private-delete
+attempt; NOT an exact worker-return fence. Same512B LOW; no extra BSS, explicit
+observer syscall, allocation, lock, thread or output. Two40B records use64 bytes
+of source reads total (56 fixed global,8 known native-frame attributes); saved
+arguments/results supply the other16 bytes. No arbitrary argument dereference.
+
+LOW392 marker50524c30,396 mask. Before400..439: mutex_pointer64,protocol32,
+recursive32,original24B mutex. After440..479: create_return64,spin64,mutex24.
+480PC32/484TOC32/488callerLR64/496ingressSP64/504ownerTID64. The input pointer
+must be7480a8 and attribute pointer the exact private initializer frame+70.
+The observer frame is released before original create helper executes.
+
+Masks1armed,2provider admitted,3before complete,7both complete,129unknown.
+Already-initialized native once produces mask2/no create samples and is
+INDETERMINATE, not failure. Error/partial/no-call/owner drift/unknown/busy state
+also remains indeterminate, never releases an automatic retry.
+
+Conservative local path charge1280B; conditional worker579184/655248B leaves
+76064B. Native mappings/recursion/foreign/kernel/interrupt premises remain open.
+Spin contention has no in-source finite progress guarantee. No whole-operation
+time or continuous physical resource bound is asserted. E01-E09 unaccepted.
+
+2. Finite action budget IF later approved
+ONE fresh read-only PC PNY identity/preservation phase, ONE USB staging, ONE
+Recovery6 installation, at mostONE explicit Recovery3 check (an automatic check
+suppresses manual), at mostTWO ordinary/default uses of the SAME pinned existing
+UPDWEBMOD installer if webMAN is unavailable (one after each recovery), ONE
+early11-GET set and ONE final11-GET set. No post-check PC drive roundtrip.
+No extra manual restart/check/update/game/app/fill/fault/deletion, raw write,
+rollback, alternate package or other-drive action. No automatic substitute probe.
+
+3. Fresh identity and complete preservation AFTER exact approval
+Last owner report: PNY/USB fitted, XMB responsive, capacity unchanged, webMAN
+<ps3-ip>. The numeric1658GB/1863GB is a historical reference, not a fresh
+measurement. Historical PC Disk5/G: is NOT fresh identity.
+If fitted, normal controller shutdown must reach red standby before removal;
+a failed shutdown stops movement. Connect only spare PNY and the same FAT32 USB,
+obtain fresh disk number/letter and decline Windows initialize/format prompts.
+Keep near-full Lexar, populated Crucial and original1TB intact.
+
+Read-only opened-handle, Windows and ATA identity must match PNY2TB SATA SSD,
+serial<serial>,firmwareHT3C09BA,2000398934016B,512/512 sectors.
+Stop on mismatch. Preserve ALL allocated metadata/data including unreachable
+objects under8GiB archive/16384 allocated-inode limits, frozen read-only Core
+SHA256372ed659234d27fc0fbf04da11b80b1fd88f454e63467d2d2b2ff6a1a15aa10a,
+two complete live comparisons and independent archive coverage/hash verification.
+Never whole-hash/densify a sparse image or invent zero-filled sparse-hole data.
+Compare with completed RDI11 preservation and documented installer fixture.
+Unexplained NEW inconsistencies stop for review; same-size associations do not
+prove origin. No physical disk writes are included in this preparation.
+
+Freshly verify ALL4150 regular game/UPDWEBMOD files against this packet's exact
+WEBMAN-INSTALLER-FILES.json; record directory/inode identities. Existing title
+webMAN MOD1.47, TITLE_ID UPDWEBMOD, APP_VER01.00/VERSION01.00. Missing or changed
+installer stops; do not download, substitute or rebuild. Preserve bytes or explicit
+absence/type/size of boot_plugins.txt, plugins/webftp_server.sprx, webftp_server.sprx,
+xmlhost/game_plugin/fb.xml, mygames.xml and full XML tree. Individual control cap
+4MiB, XML tree cap64MiB/16384 nodes. No symlink alternate paths. Pin saved baseline
+category_game.xml. Close every physical/file handle before releasing staging.
+
+4. Single USB staging and one Recovery6
+Freshly identify the same FAT32 device/volume/letter. Copy/read back ONLY the
+reviewed PUP to PS3/UPDATE/PS3UPDAT.PUP. Do NOT read/hash/back up firmware already
+on USB. Preserve previous outputs. All FOUR new paths in section5 and
+HDD2TB-RDI12-PNY-READY.json must be absent; existing evidence stops staging.
+Preserve legacy HDD2TB-P8.bin if present and clear ONLY that legacy output;
+over its bounded4MiB cap stops staging. No generic cleanup.
+
+Generate/read back canonical marker using READINESS-MARKER-SCHEMA.json, binding
+proposal/PUP/source-plan/nonce, fresh identity/preservation/installer/controls and
+four output absences. Marker cap16KiB; freeze exact bytes/size/hash. Independently
+verify staged PUP/marker and close handles. No automatic firmware backup.
+
+After staging release: safely eject PNY/USB; with PS3 fully off fit only spare
+PNY and USB in rightmost port. Enter Safe Mode directly, install RDI12 ONCE via
+option6 System Update. Let an active update/automatic filesystem check finish and
+report its route. Leave unexpected format/rebuild/Restore PS3 System confirmations
+unselected. At XMB record capacity/responsiveness/prompts. If webMAN is unavailable,
+invoke SAME freshly pinned existing UPDWEBMOD installer ONCE by ordinary/default
+action; otherwise zero invocations. No package/version substitution or extra manual
+restart. Leave PNY/USB fitted and report current IP.
+
+5. Early installed-file/receipt gate
+ONE fixed set of at mostELEVEN GETs;30seconds TOTAL and5seconds connect/read
+maximum each, exact expected length+1 cap, no redirect/retry/poll/RAM/PS3MAPI/
+mount/reboot/write commands:
+/dev_flash/vsh/module/sysconf_plugin.sprx -- 748818B
+SHA256 1084f79bf2dceebec08460876186682b1fab0403859d5651411af278b70396f7.
+/dev_flash/sys/internal/libfs_utility_init.sprx -- 81568B
+SHA256 9b95adf76c24c8617b213c280f40d5f99ac7ae6c7ee0feac35d3287972b0d783.
+/dev_flash/vsh/module/vsh.self --3136560B,
+SHA2566ae8e8315d99827377933003f269647ca1e2fcc014357ebd39a8fdee5cc8273c.
+/dev_flash/vsh/resource/explore/xmb/category_game.xml --49787B,
+SHA256953516798a769e2a956f1cea3d99cd559885d3832a15f1c0614a454acb75a6db.
+/dev_hdd0/boot_plugins.txt and /dev_hdd0/plugins/webftp_server.sprx:
+complete bytes must match fresh verified controls.
+/dev_usb000/HDD2TB-RDI12-PNY-READY.json -- exact staged marker bytes.
+/dev_usb000/HDD2TB-RDI12-20dc1401-RR.bin --1040B.
+/dev_usb000/HDD2TB-RDI12-20dc1401-OBJ.bin --4112B.
+/dev_usb000/HDD2TB-RDI12-20dc1401-LOW.bin --528B.
+/dev_usb000/HDD2TB-RDI12-20dc1401-IDS.bin --16400B.
+
+Exact-path404 means absence; preserve bounded error/header bytes, cap4096B.
+Record no additional direct native printf, heap-cleanup, thread-exit or stack-query
+patches beyond RDI12 and ordinary webMAN. File readback is not a RAM/code-page
+hash. Missing/oversize/error/mismatch stops. Require all four receipts absent
+before manual check. Unexpected early receipts imply a checker route ran:
+capture/classify and do NOT add a check. An already reported automatic check
+likewise suppresses manual. No substitute probe or retry.
+
+6. At mostONE explicit Recovery3 and ordinary installer restoration
+Only after early gate passes and no automatic check: normal controller shutdown
+to red standby, enter Safe Mode and run option3 Restore File System ONCE.
+Record messages/duration and let it finish. If automatic check starts first,
+let it finish without adding manual. No polling or PS-button interaction during
+check. If unchanged10minutes, report screen/activity without forced shutdown.
+Leave unexpected format/update/rebuild confirmations unselected. Built-in repair
+can modify filesystem files/metadata without a byte-write cap, hence preservation
+is mandatory. No induced inconsistency or raw-sector change is proposed.
+
+At XMB record free/total capacity and responsiveness. Saved Cobra recovery policy
+disables boot_plugins.txt. If webMAN is unavailable, run SAME existing pinned
+UPDWEBMOD installer ONCE by ordinary action; otherwise skip. Record need/current
+IP. No extra manual restart, check, app/game or drive movement. Leave PNY/USB fitted.
+
+7. One final11-GET set, saved interpretation and stop
+Use exact same paths/bounds from section5. All four receipts complete; seven
+whole files/controls/marker exact. Installer restoration is recreation/overwrite
+fixture, not uninterrupted boot-list persistence. Preserve differences and stop;
+do not correct files or repeat checker. Independently verify saved paths, lengths,
+framing/footer/CRC/SID/nonce/roles/phases/counts and whole byte hashes.
+
+Use pinned analysis/dev006/rdi12-preparation-v1/read_all_v1.py, transitively
+read_rdi12_v3/read_lower_v3/v2/v1, read_ids_v1 and exact build-v2 manifest.
+Require16RR events, worker continuation1, required statuses0; six OBJ snapshots
+without query error/drift/truncation, parent/worker/child consistency,128MiB
+backing accounting and private heap ID present after create/absent after delete,
+free and join. LOW original P8/export/worker lineage and private-delete provider
+60f5c0/TOC6f5558, stack655360 and zero selected returns remain mandatory. Offset128
+is callback TABLE747d94;176 is separate reporter descriptor6ec820/PC616df0.
+Callback snapshot does NOT prove actual final dispatch.
+
+IDS HD2IDS12/schema000c0000,16384B+16B footer52444e3c. At most512 unique
+class95 IDs per phase, six vectors cross-bound to OBJ count/CRC/endpoints/owner/
+watch, whole CRC and zero reserved bytes. At most one new ID per post-baseline
+phase; at most72 count/list +5getpid +5kernel941 =82 queries. Each96B trailer
+marker4c574c30 binds status/PID/ID/result/delta-cardinality/40B native info, with
+zero waiter pointer/capacity. Multiple IDs, overflow, errors or drift make evidence
+indeterminate. Preserve raw names; names alone do not prove origin. Footers
+acknowledge payload/footer write, not close/flush durability.
+
+Validate LOW with OBSERVATION-SCHEMA.json and the exact pinned read_all_v1
+definitions. Only mask7 admits a complete selected-create classification.
+Before requires pointer7480a8, protocol2/recursive32 (attributes0000000200000020),
+zero24B original mutex. After requires signed create_return0,spin1 (once still
+held during this sample), attrs22, positive class95 ID. Same ID must remain in
+phases4/5/6 with consistent positive PID and _lv2pri/NUL/protocol2/recursive32
+when queried. Full worker ownership/provider/caller/SP lineage remains mandatory.
+The shared done flag is not sampled by this revised schema. Never interpret
+400/440 as old done values. The raw inherited printf_static_observer descriptive
+key is superseded by OBSERVATION-SCHEMA and actual printf_callsite key.
+
+A match attributes a finite original create-helper invocation and its returned
+ID to this private call chain. It does not prove exclusive global ownership,
+exclude foreign actors, establish every alias/copy, actual final exit dispatch,
+process/physical lifetime or continuous resource/admission/durability. Preserve
+indeterminate data without mutation/retry. Do not destroy this shared mutex just
+because it persists beyond private checker heap deletion.
+
+Stop at saved receipts and offline interpretation. No successor, extra check,
+restart, drive return, game/app/fill/fault/deletion or publication follows.
+All E01-E09 remain unaccepted, stablefalse; no final2TB/4TB/4Kn/zero-full or
+power-loss guarantee. Keep other drives intact.

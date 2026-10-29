@@ -1,0 +1,2849 @@
+{
+  "schema_version": 1,
+  "title": "Cross Platform C++ PS3 Repair CLI Roadmap",
+  "created_on": "2026-10-20",
+  "timezone": "UTC+3",
+  "workspace": "C:/Projects/PS3Firmware",
+  "authorization": {
+    "current_scope": "planning_only",
+    "planning_documents_authorized": true,
+    "development_authorized": false,
+    "builds_or_product_tests_authorized": false,
+    "physical_device_actions_authorized": false,
+    "console_actions_authorized": false,
+    "private_key_access_authorized": false,
+    "publication_authorized": false,
+    "rule": "No task definition or dependency closure grants execution authority. Obtain a later explicit user instruction for development and exact hardware/publication scope."
+  },
+  "status": "planned",
+  "proposed_project_root": "TBD after explicit development authorization; this research folder contains planning documents only",
+  "completion_rule": "Complete only for the exact advertised support tuples after all mandatory suite tracks and relevant gates pass. CLI-018/CLI-056 greater-than-2-TiB work and CLI-075 application database diagnostics are separately tracked optional extensions.",
+  "source_baseline_file": "SOURCE-SNAPSHOT.json",
+  "research_register_file": "RESEARCH-REGISTER.md",
+  "source_reuse_file": "SOURCE-REUSE.md",
+  "validation_file": "VALIDATION-GATES.md",
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Scope provenance and evidence contracts"
+    },
+    {
+      "id": "P1",
+      "name": "Format and repair research"
+    },
+    {
+      "id": "P2",
+      "name": "Core interfaces crypto transports and independent fixtures"
+    },
+    {
+      "id": "P3",
+      "name": "Complete read-only UFS2 inspection"
+    },
+    {
+      "id": "P4",
+      "name": "Repair decisions plans and overlays"
+    },
+    {
+      "id": "P5",
+      "name": "Image repair and recoverable commit"
+    },
+    {
+      "id": "P6",
+      "name": "Device and console profile qualification"
+    },
+    {
+      "id": "P7",
+      "name": "FAT VFLASH acquisition recovery backup and migration"
+    },
+    {
+      "id": "P8",
+      "name": "Complete suite integration and release"
+    }
+  ],
+  "gates": [
+    {
+      "id": "G00",
+      "name": "Requirements provenance and custody",
+      "status": "not_assessed",
+      "depends_on": [],
+      "task_ids": [
+        "CLI-001",
+        "CLI-002",
+        "CLI-003",
+        "CLI-004",
+        "CLI-005",
+        "CLI-006"
+      ],
+      "acceptance": "Approved scope and source reuse decisions; operational custody validation is repeated at release.",
+      "passed": false
+    },
+    {
+      "id": "G01",
+      "name": "PS3 format and repair specifications",
+      "status": "not_assessed",
+      "depends_on": [
+        "G00"
+      ],
+      "task_ids": [
+        "CLI-007",
+        "CLI-008",
+        "CLI-009",
+        "CLI-010",
+        "CLI-011",
+        "CLI-012",
+        "CLI-013",
+        "CLI-014",
+        "CLI-015",
+        "CLI-019"
+      ],
+      "acceptance": "Every admitted profile has byte-exact interpretation and action/refusal rules; FAT/VFLASH use additional gates.",
+      "passed": false
+    },
+    {
+      "id": "G02",
+      "name": "Independent corpus and oracles",
+      "status": "not_assessed",
+      "depends_on": [
+        "G00"
+      ],
+      "task_ids": [
+        "CLI-020",
+        "CLI-049"
+      ],
+      "acceptance": "Independently constructed witnesses and expected outcomes do not depend solely on the implementation being judged.",
+      "passed": false
+    },
+    {
+      "id": "G03",
+      "name": "Shared core crypto and image I O",
+      "status": "not_assessed",
+      "depends_on": [
+        "G01",
+        "G02"
+      ],
+      "task_ids": [
+        "CLI-021",
+        "CLI-025",
+        "CLI-026",
+        "CLI-027",
+        "CLI-031",
+        "CLI-032",
+        "CLI-033",
+        "CLI-038",
+        "CLI-067"
+      ],
+      "acceptance": "Source review, target compilation and generated/image checks are recorded separately.",
+      "passed": false
+    },
+    {
+      "id": "G04",
+      "name": "Complete bounded UFS2 inspection",
+      "status": "not_assessed",
+      "depends_on": [
+        "G03"
+      ],
+      "task_ids": [
+        "CLI-034",
+        "CLI-035",
+        "CLI-036",
+        "CLI-037",
+        "CLI-039",
+        "CLI-040",
+        "CLI-076"
+      ],
+      "acceptance": "All supported invariants and dependent ownership have coverage; unknowns prevent global clean/reclaim conclusions.",
+      "passed": false
+    },
+    {
+      "id": "G05",
+      "name": "Reviewable repair plans and overlays",
+      "status": "not_assessed",
+      "depends_on": [
+        "G04"
+      ],
+      "task_ids": [
+        "CLI-015",
+        "CLI-022",
+        "CLI-024",
+        "CLI-041",
+        "CLI-042",
+        "CLI-043",
+        "CLI-044",
+        "CLI-077"
+      ],
+      "acceptance": "Plans are deterministic, evidence-bound, byte-allowlisted and verified on isolated overlays.",
+      "passed": false
+    },
+    {
+      "id": "G06",
+      "name": "Image repair and transaction recovery",
+      "status": "not_assessed",
+      "depends_on": [
+        "G05"
+      ],
+      "task_ids": [
+        "CLI-045",
+        "CLI-046",
+        "CLI-047",
+        "CLI-048",
+        "CLI-049",
+        "CLI-050"
+      ],
+      "acceptance": "Every supported action and transaction failure point preserves verified recovery or explicit uncertainty.",
+      "passed": false
+    },
+    {
+      "id": "G07",
+      "name": "Per platform physical device qualification",
+      "status": "not_assessed",
+      "depends_on": [
+        "G06"
+      ],
+      "task_ids": [
+        "CLI-028",
+        "CLI-029",
+        "CLI-030",
+        "CLI-051",
+        "CLI-067"
+      ],
+      "acceptance": "Windows Linux and macOS qualify independently for each operation/backend/architecture.",
+      "passed": false
+    },
+    {
+      "id": "G08",
+      "name": "Per profile PS3 console acceptance",
+      "status": "not_assessed",
+      "depends_on": [
+        "G07"
+      ],
+      "task_ids": [
+        "CLI-052",
+        "CLI-053",
+        "CLI-054",
+        "CLI-055",
+        "CLI-073"
+      ],
+      "acceptance": "Advertised console profiles pass exact approved native plans; greater than 2 TiB remains separate CLI-056.",
+      "passed": false
+    },
+    {
+      "id": "G09",
+      "name": "FAT filesystem checking and repair",
+      "status": "not_assessed",
+      "depends_on": [
+        "G03",
+        "G06"
+      ],
+      "task_ids": [
+        "CLI-016",
+        "CLI-057",
+        "CLI-058",
+        "CLI-081"
+      ],
+      "acceptance": "FAT12/16/32 each have independent checking, repair and recovery evidence.",
+      "passed": false
+    },
+    {
+      "id": "G10",
+      "name": "Nested VFLASH and partition repair",
+      "status": "not_assessed",
+      "depends_on": [
+        "G07",
+        "G09"
+      ],
+      "task_ids": [
+        "CLI-017",
+        "CLI-059",
+        "CLI-060",
+        "CLI-077",
+        "CLI-078"
+      ],
+      "acceptance": "Critical region and disklabel operations have their own preservation and native compatibility acceptance.",
+      "passed": false
+    },
+    {
+      "id": "G11",
+      "name": "Acquisition recovery backup and migration",
+      "status": "not_assessed",
+      "depends_on": [
+        "G04",
+        "G06",
+        "G07"
+      ],
+      "task_ids": [
+        "CLI-023",
+        "CLI-039",
+        "CLI-061",
+        "CLI-062",
+        "CLI-063",
+        "CLI-064",
+        "CLI-065",
+        "CLI-079",
+        "CLI-083"
+      ],
+      "acceptance": "Coverage and source custody remain explicit across companion operations; optional database diagnostics are separate.",
+      "passed": false
+    },
+    {
+      "id": "G12",
+      "name": "Complete suite release",
+      "status": "not_assessed",
+      "depends_on": [
+        "G00",
+        "G08",
+        "G09",
+        "G10",
+        "G11"
+      ],
+      "task_ids": [
+        "CLI-066",
+        "CLI-067",
+        "CLI-068",
+        "CLI-069",
+        "CLI-070",
+        "CLI-071",
+        "CLI-072",
+        "CLI-074",
+        "CLI-079",
+        "CLI-080",
+        "CLI-081",
+        "CLI-082",
+        "CLI-083"
+      ],
+      "acceptance": "Only exact advertised tuples with accepted evidence may be distributed as the complete suite.",
+      "passed": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": "CLI-001",
+      "title": "Define suite requirements and completion contract",
+      "phase": "P0",
+      "kind": "decision",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [],
+      "research_refs": [
+        "R01"
+      ],
+      "gate_ids": [
+        "G00"
+      ],
+      "deliverables": [
+        "Requirements and scope contract"
+      ],
+      "acceptance": [
+        "Every promised operation and excluded or optional extension has a named support profile and measurable outcome."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-001/"
+    },
+    {
+      "id": "CLI-002",
+      "title": "Resolve source provenance and file level reuse terms",
+      "phase": "P0",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-001"
+      ],
+      "research_refs": [
+        "R02"
+      ],
+      "gate_ids": [
+        "G00"
+      ],
+      "deliverables": [
+        "Source provenance and licence manifest"
+      ],
+      "acceptance": [
+        "Each candidate file has a pinned origin, licence decision, notices and permitted reuse category; unresolved material cannot be incorporated."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-002/"
+    },
+    {
+      "id": "CLI-003",
+      "title": "Specify operation and hardware profile ledger",
+      "phase": "P0",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-001"
+      ],
+      "research_refs": [
+        "R01"
+      ],
+      "gate_ids": [
+        "G00"
+      ],
+      "deliverables": [
+        "Versioned support profile schema"
+      ],
+      "acceptance": [
+        "Ledger distinguishes image, host, backend, console crypto, filesystem dialect, geometry, capacity and read/write/recovery acceptance."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-003/"
+    },
+    {
+      "id": "CLI-004",
+      "title": "Define preservation permissions and privacy boundaries",
+      "phase": "P0",
+      "kind": "decision",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-001"
+      ],
+      "research_refs": [
+        "R01",
+        "R10",
+        "R13"
+      ],
+      "gate_ids": [
+        "G00"
+      ],
+      "deliverables": [
+        "Custody and authorization contract"
+      ],
+      "acceptance": [
+        "Planning authority cannot enable code execution or hardware actions; future evidence excludes secrets and uncontrolled user payload."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-004/"
+    },
+    {
+      "id": "CLI-005",
+      "title": "Specify evidence findings and gate records",
+      "phase": "P0",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-001",
+        "CLI-003",
+        "CLI-004"
+      ],
+      "research_refs": [
+        "R13",
+        "R14"
+      ],
+      "gate_ids": [
+        "G00"
+      ],
+      "deliverables": [
+        "Evidence and finding schemas"
+      ],
+      "acceptance": [
+        "Every result binds source revision, exact inputs, independent oracle, capability tuple, limitations and coverage."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-005/"
+    },
+    {
+      "id": "CLI-006",
+      "title": "Select build dependency and maintenance policy",
+      "phase": "P0",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-002",
+        "CLI-003"
+      ],
+      "research_refs": [
+        "R02",
+        "R16"
+      ],
+      "gate_ids": [
+        "G00"
+      ],
+      "deliverables": [
+        "Toolchain and dependency specification"
+      ],
+      "acceptance": [
+        "C/C++ standards, compilers, supported dependency versions, offline/reproducible acquisition and upgrade policy are reviewed without installing them."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-006/"
+    },
+    {
+      "id": "CLI-007",
+      "title": "Research PS3 disklabels partition bounds and nested maps",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-003"
+      ],
+      "research_refs": [
+        "R03"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "PS3 disk layout specification"
+      ],
+      "acceptance": [
+        "Field layout, table variants, overlap rules and VFLASH nesting have independent corroboration; ambiguous maps remain unwritable."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-007/"
+    },
+    {
+      "id": "CLI-008",
+      "title": "Research and reconcile console crypto profiles",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-003",
+        "CLI-007"
+      ],
+      "research_refs": [
+        "R03",
+        "R05"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Crypto profile and generated vector specification"
+      ],
+      "acceptance": [
+        "CBC/XTS, layer order, byte swaps, sector origin and supplied key forms are explicit for each profile, beyond NAND/NOR shorthand."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-008/"
+    },
+    {
+      "id": "CLI-009",
+      "title": "Resolve all address and allocation units",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-007",
+        "CLI-008"
+      ],
+      "research_refs": [
+        "R04",
+        "R05"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Unit conversion and accounting contract"
+      ],
+      "acceptance": [
+        "Host logical/physical units, crypto sectors, fragments, fsbtodb and di_blocks conventions are independently specified; 4Kn is explicit."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-009/"
+    },
+    {
+      "id": "CLI-010",
+      "title": "Research superblocks replicas and feature flags",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-007",
+        "CLI-009"
+      ],
+      "research_refs": [
+        "R04"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Superblock and feature specification"
+      ],
+      "acceptance": [
+        "Primary/alternate selection, byte preservation, known/unknown flags and supported formats have deterministic or refuse rules."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-010/"
+    },
+    {
+      "id": "CLI-011",
+      "title": "Resolve cylinder groups and initialized inode prefixes",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-009",
+        "CLI-010"
+      ],
+      "research_refs": [
+        "R04",
+        "R06"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Cylinder group and inode initialization specification"
+      ],
+      "acceptance": [
+        "cg_initediblk units and corrupt-prefix fallback are resolved; partial last groups, metadata reservations and lazy initialization are specified."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-011/"
+    },
+    {
+      "id": "CLI-012",
+      "title": "Research inode extents sparse tails links and attributes",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-009",
+        "CLI-010",
+        "CLI-011"
+      ],
+      "research_refs": [
+        "R04",
+        "R06"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Inode and extent specification"
+      ],
+      "acceptance": [
+        "Direct through triple-indirect holes, pointer metadata, PS3 tail rules, inline links, external attributes and special nodes are mapped."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-012/"
+    },
+    {
+      "id": "CLI-013",
+      "title": "Research directory graph and raw name conventions",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-011",
+        "CLI-012"
+      ],
+      "research_refs": [
+        "R04",
+        "R06"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Directory and name specification"
+      ],
+      "acceptance": [
+        "Record boundaries, byte names, dot entries, parent relationships, hard links and export collisions are specified."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-013/"
+    },
+    {
+      "id": "CLI-014",
+      "title": "Research dirty soft update and unsupported feature states",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-010",
+        "CLI-011",
+        "CLI-012"
+      ],
+      "research_refs": [
+        "R04",
+        "R07"
+      ],
+      "gate_ids": [
+        "G01"
+      ],
+      "deliverables": [
+        "Dirty and feature state decision table"
+      ],
+      "acceptance": [
+        "Pending frees and dirty markers are distinguished from disposable allocations; unsupported features retain preservation and refusal policies."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-014/"
+    },
+    {
+      "id": "CLI-015",
+      "title": "Define repair and salvage decision catalogue",
+      "phase": "P1",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-012",
+        "CLI-013",
+        "CLI-014"
+      ],
+      "research_refs": [
+        "R07",
+        "R08"
+      ],
+      "gate_ids": [
+        "G01",
+        "G05"
+      ],
+      "deliverables": [
+        "Repair decision catalogue"
+      ],
+      "acceptance": [
+        "Each action declares evidence, full ownership prerequisites, postconditions, changed ranges and refusal/ambiguity behavior."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-015/"
+    },
+    {
+      "id": "CLI-016",
+      "title": "Research FAT12 FAT16 and FAT32 variants",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-007",
+        "CLI-009"
+      ],
+      "research_refs": [
+        "R11"
+      ],
+      "gate_ids": [
+        "G09"
+      ],
+      "deliverables": [
+        "FAT format and repair specification"
+      ],
+      "acceptance": [
+        "FAT copies, chains, directories, long names, bad/reserved clusters and FAT32 auxiliary metadata have profile-specific rules."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-016/"
+    },
+    {
+      "id": "CLI-017",
+      "title": "Research VFLASH region roles and safe restoration",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-007",
+        "CLI-008",
+        "CLI-016"
+      ],
+      "research_refs": [
+        "R11",
+        "R15"
+      ],
+      "gate_ids": [
+        "G10"
+      ],
+      "deliverables": [
+        "VFLASH compatibility and preservation contract"
+      ],
+      "acceptance": [
+        "Nested region roles, critical metadata, preservation and console consequences are established before any repair plan."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-017/"
+    },
+    {
+      "id": "CLI-018",
+      "title": "Audit greater than 2 TiB addressing as a separate extension",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "optional_large_capacity",
+      "depends_on": [
+        "CLI-007",
+        "CLI-008",
+        "CLI-009"
+      ],
+      "research_refs": [
+        "R05"
+      ],
+      "gate_ids": [
+        "G01",
+        "G08"
+      ],
+      "deliverables": [
+        "Large capacity extension register"
+      ],
+      "acceptance": [
+        "Sector index/tweak width, arithmetic and console/firmware requirements remain separate; no host-only result qualifies console support."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-018/"
+    },
+    {
+      "id": "CLI-019",
+      "title": "Derive memory work recursion and scratch budgets",
+      "phase": "P1",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-011",
+        "CLI-012",
+        "CLI-013",
+        "CLI-015"
+      ],
+      "research_refs": [
+        "R06",
+        "R12"
+      ],
+      "gate_ids": [
+        "G01",
+        "G04"
+      ],
+      "deliverables": [
+        "Resource admission and failure contract"
+      ],
+      "acceptance": [
+        "Limits account for initialized placement, all ownership records, diagnostics, repair growth and failure reserves; unknown costs remain explicit."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-019/"
+    },
+    {
+      "id": "CLI-020",
+      "title": "Specify independent corpus and oracle construction",
+      "phase": "P1",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-005",
+        "CLI-009",
+        "CLI-010",
+        "CLI-011",
+        "CLI-012",
+        "CLI-013"
+      ],
+      "research_refs": [
+        "R14"
+      ],
+      "gate_ids": [
+        "G02"
+      ],
+      "deliverables": [
+        "Corpus taxonomy and oracle design"
+      ],
+      "acceptance": [
+        "Fixture construction and judging are independent; every known upstream defect has a planned witness and expected outcome."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-020/"
+    },
+    {
+      "id": "CLI-021",
+      "title": "Specify reusable core context and error interfaces",
+      "phase": "P2",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-005",
+        "CLI-006",
+        "CLI-009",
+        "CLI-015",
+        "CLI-019"
+      ],
+      "research_refs": [
+        "R06",
+        "R09",
+        "R13"
+      ],
+      "gate_ids": [
+        "G03"
+      ],
+      "deliverables": [
+        "Shared core interface specification"
+      ],
+      "acceptance": [
+        "Per-run contexts, explicit coverage, checked byte I/O and no hidden writes replace process globals and implicit finalization."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-021/"
+    },
+    {
+      "id": "CLI-022",
+      "title": "Specify journal transaction and overlay state machines",
+      "phase": "P2",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-005",
+        "CLI-009",
+        "CLI-015"
+      ],
+      "research_refs": [
+        "R09"
+      ],
+      "gate_ids": [
+        "G05",
+        "G06"
+      ],
+      "deliverables": [
+        "Repair transaction design"
+      ],
+      "acceptance": [
+        "All writes and durable publication transitions have before-image, precondition, failure, originally-dirty rollback and resume rules."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-022/"
+    },
+    {
+      "id": "CLI-023",
+      "title": "Specify capture unreadable map and archive formats",
+      "phase": "P2",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-005",
+        "CLI-007",
+        "CLI-009"
+      ],
+      "research_refs": [
+        "R08",
+        "R10"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Capture and archive format specification"
+      ],
+      "acceptance": [
+        "Capture can resume safely, records unknown ranges without fabricated zeros, and binds identity/profile while preserving raw encrypted bytes."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-023/"
+    },
+    {
+      "id": "CLI-024",
+      "title": "Specify CLI results key input and machine reports",
+      "phase": "P2",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-003",
+        "CLI-005",
+        "CLI-015",
+        "CLI-021",
+        "CLI-022",
+        "CLI-023"
+      ],
+      "research_refs": [
+        "R13"
+      ],
+      "gate_ids": [
+        "G05",
+        "G12"
+      ],
+      "deliverables": [
+        "CLI and report contract"
+      ],
+      "acceptance": [
+        "Exit/result distinctions, secure key input, cancellation, dry-run/plan approval and terminal-safe raw names are documented."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-024/"
+    },
+    {
+      "id": "CLI-025",
+      "title": "Specify equivalent device backend contracts",
+      "phase": "P2",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-006",
+        "CLI-007",
+        "CLI-009",
+        "CLI-021",
+        "CLI-022"
+      ],
+      "research_refs": [
+        "R10"
+      ],
+      "gate_ids": [
+        "G03",
+        "G07"
+      ],
+      "deliverables": [
+        "Cross-platform transport contract"
+      ],
+      "acceptance": [
+        "Exact I/O, full bounds, identity, exclusion, permissions, flush failure and hotplug behavior are defined per OS and bridge."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-025/"
+    },
+    {
+      "id": "CLI-026",
+      "title": "Adapt audited native key derivation and crypto components",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-002",
+        "CLI-006",
+        "CLI-008",
+        "CLI-009",
+        "CLI-020",
+        "CLI-021"
+      ],
+      "research_refs": [
+        "R03",
+        "R05"
+      ],
+      "gate_ids": [
+        "G03"
+      ],
+      "deliverables": [
+        "Native crypto library and vector evidence"
+      ],
+      "acceptance": [
+        "Independent generated known answers cover all admitted layers and high/unaligned boundaries; no real key material is required."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-026/"
+    },
+    {
+      "id": "CLI-027",
+      "title": "Implement checked regular image transport",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-006",
+        "CLI-020",
+        "CLI-021",
+        "CLI-025"
+      ],
+      "research_refs": [
+        "R10"
+      ],
+      "gate_ids": [
+        "G03"
+      ],
+      "deliverables": [
+        "Image backend and fault evidence"
+      ],
+      "acceptance": [
+        "Short/failed reads never return invented success, seeks and conversions are checked, read-only is enforced, flush failures propagate."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-027/"
+    },
+    {
+      "id": "CLI-028",
+      "title": "Implement Windows raw transport adapter",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-006",
+        "CLI-021",
+        "CLI-025",
+        "CLI-027"
+      ],
+      "research_refs": [
+        "R10"
+      ],
+      "gate_ids": [
+        "G07"
+      ],
+      "deliverables": [
+        "Windows backend and adapter tests"
+      ],
+      "acceptance": [
+        "Identity, exclusion, aligned I/O and durability errors satisfy the common contract in mocks before disposable-media qualification."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-028/"
+    },
+    {
+      "id": "CLI-029",
+      "title": "Implement Linux raw transport adapter",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-006",
+        "CLI-021",
+        "CLI-025",
+        "CLI-027"
+      ],
+      "research_refs": [
+        "R10"
+      ],
+      "gate_ids": [
+        "G07"
+      ],
+      "deliverables": [
+        "Linux backend and adapter tests"
+      ],
+      "acceptance": [
+        "Linux identity, mount exclusion, aligned positional I/O, cancellation and durable flush semantics are independently tested."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-029/"
+    },
+    {
+      "id": "CLI-030",
+      "title": "Implement macOS raw transport adapter",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-006",
+        "CLI-021",
+        "CLI-025",
+        "CLI-027"
+      ],
+      "research_refs": [
+        "R10"
+      ],
+      "gate_ids": [
+        "G07"
+      ],
+      "deliverables": [
+        "macOS backend and adapter tests"
+      ],
+      "acceptance": [
+        "macOS device identity, exclusion/automount handling, raw I/O and persistence/error semantics have independent tests."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-030/"
+    },
+    {
+      "id": "CLI-031",
+      "title": "Implement bounded disklabel and crypto profile discovery",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-007",
+        "CLI-008",
+        "CLI-009",
+        "CLI-020",
+        "CLI-026",
+        "CLI-027"
+      ],
+      "research_refs": [
+        "R03",
+        "R05"
+      ],
+      "gate_ids": [
+        "G03"
+      ],
+      "deliverables": [
+        "Disk layout and profile discovery library"
+      ],
+      "acceptance": [
+        "Partition ends and nested views are bounded; competing valid candidates or crypto interpretations prevent repair admission."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-031/"
+    },
+    {
+      "id": "CLI-032",
+      "title": "Implement checked PS3 UFS2 decoding",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-010",
+        "CLI-011",
+        "CLI-012",
+        "CLI-013",
+        "CLI-014",
+        "CLI-020",
+        "CLI-021",
+        "CLI-027",
+        "CLI-031"
+      ],
+      "research_refs": [
+        "R04",
+        "R06"
+      ],
+      "gate_ids": [
+        "G03"
+      ],
+      "deliverables": [
+        "PS3 UFS2 decoder and corruption tests"
+      ],
+      "acceptance": [
+        "Every field is decoded with explicit units and checked ranges; unknown bytes are preserved and unsupported states reported."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-032/"
+    },
+    {
+      "id": "CLI-033",
+      "title": "Implement one logical extent and ownership iterator",
+      "phase": "P2",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-012",
+        "CLI-019",
+        "CLI-020",
+        "CLI-032"
+      ],
+      "research_refs": [
+        "R06"
+      ],
+      "gate_ids": [
+        "G03",
+        "G04"
+      ],
+      "deliverables": [
+        "Unified extent iterator and independent tests"
+      ],
+      "acceptance": [
+        "Data, holes, indirect metadata, EAs and reserved references retain logical positions and exact fragment lengths in every caller."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-033/"
+    },
+    {
+      "id": "CLI-034",
+      "title": "Implement full inode and fragment ownership checking",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-011",
+        "CLI-014",
+        "CLI-019",
+        "CLI-020",
+        "CLI-032",
+        "CLI-033"
+      ],
+      "research_refs": [
+        "R06"
+      ],
+      "gate_ids": [
+        "G04"
+      ],
+      "deliverables": [
+        "Inode and ownership scan pass"
+      ],
+      "acceptance": [
+        "Complete supported-domain scans detect all ownership conflicts including same-inode aliases; unknown regions prevent global conclusions."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-034/"
+    },
+    {
+      "id": "CLI-035",
+      "title": "Implement directory connectivity and link checking",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-013",
+        "CLI-019",
+        "CLI-020",
+        "CLI-033",
+        "CLI-034"
+      ],
+      "research_refs": [
+        "R06"
+      ],
+      "gate_ids": [
+        "G04"
+      ],
+      "deliverables": [
+        "Directory graph and reference scan passes"
+      ],
+      "acceptance": [
+        "Root, raw names, dot entries, cycles, parents and all reference counts are reconciled without silently skipped reads."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-035/"
+    },
+    {
+      "id": "CLI-036",
+      "title": "Implement independent allocation and summary reconstruction",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-011",
+        "CLI-014",
+        "CLI-020",
+        "CLI-034",
+        "CLI-035"
+      ],
+      "research_refs": [
+        "R06",
+        "R07"
+      ],
+      "gate_ids": [
+        "G04"
+      ],
+      "deliverables": [
+        "Read-only allocation reconstruction"
+      ],
+      "acceptance": [
+        "CG maps, partial group bounds, fragment/cluster summaries and global copies derive from complete ownership rather than corrupt totals."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-036/"
+    },
+    {
+      "id": "CLI-037",
+      "title": "Implement coverage aware scanner reports",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-005",
+        "CLI-021",
+        "CLI-024",
+        "CLI-034",
+        "CLI-035",
+        "CLI-036"
+      ],
+      "research_refs": [
+        "R06",
+        "R13"
+      ],
+      "gate_ids": [
+        "G04"
+      ],
+      "deliverables": [
+        "Scanner finding and coverage integration"
+      ],
+      "acceptance": [
+        "Consistent, inconsistent, incomplete, unsupported and aborted outcomes are distinct and backed by a coverage map; no writes occur."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-037/"
+    },
+    {
+      "id": "CLI-038",
+      "title": "Enforce resource limits and cancellation",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-019",
+        "CLI-021",
+        "CLI-027",
+        "CLI-033"
+      ],
+      "research_refs": [
+        "R12"
+      ],
+      "gate_ids": [
+        "G03",
+        "G04"
+      ],
+      "deliverables": [
+        "Bounded work and resource controls"
+      ],
+      "acceptance": [
+        "Corrupt input, allocation/scratch exhaustion and cancellation end within declared budgets without writes or false clean outcomes."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-038/"
+    },
+    {
+      "id": "CLI-039",
+      "title": "Implement read-only extraction and content verification",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-023",
+        "CLI-024",
+        "CLI-031",
+        "CLI-033",
+        "CLI-037",
+        "CLI-038"
+      ],
+      "research_refs": [
+        "R08",
+        "R10"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Extraction and verification functions"
+      ],
+      "acceptance": [
+        "Extraction preserves content positions and raw-name mapping, reports unreadable bytes and separates hashes from original-content proof. Output paths stay confined to the selected destination despite raw names, symlinks, hardlinks and platform-normalization collisions."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-039/"
+    },
+    {
+      "id": "CLI-040",
+      "title": "Implement degraded metadata discovery and salvage",
+      "phase": "P3",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-010",
+        "CLI-011",
+        "CLI-015",
+        "CLI-020",
+        "CLI-031",
+        "CLI-032",
+        "CLI-037",
+        "CLI-038"
+      ],
+      "research_refs": [
+        "R06",
+        "R08"
+      ],
+      "gate_ids": [
+        "G04"
+      ],
+      "deliverables": [
+        "Degraded scan and salvage evidence"
+      ],
+      "acceptance": [
+        "Alternate structures and damaged prefixes yield bounded evidence/confidence; ambiguous reconstruction remains export-only or refused."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-040/"
+    },
+    {
+      "id": "CLI-041",
+      "title": "Implement orphan reconnection and duplicate ownership planning",
+      "phase": "P4",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-015",
+        "CLI-020",
+        "CLI-035",
+        "CLI-037",
+        "CLI-040"
+      ],
+      "research_refs": [
+        "R07",
+        "R08"
+      ],
+      "gate_ids": [
+        "G05"
+      ],
+      "deliverables": [
+        "Recovery and orphan action planner"
+      ],
+      "acceptance": [
+        "Disconnected trees and competing owners have explicit preservation policies; no global reclaim is based on incomplete traversal."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-041/"
+    },
+    {
+      "id": "CLI-042",
+      "title": "Implement deterministic UFS2 repair planning",
+      "phase": "P4",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-015",
+        "CLI-022",
+        "CLI-036",
+        "CLI-037",
+        "CLI-038",
+        "CLI-040"
+      ],
+      "research_refs": [
+        "R07",
+        "R09"
+      ],
+      "gate_ids": [
+        "G05"
+      ],
+      "deliverables": [
+        "UFS2 repair action planner"
+      ],
+      "acceptance": [
+        "Every proposed counter/map/link/record correction has checked dependencies and byte preconditions, with no direct target writes."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-042/"
+    },
+    {
+      "id": "CLI-043",
+      "title": "Implement isolated repair overlay representation",
+      "phase": "P4",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-021",
+        "CLI-022",
+        "CLI-027",
+        "CLI-041",
+        "CLI-042"
+      ],
+      "research_refs": [
+        "R09"
+      ],
+      "gate_ids": [
+        "G05"
+      ],
+      "deliverables": [
+        "Versioned overlay library and format"
+      ],
+      "acceptance": [
+        "All algorithm writes go to a bounded inspectable overlay; crash/reopen format, overlapping sectors and base identity are explicit."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-043/"
+    },
+    {
+      "id": "CLI-044",
+      "title": "Implement plan preview and approval binding",
+      "phase": "P4",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-024",
+        "CLI-041",
+        "CLI-042",
+        "CLI-043"
+      ],
+      "research_refs": [
+        "R09",
+        "R13"
+      ],
+      "gate_ids": [
+        "G05"
+      ],
+      "deliverables": [
+        "Repair plan export and review interface"
+      ],
+      "acceptance": [
+        "Plan binds input identity/digests/profile/policy and expected changes; stale or modified inputs invalidate apply admission."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-044/"
+    },
+    {
+      "id": "CLI-045",
+      "title": "Implement durable encrypted before-image journals",
+      "phase": "P5",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-022",
+        "CLI-025",
+        "CLI-026",
+        "CLI-027",
+        "CLI-043",
+        "CLI-044"
+      ],
+      "research_refs": [
+        "R09"
+      ],
+      "gate_ids": [
+        "G06"
+      ],
+      "deliverables": [
+        "Repair journal writer and format"
+      ],
+      "acceptance": [
+        "Every overwritten physical/crypto span is fully captured durably first; dirty originals and directory/EA updates are supported."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-045/"
+    },
+    {
+      "id": "CLI-046",
+      "title": "Implement checked repair commit state machine",
+      "phase": "P5",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-022",
+        "CLI-038",
+        "CLI-044",
+        "CLI-045"
+      ],
+      "research_refs": [
+        "R09"
+      ],
+      "gate_ids": [
+        "G06"
+      ],
+      "deliverables": [
+        "Image repair commit engine"
+      ],
+      "acceptance": [
+        "No destructor writes; target changes are allowlisted and ordered, every error preserves primary status and recovery evidence."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-046/"
+    },
+    {
+      "id": "CLI-047",
+      "title": "Implement restart resume and verified rollback",
+      "phase": "P5",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-022",
+        "CLI-045",
+        "CLI-046"
+      ],
+      "research_refs": [
+        "R09"
+      ],
+      "gate_ids": [
+        "G06"
+      ],
+      "deliverables": [
+        "Resume and rollback engine"
+      ],
+      "acceptance": [
+        "Wrong identities/versions/external changes are rejected; repeated or interrupted recovery restores the original supported state or reports uncertainty."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-047/"
+    },
+    {
+      "id": "CLI-048",
+      "title": "Implement independent post-repair verification",
+      "phase": "P5",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-020",
+        "CLI-036",
+        "CLI-037",
+        "CLI-039",
+        "CLI-046",
+        "CLI-047"
+      ],
+      "research_refs": [
+        "R09",
+        "R14"
+      ],
+      "gate_ids": [
+        "G06"
+      ],
+      "deliverables": [
+        "Post-repair verifier and idempotence checks"
+      ],
+      "acceptance": [
+        "Changed sectors match the plan, unaffected content is preserved, independent invariants hold and clean promotion requires complete verification."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-048/"
+    },
+    {
+      "id": "CLI-049",
+      "title": "Build independent fixture oracle and failure injection harness",
+      "phase": "P2",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-006",
+        "CLI-020",
+        "CLI-021",
+        "CLI-022"
+      ],
+      "research_refs": [
+        "R14"
+      ],
+      "gate_ids": [
+        "G02"
+      ],
+      "deliverables": [
+        "Generated corpus and independent fault harness"
+      ],
+      "acceptance": [
+        "Independent construction/oracles expose intentionally seeded expectation errors and support every I/O/publication failure point."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-049/"
+    },
+    {
+      "id": "CLI-050",
+      "title": "Qualify image repair and crash recovery",
+      "phase": "P5",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-026",
+        "CLI-027",
+        "CLI-037",
+        "CLI-038",
+        "CLI-041",
+        "CLI-042",
+        "CLI-043",
+        "CLI-044",
+        "CLI-045",
+        "CLI-046",
+        "CLI-047",
+        "CLI-048",
+        "CLI-049"
+      ],
+      "research_refs": [
+        "R09",
+        "R14"
+      ],
+      "gate_ids": [
+        "G06"
+      ],
+      "deliverables": [
+        "Image repair qualification report"
+      ],
+      "acceptance": [
+        "All admitted image profiles pass action/refusal cases and the complete transaction cut-point matrix; failures remain recoverable and explicit."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-050/"
+    },
+    {
+      "id": "CLI-051",
+      "title": "Qualify physical backends separately on each OS",
+      "phase": "P6",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-025",
+        "CLI-028",
+        "CLI-029",
+        "CLI-030",
+        "CLI-050",
+        "CLI-067"
+      ],
+      "research_refs": [
+        "R10",
+        "R15"
+      ],
+      "gate_ids": [
+        "G07"
+      ],
+      "deliverables": [
+        "Per-platform physical transport receipts"
+      ],
+      "acceptance": [
+        "Each named OS/arch/backend/device tuple proves exclusion, readback, durability/error and hotplug behavior under a separately authorized disposable-media plan."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-051/"
+    },
+    {
+      "id": "CLI-052",
+      "title": "Qualify NAND CBC PS3 console compatibility",
+      "phase": "P6",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-008",
+        "CLI-009",
+        "CLI-014",
+        "CLI-050",
+        "CLI-051"
+      ],
+      "research_refs": [
+        "R15"
+      ],
+      "gate_ids": [
+        "G08"
+      ],
+      "deliverables": [
+        "NAND CBC console profile acceptance"
+      ],
+      "acceptance": [
+        "Exact disposable/copy profile preserves agreed bytes/metadata and passes approved console checks; console mutation is independently recorded."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-052/"
+    },
+    {
+      "id": "CLI-053",
+      "title": "Qualify fat NOR crypto and layout profiles",
+      "phase": "P6",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-008",
+        "CLI-009",
+        "CLI-017",
+        "CLI-050",
+        "CLI-051"
+      ],
+      "research_refs": [
+        "R15"
+      ],
+      "gate_ids": [
+        "G08"
+      ],
+      "deliverables": [
+        "Fat NOR profile acceptance"
+      ],
+      "acceptance": [
+        "Actual outer CBC/XTS and nested layer profile is proven rather than inferred from NOR; console acceptance is separate for each admitted layout."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-053/"
+    },
+    {
+      "id": "CLI-054",
+      "title": "Qualify Slim XTS console compatibility",
+      "phase": "P6",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-008",
+        "CLI-009",
+        "CLI-014",
+        "CLI-050",
+        "CLI-051"
+      ],
+      "research_refs": [
+        "R15"
+      ],
+      "gate_ids": [
+        "G08"
+      ],
+      "deliverables": [
+        "Slim XTS profile acceptance"
+      ],
+      "acceptance": [
+        "XTS sector origin, metadata behavior and approved console workload are independently verified on the exact supported profile."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-054/"
+    },
+    {
+      "id": "CLI-055",
+      "title": "Qualify observed alternate 512e accounting profiles",
+      "phase": "P6",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-009",
+        "CLI-014",
+        "CLI-050",
+        "CLI-051"
+      ],
+      "research_refs": [
+        "R05",
+        "R15"
+      ],
+      "gate_ids": [
+        "G08"
+      ],
+      "deliverables": [
+        "512e profile acceptance"
+      ],
+      "acceptance": [
+        "Source accounting conventions survive repair and native reuse; host physical-sector presentation alone cannot select the convention."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-055/"
+    },
+    {
+      "id": "CLI-056",
+      "title": "Qualify greater than 2 TiB extension if separately pursued",
+      "phase": "P6",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "optional_large_capacity",
+      "depends_on": [
+        "CLI-018",
+        "CLI-050",
+        "CLI-051"
+      ],
+      "research_refs": [
+        "R05",
+        "R15"
+      ],
+      "gate_ids": [
+        "G08"
+      ],
+      "deliverables": [
+        "Optional high-capacity qualification"
+      ],
+      "acceptance": [
+        "Host addressing and applicable firmware/console high-LBA compatibility are independently qualified; no ordinary-profile result is transferred."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-056/"
+    },
+    {
+      "id": "CLI-057",
+      "title": "Implement and qualify FAT12 FAT16 FAT32 checking",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-016",
+        "CLI-020",
+        "CLI-021",
+        "CLI-031",
+        "CLI-038",
+        "CLI-049"
+      ],
+      "research_refs": [
+        "R11"
+      ],
+      "gate_ids": [
+        "G09"
+      ],
+      "deliverables": [
+        "FAT checker and image evidence"
+      ],
+      "acceptance": [
+        "FAT copies/chains, names, cross-links, loops and auxiliary metadata have complete coverage and independent corruption oracles."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-057/"
+    },
+    {
+      "id": "CLI-058",
+      "title": "Implement and qualify FAT repair transactions",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-015",
+        "CLI-016",
+        "CLI-043",
+        "CLI-045",
+        "CLI-046",
+        "CLI-047",
+        "CLI-048",
+        "CLI-050",
+        "CLI-057"
+      ],
+      "research_refs": [
+        "R09",
+        "R11"
+      ],
+      "gate_ids": [
+        "G09"
+      ],
+      "deliverables": [
+        "FAT image repair qualification"
+      ],
+      "acceptance": [
+        "FAT-specific plans preserve unrelated data, explain copy arbitration and survive action/refusal and interrupted-recovery cases."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-058/"
+    },
+    {
+      "id": "CLI-059",
+      "title": "Implement and qualify nested VFLASH inspection and backup",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-008",
+        "CLI-017",
+        "CLI-023",
+        "CLI-026",
+        "CLI-031",
+        "CLI-039",
+        "CLI-057"
+      ],
+      "research_refs": [
+        "R11"
+      ],
+      "gate_ids": [
+        "G10"
+      ],
+      "deliverables": [
+        "VFLASH inspection and preservation evidence"
+      ],
+      "acceptance": [
+        "Nested regions and layer addressing remain bounded; independent backups and read-only results are verified before repair admission."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-059/"
+    },
+    {
+      "id": "CLI-060",
+      "title": "Qualify VFLASH repair on disposable console media",
+      "phase": "P7",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-017",
+        "CLI-051",
+        "CLI-058",
+        "CLI-059",
+        "CLI-078"
+      ],
+      "research_refs": [
+        "R11",
+        "R15"
+      ],
+      "gate_ids": [
+        "G10"
+      ],
+      "deliverables": [
+        "VFLASH repair acceptance"
+      ],
+      "acceptance": [
+        "Exact role/profile restoration and separately approved console recovery outcomes are verified; UFS acceptance is not inherited."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-060/"
+    },
+    {
+      "id": "CLI-061",
+      "title": "Implement resumable encrypted acquisition and read maps",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-023",
+        "CLI-025",
+        "CLI-027",
+        "CLI-028",
+        "CLI-029",
+        "CLI-030",
+        "CLI-031",
+        "CLI-038",
+        "CLI-049"
+      ],
+      "research_refs": [
+        "R08",
+        "R10"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Encrypted capture and rescue functions"
+      ],
+      "acceptance": [
+        "Capture binds identity, retains unreadable intervals, resumes without fabricating content and verifies completed readable ranges. Corrupt/truncated/swapped or stale read maps and interrupted checkpoint publication cannot mark unread intervals complete."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-061/"
+    },
+    {
+      "id": "CLI-062",
+      "title": "Implement preservation archives with explicit coverage",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-023",
+        "CLI-031",
+        "CLI-034",
+        "CLI-039",
+        "CLI-061"
+      ],
+      "research_refs": [
+        "R08",
+        "R10"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Archive creation and coverage manifests"
+      ],
+      "acceptance": [
+        "Archive manifests distinguish complete raw capture from allocation-based backup and preserve uncertainty when maps are damaged. Payload hashes, manifest/range integrity, ordering and truncation checks are validated before restore."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-062/"
+    },
+    {
+      "id": "CLI-063",
+      "title": "Implement file tree and orphan export recovery",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-015",
+        "CLI-039",
+        "CLI-040",
+        "CLI-041",
+        "CLI-062"
+      ],
+      "research_refs": [
+        "R08"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Recovery export and manifests"
+      ],
+      "acceptance": [
+        "Recovered paths/bytes/confidence and collisions are explicit; partial or guessed reconstructions never become verified originals."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-063/"
+    },
+    {
+      "id": "CLI-064",
+      "title": "Port and qualify file level migration",
+      "phase": "P7",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-002",
+        "CLI-015",
+        "CLI-033",
+        "CLI-035",
+        "CLI-036",
+        "CLI-045",
+        "CLI-047",
+        "CLI-048",
+        "CLI-050",
+        "CLI-062"
+      ],
+      "research_refs": [
+        "R08",
+        "R09"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "C/C++ migration and comparison evidence"
+      ],
+      "acceptance": [
+        "Hard links, holes, raw names, EAs and content verification retain separate source-change, preservation and rollback gates."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-064/"
+    },
+    {
+      "id": "CLI-065",
+      "title": "Qualify archive restore and source preservation",
+      "phase": "P7",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-049",
+        "CLI-061",
+        "CLI-062",
+        "CLI-063",
+        "CLI-064"
+      ],
+      "research_refs": [
+        "R08",
+        "R14"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Backup and restore qualification"
+      ],
+      "acceptance": [
+        "Restore preserves all archived admitted bytes and metadata, rejects coverage gaps/mismatched targets and does not overwrite sources. Hostile path records, swapped payloads/manifests and incomplete checkpoint publications are rejected before destination writes."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-065/"
+    },
+    {
+      "id": "CLI-066",
+      "title": "Integrate suite commands and structured outcomes",
+      "phase": "P8",
+      "kind": "implementation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-024",
+        "CLI-037",
+        "CLI-044",
+        "CLI-047",
+        "CLI-048",
+        "CLI-058",
+        "CLI-059",
+        "CLI-061",
+        "CLI-063",
+        "CLI-064"
+      ],
+      "research_refs": [
+        "R13"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "CLI command suite and report schema"
+      ],
+      "acceptance": [
+        "All commands share explicit capabilities, coverage, stable report versions, cancellation and nonzero incomplete/failed results."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-066/"
+    },
+    {
+      "id": "CLI-067",
+      "title": "Establish three OS build and image validation matrix",
+      "phase": "P2",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-002",
+        "CLI-006",
+        "CLI-021",
+        "CLI-026",
+        "CLI-027",
+        "CLI-049"
+      ],
+      "research_refs": [
+        "R16"
+      ],
+      "gate_ids": [
+        "G03",
+        "G07",
+        "G12"
+      ],
+      "deliverables": [
+        "Windows Linux macOS build receipts"
+      ],
+      "acceptance": [
+        "Every advertised host/architecture compiles and passes appropriate generated/image checks with locked dependencies; hardware results remain separate."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-067/"
+    },
+    {
+      "id": "CLI-068",
+      "title": "Qualify bounded performance without weakening checks",
+      "phase": "P8",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-019",
+        "CLI-038",
+        "CLI-050",
+        "CLI-065",
+        "CLI-066",
+        "CLI-067"
+      ],
+      "research_refs": [
+        "R12",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Resource and performance report"
+      ],
+      "acceptance": [
+        "Caches/batching preserve exact results and recovery semantics; CPU/memory/scratch/throughput are measured on labelled workloads."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-068/"
+    },
+    {
+      "id": "CLI-069",
+      "title": "Prepare notices dependency inventory and packages",
+      "phase": "P8",
+      "kind": "release",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-002",
+        "CLI-006",
+        "CLI-066",
+        "CLI-067"
+      ],
+      "research_refs": [
+        "R02",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Package manifest SBOM and notices"
+      ],
+      "acceptance": [
+        "All distributed components have resolved provenance and locked hashes, reproducible build inputs and notices."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-069/"
+    },
+    {
+      "id": "CLI-070",
+      "title": "Write operating recovery and support documentation",
+      "phase": "P8",
+      "kind": "release",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-003",
+        "CLI-024",
+        "CLI-047",
+        "CLI-050",
+        "CLI-051",
+        "CLI-058",
+        "CLI-060",
+        "CLI-065",
+        "CLI-066"
+      ],
+      "research_refs": [
+        "R13",
+        "R15",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "User manual and recovery runbooks"
+      ],
+      "acceptance": [
+        "Instructions match qualified operations, preserve originals, explain incomplete outcomes and retain a usable recovery-version route."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-070/"
+    },
+    {
+      "id": "CLI-071",
+      "title": "Review exact suite release and support claims",
+      "phase": "P8",
+      "kind": "release",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-051",
+        "CLI-052",
+        "CLI-053",
+        "CLI-054",
+        "CLI-055",
+        "CLI-058",
+        "CLI-060",
+        "CLI-065",
+        "CLI-066",
+        "CLI-067",
+        "CLI-068",
+        "CLI-069",
+        "CLI-070",
+        "CLI-073",
+        "CLI-074",
+        "CLI-076",
+        "CLI-078",
+        "CLI-079",
+        "CLI-081",
+        "CLI-082",
+        "CLI-083"
+      ],
+      "research_refs": [
+        "R01",
+        "R15",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Independent release review and support ledger"
+      ],
+      "acceptance": [
+        "Every advertised tuple and operation has accepted evidence; unsupported capacity/architecture/features are explicit and no required suite track disappears."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-071/"
+    },
+    {
+      "id": "CLI-072",
+      "title": "Package and publish only explicitly authorized releases",
+      "phase": "P8",
+      "kind": "release",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-071",
+        "CLI-080"
+      ],
+      "research_refs": [
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Release artifacts and publication receipts"
+      ],
+      "acceptance": [
+        "Exact artifacts match reviewed hashes/notices and per-host smoke evidence; publication occurs only under later explicit authority."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-072/"
+    },
+    {
+      "id": "CLI-073",
+      "title": "Define post-repair native growth and recovery limits",
+      "phase": "P6",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-014",
+        "CLI-015",
+        "CLI-019",
+        "CLI-050"
+      ],
+      "research_refs": [
+        "R07",
+        "R12",
+        "R15"
+      ],
+      "gate_ids": [
+        "G08"
+      ],
+      "deliverables": [
+        "Native interoperability and future-growth policy"
+      ],
+      "acceptance": [
+        "Host-repaired structures are not promised to remain natively repairable under arbitrary later growth; supported/refusal/recovery behavior is documented."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-073/"
+    },
+    {
+      "id": "CLI-074",
+      "title": "Define source updates vulnerability response and journal compatibility",
+      "phase": "P8",
+      "kind": "design",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-002",
+        "CLI-006",
+        "CLI-022",
+        "CLI-024",
+        "CLI-050"
+      ],
+      "research_refs": [
+        "R02",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Maintenance and recovery compatibility policy"
+      ],
+      "acceptance": [
+        "Source updates rerun affected gates, reports/journals have explicit compatibility and old recovery paths remain available."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-074/"
+    },
+    {
+      "id": "CLI-075",
+      "title": "Research optional XMB database diagnostics",
+      "phase": "P7",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "optional_application_layer",
+      "depends_on": [
+        "CLI-003",
+        "CLI-013",
+        "CLI-039"
+      ],
+      "research_refs": [
+        "R01",
+        "R08"
+      ],
+      "gate_ids": [
+        "G11"
+      ],
+      "deliverables": [
+        "Optional database diagnostic assessment"
+      ],
+      "acceptance": [
+        "Application database diagnostics have separate schemas and evidence; filesystem repair does not claim database or licence validity."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-075/"
+    },
+    {
+      "id": "CLI-076",
+      "title": "Review complete resource and scratch admission",
+      "phase": "P3",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-019",
+        "CLI-034",
+        "CLI-035",
+        "CLI-036",
+        "CLI-037",
+        "CLI-038",
+        "CLI-040",
+        "CLI-049"
+      ],
+      "research_refs": [
+        "R06",
+        "R12",
+        "R14"
+      ],
+      "gate_ids": [
+        "G04"
+      ],
+      "deliverables": [
+        "Independent scanner resource review"
+      ],
+      "acceptance": [
+        "Worst admitted layouts and failure-path work fit explicit budgets; OOM/scratch exhaustion cannot produce partial clean or reclaim permission."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-076/"
+    },
+    {
+      "id": "CLI-077",
+      "title": "Research deterministic damaged partition reconstruction",
+      "phase": "P4",
+      "kind": "research",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-007",
+        "CLI-008",
+        "CLI-009",
+        "CLI-010",
+        "CLI-015",
+        "CLI-040"
+      ],
+      "research_refs": [
+        "R03",
+        "R07",
+        "R11"
+      ],
+      "gate_ids": [
+        "G05",
+        "G10"
+      ],
+      "deliverables": [
+        "Partition reconstruction decision contract"
+      ],
+      "acceptance": [
+        "Multiple independent structures corroborate exact starts/lengths/roles; ambiguous tables remain preserved and export-only."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-077/"
+    },
+    {
+      "id": "CLI-078",
+      "title": "Qualify bounded partition repair transactions",
+      "phase": "P7",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-022",
+        "CLI-045",
+        "CLI-046",
+        "CLI-047",
+        "CLI-048",
+        "CLI-050",
+        "CLI-051",
+        "CLI-059",
+        "CLI-077"
+      ],
+      "research_refs": [
+        "R09",
+        "R11",
+        "R15"
+      ],
+      "gate_ids": [
+        "G10"
+      ],
+      "deliverables": [
+        "Partition repair profile qualification"
+      ],
+      "acceptance": [
+        "Whole-device/nested table changes have independent before-image and role checks, interrupted recovery and exact later native acceptance where applicable."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-078/"
+    },
+    {
+      "id": "CLI-079",
+      "title": "Qualify multi-device identity privacy and source custody",
+      "phase": "P8",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-005",
+        "CLI-025",
+        "CLI-044",
+        "CLI-047",
+        "CLI-061",
+        "CLI-062",
+        "CLI-064",
+        "CLI-066"
+      ],
+      "research_refs": [
+        "R10",
+        "R13",
+        "R14"
+      ],
+      "gate_ids": [
+        "G00",
+        "G11",
+        "G12"
+      ],
+      "deliverables": [
+        "Custody and privacy validation"
+      ],
+      "acceptance": [
+        "Source/destination swaps, hotplug, lookalike names, logs and secret handling cannot cause source writes or private key disclosure."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-079/"
+    },
+    {
+      "id": "CLI-080",
+      "title": "Accept complete advertised suite across the support ledger",
+      "phase": "P8",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-051",
+        "CLI-052",
+        "CLI-053",
+        "CLI-054",
+        "CLI-055",
+        "CLI-058",
+        "CLI-060",
+        "CLI-065",
+        "CLI-066",
+        "CLI-067",
+        "CLI-068",
+        "CLI-069",
+        "CLI-070",
+        "CLI-073",
+        "CLI-074",
+        "CLI-076",
+        "CLI-078",
+        "CLI-079",
+        "CLI-081",
+        "CLI-082",
+        "CLI-083"
+      ],
+      "research_refs": [
+        "R01",
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Complete suite acceptance matrix"
+      ],
+      "acceptance": [
+        "Required UFS2 FAT VFLASH partition acquisition recovery backup and migration tracks all close for advertised profiles; partial milestones retain partial labels."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-080/"
+    },
+    {
+      "id": "CLI-081",
+      "title": "Qualify dev_hdd1 FAT32 console cache repair",
+      "phase": "P7",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-004",
+        "CLI-009",
+        "CLI-014",
+        "CLI-016",
+        "CLI-051",
+        "CLI-057",
+        "CLI-058"
+      ],
+      "research_refs": [
+        "R11",
+        "R15"
+      ],
+      "gate_ids": [
+        "G09"
+      ],
+      "deliverables": [
+        "dev_hdd1 FAT32 native operation acceptance"
+      ],
+      "acceptance": [
+        "Exact dev_hdd1 role/profile repair passes independent host checks and separately approved console use on disposable/restorable copies, per advertised backend; generic FAT image results alone are insufficient."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-081/"
+    },
+    {
+      "id": "CLI-082",
+      "title": "Qualify fuzzing and native memory safety across input formats",
+      "phase": "P8",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-006",
+        "CLI-020",
+        "CLI-026",
+        "CLI-031",
+        "CLI-032",
+        "CLI-033",
+        "CLI-037",
+        "CLI-038",
+        "CLI-043",
+        "CLI-045",
+        "CLI-047",
+        "CLI-049",
+        "CLI-057",
+        "CLI-061",
+        "CLI-062",
+        "CLI-066",
+        "CLI-067"
+      ],
+      "research_refs": [
+        "R06",
+        "R09",
+        "R12",
+        "R14",
+        "R16"
+      ],
+      "gate_ids": [
+        "G12"
+      ],
+      "deliverables": [
+        "Native input hardening and fuzz qualification report"
+      ],
+      "acceptance": [
+        "Generated corrupt disk/filesystem/overlay/journal/archive/report inputs pass applicable memory/undefined-behavior sanitizers and coverage-guided fuzz campaigns with declared budgets and independently reviewed coverage; exhaustion/failures remain explicit."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-082/"
+    },
+    {
+      "id": "CLI-083",
+      "title": "Qualify confined extraction and untrusted archive recovery",
+      "phase": "P8",
+      "kind": "validation",
+      "status": "planned",
+      "execution_authorized": false,
+      "scope": "suite",
+      "depends_on": [
+        "CLI-039",
+        "CLI-061",
+        "CLI-062",
+        "CLI-063",
+        "CLI-065",
+        "CLI-066",
+        "CLI-079"
+      ],
+      "research_refs": [
+        "R08",
+        "R10",
+        "R13",
+        "R14"
+      ],
+      "gate_ids": [
+        "G11",
+        "G12"
+      ],
+      "deliverables": [
+        "Destination confinement and archive trust qualification"
+      ],
+      "acceptance": [
+        "Raw names, symlinks, hardlinks, path collisions and hostile manifests cannot escape the selected export/restore target; corrupt/swapped capture maps or archives cannot certify unread bytes or trigger writes."
+      ],
+      "future_evidence_directory": "<future-project>/evidence/CLI-083/"
+    }
+  ]
+}
+

@@ -1,0 +1,10 @@
+HW002AH / HDD2TB-P13 / CECHA00 / disposable Lexar
+Recovery option 6 installation completed:
+Returned to responsive XMB:
+System Information free / total capacity:
+Ordinary controller shutdown and power-on completed:
+Unexpected prompts/errors (leave confirmations unselected):
+Approximate boot time (if recorded):
+webMAN available / current IP:
+USB location:
+No manual checker, disk swap, game or fault test requested.

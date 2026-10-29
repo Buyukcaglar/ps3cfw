@@ -1,0 +1,168 @@
+PERF001-DR1 -- Independent dedicated PS3 / 2 TB SSD read-performance plan
+17 October 2026; UTC+3; English
+STATE: PLANNED ONLY -- DEVICE DETAILS PENDING -- ALL HARDWARE GATES LOCKED
+
+Objective and present authorization
+Improve ordinary internal-storage reads: sequential loading, small/random asset
+access, metadata/open costs, loading time and streaming stalls. Preserve content,
+error handling, memory/cancellation limits and save/install compatibility.
+This request authorizes preparing/saving the independent plan. No implementation,
+build, staging, console contact, disk/USB operation or native execution occurs now.
+The user intends a dedicated PS3 and experimental 2 TB SSD; neither exact device
+is identified yet. Device details are required before any hardware gate can move.
+
+Ownership and independence
+DR1 has its own console/SSD admission, known-data corpus, identity/custody records,
+fresh source/application/package/nonce namespace and test receipts. It does not
+depend on BF completion, BF filler, files0/14/28, the old Lexar or its custody.
+Original BF and RO1 remain exactly as recorded, with their separate dependencies
+and gates. No BF stop/collector/relaunch/restart/swap or64GiB-stage change belongs
+to this branch. The original 1 TB/image, Crucial, PNY, populated Lexar/filler and
+originals/NAND/archives/private material/concurrent work remain protected.
+If the proposed dedicated SSD turns out to be a protected existing device,
+resolve that actual ownership conflict before treating it as disposable.
+
+Required device details -- fill DEVICE_DETAILS_TEMPLATE.json
+- PS3 exact CECH model, current system-software version and actual firmware
+  distribution/type (OFW/CFW/HFW/HEN/other), existing storage patches and working
+  native homebrew/loader status if known. Do not assume this console supports
+  CFW, the old P13 candidate or the old native binary.
+- SSD manufacturer/model, serial and firmware from available owner information;
+  advertised capacity, any known measured bytes/sector geometry, current location
+  and data that must be retained. Bind fresh actual identity before later writes;
+  old Windows disk numbers never identify the target.
+- Confirmation of which exact console/SSD the user is dedicating, current
+  internal drive to preserve, and available USB/controller/PC connection route.
+No EID/root/derived keys are requested. Unknown details stay null, not guessed.
+
+Step-by-step execution plan (all hardware steps are currently LOCKED)
+
+1. DEVICE INTAKE / FEASIBILITY -- PC, then a future bounded hardware preflight
+   Refresh authority and bind the supplied device details. Establish compatible
+   homebrew/firmware, native 2 TB admission, recovery route and a reproducible
+   unmodified baseline. Separate native formatting/boot from integrity/capacity.
+   Do not install P13 or change firmware just because another CECHA00 used it.
+   Any required formatting/provisioning must be bound to the exact dedicated
+   SSD and its data disposition in a reviewed procedure. No old drive/image
+   migration is assumed. An incompatible model/firmware is a real decision point.
+
+2. ADAPT AND REVIEW THE DIAGNOSTIC -- PC only, after details resolve compatibility
+   Reuse useful reviewed RO1 timing/byte-cap/cleanup concepts through a detached
+   DR1 implementation. Replace the fixed BF prefix/files/game allowlist, nonce,
+   firmware/space assumptions and any fixture-specific ABI/import assumptions.
+   New title/version and namespaces are selected against current inventory;
+   no consumed RO1/BF app, stager, collector, writer or receipt is reused.
+   Independently generate expected pattern/slice SHA references from public data.
+   Host faults cover gates, caps, short/error I/O, seek/stat, stop/cleanup, timers,
+   output publication and malformed receipts. Review exact linked package/ABI.
+   The current request creates no such implementation or unlocked package.
+
+3. NATIVE PILOT AND KNOWN-DATA ADMISSION -- HARDWARE
+   Start with CPU/timer/UI/controller/exit checks with zero HDD payload writes.
+   Native loader, timer frequency/monotonicity, visible responsiveness and XMB
+   return are outcomes of this pilot, not facts supplied by host checks.
+   Then use a newly reviewed, nonce-owned file pilot capped at256MiB new payload,
+   with exact pattern/SHA/size/EOF, sync/close, bounded cancellation and ordinary
+   restart checks. Partial/error output is retained; no automatic resume/delete.
+   Admit the main corpus only after that pilot passes. First setup writes have
+   a combined hard cap2GiB, including the pilot; no unbudgeted occupancy fill.
+   Proposed main corpus: three512MiB files plus at most16 mixed-size files with
+   aggregate <=64MiB, all generated/owned, fixed paths and per-file domains.
+   Pilot+main nominal payload <=1856MiB (1.8125GiB). Full initial/global and
+   ordinary-restart verification nominally returns <=5568MiB; all setup read
+   requests/EOF/retries across setup jobs share an8GiB aggregate cap and ledger.
+   No real games/saves/licenses/trophies are needed for this first corpus.
+
+4. BASELINE INTERNAL READS -- HARDWARE, READ-ONLY WORKLOAD AFTER ADMISSION
+   - CPU-only generation/hash/comparison controls and before/after calibration.
+   - Six balanced A/B pairs:256MiB direct read versus read+verify per arm,
+     with two independent256MiB post-check reads. Counterbalance AB/BA and range
+     assignment; use two disjoint256MiB slices within a512MiB owned file.
+   - Three repeats each for4KiB/64KiB/1MiB aligned requests,64MiB per run.
+   - Three repeats over each of three owned logical file ranges,64MiB per run.
+   - Three fixed-seed small/random4KiB traces and64KiB locality traces.
+   - Four16MiB timing-on/off controls and three passes of the16-file mix.
+   Nominal returned payload <=5536481280B (5.15625GiB) if file mix is64MiB.
+   Absolute charged requested-read cap8GiB includes every control/EOF/retry.
+   Record read/seek/open/stat/close, bytes/rcs, p50/p90/p95/p99/max bounds, total
+   and syscall-active time, CPU/hash/compare, space, UI/controller and USB costs.
+   Label first-pass cache state unknown and repeated passes warm/mixed; no cache
+   clearing or firmware setting changes are part of the initial benchmark.
+   Buffers start4096-aligned; one application reader/QD1 initially. Actual device
+   queue depth/link speed and NAND geometry remain unknown until evidenced.
+
+5. ATTRIBUTE AND OPTIMIZE -- PC analysis/development + targeted HARDWARE A/B
+   The first diagnostic separates application work from filesystem-call time.
+   Crypto/driver/cache/media work remains included inside that call. Do not name
+   unaccounted whole-minus-components time an SSD or encryption measurement.
+   If application work dominates, improve only relevant code and label a faster
+   diagnostic as diagnostic benefit. For ordinary game reads, prioritize measured
+   request-size/alignment/locality, read-ahead/batching, copies/cache behavior,
+   and then shared filesystem/driver/crypto code where evidence warrants it.
+   Deeper observers require exact matching firmware, source/ABI/lock/lifetime and
+   overhead review before hardware; no external VSH/kernel/process RAM probes.
+   Change one factor at a time. Keep a frozen baseline and matched data/layout,
+   compiler/UI/workloads; disclose warm-cache/order/temperature/history effects.
+   A queue-depth experiment is not proof of NCQ support. No SATA generation,
+   cache/crypto bottleneck or TRIM benefit is assumed from console/SSD age.
+
+6. SHOW ORDINARY GAME BENEFIT AND RELIABILITY -- HARDWARE
+   Use owner-selected representative titles/scenes after baseline attribution;
+   bind installed data, loader/configuration and legal local sources. Measure
+   loading/streaming/frame hitches on baseline and candidate. Define exact game
+   provisioning bytes, scene repetitions and time budget before this stage.
+   Check data hashes, ordinary restarts, save/install compatibility, cleanup,
+   memory and relevant error paths on the dedicated fixture. No repeated lengthy
+   LBP3 level-building/trophy chores. Firmware/common-path changes require broader
+   regression/recovery proof than an application-only request-size comparison.
+
+7. REPEAT ACROSS CONTROLLED STATES / DECIDE -- HARDWARE + PC analysis
+   Reproduce a promising result in at least two independently prepared states of
+   this dedicated SSD, with explicit state/occupancy/fragmentation/extent history.
+   Start with low-conditioning states; near-full conditioning and large/sparse
+   high-offset files are later hypotheses with their own preparation/endurance
+   budgets. Every write, install, prefill, verify and cleanup counts. No silent
+   terabyte fill or assumed erased NAND from filesystem-free space.
+   Fault/power-loss, discard/ATA or volatile-cache experiments are not included
+   in the initial read study. Propose them only for a concrete measured need
+   after correctness/recovery review. Keep the baseline if gains are uncertain.
+   Results initially cover this console/firmware/SSD only, not all PS3 models.
+
+Common provisional bounds -- rebind/review after device details, never weaken silently
+- Main read profile: <=8GiB requested reads/run; zero intentional HDD payload
+  writes during the profile; OS housekeeping is still possible with read-only opens.
+- Initial fixture payload writes <=2GiB total; initial setup requested reads
+  <=8GiB aggregate. Provisioning format/metadata is not included in payload bytes
+  and needs its own explicit reviewed scope before any action.
+- >=130GiB available (139586437120B) conservatively retained for initial DR1
+  fixture/profile; this is a DR1 guard, not an inherited BF admission requirement.
+- Extra working memory <=8MiB, graphics separately <=32MiB provisional; USB
+  evidence <=8MiB/job and >=64MiB available at native admission plus stage inputs.
+- Twenty-minute cooperative active-work limit/job, separate READY/cleanup time;
+  no hard deadline or cancellation guarantee for a blocked syscall.
+- Service stop before opens and by earliest1MiB/64operations/250ms; controller
+  Circle/accepted process exit, first error plus cleanup uncertainty preserved.
+- Candidate block: six baseline/candidate pairs, <=12*8GiB=96GiB requested profile
+  reads, no new payload writes. This is a ceiling for one declared block, not
+  permission for automatic repetition. Separate game/conditioning budgets remain
+  unspecified and LOCKED until concrete workloads and device details exist.
+
+Decision thresholds -- targets, not promised or observed improvements
+Native timing overhead <=2% on matched controls; disclose/rescope incomplete
+coverage or unresolved latency bins. Six matched pairs with balanced order and
+direction agreeing in >=5/6; gain above2x measured uncertainty. Target >=10%
+median relevant read throughput or >=5% approved loading-time reduction.
+No >5%p95/>10%p99 latency regression, new unexplained >1s stalls or doubled maxima;
+zero new content/offset/alias/reserve/error/cleanup/cancellation failures. Report
+CPU/memory costs. A synthetic/diagnostic gain does not establish a game gain.
+Full-capacity integrity, repair/update/migration, sudden-power-loss durability
+and release/user acceptance remain distinct evidence gates.
+
+Current stop and next input
+All DR1 gate booleans in plan.json are false; device fields remain null. No DR1
+native source, executable/package, nonce or hardware release exists. Existing
+BF/RO1 frozen bindings and source gates remain unchanged. Next input is the
+dedicated PS3 model/current firmware and SSD model/details. Receiving details
+permits tailoring the next concrete scope; it does not itself prove compatibility,
+fixture admission, measurements or any released hardware action.
+See DEVICE_DETAILS_TEMPLATE.json, plan.json and NEXT_SESSION_PROMPT.txt.

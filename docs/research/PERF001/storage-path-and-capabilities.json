@@ -1,0 +1,389 @@
+{
+  "task": "PERF001-B",
+  "date_local": "2026-10-16",
+  "scope": "Existing saved Evilnat4.93 CEX/P13 lineage artifacts and fresh bounded host disassembly only.",
+  "proof_states": [
+    "not-supported",
+    "filtered",
+    "exposed-but-unused",
+    "documented-only",
+    "statically-observed",
+    "runtime-observed",
+    "unknown"
+  ],
+  "proof_state_policy": "Use absence/filter states only with a connected explicit rejection. No whole-console capability absence follows from a string/opcode search.",
+  "artifact_identity": {
+    "LV1": {
+      "path": "analysis/candidate-review/lv1.elf",
+      "sha256": "dec10390c6617078b693ffd859598ce96e81d8c0de37ae34e4e95d2563f0cef3"
+    },
+    "LV2": {
+      "path": "analysis/build-p4-v3/lv2-patched.elf",
+      "sha256": "dc9d6e24fb5bd9eaa15678e8fc1b2076cc0358a1be574d87a9f14e0fa468280a"
+    },
+    "libfs": {
+      "path": "analysis/checker-audit/libfs.sprx.elf",
+      "sha256": "b927cab05973ef71fbcd6103f1e44f498de0a0c21300c32d7fd7807e006e0e7e"
+    },
+    "lineage_evidence": "analysis/PERF001/storage-static/p13-kernel-lineage.json",
+    "installed_scope": "HW002AH proves only78487B libfs_utility_init SELF. Saved package lineage and static findings are not whole installed/loaded LV1/LV2 readback."
+  },
+  "address_convention": "ELF virtual addresses; LV2 abbreviations omit8000000000000000; PRX values are link-time pre-relocation; each fresh listing has file offset and SHA256.",
+  "layers": [
+    {
+      "id": "application/libfs",
+      "path": "ordinary game/homebrew FS API -> sys_fs exports inlibfs.sprx",
+      "locators": [
+        "Read NID4d5ff8e2 OPD105f8 PC1154 ->li r11,802 at1170/1194; sc1174/1198",
+        "Write NIDecdcf2ab OPD10600 PC11ac ->li r11,803 at11c8/11ec; sc11cc/11f0",
+        "Close NID2cb51f0d PC1204 ->syscall804",
+        "Lseek NIDa397d042 PC13ec",
+        "GetFreeSize NIDaa3b4bcd PC5154:primaryfcntl817 c0000002 at52bc; fallback840 at5380/556c"
+      ],
+      "widths": "Read/write size r5 retained64bits; userspace pointers narrowed32bits byPPU ABI; descriptor sign-extension is not file-offset narrowing.",
+      "evidence": [
+        "libfs-export-bindings.json",
+        "libfs-read-write-close.txt",
+        "libfs-get-free-size.txt",
+        "libfs-lseek.txt"
+      ],
+      "confidence": "statically-observed in saved actual module; exact live loaded imports not captured"
+    },
+    {
+      "id": "LV2 FS entry/dispatch",
+      "path": "syscall table363be0 ->process/file/fs dispatch ->UFS vnode operations",
+      "locators": [
+        "802 slot3654f0 ->OPD343498 ->29d33c ->29a250 ->187f54",
+        "803 slot3654f8 ->OPD343480 ->29d12c ->29a0a8 ->187b24",
+        "UFS C++ vtable368ac0; ordinary read/write adapter and vnode VOPselection have virtual calls"
+      ],
+      "evidence": [
+        "syscall-bindings.json",
+        "kernel-syscall-802-table-resolved.txt",
+        "kernel-syscall-803-table-resolved.txt",
+        "kernel-generic-read-dispatch.txt",
+        "kernel-generic-write-dispatch.txt"
+      ],
+      "gap": "Every indirect bridge from file descriptor dispatch toffs_read/write and device-vnode backend is not exhaustively closed; filesystem selection and cache states remain dynamic."
+    },
+    {
+      "id": "UFS2 mapping/allocation/cache",
+      "path": "ffs_read/write ->buffer/allocator/getlbns/bmaparray ->ufs_strategy ->device vnode",
+      "locators": [
+        "ffs_write2096a8;ffs_read209d4c;ufs_strategy20f054",
+        "UFS2 balloc1f6614 descriptor3350e0;getlbns20b5f4;bmaparray20b758",
+        "strategy mapped sector buffer+f0 loaded64bit,shifted tobyte offset at20f0f8 andstored8B buffer+18"
+      ],
+      "widths": "64bit offsets/inode sizes/UFS2 direct+indirect fragment pointers and mapped sectors in inspected routes; separate per-block counts/indices remain bounded32bit.",
+      "evidence": [
+        "analysis/four-tb-fileio-offline-20261014/REPORT.md",
+        "analysis/four-tb-fileio-offline-20261014/model-results-v5.json"
+      ],
+      "limits": "Prior host models use synthetic metadata/mocked I/O; they do not measure allocation cost, fragmentation, active extents or native performance."
+    },
+    {
+      "id": "free-space/reserve",
+      "path": "rawsyscall840 ->298654 ->19ceb4 ->UFS vtable+30 ->2b8010 ->2b1940",
+      "locators": [
+        "368af0 ->OPD346678 ->2b8010",
+        "2b1940..2b1a4c reads superblock+440,+3f8,+408 andgeometry/reserve fields;bounded arithmetic,no I/O call or bitmap loop",
+        "PublicGetFreeSize fastfcntl817 c0000002 ->2b067c..2b06b8 ->2a7290;conditional298654 at2a7444 plus otherstate helpers"
+      ],
+      "finding": "The two API calls perMiB incur dispatch/lock/path overhead. A full allocation bitmap scan per call is not established and is contradicted by the traced rawUFS arithmetic.",
+      "evidence": [
+        "kernel-volume-freesize-real-dispatch.txt",
+        "ufs-vtable-bindings.json",
+        "kernel-ufs-freesize-method.txt",
+        "kernel-ufs-freesize-arithmetic.txt",
+        "kernel-fcntl-free-size-body.txt"
+      ]
+    },
+    {
+      "id": "LV2 storage requests",
+      "path": "native device read/write wrappers orrawstorage syscalls ->commonrequest worker/bound ->LV1-backed backend",
+      "locators": [
+        "device wrappers2a2f14 ->278740 write;2a3264 ->278870 read",
+        "storage read60227cedc->27d6c4->278870;write60327cdd8->27ecf4->278740",
+        "async60627c804->27e5dc->2781ec;60727c700->27e428->2781d8",
+        "common2780b8->281970->2807d4;request start+78 is64bit,count+80 is32bit",
+        "28086c truncates regionlength to32bits,real>2TiB ceiling;4000797360sectorLexar fitsbelow2^32"
+      ],
+      "evidence": [
+        "analysis/four-tb-addressing-offline-20261014/REPORT.md",
+        "kernel-storage-request-bound.txt"
+      ],
+      "limits": "Not a proven throughput bottleneck on current2TB geometry; not all indirect backends orrequest scheduling closed."
+    },
+    {
+      "id": "LV2/LV1 ABI",
+      "path": "LV1-backed backend ->storage_read245/storage_write246 ->asyncstatus249;senddevicecommand248 separately",
+      "locators": [
+        "read hv245 loadatLV2aacbc/scaacc4;write hv246 at aac14/scaac1c",
+        "read/write r5=start retained64bits;count r6 separately32bits;regionIDr4 separately8bits in examinedwrapper",
+        "sendcommand248 atab384/scab390;getasyncstatus249 atac4e8/scac4f0"
+      ],
+      "evidence": [
+        "kernel-storage-hypercall-sites-rw.json",
+        "kernel-storage-hypercall-sites.json",
+        "kernel-hv245-at-aacbc.txt",
+        "kernel-hv246-at-aac14.txt"
+      ],
+      "limits": "Linux primary lv1call.h supplies ABI names; CEX savedinstructions independently show IDs. No real hypercall executed."
+    },
+    {
+      "id": "LV1 regions/physical mapping",
+      "path": "region request ->bounds ->absolute device sector ->device-specific method",
+      "locators": [
+        "region initializer25d5ec stores64bitstart+40,length+48",
+        "write254f34..254f48/read2551a0..2551b4 compare count<=length,start<=length-count with64bitoperations",
+        "write254f68/254f74,read2551f0/2551fc loadregionbase andaddrelativeStart",
+        "native encryptedregiontable25aba8 serializer/25bf84reader retains8B bigendianstart/length"
+      ],
+      "evidence": [
+        "analysis/four-tb-fileio-offline-20261014/REPORT.md",
+        "lv1-write-translation-full.txt",
+        "lv1-read-translation-full.txt",
+        "lv1-region-translation.txt"
+      ],
+      "limits": "CurrentBF filenames/logicaloffsets/freebytes do not identify highphysicalextent placement;region and encryption mappings still must be proved fordiscard."
+    },
+    {
+      "id": "encryption",
+      "path": "device cryptocontext/DMA path ->ATAphysicalLBA distinct fromcrypto input/tweak",
+      "locators": [
+        "265efc retainsfullLBA r21,storescontext+140",
+        "275f74 loadsdescriptor+34 low32bitsector for2771a4",
+        "2771a4 writessectorlow32bits littleendian then12zerobytes per16Bcrypto input"
+      ],
+      "finding": "Prior staticfinding repeatscrypto input atN/N+2^32;ATAaddress remainsseparate48bit. This is not physical alias evidence.",
+      "mode_scope": "CECHA00 CBC192 per512B sector/zeroIV is supported by preserved host-tool conventions and prior model-specific inference; active native hardware mode/context anddiscard semantics not directlycaptured.",
+      "evidence": [
+        "lv1-encrypted-rw.txt",
+        "lv1-sector-crypto-input.txt",
+        "lv1-sector-crypto-generator.txt",
+        "analysis/four-tb-addressing-offline-20261014/REPORT.md"
+      ],
+      "limits": "Do not changecrypto format orinfer postdiscard plaintextzeros. Disk returnszeros atciphertext layer neednotdecrypt tologicalzeros. No keys orsecurepayloads inspected."
+    },
+    {
+      "id": "SATA/ATA",
+      "path": "native LBA48selector ->DMAEXTtaskfile ->lower transport/submission",
+      "locators": [
+        "26e46c chooses2662a0 when+1610set;othermodespresent",
+        "2662a0 ->25ebfc35write/25ecc425read ->266dac",
+        "Generic internaldevicecommand2 uses261178->25e570taskfile copier->266dac",
+        "internalcommand23 ->26f344 ->selector+1610 ->EA/E7cacheflushbuilders"
+      ],
+      "evidence": [
+        "lv1-ata-extended-dispatch.txt",
+        "analysis/four-tb-addressing-offline-20261014/lv1-ata-rw.txt",
+        "lv1-ata-dispatch-commands-v2.txt",
+        "lv1-ata-command-switch-v2.json"
+      ],
+      "limits": "Transport acceptance, actual SATA frames, DMA completion, link and queue state are unobserved. Console age does not establish the SATA generation."
+    },
+    {
+      "id": "repair/format utilities (separate)",
+      "path": "libfs_utility_init/utility/full/emer_init/sys_init_osd checker/newfs copies",
+      "finding": "P13 changes the repair/checker utility and inherits the earlier admission/mount changes. Checker bitmap/container budgets and optional formatter erase loops are separate from ordinary kernel UFS read/write. They are not active per-MiB ordinary-write costs.",
+      "evidence": [
+        "research/filesystem-review.md",
+        "analysis/four-tb-addressing-offline-20261014/REPORT.md",
+        "p13-kernel-lineage.json"
+      ]
+    }
+  ],
+  "capability_matrix": [
+    {
+      "capability": "ATA LBA48 read/write",
+      "device_advertisement": "See primary-ATA agent saved Lexar IDENTIFY decode, PC SAT only; word86 bit10 set.",
+      "host_forwarding": "statically-observed",
+      "ordinary_os_issuance": "statically-observed",
+      "finding": "LV1 selector+1610 from word86bit10 selects2662a0; read25ecc4 emits25 READ DMA EXT, write25ebfc emits35 WRITE DMA EXT; six LBA bytes retained. Command count is16bits at leaf; upper request count32bits and start64bits.",
+      "runtime_observation": "unknown",
+      "limits": "Static command construction and prior2168 pack vectors stop before hardware; no native ATA trace. Exact maximum effective split size not proved.",
+      "evidence": [
+        "lv1-ata-extended-dispatch.txt",
+        "lv1-ata-builders.txt",
+        "analysis/four-tb-addressing-offline-20261014/model-results-v4.json"
+      ]
+    },
+    {
+      "capability": "TRIM / ATA DATA SET MANAGEMENT06 with featurebit0",
+      "device_advertisement": "statically-observed in saved PC SAT IDENTIFY word169bit0; not a PS3 observation.",
+      "host_forwarding": "unknown",
+      "ordinary_os_issuance": "unknown",
+      "runtime_observation": "unknown",
+      "finding": "No connected filesystem free/deallocate-to-DSM issuer was established. A generic low ATA taskfile route exists: internal device command 2 -> 0x26ede4/0x26f3f4 -> 0x261178 -> 0x25e570 -> 0x266dac. The copier at 0x25e570 copies the command byte at input +0xb into taskfile +0x13 without an opcode whitelist in that body.",
+      "limits": "This is exposed generic low-level machinery. It does not establish DSM data-out protocol support, upper caller access, all-layer filtering, safe encrypted-LBA translation or real TRIM acceptance. A bounded search cannot prove complete absence of TRIM.",
+      "evidence": [
+        "lv1-ata-dispatch-commands-v2.txt",
+        "lv1-ata-generic-entry-full.txt",
+        "lv1-ata-builders-lower.txt",
+        "ata-generic-taskfile-callers.json"
+      ]
+    },
+    {
+      "capability": "Device cache FLUSH CACHE / FLUSH CACHE EXT",
+      "device_advertisement": "Saved PC SAT IDENTIFY advertises flush/flush-ext; see primary-ATA decode.",
+      "host_forwarding": "statically-observed",
+      "ordinary_os_issuance": "statically-observed for whole-filesystem sync route; not observed from per-file UFS fsync",
+      "runtime_observation": "unknown",
+      "finding": "Native LV1 internal command23 routes26f344; selector+1610 chooses wrapper25fa5c->builder25eb40/EA, or25fba4->25eba0/E7. Native LV2 storage_flush2be874 reaches command helper279048; whole UFS sync reaches it but drops errors. Per-file fsync820 follows nativeFFS/softdep work without reaching storage_flush.",
+      "limits": "Full LV2 internal opcode35 -> LV1command23 translation is not closed in this pass. Neither returned fsync success nor rebooted files prove drive-cache compliance/power-loss durability.",
+      "evidence": [
+        "lv1-ata-command-switch-v2.json",
+        "lv1-ata-dispatch-commands-v2.txt",
+        "lv1-smart-identify-cache-builders.txt",
+        "analysis/four-tb-fsync-flush-offline-20261014/REPORT.md"
+      ]
+    },
+    {
+      "capability": "FUA on ordinary writes",
+      "device_advertisement": "The exact saved Lexar PC SAT IDENTIFY has words 84 and 87 = 0x4163, bit 6 = 1: WRITE DMA FUA EXT and WRITE MULTIPLE FUA EXT are advertised. This is historical PC-side device advertisement, not PS3 issuance. Obsolete word 84 bit 7 does not resolve NCQ-FUA.",
+      "host_forwarding": "unknown",
+      "ordinary_os_issuance": "not observed in traced default DMA EXT write builder",
+      "runtime_observation": "unknown",
+      "finding": "The traced default write emits 0x35 WRITE DMA EXT. It does not emit 0x3d WRITE DMA FUA EXT or 0x61 WRITE FPDMA QUEUED with FUA. This observation is bounded to the traced default path.",
+      "evidence": [
+        "lv1-ata-extended-dispatch.txt",
+        "lv1-ata-builders.txt",
+        "research/PERF001/ata-device-and-primary-sources.json",
+        "analysis/PERF001/ata-research/lexar-selected-word-decode.json"
+      ],
+      "advertisement_evidence": {
+        "report": "research/PERF001/ata-device-and-primary-sources.json",
+        "decode": "analysis/PERF001/ata-research/lexar-selected-word-decode.json",
+        "saved_capture_scope": "October 13/14, 2026 PC SAT evidence for serial <serial> / firmware SN21128",
+        "selected_words": {
+          "84": "0x4163",
+          "87": "0x4163"
+        },
+        "bit": 6,
+        "supported": true,
+        "NCQ_FUA": "unknown; obsolete bit 7 is not decisive"
+      }
+    },
+    {
+      "capability": "NCQ / command queue depth",
+      "device_advertisement": "Saved PC SAT word76bit8 and word75 advertise NCQ/32commands; see primary decode.",
+      "host_forwarding": "unknown across all modes",
+      "ordinary_os_issuance": "Traced ordinary48-bit builder uses non-FPDMA25/35, notNCQ60/61",
+      "runtime_observation": "unknown",
+      "finding": "Native LV1 has16-entry0x58-stride software rings26e904..26e930 and26e5bc..26e5cc, plus shared command state/locks. These do not establish16 hardware NCQ tags or actual active queue depth. BF issues one synchronous request at a time.",
+      "limits": "No full concurrency/DMA/interrupt audit or runtime queue measurement. SDK asynchronous APIs do not establish queued SATA.",
+      "evidence": [
+        "lv1-ata-command-control.txt",
+        "analysis/four-tb-addressing-offline-20261014/lv1-ata-rw.txt",
+        "libfs-aio-submit.txt"
+      ]
+    },
+    {
+      "capability": "IDENTIFY DEVICE",
+      "device_advertisement": "runtime-observed over saved hostPC SAT, not PS3.",
+      "host_forwarding": "statically-observed",
+      "ordinary_os_issuance": "statically-observed native initialization parser/caller",
+      "runtime_observation": "unknown onPS3",
+      "finding": "Native builder25ead0 storesEC at25eb14; wrapper25ffe4->260100 calls it, and native initialization270228 calls25ffe4. Parser270448..27048c derives LBA48 selector,2707e4..270854 assembles words100..103; publishes logical block size512.",
+      "evidence": [
+        "lv1-smart-identify-cache-builders.txt",
+        "lv1-ata-cache-wrapper-callers.json",
+        "lv1-ata-init-parser.txt",
+        "research/p2-storage-review.md"
+      ]
+    },
+    {
+      "capability": "SMART",
+      "device_advertisement": "See saved PC SAT capability/status; host observation only.",
+      "host_forwarding": "statically-observed low-levelbuilders",
+      "ordinary_os_issuance": "unknown for ordinary GameOS/app policy",
+      "runtime_observation": "unknown onPS3",
+      "finding": "Builders25e7b0 and25e818 storecommandB0 withC24F signature and featuresD8 andD3. Actual callers261000/261148 exist. D8=SMART ENABLE OPERATIONS; D3 byte is legacy SAVE ATTRIBUTE VALUES, not autosaveD2. No SMART temperature sampling inBF.",
+      "evidence": [
+        "lv1-smart-identify-cache-builders.txt",
+        "ata-resolved-builder-callers.json"
+      ]
+    },
+    {
+      "capability": "SET FEATURES / transfer and power configuration",
+      "device_advertisement": "See savedPC SAT fields; actual negotiated PS3 state unknown.",
+      "host_forwarding": "statically-observed",
+      "ordinary_os_issuance": "statically-observed initialization call path only",
+      "runtime_observation": "unknown",
+      "finding": "25e880 emitsEF SET FEATURES, with variable feature/count/register inputs;27051c calls260308 and other mode wrappers call25e880. STANDBY IMMEDIATEE0 byte at25e780. This proves command machinery exists; active write-cache/APM/link/power policy is unresolved.",
+      "evidence": [
+        "lv1-smart-identify-cache-builders.txt",
+        "ata-resolved-builder-callers.json",
+        "lv1-ata-init-parser.txt"
+      ]
+    },
+    {
+      "capability": "SATA link generation/rate and negotiated UDMA",
+      "device_advertisement": "Lexar savedPC SAT supportsGen1/2/3 and reportsPC bridge link; notPS3 negotiated link.",
+      "host_forwarding": "unknown",
+      "ordinary_os_issuance": "unknown",
+      "runtime_observation": "unknown",
+      "finding": "Do not hardcode SATA 1.5 Gb/s or calculate a PS3 bus ceiling from console age or a PC bridge negotiation. Exact controller-generation/model and the negotiated PS3 link remain unresolved.",
+      "evidence": [
+        "research/PERF001/ata-device-and-primary-sources.json"
+      ]
+    }
+  ],
+  "geometry": {
+    "device_capacity_bytes": 2048408248320,
+    "logical_sectors": 4000797360,
+    "saved_host_logical_sector_bytes": 512,
+    "saved_host_physical_sector_bytes": 512,
+    "physical_report_scope": "PC SAT advertisement only; not actual NAND page/erase block size or a native PS3 alignment test.",
+    "filesystem_geometry": "Saved native-format Lexar metadata, independently verified offline on October 13, 2026, establishes 4096-byte fragments, 16384-byte blocks, 6761 cylinder groups and a 2046260748288-byte primary partition. HW002AY records that the completed October 15 file-level migration retained that native geometry. These are dated saved observations; PERF001 did not freshly read the current console or disk.",
+    "current_extent_mapping": "Unknown. Saved geometry and migration preservation do not map current BF payload/metadata extents or prove high physical placement.",
+    "high_LBA": "Physical placement with sector bit 31 set and final-region qualification remain capacity-workflow gates. The sector-bit-32 / 2 TiB boundary lies beyond this drive.",
+    "saved_native_geometry": {
+      "evidence": "observations/HW002Z/geometry-verification.json",
+      "recorded_utc": "2026-10-13T17:30:32.175172+00:00",
+      "primary_partition_bytes": 2046260748288,
+      "fs_size_fragments": 499575378,
+      "fs_dsize_fragments": 483889811,
+      "fragment_bytes": 4096,
+      "block_bytes": 16384,
+      "group_count": 6761,
+      "summary_bytes": 110592,
+      "migration_preservation_evidence": "observations/HW002AY/RESULT.md",
+      "migration_commit_UTC+3": "2026-10-15 04:10:02 +03:00",
+      "proof_scope": "Saved native-format metadata and completed PC file-level migration preservation; not a fresh present-state query.",
+      "current_physical_extent_shape_and_placement": "unknown",
+      "partition_and_extent_4KiB_alignment": "not established solely by fragment/block sizes or ATA physical-sector advertisement"
+    }
+  },
+  "discard_release_obligations": [
+    "Prove free/dead extent ownershipincludingmetadata/journal/softupdates beforeATAcommands.",
+    "Prove region-relative tophysical encrypted-LBA translation andallunit/alignmentlimits.",
+    "Prove allocationrace exclusion andretirement before reuse;do not serialize unsafe whole-drive ranges.",
+    "Define postdiscardreads underCBC/XTS,ciphertextzeros andfilesystemhole/zero-fillsemantics.",
+    "Define fsync/flush ordering,error/statuspropagation,timeout/cancellation,crash/recovery/fscklifecycle.",
+    "Verify exactdevicecapabilityandprotocol support separatelyfromadvertisement;disposabledriveonlyafterreviewandauthorization."
+  ],
+  "unresolved_edges": [
+    "Complete dynamic file-to-vnode and device-backend selection",
+    "Exact CEX upper caller policy and DSM data-out protocol filtering",
+    "Ordinary filesystem free/deallocate-to-DSM issuance",
+    "Complete LV2 internal flush opcode 0x35 to LV1 device command 0x23 translation",
+    "Whole installed and loaded LV1/LV2 byte identity",
+    "PS3 negotiated SATA/UDMA link and actual active hardware queue",
+    "Current BF physical extent map",
+    "Native active encryption context/mode and discard read semantics"
+  ],
+  "evidence_manifest": "analysis/PERF001/storage-static/evidence-manifest-v2.json",
+  "corrections": "analysis/PERF001/storage-static/READ-ME-FIRST.txt",
+  "gate": "Investigation and proposal only. No firmware build, patch or deployment, console probe, disk operation or TRIM experiment was performed.",
+  "integration_revision": {
+    "revision": 2,
+    "date_local": "2026-10-16",
+    "changes": [
+      "Exact saved FUA device advertisement",
+      "Dated native-format Lexar geometry and migration retention"
+    ],
+    "prior_map": "analysis/PERF001/storage-static/storage-map-before-integration-v2.json",
+    "hardware_action": false
+  }
+}

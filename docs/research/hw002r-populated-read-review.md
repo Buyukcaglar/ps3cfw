@@ -1,0 +1,13 @@
+# HW002R populated baseline reader review
+
+Primary-agent source review; no separate agent or human review is claimed. This phase performs fixed HTTP GET reads of the 78,167-byte P8 utility and anonymous FTP reads of a checksum-pinned, private sample manifest. It does not perform repair, memory/syscall probes, file writes, rename/delete, firmware installation, source-image access or key access.
+
+The migration cache checksum was verified against its request pin before preparing 16 source-file hashes: four game metadata, four game binaries, four save metadata and four static trophy files. Total complete content is 1,444,498 bytes. Each file is at most 1 MiB; cumulative sample maximum is 8 MiB. ASCII safe paths only, no symlinks or nonrepresentable names; these exclusions are explicit sampling limits. Paths and FTP trace stay local under observations/HW002R/private; no payload is saved. A sample mismatch stops for changed-file triage and is not automatically attributed to corruption.
+
+The anonymous FTP command allowlist contains USER/PASS, TYPE I/A, PASV, QUIT, LIST / and SIZE/RETR for exact manifest/control paths only. Passive peer is fixed to<ps3-ip> with a nonprivileged port. Complete reads have exact SIZE/length checks, per-file byte/time bounds and a240-second sample phase deadline. Root listing is limited to256 rows of2048 characters, used only for the reported free-space field. There are no retries or resumptions. A socket timeout bounds blocking reads; final close runs on failure.
+
+P8 utility complete bytes must match before and after. Two migrated controls are read before and after, if accessible, and must remain stable. Their source hash matches are recorded separately. A550 result is recorded as inaccessible, not proof that a file does not exist. The pinned source cache contains no boot_plugins.txt, consistent with the initial HTTP404; current webMAN may therefore use another loading route. No loading-route or whole-firmware claim is inferred. The first fixed HTTP control attempt remains preserved as incomplete after that404, with exact P8 utility match established.
+
+Baseline and after-boot directories are exclusive. After-boot requires the passed baseline plus a new actual ordinary-shutdown/power-on/XMB/no-prompt report, and checks sample/control equality across phases. It is not authorized by the initial readiness report. No whole-tree integrity, native checker memory bound, recovery safety, full capacity or stable support claim follows from these reads.
+
+The old Verify-HW002R-ReturnControl.py remains an unreleased pre-migration draft and is not invoked. The concurrent PS3HDDTool and publication trees are read-only to this work.

@@ -1,0 +1,21 @@
+{
+  "nonce": 551293953,
+  "TAG": 1380206924,
+  "MAGIC": 1380206908,
+  "source_plan_identity": "4016e70c4ea98f44b2e5419d5a3aaa68c26819a447f8952ae14cd3464cc7e65b",
+  "files": {
+    "RR": 1040,
+    "OBJ": 4112,
+    "LOW": 528,
+    "IDS": 16400
+  },
+  "RR_events": 16,
+  "worker_continuation": 1,
+  "maximumTotalQueries": 82,
+  "IDCapacity": 512,
+  "IDSschema": "HD2IDS12/000c0000",
+  "observationSchema": "OBSERVATION-SCHEMA.json",
+  "captureMayBeValidButPrintfIndeterminate": true,
+  "allBroaderE01E09Unaccepted": true,
+  "stable": false
+}

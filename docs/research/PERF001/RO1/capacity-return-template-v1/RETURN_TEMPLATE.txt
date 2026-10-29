@@ -1,0 +1,99 @@
+CAPACITY WORKFLOW -> RO1 RETURN HANDOFF
+Workspace: C:\Projects\PS3Firmware. English; UTC+3.
+Prepared by: <capacity owner/chat identifier>
+As of: <ISO timestamp with UTC offset; also give UTC+3>
+Overall result: <QUALIFIED FOR RO1 INTAKE / PENDING / BLOCKED>
+Replace every placeholder with evidence or PENDING. This template is not evidence.
+
+BF EVIDENCE PACKET
+Schema: RO1-capacity-handoff-v1
+Packet path: <absolute path to completed capacity-handoff JSON>
+Packet SHA256: <64 lowercase hex digits>
+BF session nonce: <full 32-byte nonce as 64 hex digits>
+Qualification report path / SHA256: <absolute path> / <hash or PENDING>
+Qualification outcome and exact scope: <result; unresolved conditions>
+
+Raw final receipt path / SHA256: <absolute path> / <hash>
+Progress journal path / SHA256: <absolute path> / <hash>
+READY and DONE paths / SHA256: <absolute paths> / <hashes>
+BA controls-digest reference path / SHA256: <absolute path> / <hash>
+Owner completion/XMB evidence path / SHA256: <absolute path> / <hash>
+Restart/persistence/game evidence paths / SHA256: <absolute paths> / <hashes>
+
+BF final/global/after-controls: <PASS / PENDING / FAIL; evidence reference>
+Responsive XMB return: <PASS / PENDING / FAIL; owner report>
+Ordinary restart: <PASS / PENDING / FAIL; owner report>
+Retained-file persistence: <PASS / PENDING / FAIL; exact files/ranges verified>
+Brief existing-game check: <PASS / PENDING / FAIL; title and exact scope>
+Cleanup/publication errors or missing evidence: <details or NONE with evidence>
+Collector state: <unused / consumed; exact existing capture path>
+Do not infer these outcomes from DONE, progress counters or completed writing.
+
+AVAILABLE SPACE -- EXACT INTEGER BYTES
+RO1 floor: 139586437120 bytes (130 GiB = 128 GiB reserve + 2 GiB margin).
+Final BF available_after_bytes: <integer or PENDING>
+Final measurement time and receipt field/source: <timestamp; bound reference>
+Current native available bytes: <integer or PENDING>
+Current measurement time and approved method: <timestamp; method>
+Current measurement evidence path / SHA256: <absolute path> / <hash>
+Current measurement after any mapping/refit/boot: <YES / NO / PENDING>
+Both final and current values >= floor: <YES / NO / PENDING>
+If either is below floor or unknown, RO1 remains blocked/locked. BF can pass below
+130 GiB. No filler deletion, guard reduction or reserve-reclamation workaround.
+
+SELECTED-FILE EXTENT REPORT
+Schema: RO1-selected-extents-v1
+Report path / SHA256: <absolute path> / <hash>
+Mapping capture time: <timestamp>
+Underlying mapping/source evidence paths / SHA256: <absolute paths> / <hashes>
+Freshly confirmed ATA serial / firmware / capacity: <actual values and source>
+Expected Lexar: <serial> / SN21128 / 2048408248320 bytes.
+BF nonce in extent report matches final packet: <YES / NO / PENDING>
+Coordinate convention: <whole-device byte offsets; source translation reference>
+
+Selected files, each expected complete 17179869184 bytes (16 GiB):
+00: /dev_hdd0/tmp/HDD2TB-BF-c2773e7c49901095-fill-00.bin
+    Actual bytes: <integer>; final state: <value>; write SHA256: <hash>;
+    read SHA256: <hash>; persistence reference: <reference or PENDING>.
+14: /dev_hdd0/tmp/HDD2TB-BF-c2773e7c49901095-fill-14.bin
+    Actual bytes: <integer>; final state: <value>; write SHA256: <hash>;
+    read SHA256: <hash>; persistence reference: <reference or PENDING>.
+28: /dev_hdd0/tmp/HDD2TB-BF-c2773e7c49901095-fill-28.bin
+    Actual bytes: <integer>; final state: <value>; write SHA256: <hash>;
+    read SHA256: <hash>; persistence reference: <reference or PENDING>.
+
+Extent report contains file_offset/device_byte/bytes for all three full files:
+<PASS / PENDING / FAIL>. No holes, intra/cross-file overlap, sector misalignment
+or device overrun: <PASS / PENDING / FAIL; validator/source reference>.
+Mapping was read-only: <evidence>. Same-drive refit/ordinary boot if moved:
+<owner result and evidence, or NOT MOVED>. No silent file substitution.
+
+RO1 CUSTODY AND ORDERING
+Custody: <RETAINED BY CAPACITY / OFFERED TO RO1 / ACCEPTED BY RO1 / BLOCKED>
+Coordination/acceptance through the owner: <actual instruction/relayed acknowledgement
+and timestamp, or PENDING; do not claim acceptance from an offer alone>
+Current console/firmware/drive confirmation: <CECHA00/P13/Lexar evidence>
+BF app finished; collectors/workers/device handles closed: <evidence or PENDING>
+Console location/state: <actual location; fitted drive; responsive XMB/idle state>
+USB location/state: <PS3 / PC / other; mounted/ejected; evidence timestamp>
+Real data and filler retained: <confirmation and scope>
+Concurrent games/downloads/installs/copies/fills: <actual state>
+64 GiB stage released / started: <actual values; either true blocks this ordering>
+Current capacity checkpoint path / SHA256: <absolute path> / <hash>
+Current plan\STATUS.json SHA256: <hash; refresh if authority changes>
+
+Keep the 64 GiB stage held until the RO1 window is resolved through the owner.
+Evidence qualification/custody alone does not authorize RO1 hardware release.
+Both native gates remain locked pending the separately reviewed release change
+and explicit human authorization. Do not install the 00.02 PREP LOCKED preview.
+Separate RO1 release/staging/launch authorization reference: <actual separate
+human authorization, or NONE; this handoff itself grants none>.
+
+BLOCKERS AND NEXT ACTION
+Unmet assertions/missing evidence: <exact list or NONE with references>
+Next permitted action: <bounded offline intake/review, or report the blocker>
+Hardware actions still unreleased: <list>
+Capacity custody return required after RO1 run/capture/review: <owner/contact>
+Preserve originals/drives/filler/archives/private material and concurrent work.
+No replay of consumed operations, F: firmware access, unique-key read/hash/export,
+raw-image whole hashing/densification, TRIM, repair, format or firmware change.

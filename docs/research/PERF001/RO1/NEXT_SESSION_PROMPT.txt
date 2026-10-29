@@ -1,0 +1,102 @@
+Work in C:\Projects\PS3Firmware. English; UTC+3.
+Read this entire prompt, research\PERF001\RO1\RESULT.txt and REVIEW.json;
+analysis\PERF001\ro1-offline-v1\preservation-checkpoint.json; current
+plan\STATUS.json, plan\backlog\PERF001.json and the capacity handoff/roots.
+Original complete boundaries:plan\PERF001_SESSION_HANDOFF.txt and
+research\PERF001\NEXT_SESSION_PROMPT.txt. Applicable AGENTS.md still applies
+if added. Current authority supersedes this dated record.
+
+Latest human authorization was to IMPLEMENT PERF001-RO1 OFFLINE and complete
+host checks/review, preserving BF/P13, with no staging, deployment, console/disk
+operations or TRIM experiments. That work is complete. STOP BEFORE HARDWARE
+RELEASE. Do not treat this prompt or the package as permission to remove gates,
+stage/launch, collect BF results, deliver STOP or contact the console.
+
+Source:analysis\PERF001\ro1-offline-v1\src\ro1.h,ro1.c,native.c,memory.c.
+Detached references/imports under src\ref; original BF bytes remain untouched.
+Host backends:src\host.c and native_host.c. Generic saved-file analyzer:analyze.py.
+Fresh build helpers:build_host.py,build_native.py (no staging/network/device API).
+prepare.py, references.py, full_host_references.py and finish_offline.py are
+consumed snapshot/reference/registration writers; do not replay them. Preserve
+all failed source/build/test attempts. Repeated checks require fresh output names.
+
+Final software candidate:attempts\native-checked\first\ro1.elf and
+attempts\native-checked\PERF001-RO1-OFFLINE-LOCKED.pkg. Separate titleIDPFR100001,
+APP_VER00.01, free-NPDRM. Both hardware/qualification gates0; BF whole hashes
+unadmitted/zero. First gate before I/O/UI. No READY/STOP tokens or stager exists.
+The source is a complete diagnostic with default-deny admission; native loader,
+operation, UI/XMB acceptance and instrumentation overhead remain untested.
+
+Final evidence under analysis\PERF001\ro1-offline-v1:
+- checks\host-reviewed\result.json:35 integrated-C fault/admission/cleanup cases.
+- checks\native-adapter-final\result.json:36 native-adapter cases, mocked calls;
+  real core separately tested, adapter suite uses bounded callback driver.
+- reference-vectors.json:24 Python/numpy vectors and two256MiB slice hashes.
+- checks\full-scale-checked.json:full native-size generated-data schedule;
+  status0,106runs,5,662,423,872 returned bytes, no mock handle leaks.
+- checks\host-reviewed\parser-checks.json:1013 saved-receipt/parser checks.
+- attempts\native-checked\binary-review.json:identical links,20NIDs,99OPD32,
+ 365calls,2,573,980B extra BSS, all loadable NPDRM bytes and MACs/package/SFO pass.
+ ECDSA not independently revalidated; no Sony-signature/loader acceptance claim.
+- preservation-checkpoint.json:final source/output and protected input bindings;
+  listed large artifacts SIZE ONLY. Root capacity checkpoint pointer unchanged.
+
+Implementation specifics:all19 exact file paths are compile-time allowlisted;
+three proposed complete16GiB BF files0/14/28 and16 BA immutable executables.
+No current BF global qualification or final file hashes are fabricated. Actual
+future selected files/ranges must be re-bound from qualified evidence. Logical
+file order is not physical extent placement. Whole-file hashes do not validate
+arbitrary slices; independent public BF seed/file/offset SHA references are used.
+Syscall-only arm does not certify transient returned bytes; post-read checks
+certify only later content. Cache state unknown/warm-mixed; no cache reset.
+
+The106-run schedule includes CPU/calibration,balanced12 sequential arms+2slice
+checks,buffer/place/random/locality mixes,4 timing controls and48asset passes.
+Main proposal5,595,315,008B+64MiB timing controls=5,662,423,872B returned bytes;
+90EOF one-byte requests also charged. Absolute8GiB is charged on REQUEST before
+every read, including retries/EOF; reported returned bytes tracked separately.
+Working data buffers4096aligned;2,573,980B extra BSS plus separate graphics32MiB.
+20min cooperative limit;128GiB+2GiB reserve. Stop at earliest1MiB/64ops/250ms and
+before opens; blocked syscalls have no hard wall-clock guarantee. Short-read
+reassembly bounded64positive fragments. First error and cleanup uncertainty kept.
+No HDD writable open/write/fsync, rename/delete/truncate/raw or ATA function.
+Read-only opens can induce filesystem housekeeping; do not claim physicalzero.
+
+106x65536B progress,8192B result,4096B final-publication witness,64B DONE stay
+below8MiB even at120records. All new USB outputs exclusive-create and nonce
+bound; USBavailable admission64MiB. Result synced/closed/reread with exactEOF.
+The witness captures result-publication timings, excluding its own final write/
+close and DONE. DONE can remain after its own sync/close failure; presence is
+not native-return/final-persistence/durability proof. Failures return error.
+No collector/stager is implemented or released. No implicit historical reuse.
+
+Timers use native ticks+actual frequency, bounded histograms and quantile bounds.
+Core scopes exclusive; native USB/controller/STOP/render subscopes inclusive.
+Do not add nested scopes or call unaccounted application residual SSD/crypto time.
+Calibration and timing-on/off controls are implemented. Synthetic mock clock
+ratios are not performance results; analyzer leaves real gain/overhead/coverage
+qualification pending. Native<=2% overhead and latency/no-regression criteria
+remain future measured gates. File fsync/ATA durability concerns are unchanged.
+
+The review is primary-agent source/linked-artifact review, not a separately
+commissioned reviewer or runtime acceptance. Original handoff/controller/test
+custody, P13, BF187bindings, prior PERF001 research outputs and unrelated roots
+remain preserved. Only PERF001's task/register entries were scoped updates.
+Root CURRENT checkpoint remains the capacity owner's; follow the new scoped
+RO1 checkpoint for expected task/STATUS deltas, never overwrite newer pointers.
+
+NEXT GATE:human supplies/authorizes a NEW request. For hardware release, first
+refresh actual BF final/global/controls/reserve/XMB/persistence/game/extent gates
+through existing owner evidence, coordinate custody via human, bind final
+receipt/hashes/ranges, review a fresh release change/nonce/package and concrete
+bounded protocol, then require explicit hardware authorization. No such authority
+exists here. Do not remove either gate merely to make the app runnable.
+
+Preserve original1TB/image,populatedCrucial,storedPNY,populatedLexar/filler,
+originals/NAND/archives/private material/concurrent work. No F: firmware access,
+48BEID/derived-key read/hash/print/export, external console memory probes, raw
+image whole hashes/densification or administrator job replay. Shared PS3HDDTool
+writers off limits; approved file-level migration route unchanged. No console/
+network/USB stager/snapshot/collector/stop/memory tool, fault/repair/format/cache/
+queue/power change, TRIM/ATA experiment, automation or cross-chat message.
+Stop at the newly authorized boundary. Do not declare storage stable/cause fixed.

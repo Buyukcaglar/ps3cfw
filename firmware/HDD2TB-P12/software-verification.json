@@ -1,0 +1,146 @@
+{
+  "candidate": "HDD2TB-P12",
+  "candidate_sha256": "7fb5d6e57ef53654f336745dbc9463c8e6b2cded03b05cdbeb80e5125215fb7c",
+  "candidate_size": 215765852,
+  "build_manifest_sha256": "c15e16c684a345bf0557452db7692c2b6f2c68f2a93bc149030ec086071ff715",
+  "software_gates": {
+    "two_complete_builds_byte_identical": true,
+    "336_actual_instruction_cases_passed": true,
+    "reported_summary_read_failure_aborts_before_CONTINUE_and_later_allocations": true,
+    "setup_OOM_cleanup_zero_mock_writes_under_explicit_preconditions": true,
+    "original_OOM_status_and_close_free_routes_preserved": true,
+    "successful_setup_observations_differentially_preserved": true,
+    "two_hook64byte_delta_and_branch_link_relocation_scope_reviewed": true,
+    "separate_package_crypto_and_four_base_loaded_delta_audit_passed": true,
+    "CoreOS_sysconf_versions_budget_observer_prior_guards_preserved": true,
+    "prior_media_evidence_authority_preserved": true,
+    "bounded_Lexar_install_boot_readback_protocol_reviewed": true
+  },
+  "review_reports": [
+    {
+      "path": "research/dev006-p12-setup-abort-review.md",
+      "sha256": "cb7f15c88df46edda7315892c1ca509f6228ce2063ec24037697387f7b732f02"
+    },
+    {
+      "path": "analysis/p12-review/final-audit.json",
+      "sha256": "e39ff9670efba7c5c93dbdf6511b602e6c979347c09256ad67daaed2d5bbbb47"
+    },
+    {
+      "path": "analysis/p12-review/reproducibility.json",
+      "sha256": "ad926a3096d222fbba44ba2b7d4683cab2eafa90c867a7e71329bf253526b147"
+    },
+    {
+      "path": "analysis/dev006/p12-setup-delta/review.json",
+      "sha256": "248f25d9806e182c1c2f52875ea5ba7b5c697a87a0ddf3873e813ec309cfeda7"
+    },
+    {
+      "path": "analysis/dev006/p12-setup-abort-v1/manifest.json",
+      "sha256": "91e21badb717a7903fbb8ada063167605ebc59402830e352c0a75111a007d1b6"
+    },
+    {
+      "path": "analysis/dev006/p12-setup-abort-v1/helper.txt",
+      "sha256": "8b1a3aa6ae4e44741ae7fdce0942c7d8a2196245b52e6459435d5ed45f2ca6f0"
+    },
+    {
+      "path": "analysis/dev006/p12-setup-abort-model-v1/result.json",
+      "sha256": "cf11eb362356bb1d137916bfddb99606b7390c768c807b4ffe05d36bd23be5c5"
+    },
+    {
+      "path": "analysis/dev006/p11-summary-read-failure-model-v1/result.json",
+      "sha256": "38a988f2d14c838ad7d532d244fb43b880adf7704919b1e3c8db4bff72290ef7"
+    },
+    {
+      "path": "analysis/dev006/p11-summary-read-source-v1/evidence.json",
+      "sha256": "61bf11914c04cf51b7ae92979e5124a386d024f350be1d1afb988b88ebc445c4"
+    },
+    {
+      "path": "analysis/dev006/p11-summary-read-source-extra-v1/provenance.json",
+      "sha256": "e2f91faf3ff08fbcf112af7e97af96c0d5e79d2462b9095f1d05675a416eeb00"
+    },
+    {
+      "path": "analysis/dev006/capture_p11_summary_read.py",
+      "sha256": "36636b147234bc91f84971e6cae55e553c79cab42a00a3446a1e325f4af4d549"
+    },
+    {
+      "path": "analysis/dev006/prepare_p11_read_cpu.py",
+      "sha256": "727f9f8512a65a493f045c61193b70f112cc6cd7c9c02effe410031e3925491d"
+    },
+    {
+      "path": "analysis/dev006/p11_summary_read_cpu.py",
+      "sha256": "b5e0fbfc95d804fe6ba09997f35ee68d1b8976ff8924a0a820f86d25e9c0a1d2"
+    },
+    {
+      "path": "analysis/dev006/model_p11_summary_read_failure.py",
+      "sha256": "bd28682063daafde5c3ad438899eae60a083f8994e79cf38aeb492cbaa69629d"
+    },
+    {
+      "path": "analysis/dev006/prepare_p12_setup_abort_guard.py",
+      "sha256": "377c8e2d7bfd98e7cdb6e4e5d823ebf7ccb2a7b82df28ff83e55e23bff6592e0"
+    },
+    {
+      "path": "analysis/dev006/model_p12_setup_abort.py",
+      "sha256": "62610eb4ec8f4e7af694d48f0ca22aa20638ee47b5b4f29779a81292ed90b63b"
+    },
+    {
+      "path": "analysis/dev006/audit_p12_setup_delta.py",
+      "sha256": "020f3c9813a473ada4de29186ef799806777fe2a3e4be28af150e3b34fcb62cc"
+    },
+    {
+      "path": "analysis/dev006/prepare_p12_builder.py",
+      "sha256": "5b55b027e339525d34d471ab38d1e47d26f1b0f2e84641ddf80dcbacdd5db6bc"
+    },
+    {
+      "path": "analysis/dev006/p12-builder-provenance.json",
+      "sha256": "407bbc1e45a7eaeffa313c4a84ca1bdc2e3b13aaca0f1c7f2153932e2ab1cd12"
+    },
+    {
+      "path": "analysis/dev006/audit_p12.py",
+      "sha256": "a13ca8dfa2c8305cb199ce5477dfcc6e34cf42b199d1c93666f47fbd30480a97"
+    },
+    {
+      "path": "tools/build_hdd2tb_p12.py",
+      "sha256": "e48e20929756e2394f704d5e7636d8e14e4c1daf2ce227e27038bb0e13232a7d"
+    },
+    {
+      "path": "tools/build_hdd2tb_p1.py",
+      "sha256": "fe4cde05884e5dcf8f9b399ee85c7835801d17c3cd390d187e749fbb20d75499"
+    },
+    {
+      "path": "tools/build_hdd2tb_p5.py",
+      "sha256": "31590ec7d90766f601f96a2dbdec67d1d992234caac47c53286e6da233c63534"
+    },
+    {
+      "path": "tools/Capture-HW002AF-InstalledUtility.py",
+      "sha256": "9083af771dbf08159c5b77f0b8ba08111fc0d79ef8bbc1e44811a2da0087b153"
+    },
+    {
+      "path": "observations/HW002AF/read-review.json",
+      "sha256": "a76cf6af9a7640eb2d10f573e7fbbb6777146d1ea53772de478a9a07811798ee"
+    },
+    {
+      "path": "observations/HW002AF/reader-provenance.json",
+      "sha256": "ec82b3216118d07922d91845e30d32fa4889d8ba90ac748b8997563279e5526e"
+    },
+    {
+      "path": "observations/HW002AE/independent-verification.json",
+      "sha256": "f8791905710adc9b633e7687b8889819de98b0fc955d312bb94a734bce93791d"
+    }
+  ],
+  "hardware_protocol": {
+    "path": "candidates/HDD2TB-P12/HW002AF.md",
+    "sha256": "12ead2ba6d801b6f1b875f2f1d5c0a6a3e20fc38f2981c1af968ccc5dd5c2a64",
+    "results": "candidates/HDD2TB-P12/HW002AF-RESULTS.txt",
+    "revision": 1
+  },
+  "review_provenance": "Primary agent separate instruction, byte/relocation and package/crypto/parser implementations; no independent human/subagent claimed",
+  "software_release_approved": true,
+  "software_release_approval_scope": "Exact P12 guarded F stage/full readback without firmware backup; user Recovery6 install/XMB/capacity/ordinaryrestart on fitted disposable Lexar and fixed installed SELF GET after human report. No checker/fault/game/populated repair.",
+  "remaining_limits": {
+    "hardware_installation_tested": false,
+    "real_read_or_allocation_failure_tested": false,
+    "whole_native_peak_headroom_teardown_or_failure_cleanup_proven": false,
+    "populated_nearfull_repair_or_recovery_qualified": false,
+    "stable_support": false,
+    "Sony_authenticity_claim": false
+  }
+}

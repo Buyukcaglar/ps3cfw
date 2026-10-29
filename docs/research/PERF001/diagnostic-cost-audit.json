@@ -1,0 +1,159 @@
+{
+  "task": "PERF001-C",
+  "proof_level": "Exact saved-log reproduction plus static inspection of frozen BF final-v16 source; no native component measurements",
+  "authorization_boundary": "Investigation/proposals only. Existing BF source/protocol/workflow unchanged. No hardware/network/USB/console/disk operations, deployment, release or TRIM experiments performed.",
+  "outputs": {
+    "reproduction_helper": "analysis/PERF001/bf-analysis/reproduce_saved_progress.py",
+    "derived_summary": "analysis/PERF001/bf-analysis/summary.json",
+    "decoded_journal": "analysis/PERF001/bf-analysis/decoded-progress.csv",
+    "failed_attempt_preserved": "analysis/PERF001/bf-analysis/reproduce_saved_progress.attempt-first.py",
+    "failed_attempt_explanation": "First host-only run reached the percentage assertion after reproducing all medians, but binary floating-point arithmetic on Bps differed by rounding from the saved recorder's arithmetic on decimal MBps. No derived output was created. Corrected helper matches original decimal-MB arithmetic exactly; the failed helper is preserved."
+  },
+  "frozen_binding_checks": {
+    "review": "observations/HW002BF/final-v16/software-review.json",
+    "review_bindings_total": 187,
+    "selected_inputs_checked_against_review": 11,
+    "hash_inventory": "analysis/PERF001/bf-analysis/summary.json#/source_inputs",
+    "limit": "Only the selected relevant source/protocol/marker inputs were verified by this helper; root authority verification covers the checkpoint separately."
+  },
+  "evidence_locators": [
+    {"path": "observations/HW002BF/final-v16/network-snapshots/38ee64d4195043cd9ac8ecb1838338a7/progress.bin", "locator": "3859 fixed256B records, each offset256*sequence; SHA25672decc85c60f05542d032f0b09bdda24f79907f56063f5fc146db73445f23a5c", "proof": "Saved native progress, no fresh query"},
+    {"path": "observations/HW002BF/final-v16/network-snapshots/38ee64d4195043cd9ac8ecb1838338a7/result.json", "locator": "utc, passed_snapshot, partial_tail_bytes, latest, finished", "proof": "Historical host snapshot2026-10-16T06:51:49.666849+00:00"},
+    {"path": "tools/Read-HW002BF-Fill.py", "locator": "parse_progress function; inspected only", "proof": "Exact parser format, not executed/imported"},
+    {"path": "analysis/dev006/native-fill-final-v16/main.c", "locator": "35-45,84-144,174-215,218-250", "proof": "Raw syscalls, pattern, guard/STOP/progress, writer/verifier and result cleanup"},
+    {"path": "analysis/dev006/native-fill-final-v16/fill_io_ui_v1.h", "locator": "8-23,25-33", "proof": "Controller polling before250ms redraw throttle, operation counters, ETA and fresh-X admission"},
+    {"path": "analysis/dev006/native-fill-final-v16/fill_eta_v1.c", "locator": "2-3,6-34", "proof": "Recent30s history,3s minimum, >=1MiB, >=1s history insertion, reset/completion behavior"},
+    {"path": "analysis/dev006/native-fill-final-v16/fill_ui_ps3_v1.c", "locator": "19-34,43-50,75-99", "proof": "App-owned timebase,32MiB graphics allocation, VSYNC/flip waits, redraw/controller/callback work"},
+    {"path": "analysis/dev006/native-fill-final-v16/fill_ui_canvas_v1.c", "locator": "47-80", "proof": "Full framebuffer CPU clear plus text/progress drawing at every rendered update"},
+    {"path": "analysis/dev006/native-fill-final-v16/sha256.h", "locator": "16-25", "proof": "Streaming scalar SHA256, byte copy into64B blocks,64 compression rounds"},
+    {"path": "analysis/dev006/native-fill-final-v16/session.h", "locator": "owned_prefix, BASE_RAW_BYTES, BASE_AVAILABLE_BYTES, MAX_NEW_BYTES", "proof": "Exact nonce-owned paths/budget constants; no console-specific key material"},
+    {"path": "observations/HW002BF/final-v16/PROTOCOL.md", "locator": "whole document", "proof": "Current reviewed workflow, UI current-operation ETA, retention and later qualification gates"}
+  ],
+  "saved_measurement": {
+    "snapshot_utc": "2026-10-16T06:51:49.666849+00:00",
+    "status_is_historical": true,
+    "validated_records": 3859,
+    "all_checksums_exact_session_sequences_policy_status_zero": true,
+    "phase_record_counts": {"baseline_controls_phase1": 1, "write_phase2": 1920, "current_file_verify_phase3": 1938},
+    "measured_rate_sample_counts": {"write": 1920, "read_verify": 1879},
+    "units": "MB/s decimal1000000B/s; added filler ranges in binary GiB, not total disk/filesystem/NAND occupancy",
+    "stage_medians": [
+      {"added_GiB": [0,32], "write_MBps": 11.5876195, "write_n": 128, "read_verify_MBps": 14.8407425, "read_verify_n": 126},
+      {"added_GiB": [32,336], "write_MBps": 9.9599745, "write_n": 1216, "read_verify_MBps": 14.83528, "read_verify_n": 1197},
+      {"added_GiB": [336,480], "write_MBps": 7.541732, "write_n": 576, "read_verify_MBps": 14.8303475, "read_verify_n": 556}
+    ],
+    "write_median_reduction_percent": 34.9156054010921,
+    "read_verify_median_reduction_percent": 0.07004366526809358,
+    "perfile": "All30 exact per-file medians/counts reproduce saved assessment; see summary.json#/perfile",
+    "last_record": {"sequence": 3858, "byte_offset": 987648, "phase": 3, "file_index": 29, "completed_files": 29, "written_bytes": 515396075520, "payload_read_bytes": 512174850048, "current_file29_verified_GiB": 13, "file29_remaining_GiB": 3, "available_bytes": 475255017472, "UI_updates": 306665},
+    "file29_incomplete": "52 measured read samples versus63 for each completed file. Each completed file also has an initial Calculating and final Complete phase3 record; these are excluded from measured-rate medians.",
+    "wall_clock_phase_file_rates": "Not recoverable exactly: journal stores no native timestamp or elapsed duration. Host snapshot UTC dates collection, and ETA/rolling rate cannot reconstruct per-phase/file duration. UI update count is not an elapsed timer.",
+    "sampling_limits": "Rates use recent <=30s windows, minimum3s and1MiB. Progress sampled at256MiB boundaries plus phase changes. Some adjacent windows overlap; overlap is not uniform. At the three write medians, nominal256MiB spacing is23.17s,26.95s,35.59s, and verified reads about18.1s. These remain descriptive estimates, not independent trials or confidence intervals."
+  },
+  "operation_audit": [
+    {
+      "component": "Host syscall entry / write scheduling",
+      "evidence": "main.c:21-39,194-200",
+      "observed_static_behavior": "Single-threaded caller; one synchronous syscall803 write of1MiB followed by hash/accounting and syscall840 query before next iteration. No async submission or multiple outstanding requests at this application layer.",
+      "cost_model": "Call count and request size constant perMiB; underlying latency can vary with allocation/cache/media/driver work.",
+      "unknown": "Synchronous application depth1 does not prove LV2/LV1/controller hardware queue depth, cache policy, request splitting or NCQ absence."
+    },
+    {
+      "component": "Free-space/reserve enforcement",
+      "evidence": "main.c:95-99,176-177,184-200",
+      "observed_static_behavior": "Two calls to the SAME syscall840 per1MiB, before and after write; an extra call after each new file open. Both return total/available and validate raw baseline/reserve, headroom and unexpectedly large available-byte decrease.",
+      "snapshot_work_count": "491520MiB written =>983040 mandatory loop space queries plus30 postopen extra queries, excluding initial baseline query.",
+      "cost_model": "Guard scalar comparisons constant; syscall implementation cost not timed. Allocation/free-space complexity could be occupancy-sensitive only if the exact implementation demonstrates or measurement isolates it.",
+      "safety": "Keep128GiB available reserve plus2GiB metadata and next1MiB headroom; no query removal or reduced reserve is released. Unused older main.c RESERVE64GiB macro does not override active RESERVE_BB128GiB."
+    },
+    {
+      "component": "Pattern generation / software SHA256",
+      "evidence": "main.c:84-89,194-198,135-138; sha256.h:16-25",
+      "observed_static_behavior": "Write generates each1MiB with fixed integer mixing per8B, then hashes returned bytes. Verification regenerates a separate1MiB wanted buffer, compares full valid bytes, then hashes read bytes. SHA copies input byte-by-byte into64B streaming blocks and compresses64 rounds.",
+      "cost_model": "Fixed source work per byte, independent of occupancy; index/offset values change but loop lengths do not. Actual PPU wall/CPU time, thermal/frequency effects and lower-layer crypto are unmeasured.",
+      "implication": "Read+pattern+comparison+SHA at14.84MB/s can form a processing ceiling; neither that ceiling nor raw SSD read speed is established without component timing. CPU-only diagnostic improvement may have no game/save/install benefit."
+    },
+    {
+      "component": "USB STOP / controller cancellation",
+      "evidence": "main.c:41-45,91-94,183-184,133; fill_io_ui_v1.h:8-12; fill_ui_ps3_v1.c:89-95",
+      "observed_static_behavior": "Each write1MiB begins poll_stop: controller/callback handling then token lookup under/dev_usb000; an absent STOP causes an open syscall returning ENOENT. Verification checks USB STOP per16MiB, with additional controller polling per1MiB via ui_tick. Present token requires exact64B +EOF +close and exact session marker.",
+      "cost_model": "Fixed lookup frequency per byte; USB/FS lookup latency may vary and is unmeasured. Controller work is performed before UI redraw throttle, even when no redraw occurs.",
+      "safety": "Retain Circle/STOP handling, exact marker validation and error behavior. Blocking syscalls have no guaranteed cancellation wall-clock bound."
+    },
+    {
+      "component": "UI / timebase / framebuffer / flip",
+      "evidence": "fill_io_ui_v1.h:8-23; fill_ui_ps3_v1.c:19-34,75-99; fill_ui_canvas_v1.c:47-80",
+      "observed_static_behavior": "Nonforced redraw throttled to >=250ms, forced at each progress publication; timebase sampled from mftb using syscall147 frequency initialized once. Full CPU framebuffer clear/text render, ordering barriers, flip submission and callback work. Pending flip wait loops sleep1ms up to3000 iterations.",
+      "cost_model": "Roughly time-based4Hz work plus forced redraws; more time perMiB means potentially more redraws perMiB. Frame size depends on display resolution640..1920 by480..1080, not volume occupancy; resolution and flip time are not stored in progress journal.",
+      "memory": "Two128B-aligned1MiB storage/pattern buffers plus32MiB app GCM I/O allocation; GPU framebuffers separate. Storage buffer declarations do not prove4KiB pointer alignment or physical extent alignment.",
+      "safety": "Potential redraw/controller duplicate optimization must retain live cancellation and truthful operation progress; no frozen source changed."
+    },
+    {
+      "component": "USB progress journal",
+      "evidence": "main.c:100-115,139,201,203,209,212",
+      "observed_static_behavior": "At256MiB payload boundaries and phase transitions, force UI update, encode256B record, SHA224B, USB write256B and fsync. sequence capped16384; all errors/shortwrites stop.",
+      "cost_model": "Publication frequency per byte fixed; USB journal growth/allocation/fsync behavior may vary, but no duration is recorded. Constant source work does not prove constant native call latency.",
+      "limit": "Rate snapshot is calculated before that record's USB write/fsync; later ETA windows can include earlier publication cost. Final file-write fsync happens after last phase2 progress record, so file completion latency is incompletely represented by rolling write samples.",
+      "safety": "Do not omit progress synchronization merely for speed; any changed journal batching needs separate review of observability/cancellation/recovery semantics."
+    },
+    {
+      "component": "HDD file sync / close / integrity lifecycle",
+      "evidence": "main.c:117-144,203-215,226-250",
+      "observed_static_behavior": "Each completed write file gets syscall820 fsync and close before phase3 full pattern/SHA/size/EOF readback. Later phase4 rereads all retained files, followed by16 game controls. fsync/close errors recorded and success bits withheld; read-close errors propagate. On partial write, returned bytes are hashed/accounted before error stop; partial files retained.",
+      "cost_model": "Per-file sync may vary with dirty data/durability implementation/media latency; timing unavailable. Syscall820 success does not prove ATA FLUSH opcode, FUA use or power-loss durability.",
+      "receipt": "USB result write/fsync/close, exact8192B reread/compare, then DONE token write/fsync/close. A matching final receipt remains a separate gate; this historical log is unfinished.",
+      "safety": "Preserve sync/close error cleanup, no deletion/auto-resume and full integrity lifecycle. Higher diagnostic speed cannot substitute for capacity/persistence/game/placement qualification."
+    },
+    {
+      "component": "Alignment / copying / lower-layer amplification",
+      "evidence": "main.c:9,15,73,194-200; sha256.h:24",
+      "observed_static_behavior": "1MiB requested write/read sizes and sequential offsets are4KiB multiples. Buffer pointers are guaranteed128B alignment by source, not4KiB. Read verification uses a second1MiB regenerated-pattern buffer and software SHA input copies.",
+      "cost_model": "Application copying is fixed per byte; filesystem extents, crypto-sector mapping, kernel bounce buffers and SSD internal page/erase size unknown from this source.",
+      "limit": "No claim of4KiB physical alignment, read-modify-write amplification or NAND page size follows from512B advertised sectors or these application buffer declarations."
+    }
+  ],
+  "write_slowdown_equivalent_cost": {
+    "formula": "1048576/late_median_Bps -1048576/early_median_Bps",
+    "early_seconds_per_MiB": 0.09049106246541837,
+    "late_seconds_per_MiB": 0.13903649718658792,
+    "extra_seconds_per_MiB": 0.04854543472116955,
+    "if_exclusively_two_space_queries_extra_ms_each": 24.272717360584778,
+    "if_exclusively_one_STOP_lookup_extra_ms_each": 48.545434721169556,
+    "if_exclusively_one_progress_fsync_per256MiB_extra_seconds": 12.427631288619406,
+    "interpretation": "Only a magnitude target for timer design. Reciprocal median arithmetic is not a mean duration, measured overhead, causal decomposition or expected optimization gain. Distinct windows/source phases and sampling make the single-component scenarios especially hypothetical."
+  },
+  "bottleneck_findings": {
+    "write": "A34.9156% measured guarded-write median reduction is reproduced. Same fixed1MiB application loop and source workload at all stages. Occupancy/time-dependent filesystem or SSD work, variable guard/USB/UI latency or combinations remain candidates; no cause isolated.",
+    "read": "Verified-read medians change0.0700%. Full software verification adds CPU/copy/render overhead, so underlying read degradation could remain below that processing ceiling. No syscall-only read limit measured.",
+    "counterevidence": "Simple claim that both read and write become proportionally slower is contradicted at the measured application level. A purely fixed-cost per-byte algorithm cannot alone explain a new step unless its native timing or time-based work changes. Flat verified reads weaken broad explanations affecting all components equally but do not eliminate write-specific allocation/media or CPU-capped reads.",
+    "not_established": ["Bare SSD throughput", "TRIM capability/issuance", "Exact SATA link speed", "SSD cache/controller/NAND variant", "Thermal throttling", "Allocation/bitmap scan complexity", "Driver/crypto component time", "Durable flush latency", "Filesystem/physical extent placement"]
+  },
+  "proposed_component_timers": {
+    "status": "Design only; no native helper built/released/executed",
+    "clock": "App-owned monotonic mftb converted with measured timebase frequency as frozen UI already does. Record native monotonic_us at phase/file boundaries and each timed interval. Wall-clock UTC belongs in host manifest, not rate calculation. Check monotonicity/wrap/overflow.",
+    "calibration": "Before I/O, measure back-to-back timestamp reads and an empty instrumented block over>=10000 iterations; publish p50/p95/p99/max and raw timer overhead. Require instrumentation overhead<1% of smallest relevant median interval, otherwise batch timing or use lower-overhead ticks. Keep raw and overhead-bounded estimates; do not blindly subtract or treat wall elapsed as CPU cycles.",
+    "components": [
+      "read syscall802 elapsed plus requested/returned bytes and rc",
+      "write syscall803 elapsed plus requested/returned bytes and rc, only in later separately released fresh-file protocol",
+      "each syscall840 before/after/postopen individually, with returned total/available",
+      "open/fstat/EOF-read/file-fsync820/close individually; distinguish HDD from USB",
+      "pattern generation, SHA update/finalization and comparison individually",
+      "controller/callback polling separate from absent/present USB STOP open/read/EOF/close",
+      "UI timebase/ETA update, framebuffer rendering, flip wait/submission and callbacks separately",
+      "USB progress encoding/SHA/write/fsync/close separately",
+      "whole loop and file/phase boundaries including guard/UI/USB/sync; residual=whole minus exclusive accounted components"
+    ],
+    "crypto": "No external kernel/RAM probe. User syscall time includes hidden filesystem/driver/crypto/media latency. Isolate lower-layer crypto only if exact static implementation plus later independently authorized app-owned instrumentation makes it observable; otherwise retain unknown.",
+    "accounting": "Use exclusive elapsed scopes to avoid ui_tick nested inside poll_stop/publish double counting. Keep counts, bytes, sum/min/max and log-binned or fixed-width latency distributions; p50/p95/p99/max and stall/error counts. Fixed in-memory bounded telemetry ring/histograms; export outside primary timed region and time export separately. Record dropped samples and instrumentation memory limit.",
+    "controls": "Freeze binary/hash, compiler options, buffer sizes/pointer alignment, request sizes, serial depth1 baseline, display mode/UI cadence, native file/phase and requested/actual bytes. Same retained ranges, pseudo-random seed and alternating paired order for syscall-only versus verified-read comparisons. Distinguish first/warm reads; no claim of cold cache without approved cache-control evidence. No cache/queue/power/TRIM settings changed.",
+    "statistical_unit": "Repeated independently bounded passes, not thousands of correlated rolling journal records. Publish paired whole-pass ratios and latency tails separately; do not derive confidence intervals by treating BF progress samples as independent.",
+    "first_gate": "Wait for owner-qualified current BF completion and fresh reviewed read-only protocol. Begin retained-file syscall-only versus verified-read comparisons with fixed bounded ranges; no deletion, new filler, resume/restart or write tests implied."
+  },
+  "optimization_implications": [
+    {"option": "Add component telemetry in a fresh diagnostic proposal", "priority": 1, "expected_gain": "Attribution/decision quality; no speedup claim", "dependency": "Reviewed separate diagnostic protocol after BF qualification"},
+    {"option": "Reduce redundant diagnostic UI/pattern/SHA copies where measured expensive", "priority": 2, "expected_gain": "Potential faster integrity diagnostic; ordinary games benefit unproved", "safety": "Retain exact pattern/SHA/EOF/integrity, cancellation, truthful progress and reserve behavior"},
+    {"option": "Optimize syscall840/free-space implementation or batching", "priority": "conditional", "expected_gain": "Only if measured incremental query cost explains material whole-loop time", "safety": "Do not reduce active guard frequency/reserve without independent race/headroom/error proof and later authorization; source alone does not show query complexity"},
+    {"option": "Buffers/async depth/driver crypto/allocation changes", "priority": "deferred pending timers and exact layer proof", "expected_gain": "Workload-specific hypothesis only", "safety": "Require compatibility, memory, flush/error/recovery and latency-tail regression evidence; no firmware implementation in this session"},
+    {"option": "Disable fsync/integrity/STOP or bypass reserve to improve rates", "priority": "rejected", "expected_gain": "Unacceptable measurement change/correctness loss", "safety": "Current workflow preservation requirement"}
+  ]
+}

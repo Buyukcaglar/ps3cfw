@@ -1,0 +1,33 @@
+{
+  "schema": "PERF001-DR1-device-details-v1",
+  "state": "unfilled_template_not_device_admission",
+  "owner": "the owner",
+  "console": {
+    "exact_CECH_model": null,
+    "current_system_software_version": null,
+    "firmware_distribution_and_build": null,
+    "firmware_type_OFW_CFW_HFW_HEN_other": null,
+    "known_storage_patches": null,
+    "working_homebrew_loader_if_known": null,
+    "current_internal_drive_to_preserve": null,
+    "confirmed_dedicated_console": false,
+    "available_recovery_route_if_known": null
+  },
+  "ssd": {
+    "manufacturer_and_model": null,
+    "serial_if_available_from_label": null,
+    "firmware_if_known": null,
+    "advertised_capacity": "2 TB intended; actual device unprovided",
+    "measured_capacity_bytes_if_known": null,
+    "logical_sector_bytes_if_known": null,
+    "reported_physical_sector_bytes_if_known": null,
+    "current_location": null,
+    "data_to_retain_if_any": null,
+    "confirmed_exact_dedicated_experimental_target": false
+  },
+  "connections": {
+    "controller_and_display_available": null,
+    "USB_media_and_PC_connection_route": null
+  },
+  "instructions": "Fill from owner knowledge only. Unknown stays null. No hardware queries, key material, stale disk-number selection or gate changes are requested by this template."
+}

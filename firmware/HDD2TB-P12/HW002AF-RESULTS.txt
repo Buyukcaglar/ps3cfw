@@ -1,0 +1,7 @@
+P12 installed through Recovery6:
+XMB returned:
+System Information free/total capacity:
+Ordinary controller shutdown and power-on:
+Unexpected prompts/error text/code:
+webMAN available/currentIP:
+No manual checker/fault/game/disk swap performed:

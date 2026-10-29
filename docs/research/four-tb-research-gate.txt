@@ -1,0 +1,252 @@
+4 TB RESEARCH GATE -- 2026-10-15
+
+Implementation remains BLOCKED.
+
+Owner instruction: persist every self-check finding; everything must be cleared before implementation.
+Canonical register: research/four-tb-research-tasks.json
+Full unchanged self-check: research/four-tb-self-check-findings.txt
+
+All 25 findings remain open research blockers. R01-R03 have additional offline findings.
+Each closure needs concrete evidence and cumulative verification, plus later implementation authorization.
+Documentation, conditional exclusions and passing bounded models do not clear the gate.
+No 4 TB implementation is authorized. Current 2 TB firmware and hardware test order remain unchanged.
+
+4TB-R01 | research_in_progress | Setter lookup and transitive storage lifetime
+4TB-R02 | research_in_progress | CECHA00 backend replay reachability
+4TB-R03 | research_in_progress | Backend replay request retirement before context cleanup
+4TB-R04 | open | Class domain validation in analysis policy
+4TB-R05 | open | Checked unlock and primitive cleanup ownership
+4TB-R06 | open | Preflight target, generation and provenance
+4TB-R07 | open | Finite schedule empty-slot abstraction defect
+4TB-R08 | open | Correct field classification and static-audit oracle
+4TB-R09 | open | Single cumulative fsync contract and supersessions
+4TB-R10 | open | Cold initialization and SMP publication
+4TB-R11 | open | Lower admission and completion lock-error behavior
+4TB-R12 | open | Physical removal, suspend, shutdown and direct destruction
+4TB-R13 | open | Populated soft-update writeback ordering
+4TB-R14 | open | Complete128MiB checker memory bound
+4TB-R15 | open | File and directory planning limits
+4TB-R16 | open | Whole-filesystem sync and shared flush error losses
+4TB-R17 | open | Transport flush ordering and real durability
+4TB-R18 | open | Complete formatter/checker/backend copy inventory
+4TB-R19 | open | Final HDD0 geometry and placement consistency
+4TB-R20 | open | Encryption and PS3HDDTool compatibility scope
+4TB-R21 | open | Allocation and recovery error persistence
+4TB-R22 | open | VM/mmap and cache lifecycle scope
+4TB-R23 | open | Expanded change inventory and effort estimate
+4TB-R24 | open | Reentrant close and async upper-owner cleanup
+4TB-R25 | open | Stable manager bootstrap and finalizer ownership
+
+Latest R02 investigation: analysis/four-tb-backend-hosttype-offline-20261015/REPORT.txt
+Saved ATA hosttype0/device-ID selection chain is now bound. Actual target/runtime, alias closure and reload generations remain open.
+All 25 findings remain open; no 4 TB implementation or current 2 TB test change is authorized.
+
+Latest R02 alias investigation: analysis/four-tb-region-aliases-offline-20261015/REPORT.txt
+Same11 reviewed LV1 flag sites recovered through shifted/indexed root flow. Bounds, range ownership, indirect effects, runtime and reload/lifetime proof remain open.
+258 native-body generated-memory cases include invalid count/index/overlap counterexamples, not hardware observations.
+All25 findings remain open; implementation BLOCKED; current2TB firmware and hardware order unchanged.
+
+Latest R02/R18 count/reload investigation: analysis/four-tb-region-bounds-offline-20261015/REPORT.txt
+Full-width checked repository reads, pinned coherent snapshots, same-generation selector admission, quiescent reload publication and checked failure cleanup are required. Native integration/provider/lifetime proof remains open.
+112 bounded native-body cases,231 arithmetic cases and98 abstract scenarios support the proposed contract; they are not hardware or SMP qualification.
+All25 blockers remain open; implementation BLOCKED; current2TB firmware and hardware sequence unchanged.
+
+Latest R02/R18 repository-coherence investigation: analysis/four-tb-repository-coherence-offline-20261015/REPORT.txt
+Per-node locks and repeated equal reads are insufficient. Require a producer transaction/snapshot or complete writer/source exclusion, plus generation and provider lifetime through atomic install and final retirement.
+61 saved-body/prefix cases and5291 abstract schedules are bounded offline evidence only. Native dispatch/writer/lifetime/ordering/rollback integration remains open.
+All25 blockers remain open; implementation BLOCKED; current2TB firmware and hardware sequence unchanged.
+
+Latest R02/R18 LV1 writer/namespace investigation: analysis/four-tb-repository-writers-offline-20261015/REPORT.txt
+Ordinary mutations use caller namespace; PME owns namespace1 per local header. Separate explicit-target requests, global/boot writers, extension code and namespace lifetime also require transaction mediation. Ordinary epoch nodes are not protected metadata.
+93 canonical namespace host cases,42 instruction bindings,14 mutation entries/37 direct edges,59 publisher sites and46 boot descriptors are bounded offline evidence. Transport/alias/source/native integration remains open.
+All25 blockers remain open; implementation BLOCKED; current2TB firmware and hardware sequence unchanged.
+
+Latest explicit-namespace/PME-service investigation: analysis/four-tb-explicit-transport-offline-20261015/REPORT.txt
+Consolidated4TBfindings/blockers/estimate: analysis/four-tb-explicit-transport-offline-20261015/CONSOLIDATED-4TB-REPORT.txt
+Saved PME/UX clients can write namespace1. Generic keys and protected transaction/source ownership remain distinct from service policy.409host cases and34instruction bindings are bounded offline evidence only.
+All25blockers remain open; implementation BLOCKED. Planning estimate about8-16engineer-weeks plus hardware time/contingency; no release commitment. Current2TBfirmware and hardware test sequence unchanged.
+
+Namespace-1 writer/snapshot-authorization follow-up: analysis/four-tb-namespace-coverage-offline-20261015/REPORT.txt
+Contract: analysis/four-tb-namespace-coverage-offline-20261015/SNAPSHOT-AUTHORIZATION-CONTRACT.txt
+Corrected selected-client census: 209 code SC sites; prior 270 included 61 data decodes. 135 direct repository calls / 39 mutations unchanged. All 16 additional mutation sites reviewed with explicit model scope.
+Private transaction ownership, policy/source effects, aliases, namespace lifetime and native atomic retained-generation install remain open. 118 saved-body/prefix cases and 3238 abstract cases/schedules are bounded offline evidence only.
+All 25 blockers remain open; implementation BLOCKED. Current 2 TB firmware and hardware test sequence unchanged.
+
+Policy consumer/source-state follow-up: analysis/four-tb-policy-consumers-offline-20261016/REPORT.txt
+Contract: analysis/four-tb-policy-consumers-offline-20261016/POLICY-SOURCE-CONTRACT.txt
+Native ATA HIGH override and sysmgr LOW marker are distinct raw keys; matching Eurus/ISO consumers and ATA packet/key-operation sequences are bound. Marker publication and cached state are not an atomic physical-state certificate. Function 0x5000 / packet 0x5002 are distinct from routing-map port 0x23.
+547 bounded host cases and 38 instruction bindings passed. Live CECHA00 policy, all aliases, peer/driver authentication, crypto-context lifetime and native snapshot transaction ownership remain unproved.
+All 25 blockers remain open; implementation BLOCKED. Current 2 TB firmware and hardware test sequence unchanged.
+
+ATA delivery/authorization follow-up: analysis/four-tb-ata-delivery-offline-20261016/REPORT.txt
+Contract: analysis/four-tb-ata-delivery-offline-20261016/DELIVERY-AUTHORIZATION-CONTRACT.txt
+Saved sender/receiver, conditional accepted-peer stamping, typed secure launch, response validation and separate encdec0 transactions are bound. Kernel socket/peer/VFS/secure backend authority and final retirement remain unproved. New packet-length, socket cleanup, raw device-result and close-error gaps are persisted.
+260 bounded host cases and28 instruction bindings passed; no native credential, driver, secure-backend or hardware qualification.
+All25 blockers remain open; implementation BLOCKED. Current2TB firmware and hardware test sequence unchanged.
+
+2026-10-16 available-evidence offline phase consolidation: analysis/four-tb-kernel-authorization-offline-20261016/CONSOLIDATED-4TB-REPORT.txt
+Kernel authority/retirement contract: analysis/four-tb-kernel-authorization-offline-20261016/KERNEL-AUTHORIZATION-CONTRACT.txt
+All25 per-task evidence frontiers: analysis/four-tb-kernel-authorization-offline-20261016/OFFLINE-FRONTIERS.txt
+Low UX vector/init, kernel PME Auth-ID provenance and encdec0 VFS/backing interfaces are bound. Native target/source/attestation/SMP/retirement remain unproved. Unchecked SELF metadata reads, poll error cleanup and generic duplicate-open count imbalance are persisted. Fresh class/empty-slot models correct the disclosed offline defects within scope.
+98 kernel fixtures,54 invalid-class fixtures,149 reproduced historical fixtures,54 schedules/4974states and32 asserted instruction sites; no native/hardware qualification.
+Available saved-public-artifact/generated-model phase complete; no universal proof over missing code or arbitrary native states. All25 implementation gates remain open; implementation BLOCKED. Current2TB firmware and hardware test order unchanged.
+
+2026-10-16 checker allocation follow-up: analysis/four-tb-checker-allocation-audit-offline-20261016/REPORT.txt
+Stopping-claim correction: analysis/four-tb-checker-allocation-audit-offline-20261016/ENTRY-CORRECTION.txt
+The previous consolidation completed kernel authorization/model work, not the entire offline goal. Checker cleanup/string/summary-admission/failure/heap branches remain feasible and queued. Overall autonomous goal ACTIVE.
+20 bounded direct allocation sites,81instruction fixtures and14asserted sites. Duplicate counter resets per inode while records can remain linked; malformed directory summaries can request large tables. Clean file/directory caps plus20percent reserve do not prove arbitrary128MiB repair.
+All25 implementation gates OPEN/BLOCKING. Current2TB firmware and test order unchanged.
+
+2026-10-16 checker cleanup/heap follow-up: analysis/four-tb-checker-cleanup-offline-20261016/REPORT.txt
+Saved fatal helpers use nonlocal exit/common cleanup; duplicate alias/cursor/retirement and copied-name costs are refined. Native fixed-arena fragmentation reproduces16KiB failure despite40,320B+total free. Historical normalization mask was conservative: corrected clean target96,311,424B,20percent-reserve residual11,062,758B. No full native128MiB repair bound.
+309bounded fixtures/25asserted instruction sites;11exact global alias slots/14uses. Initial summary admission, FD/write cleanup, direct recursion SCCs and full overlap/callback frontiers remain queued. Overall goal ACTIVE.
+All25 implementation gates OPEN/BLOCKING; current2TB firmware and hardware test sequence unchanged.
+
+2026-10-16 bounded offline investigation closeout:
+analysis/four-tb-checker-recovery-offline-20261016/CONSOLIDATED-4TB-REPORT.txt
+Canonical checker continuation: analysis/four-tb-checker-recovery-offline-20261016/REPORT.txt
+All25 gate/frontier reconciliation: analysis/four-tb-checker-recovery-offline-20261016/OFFLINE-FRONTIERS.txt
+157fresh fixtures/36asserted instructions;20direct allocation classes and
+16function/39edge recursion review. UFS2 summary counts survive local admission
+before narrowing; checked calloc/P13 refusal is not a worst-case repair bound.
+Close/unmount context cleanup and dirty-before-I/O require retained ownership
+and propagated errors. Corrected clean target96,311,424B and11,062,758B after
+20percent reserve remain planning arithmetic only.
+Queued offline checker follow-ups are answered; stale overall-goal-ACTIVE/
+queued progress prose is superseded for this bounded research phase.
+All25 IMPLEMENTATION gates remain OPEN/BLOCKING. No closure or waiver; no
+implementation or current2TB firmware/hardware sequence change authorized.
+
+2026-10-16 rigorous consolidated-report/all25 self-check:
+analysis/four-tb-consolidated-self-check-offline-20261016/REPORT.txt
+Corrected current consolidation: analysis/four-tb-consolidated-self-check-offline-20261016/CONSOLIDATED-4TB-REPORT-CORRECTED.txt
+Individual25gate review: analysis/four-tb-consolidated-self-check-offline-20261016/ALL-25-BLOCKER-REVIEW.txt
+12corrections/qualification gaps. Shared CPU CA omissions exposed in6/14
+microvectors; fresh correction exactly reproduces466checker/allocator cases.
+Four cleanup fixtures now seed/assert the intended descriptor; still mocked.
+Numeric geometry/clean memory arithmetic and9known native words revalidate.
+Full checker/corrupt-image admission, native ownership/retirement/SMP/durability
+remain unproved. Gate circularity and incomplete requirement dependencies
+documented without waiver. Listed effort subtotal8.5..17weeks (rounded9..17),
+before contingency/hardware elapsed time; no reliable all25upper bound.
+Universal offline-exhaustion assurance withdrawn. Old reports remain frozen
+historical evidence; CORRECTION-INDEX.json governs affected supersessions.
+All25implementation gates OPEN/BLOCKING. No implementation or current2TB
+firmware/hardware sequence change authorized by this review.
+
+2026-10-16 PowerPC models and older-suite audit (research only):
+analysis/four-tb-ppc-model-audit-offline-20261016/REPORT.txt
+Corrections/frontiers: analysis/four-tb-ppc-model-audit-offline-20261016/MODEL-CORRECTIONS-AND-FRONTIERS.txt
+Consolidated addendum: analysis/four-tb-ppc-model-audit-offline-20261016/CONSOLIDATED-4TB-REPORT.txt
+42 CPU source definitions / 24 AST variants / 146 direct consumers plus
+2 inline formatter engines accounted. Fresh analysis corrections retain
+89 JSON outputs across 70 research invocations and 11 DEV006 canonical
+suite outputs, including 594 P13 reader cases. 108 geometry cases unchanged.
+41 canonical suites depend on unseeded memory; 17 read unset CR. Poison:
+18 errors, 14 exact suites, 9 changed-output suites (3 nontrace families).
+7 atomic suites retain non-step results after injected first-store failure.
+Carry/rawCR/SO/RA0/wrap/reservation/oracle and fixture limitations persisted.
+Geometry/conditional clean 128 MiB budget remain plausible; full native
+checker/ownership/snapshot/retirement/SMP/durability and all 25 gates OPEN.
+9..17 engineer-week known-work subtotal is not an all-gate upper bound.
+No universal ISA/offline exhaustion certificate, implementation permission
+or current 2 TB firmware/hardware test sequence change.
+
+2026-10-16 initialization audit (offline research only):
+analysis/four-tb-initialization-audit-offline-20261016/REPORT.txt
+Governing evidence: analysis/four-tb-initialization-audit-offline-20261016/suite-initialization-ledger-v2.json
+All17 unset-CR suites reproduce under two complete caller patterns (34replays);
+78initialization/API vectors pass.41memory suites/42affected producers fully
+classified;35memory suites complete under explicit finite unit inputs, six
+suite frontiers remain.45selected JSON:42exact, two nontrace corrections and
+one writeback trace/count change.112isolated bounds:91returns/21strict stops.
+Failed getters publish arbitrary stale values while returning success; short
+subject getter leaves output unwritten but tested setter refuses short length.
+Native primitive/condition and hash-table graphs remain missing. Native wake
+exposes mulli and is explicitly mocked by the width fixture, not qualified.
+Strict copy mocks check2748416byte reads. Native constructor inputs/stores
+are explicit: queueargument1 canonical; completed-wait now produces status
+after constructor clear. Three final constructor replays retain four JSON.
+All25statuses/dependencies/closure fields and implementation gate unchanged.
+4TB geometry and conditional clean128MiB arithmetic remain plausible, with
+no native repair/peak/SMP/durability claim or reliable all-gate effort ceiling.
+No implementation, current2TB firmware/hardware test sequence change or
+universal offline exhaustion certificate. Full gaps/corrections persisted.
+
+2026-10-16 six-gap constructor audit (OFFLINE ONLY):
+analysis/four-tb-six-gap-constructors-offline-20261016/REPORT.txt
+All six previous frontiers accounted. Native condition/hash constructors allow
+two more strict finite suites: lifetime exact JSON; lifecycle nontrace exact.
+Cumulative37/41 conditional memory suites, no uniform new41suite replay and no
+native initialization/retirement/SMP qualification.1f248 is wait, not cleanup.
+Busy condition or held/referenced mutex is retained; primitive success is not
+request retirement. Native softdep locks are owner bookkeeping, needing outer
+serialization. Cachelimit128 is declared, not measured;5 small/signed-invalid
+limits reach invalidsize path before allocation. ColdBSS zero is insufficient.
+Parent native16slots resolves7 cases but backend8limit remains.112isolated
+bounds:98returned/14stops. Alias258classified with5 invalidcount stops, no native
+rejection implemented. Native getter confirms error outputs untouched; stale
+collector returns0.36receiver/9ATAencoder cases retain subject40/ATA48 distinction
+and no bypass/authentication proof.1278 mulli/mulhw vectors are selected ISA
+evidence, not fullwake/SMP. All25 statuses/dependencies/closures and allowed=false
+unchanged.4TB geometry/conditional128MiB costs and9..17week partial subtotal
+unchanged; peak/repair, auth, addressing, lifetime/retirement, durability gates
+remain open. Current2TB firmware and hardware test sequence unchanged.
+
+2026-10-16 native hash-limit/order/publication audit (OFFLINE ONLY):
+analysis/four-tb-hash-limit-publication-offline-20261016/REPORT.txt
+Actual saved native producer2c4324->2b16cc writes136;quarter34. Later native
+update routine can409;quarter102.11 relevant code ranges match original kernel.
+Cold serial mount order:library init/producer ->mount mutex ->UFS hash init.
+136 yields16/128/64 softdep buckets1664B; interim409 yields64/256/64,3072B.
+These are kernel cache inputs/heads, not disk population/checker heap limits.
+Library ready precedes final context pointer; context owner conflict returns0
+via actual no-op275120. Correct secondarybases25d0/25d8 identify actual47b938
+mount/update mutex, itself created in library init.3 conditional publication
+witnesses do not prove live races; complete indirect admission/worker/SMP
+publication remains open.6 order/update/error cases include4 native lost
+post-ready helper80010038 failures:once returns0/ready1/subsequent skip.
+14 setter vectors, one real producer/hash composition,3 context cases; no
+uniform older-suite replay or promotion beyond prior37/41 conditional suites.
+All25statuses/dependencies/closure fields and allowed=false unchanged.4TB
+layout/conditional128MiB costs and9..17week partial subtotal unchanged; no
+native repair/peak/retirement/SMP/durability qualification or implementation.
+Current2TB firmware and hardware test sequence unchanged.
+
+2026-10-16 indirect mount/worker SMP publication audit (OFFLINE ONLY):
+analysis/four-tb-mount-worker-publication-offline-20261016/REPORT.txt
+Actual constructed UFS vptr368ac0 selects mount at18; boot2980e8 concretely
+binds CELL_FS_UFS factory2be6e8. Raw368aa0+38 remains historical arithmetic;
+zero linear factory uses is superseded by the actual branch load.
+Registry mutex root+1500 releases before mount. Ordinary root+1508 guard
+matches only12-byte PS2 prefix; /dev_hdd0 bypasses it. Selected change/remount
+mode0/1 paths do hold it. No universal cold-entry bootstrap owner is proven.
+Workers share47b938 and wait drops/restores it. Later successful same-mutex
+release/acquire can publish protected state, conditional on stable ownership,
+all consumer coverage and primitive success; no complete SMP guarantee.
+flags1 calls24b20,23d4c and2357c before output handle and ready/final stores.
+Unmocked scheduler stops26470 on unestablished current-thread+58. Library
+discards creation errors; selected start_thread discards26020 errors.
+13 finite declared native-instruction checks pass with strict reads; no
+native scheduler/SMP, real early hash corruption or4TB qualification.
+All25 statuses/dependencies/closures and allowed=false remain unchanged.
+4TB layout/conditional128MiB figures and9..17week partial subtotal unchanged.
+Current2TB firmware and hardware test sequence unchanged.
+
+2026-10-16 SPRG0 selector and2357c/26434 scheduler audit (OFFLINE ONLY):
+analysis/four-tb-scheduler-publication-offline-20261016/REPORT.txt
+SPRG0 points to processor context, not allocated current thread. Native7d1c
+sets selector-1;27cfc binds0/1/group/slot pointers; actual thread accessor
+followscontext+68. Allocated-thread24088+58 is64-bit stack extent instead.
+Native25c58 producer and27938 consumer share group+8 lwsync/isync lock
+handoff. Selected pre-enqueue publication is useful; later UFS final/hash/
+helper publication and full boot/interrupt/assembly/lifetime remain open.
+Three27c2c registration failures retain partial binding/slot, retry refused.
+Service18decimal constructs event-receive port;24decimal sends event;
+69decimal gets PPE ID. Source labels corrected; no live event delivery.
+14declared native-instruction cases,48hint/CTR,4MSR,3classification vectors
+pass.32native text files/2950printed rows original==patched. No old41/17
+suite requalification or native SMP/retirement/4TB acceptance follows.
+All25 statuses/dependencies/closure fields and allowed=false unchanged.
+4TB geometry/conditional128MiB estimates and9..17week partial subtotal
+unchanged. Current2TB firmware and hardware test sequence unchanged.

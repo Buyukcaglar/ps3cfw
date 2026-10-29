@@ -1,0 +1,8239 @@
+{
+  "pass": true,
+  "case_count": 594,
+  "families": {
+    "P12-regression-setup-OOM": 240,
+    "P12-regression-setup-success": 48,
+    "P12-regression-summary-read-failure": 48,
+    "initial-seek": 72,
+    "reader-successful-seeks-differential": 72,
+    "retry-seek": 42,
+    "sector-reseek": 72
+  },
+  "cases": [
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "full",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": 0,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 0,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": 0,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 0,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "full",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "full",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-1-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-1-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 1,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 1,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 1,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 1,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "full",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-31-negative",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-31-short",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 31,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 31,
+      "error": -1,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 31,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 31,
+      "error": -2147418110,
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x1000000",
+        "0x2000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "full",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": 0,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 0,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": 0,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 0,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "full",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "full",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-1-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-1-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 1,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 1,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 1,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 1,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "full",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-31-negative",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-31-short",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 31,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 31,
+      "error": -1,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 31,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 31,
+      "error": -2147418110,
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x23000000",
+        "0x45000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "full",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 0,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": 0,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 0,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 0,
+      "failed_seek": 0,
+      "bulk_result": 0,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 0,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "full",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 512,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 512,
+      "failed_seek": 0,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 512,
+      "failed_seek": 1,
+      "bulk_result": 511,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 512,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "full",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-1-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 1024,
+      "scenario": "sector-1-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 1,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 1,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 1024,
+      "failed_seek": 0,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 1024,
+      "failed_seek": 1,
+      "bulk_result": 1023,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 1,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 1024,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 1,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "full",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "bulk-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "bulk-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-0-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-0-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-31-negative",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "reader-successful-seeks-differential",
+      "count": 16384,
+      "scenario": "sector-31-short",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 31,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 31,
+      "error": -1,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": null,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "initial-seek",
+      "count": 16384,
+      "failed_seek": 0,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": -1,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "retry-seek",
+      "count": 16384,
+      "failed_seek": 1,
+      "bulk_result": 16383,
+      "sector_result_kind": "full",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 0,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "negative",
+      "failed_sector": 31,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "sector-reseek",
+      "count": 16384,
+      "failed_seek": 2,
+      "bulk_result": -1,
+      "sector_result_kind": "short",
+      "failed_sector": 31,
+      "error": -2147418110,
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "passed": true,
+      "no_read_or_seek_after_failed_seek": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "PNY",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 0,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": -1,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 0,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 0,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 2,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 3,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-OOM",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 4,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-setup-success",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": null,
+      "failed_read_block": null,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 0,
+      "passed": true
+    },
+    {
+      "family": "P12-regression-summary-read-failure",
+      "drive": "Lexar",
+      "bases": [
+        "0x50000000",
+        "0x12000000"
+      ],
+      "dirty": 1,
+      "fd": 42,
+      "directories": 139,
+      "failed_alloc": 1,
+      "failed_read_block": 6,
+      "passed": true
+    }
+  ],
+  "elf_sha256": "e34e18aed90eecf11fe311137b0c6e1054689fd5b019fb27a001a57542973c86",
+  "parent_elf_sha256": "82b27194b4eb15094ed187267472e46a47dd820691c0fa4157652eea40830f85",
+  "successful_seek_reader_observations_and_P12_setup_differentially_identical": true,
+  "negative_seek_return_stops_reads_and_reseeks_and_returns_nonzero_IO_failure": true,
+  "nonvolatile_GPR_stack_TOC_LR_and_modeled_CR2_4_checked_on_reader_returns": true,
+  "kernel_IO_allocator_free_close_memset_warning_prompt_nonlocal_exit_are_mocks": true,
+  "ordinary_unmounted_yes_mode_only": true,
+  "complete_call_graph_native_unwind_full_IO_policies_or_real_fault_not_proven": true,
+  "native_hardware_fault_injection_or_execution": false,
+  "stable_support": false
+}

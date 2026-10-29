@@ -1,0 +1,16 @@
+{
+  "scope": "Continuation prompt only; no packet validated or custody/release asserted",
+  "bindings": {
+    "research/PERF001/RO1/offline-intake-prompt-v1/CONTINUE_RO1.txt": "44f4222199b1193edec54ce50b33cc815a7ab8dba84c0101c4ef37d98e434144",
+    "research/PERF001/RO1/release-prep-v1/NEXT_SESSION_PROMPT.txt": "4afa15a0b47541a6bc5d4cab254fc53149fc8d9fb1db7494324a09a66ea64948",
+    "research/PERF001/RO1/release-prep-v1/PLAN.txt": "ffa2e586a2ba22a964ddf648f50c795b80abcd6f57b28615c7ac26d98181ecc8",
+    "research/PERF001/RO1/release-prep-v1/PROTOCOL.txt": "e2ebe9a0114d5571943d5074fdae7b4a5b878820bda71d4ff5cd0a5341737478",
+    "research/PERF001/RO1/release-prep-v1/HELPERS.txt": "e124188573bb3b03c334537656adaedbc53a2f54949e5b09d47e46acfc8e5d4a",
+    "analysis/PERF001/ro1-release-prep-v1/qualification.py": "6a83a31735750e5be183feb78a384f226cd794414bfabc1e94a5a3d8d8ec5160",
+    "analysis/PERF001/ro1-release-prep-v1/common.py": "b38d0eb410d025cacda149fd3b7b187df3d49d20682559a4a5783c023ef0c7c6",
+    "research/PERF001/RO1/capacity-return-template-v1/RETURN_TEMPLATE.txt": "7b02e2635cf12d1fd2edda95c4b55b0fcd3538d07344c6fe6b084d9f9145af38",
+    "plan/STATUS.json": "3b534d55362af68cab6d3b6b4c2663eca93937b133390ea381e4d5be623752e6"
+  },
+  "shared_register_changes": false,
+  "hardware_operations": false
+}

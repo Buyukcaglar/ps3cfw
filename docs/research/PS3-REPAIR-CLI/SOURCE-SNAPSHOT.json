@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-20",
+  "timezone": "UTC+3",
+  "purpose": "Source assessment planning baseline; hashes identify selected ordinary source/context files only. No device/key/media content is included.",
+  "external_sources": [
+    {
+      "id": "S01",
+      "repository": "sagemono/UFS2Xplorer",
+      "commit": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "url": "https://github.com/sagemono/UFS2Xplorer/tree/565ba57e6aabf6996ed4e0512548f4b697183ace"
+    },
+    {
+      "id": "S07",
+      "repository": "NetBSD/src",
+      "branch": "trunk",
+      "commit": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "url": "https://github.com/NetBSD/src/tree/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs"
+    },
+    {
+      "id": "S08",
+      "repository": "NetBSD/src",
+      "branch": "netbsd-6",
+      "commit": "97570233e1d596cda4d80e34fef0b2d53a7fb154",
+      "url": "https://github.com/NetBSD/src/tree/97570233e1d596cda4d80e34fef0b2d53a7fb154/sbin/fsck_ffs"
+    }
+  ],
+  "local_workspace": "C:/Projects/PS3Firmware",
+  "local_files": [
+    {
+      "path": "README.md",
+      "bytes": 50082,
+      "sha256": "87675c4d1f16249cb12909acf6a0562a71a152e2c9699d7bdfd16bf84420b6d3",
+      "last_write_utc": "2026-10-20T14:14:36.1153740Z"
+    },
+    {
+      "path": "plan/STATUS.json",
+      "bytes": 109502,
+      "sha256": "ebadc06864abf8e0d7dc3329e6375ede0cd922a734f3687d16ef396204e44da3",
+      "last_write_utc": "2026-10-20T14:14:36.1193562Z"
+    },
+    {
+      "path": "plan/ROADMAP.md",
+      "bytes": 59507,
+      "sha256": "d81232d87587463a3dfb7cbb89dc64fb67b37969446912e2e90ca00928d6cbb5",
+      "last_write_utc": "2026-10-20T14:14:36.1163576Z"
+    },
+    {
+      "path": "plan/INITIAL_TASK_PROMPT.txt",
+      "bytes": 51081,
+      "sha256": "ae1559f1c904a726f3397cdd4bec8e13bb6ed6ef2cecc04e96d35640e9441726",
+      "last_write_utc": "2026-10-20T14:14:36.1163576Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/UfsVolume.cs",
+      "bytes": 31123,
+      "sha256": "b7866aa399011d0eff71264cc71fce149fa6b8053e5849a9d53ef3567c15ab3c",
+      "last_write_utc": "2026-10-13T08:33:33.5140181Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/DirectJournal.cs",
+      "bytes": 19174,
+      "sha256": "905da47cb919266de6d396e5cc271f5d13dee85ead09830d1cda6f8c7a72cc69",
+      "last_write_utc": "2026-10-13T08:33:33.5015020Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/DirectDisk.cs",
+      "bytes": 11764,
+      "sha256": "c34d6b9ed7bab90da746802c031f8ca422dfbddd9e15eac694c481377c93e605",
+      "last_write_utc": "2026-10-13T08:33:33.5004965Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/SourceRecovery.cs",
+      "bytes": 16665,
+      "sha256": "810ccca479a8cfe25d5ca0ed727adb256a8b23fec1b02370954db20b3d228f71",
+      "last_write_utc": "2026-10-13T08:33:33.5085012Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/LICENSE.md",
+      "bytes": 8072,
+      "sha256": "8762838014ec18c9f09bda91783ec32c48dde43541fcdda2bab10ccbcc2dc8e3",
+      "last_write_utc": "2026-10-13T08:33:33.3455362Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/NOTICE.md",
+      "bytes": 1461,
+      "sha256": "ac1005030d695032d1a4ebf663a5d77ccef62d05c4ea375975cdacc3347485ba",
+      "last_write_utc": "2026-10-13T08:33:35.1671310Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/device.c",
+      "bytes": 14913,
+      "sha256": "f6164c1095c1ee92b1eb96b29533b6a73dbf3c2edfd9d4f4081f12ed7e9478f6",
+      "last_write_utc": "2026-10-11T16:07:52.6283765Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/ps3.h",
+      "bytes": 570,
+      "sha256": "efe07472db5096fbf9e3a962f4e385e2c6adae0ce9872018c9227cbced0fd65b",
+      "last_write_utc": "2026-10-11T16:07:52.6372258Z"
+    },
+    {
+      "path": "tools/build_hdd2tb_p13.py",
+      "bytes": 9559,
+      "sha256": "b057ab59e35b03372da88d386c0c03b53a2b3928e071ff12441a1da71c2bec53",
+      "last_write_utc": "2026-10-14T06:48:19.6135715Z"
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-workload-v2/CONTINUATION.txt",
+      "bytes": 5519,
+      "sha256": "877c9a9e4561069c08abe1f8cbd9f4ec7167986c403144713d84e89bfdbc7c7d",
+      "last_write_utc": "2026-10-20T14:14:36.1143595Z"
+    }
+  ],
+  "limits": [
+    "This is not a whole workspace inventory or publication manifest.",
+    "Concurrent firmware root changes must be reconciled without overwrite.",
+    "Existing donor validation does not qualify a future C/C++ build or repair operation."
+  ]
+}
+

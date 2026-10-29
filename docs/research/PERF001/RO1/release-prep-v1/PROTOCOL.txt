@@ -1,0 +1,106 @@
+PERF001-RO1 bounded hardware protocol -- PREPARED, LOCKED, NOT RELEASED
+16 October 2026; UTC+3
+
+Do not perform these steps from this document alone. The current preview has
+hardware_release_authorized=0 and qualified_fixture=0; both stay locked. The
+current human request ends before staging, console contact or hardware execution.
+The reviewed final release plan and explicit human authorization must identify
+the precise executable/package, nonce, version, helpers and this protocol.
+
+Scope
+CECHA00; HDD2TB-P13 unchanged; populated internal Lexar NQ1002TB, firmwareSN21128,
+ATA serial<serial>,2048408248320B. Preserve original1TB/image, populated
+Crucial, storedPNY, Lexar/filler, originals/NAND/archives and private material.
+Use only three qualified complete16GiB BF files0/14/28 and16 fixed immutable BA
+executables. No mutable saves, wildcard discovery, physical-LBA read interface,
+HDD writable open/write/fsync/delete/rename/truncate, ATA/TRIM or firmware change.
+Read-only filesystem opens may cause housekeeping; physicalzero writes is not
+claimed. Only fresh exclusive USB evidence files are intentionally written.
+
+Prerequisites -- ALL must be recorded before release
+- Capacity owner has qualified first BF final receipt/global reread/after-controls,
+  final reserve and owner XMB return; ordinary restart/persistence/brief game pass.
+- Exact complete selected BF paths/sizes/write=read hashes and session are bound;
+  selected-file read-only extent report is linked. No pending BF/error/cancel
+  validation, active collector/writer or64GiB-stage release.
+- Extent mapping occurs at first checkpoint before64GiB. After any owner-approved
+  PC mapping/refitting, confirm the same drive and ordinary responsive boot.
+- Current idle hardware custody explicitly passes via the owner to this single RO1 run.
+- Actual BF final AND current native available >=139586437120B(130GiB). A valid
+  BF receipt can fall below this floor: stop preparation then; retain filler.
+- Qualification and fresh release source/package/import/ABI/fault/stop/cleanup
+  review pass. Full SHA references are not substituted for slice SHA references.
+- Fresh release-plan-v1 binds source/package/binary review, full selected hashes,
+  native nonce, helper hashes, protocol hash, current root authority and exact
+  FAT32 removable USB volume GUID/serial/size. Old Windows disk numbers are unused.
+- Human explicitly approves the canonical plan SHA and actions stage_once,
+  launch_once,capture_once. Record the actual request reference in a separate
+  RO1-hardware-authorization-v1 record. Records/hashes are custody/integrity,
+  not cryptographic authentication against replacement of all local evidence.
+
+Bounds
+-106workload records: calibration/CPU, six balanced sequential A/B pairs and
+  retained-slice checks,4KiB/64KiB/1MiB buffer comparisons, logical-range/locality/
+  random comparisons, timing controls and three passes over16game executables.
+-Expected returned reads5,662,423,872B; absolute charged REQUEST budget8,589,934,592B
+  includes every EOF byte, control, retry and short-read reassembly. No unbounded
+  retries; at most64positive fragments for one logical read.
+-HDD available floor130GiB; USB must retain at least64MiB available at native
+  admission. Staging additionally budgets package+READY bytes above that floor.
+-Native evidence <=8MiB. Two4096aligned1MiB data buffers; extra staticBSS2,573,980B;
+  separate graphics allocation32MiB. No external process/kernel/VSH RAM probes.
+-Core workload limit20minutes, cooperative between calls. READY waits at most
+  ten minutes for fresh X. Publication/cleanup adds time. A blocked syscall has
+  no hard cancellation or completion deadline; never promise total run duration.
+-Stop serviced before opens and at earliest1MiB/64operations/250ms service bound.
+  Controller Circle is the released operator cancellation route. No remote STOP
+  delivery/network helper is released by this protocol. Native STOP format is
+  documented for analysis; do not place a STOP file before launch.
+
+Future operator sequence -- only after the separate release above
+1. Owner confirms BF finished, required capacity evidence accepted, same Lexar/P13
+   fitted and idle, before64GiB, and USB returned to PC. No concurrent game,
+   download, install, copy, benchmark or capacity operation.
+2. Reviewer rechecks qualification and package/source/protocol/helper hashes and
+   explicit authorization. Run release_helpers.py stage once with that final
+   plan/approval/canonical planSHA and admitted F:\ root. It verifies removable
+   FAT32 volume identity and space, then checks ONLY seven nonce-specific paths.
+   It never enumerates or opens F:\PS3, firmware or prior BF files.
+3. Stager writes a durable workspace intent FIRST. Package is exclusive-created,
+   flushed/closed/exactly reread; READY is created last and reread. On any failure
+   keep all files/intents and STOP; no retry, overwrite, deletion or cleanup.
+   Only a separate reviewed disposition may resolve an ambiguous attempt.
+4. Safely eject USB and insert in PS3 rightmost port. Install ONLY the exact final
+   released package/title/version. The00.02 PREP LOCKED preview is never installed.
+   Launch that final app ONCE. Release the launch button; at visible READY press
+   X afresh to begin. Circle cancels. Keep USB inserted and other workloads idle.
+5. Observe UI and cancellation responsiveness; report no UI within60s without
+   relaunch or forced shutdown. Unexpected repair/format/update prompt: leave it
+   unselected and report. Mismatch/error/cancel: retain files/evidence; no restart,
+   repair, retry or further test until the owner/reviewer has assessed the result.
+6. On completion/error return, record visible outcome and responsive XMB return
+   or its absence. Only after the app has returned and owner confirms it is no
+   longer active, return USB to PC. Lexar remains fitted unless owner separately
+   authorizes a required step. Do not start64GiB fill yet.
+7. Reviewer runs release_helpers.py capture ONCE with matching final plan and
+   approval and owner-XMB-confirmed. It checks exact USB identity/READY, bounded
+   fixed result/journal/witness/DONE/optionalSTOP, saves raw evidence create-only,
+   rereads every captured byte and checks identity again. It never writes USB.
+   Partial/error output is retained and reported even when not accepted.
+8. Review exact sequence/nonce/checksums/counts/bytes/caps/cleanup, final-publication
+   witness and owner report. DONE alone cannot establish native process return,
+   its final sync/close success, persistence or power-loss durability. Calibration,
+   <=2% timing overhead, coverage and tail resolution must support any timing
+   conclusion. Hidden driver/crypto/media time stays inside FS syscall latency.
+9. Return explicit custody to the capacity workflow with result/limitations.
+  64GiB remains a separate capacity release. No automatic next stage, resume,
+   filler deletion, cache reset, ATA operation or firmware update follows RO1.
+
+Interpretation
+Cold-cache state is not manufactured: no cache flush/drop/reboot experiment.
+Label cache unknown/warm-mixed. File0/14/28 identify logical ranges; extent maps
+describe device allocation, not NAND placement. Syscall-only reads do not certify
+transient returned content; later content checks certify later retained bytes.
+This read-only diagnostic cannot isolate the historical write slowdown by itself.
+Native loader/UI/XMB/timer acceptance are future observations. No general stable
+storage, game speedup, root-cause fix or power-loss qualification is claimed.

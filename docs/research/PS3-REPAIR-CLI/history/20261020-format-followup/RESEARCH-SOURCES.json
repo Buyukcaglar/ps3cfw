@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-20",
+  "scope": "Initial source research only; selected public source bytes read and hashed in memory. No code incorporated or executed.",
+  "baseline_file": "SOURCE-SNAPSHOT.json",
+  "inventoried_files": [
+    {
+      "path": "sbin/fsck_ffs/Makefile.common",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/Makefile.common",
+      "bytes": 975,
+      "sha256": "5187f495a4cb8f07d2138984e302b3831632a25ec91648312f3da3981cf58499",
+      "line_count": 39,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/fsck.h",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/fsck.h",
+      "bytes": 13479,
+      "sha256": "3e92708f5d3af9abadfa49ff9bbf38066f7f638f083e2494c84c5961008898c1",
+      "line_count": 404,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/setup.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/setup.c",
+      "bytes": 33460,
+      "sha256": "ba75c47cda3de759e86eefb7046759f62886d2b70be448fe39d759493c6fac0a",
+      "line_count": 1184,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/utilities.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/utilities.c",
+      "bytes": 18655,
+      "sha256": "54208cd66799cc63e1893207da4ad69a367df85f7bc00c114f95d62030277bd3",
+      "line_count": 788,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/main.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/main.c",
+      "bytes": 13874,
+      "sha256": "02646a8c47175a0daf724852b8477405d3066ae7f28e8ec93e69fdcd65ca2c33",
+      "line_count": 618,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/pass1b.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass1b.c",
+      "bytes": 3670,
+      "sha256": "ccc65606a4227458c60bb3fd1736365f7112b5c002577e8b077f40d694d87952",
+      "line_count": 124,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/pass2.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass2.c",
+      "bytes": 17648,
+      "sha256": "e1d6d628dbfa13174ea9b08e3a961ea356baee9784bc25438650f20505347d9b",
+      "line_count": 646,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/pass3.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass3.c",
+      "bytes": 4380,
+      "sha256": "79530807772ef7f6b398d23bd24a66a11308fccdc33cdb346f57f120dde76e9d",
+      "line_count": 136,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/pass4.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass4.c",
+      "bytes": 6004,
+      "sha256": "ff8a1db218bf916191877ec1c911f9586edf286d566a3bac5ffdd06145caa924",
+      "line_count": 222,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/pass5.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass5.c",
+      "bytes": 15546,
+      "sha256": "804d56d4665ba01ba1f978e4793bffb461d2fe28eb07d4abcda6d71a621df0a0",
+      "line_count": 523,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/dir.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/dir.c",
+      "bytes": 24307,
+      "sha256": "d8f6e367022a1840746e2fd722d51c374855b6a0c8cf70031ac51c51efe86440",
+      "line_count": 961,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "sbin/fsck_ffs/inode.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/inode.c",
+      "bytes": 26782,
+      "sha256": "a2c31062e6f7f9e9468e052f0c7e2c48c975ecb700f01028762b765068533cec",
+      "line_count": 1052,
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "src/ps3hdd_disk/image_disk_source.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_disk/image_disk_source.cpp",
+      "bytes": 2080,
+      "sha256": "7430b73457dbb10a5a6939df1db4f50d3c04e80bee3751f8ff2d4b44cba8a5e8",
+      "line_count": 60,
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "src/ps3hdd_disk/physical_disk_source.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_disk/physical_disk_source.cpp",
+      "bytes": 3509,
+      "sha256": "f9a98a4826f4043e533abfde193dc0ab52a43d5de3b85dc35fa0c22a8013370b",
+      "line_count": 81,
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "src/ps3hdd_disk/disk_source.h",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_disk/disk_source.h",
+      "bytes": 956,
+      "sha256": "d6e954e41a83d653981e3501f1d9bc4662019fe4cddedeffe83aa34d620d8058",
+      "line_count": 31,
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "src/ps3hdd_fs/ufs2_checker.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_fs/ufs2_checker.cpp",
+      "bytes": 19834,
+      "sha256": "89eacdc2626167709da062f4e97d6b3d1d73a05b54b1cb8518a572b4546b5738",
+      "line_count": 405,
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "src/ps3hdd_fs/ufs2_writer.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_fs/ufs2_writer.cpp",
+      "bytes": 77430,
+      "sha256": "a5a81c452ac7a47d86fcdccda5f6a222eef9a822a280ea0a10ff150cbd099133",
+      "line_count": 1630,
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/CMakeLists.txt",
+      "bytes": 1697,
+      "sha256": "39030893c6e4dba4ffe3d8910cc82e49b8ecb1c40591b097c932263d272e222d",
+      "line_count": 60,
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "method": "HTTPS raw bytes; SHA-256 computed in memory"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "src/ps3hdd_app/gameos.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_app/gameos.cpp",
+      "bytes": 3812,
+      "sha256": "41079db5f0a1b766eefa8a3f0496421fc49aefbda14ce3252f7184c0ab6ec8d3",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "src/ps3hdd_crypto/aes_xts_128.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_crypto/aes_xts_128.cpp",
+      "bytes": 2643,
+      "sha256": "b38c843132164d083cd69ad5e682886fc305ce1876ec8b9b022896a98120b70c",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "src/ps3hdd_crypto/aes_cbc_192.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_crypto/aes_cbc_192.cpp",
+      "bytes": 2380,
+      "sha256": "db54c7388f9f20ab3d0171cdeae4d34b51f5d7e98234b731f0783a3a029d5688",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "src/ps3hdd_crypto/ps3_key_derivation.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_crypto/ps3_key_derivation.cpp",
+      "bytes": 2925,
+      "sha256": "2b058ee6901a77c33ddf4f18ef99f4f5f0611f69daa90e3064620ade20d49a5c",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "src/ps3hdd_cryptodisk/encrypted_disk_source.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_cryptodisk/encrypted_disk_source.cpp",
+      "bytes": 2373,
+      "sha256": "47b50aef6e0410c099699fef8a5a285d9bcf1b6c76e3b66a65a40147f3f151fa",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "src/ps3hdd_cryptodisk/encrypted_disk_source_cbc.cpp",
+      "url": "https://raw.githubusercontent.com/sagemono/UFS2Xplorer/565ba57e6aabf6996ed4e0512548f4b697183ace/src/ps3hdd_cryptodisk/encrypted_disk_source_cbc.cpp",
+      "bytes": 2326,
+      "sha256": "bf5e51c5a557beaf240c0ce024f7e65790b17b85ec1aaa10fe1ee656b47ed1b5",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ffs/fs.h",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ffs/fs.h",
+      "bytes": 26896,
+      "sha256": "472af41620c6382bc508749df9797cb6184e148d162a2499c3563c3358ce4170",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ufs/dinode.h",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ufs/dinode.h",
+      "bytes": 8555,
+      "sha256": "d5e8cbc90dc0ac8df5f23e6a537a68175a399f6c5581af4c1bc87474086d8431",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ufs/dir.h",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ufs/dir.h",
+      "bytes": 5848,
+      "sha256": "3b65d0baf38da028e120a9ef4b260518071e090c980c3469bfffd17ecc9671ad",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ffs/ffs_alloc.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ffs/ffs_alloc.c",
+      "bytes": 71562,
+      "sha256": "3b5313c696e09745ee9e168b6e1c28990939bc39197758e8d39d9d4b9e24f336",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/newfs/mkfs.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/newfs/mkfs.c",
+      "bytes": 32169,
+      "sha256": "40283b5a1b2239d03e99f1a94e599c4d36208044d15ef56522fcab1769b678ab",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/pass1.c",
+      "bytes": 14566,
+      "sha256": "26f9fa7eb2fc837218352da4096673507d70d7e4e28e7f10426193196d21c2c8",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/ea.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/ea.c",
+      "bytes": 2788,
+      "sha256": "eae1b4d610f4e1c0acd62afc541cbf0ef7d86f68be3c762dde9db8d89173308a",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "d4c364b3dcf6dfe4e20c70d31912aad7e6219c14",
+      "path": "sys/ufs/ffs/ffs_alloc.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/d4c364b3dcf6dfe4e20c70d31912aad7e6219c14/sys/ufs/ffs/ffs_alloc.c",
+      "bytes": 68578,
+      "sha256": "57623ee628b2e2a1975c55f73ca53c21209275cfa359fd93b51e04bcaa3604b9",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass1.c",
+      "bytes": 16014,
+      "sha256": "6187d643d4b2e5e975dab2f75f4535db3c417e5c606404d14984d71c43830253",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sys/ufs/ffs/fs.h",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sys/ufs/ffs/fs.h",
+      "bytes": 32903,
+      "sha256": "4cd11b5b9dda128bc8834ee890645014b5d365dfef0d0416dc1453972e782991",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "97570233e1d596cda4d80e34fef0b2d53a7fb154",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/97570233e1d596cda4d80e34fef0b2d53a7fb154/sbin/fsck_ffs/pass1.c",
+      "bytes": 15461,
+      "sha256": "1e6026e155e844da528bf8cb60b7879f36a6342829a132b79164bd4da096bebe",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "opensvc/multipath-tools",
+      "revision": "4cacf3347a51a7975d36109e29c15614bf7fb2ee",
+      "path": "kpartx/ps3.c",
+      "url": "https://raw.githubusercontent.com/opensvc/multipath-tools/4cacf3347a51a7975d36109e29c15614bf7fb2ee/kpartx/ps3.c",
+      "bytes": 1572,
+      "sha256": "ae71c353217b5927b703e9c85f13bbcc37a472754aad00c3767a3503bcc16399",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    },
+    {
+      "repository": "sguerrini97/ps3linux-patches",
+      "revision": "90c8c9c5ec16ac18afd3136b39b80e50475a25df",
+      "path": "0035-ps3-partition.patch",
+      "url": "https://raw.githubusercontent.com/sguerrini97/ps3linux-patches/90c8c9c5ec16ac18afd3136b39b80e50475a25df/0035-ps3-partition.patch",
+      "bytes": 3539,
+      "sha256": "29f33d2e85525093f0d415c5b20c648bfed211681fe5b463a667e220382277d8",
+      "method": "Research subagent fetched raw response bytes and computed SHA-256 in memory"
+    }
+  ],
+  "limits": [
+    "Sampled source inventory, not a full dependency closure or license grant.",
+    "line_count includes a trailing empty line where present.",
+    "Source findings do not qualify a product or PS3 profile."
+  ],
+  "external_repositories": [
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "role": "current comparator"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "97570233e1d596cda4d80e34fef0b2d53a7fb154",
+      "role": "netbsd-6 comparator"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "role": "releng/8.0 format and EA ownership comparator"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "d4c364b3dcf6dfe4e20c70d31912aad7e6219c14",
+      "role": "releng/5.5 initialized prefix comparator"
+    },
+    {
+      "repository": "opensvc/multipath-tools",
+      "revision": "4cacf3347a51a7975d36109e29c15614bf7fb2ee",
+      "role": "PS3 disklabel comparator"
+    },
+    {
+      "repository": "sguerrini97/ps3linux-patches",
+      "revision": "90c8c9c5ec16ac18afd3136b39b80e50475a25df",
+      "role": "archived Glevand PS3 partition patch"
+    },
+    {
+      "repository": "microsoft/vcpkg",
+      "revision": "ce35b1a53aac26d7fcdb8ee1ef7a8e4eea02d27b",
+      "role": "donor declared baseline only"
+    }
+  ],
+  "local_git_heads": {
+    "publication/PS3HDDTool": "8a9f78185eea1f496285e2b7f7920bd3f9b6dc24",
+    "tools/PS3-HDD-Reader": "2e76371bd899f790fcc30ced163b9db62fb7671e"
+  },
+  "ufs2xplorer_licence_inventory": {
+    "tree_api_url": "https://api.github.com/repos/sagemono/UFS2Xplorer/git/trees/565ba57e6aabf6996ed4e0512548f4b697183ace?recursive=1",
+    "truncated": false,
+    "entries": 277,
+    "candidate_files_scanned": 45,
+    "notice_marker_matches": 0,
+    "scan_scope": "crypto, cryptodisk, disk, fs, fsck CLI and two selected geometry test files; marker scan plus selected manual headers",
+    "licence_file": "resources/icons/LICENSE.txt",
+    "licence_file_git_blob": "07622e835dc77d86faae11cf76e31d7e6bdd3b5d",
+    "licence_scope": "Silk icons CC BY 2.5 only",
+    "source_incorporation_status": "reference_only_pending_terms_and_provenance",
+    "history_audit_complete": false
+  },
+  "selected_external_git_blobs": [
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "README.md",
+      "git_blob_sha1": "16c7babdbec868a01082be811036c2698894de9b",
+      "method": "GitHub tree API blob identifier; not raw SHA-256"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "CMakeLists.txt",
+      "git_blob_sha1": "0d1ebb2c13e8d07d8ccfd1b3aa750985f8f2dbfa",
+      "method": "GitHub tree API blob identifier; not raw SHA-256"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "vcpkg.json",
+      "git_blob_sha1": "4ae18f4f786d40b865412d23c1719dbe18995673",
+      "method": "GitHub tree API blob identifier; not raw SHA-256"
+    },
+    {
+      "repository": "sagemono/UFS2Xplorer",
+      "revision": "565ba57e6aabf6996ed4e0512548f4b697183ace",
+      "path": "docs/BUILDING.md",
+      "git_blob_sha1": "6fd583efa52b709be37c38838ddd029f403c38c7",
+      "method": "GitHub tree API blob identifier; not raw SHA-256"
+    }
+  ],
+  "declared_vcpkg_baseline": {
+    "revision": "ce35b1a53aac26d7fcdb8ee1ef7a8e4eea02d27b",
+    "openssl": "3.6.1#2",
+    "catch2": "3.13.0#0",
+    "qtbase": "6.10.0#1",
+    "actual_donor_resolution_verified": false,
+    "native_cli_versions_selected": false
+  },
+  "unpinned_published_references": [
+    {
+      "url": "https://ps3hdd.pages.dev/blog/ps3-512e-compat/",
+      "role": "firsthand bounded PS3 accounting experiment",
+      "reviewed_on": "2026-10-20",
+      "content_hash_recorded": false
+    },
+    {
+      "url": "https://www.psdevwiki.com/ps3/Mounting_HDD_on_PC",
+      "role": "partition region and VFLASH mapping research",
+      "reviewed_on": "2026-10-20",
+      "content_hash_recorded": false
+    },
+    {
+      "url": "https://www.psdevwiki.com/ps3/HDD_Encryption",
+      "role": "PS3 encryption research",
+      "reviewed_on": "2026-10-20",
+      "content_hash_recorded": false
+    },
+    {
+      "url": "https://openssl-library.org/source/license/index.html",
+      "role": "provider version-dependent licence statement",
+      "reviewed_on": "2026-10-20",
+      "content_hash_recorded": false
+    }
+  ],
+  "additional_local_files": [
+    {
+      "path": "publication/PS3HDDTool/THIRD-PARTY-NOTICES.md",
+      "bytes": 1345,
+      "sha256": "15e121ddd5e08355872e221974b604c099a8268183d7741ab70afeb5d502c6b9",
+      "last_write_utc": "2026-10-13T08:45:45.5872957Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Disk/Ps3DiskLayout.cs",
+      "bytes": 7146,
+      "sha256": "1fa29a5893328b3d08f90c9d56f662598801f129165341a6820377c5a1fc1309",
+      "last_write_utc": "2026-10-13T08:33:33.4899771Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Crypto/Ps3KeyDerivation.cs",
+      "bytes": 7239,
+      "sha256": "cdd0f20842924cd8f31590622c9485b5342f5d8d298032144a1ff33bd1508a5a",
+      "last_write_utc": "2026-10-13T08:33:33.4834101Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/RegularImage.cs",
+      "bytes": 6039,
+      "sha256": "d3c7248d5f62ea78e812b06d62148178d822ec53797e2fba2f1d8e911e846e78",
+      "last_write_utc": "2026-10-13T08:33:33.5065006Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.MigrationTests/Oracle.cs",
+      "bytes": 9731,
+      "sha256": "f8e331fe742f5cbb629b88b4061c4c6e86b3d630323b01d45d91029a161dbbbb",
+      "last_write_utc": "2026-10-13T08:33:33.4115176Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Avalonia/ViewModels/MainViewModel.cs",
+      "bytes": 130148,
+      "sha256": "481f101cebb7751a92e86c1b87389bfd9bafd7725e975fba4d6efcc386fb35b5",
+      "last_write_utc": "2026-10-13T08:33:33.5254320Z"
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Avalonia/Views/MainWindow.axaml.cs",
+      "bytes": 62159,
+      "sha256": "a8aa14bd0fb04f55434a2fbd767a55ee0fdc9880cbb325c3c109684c8407afd3",
+      "last_write_utc": "2026-10-13T08:33:33.5309606Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/LICENSE",
+      "bytes": 18431,
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+      "last_write_utc": "2026-10-11T16:07:52.6228976Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/types.h",
+      "bytes": 3287,
+      "sha256": "b4d06e0236ad6340ee89fdc4cdd617832b957444712475893c02b8baef545c12",
+      "last_write_utc": "2026-10-11T16:07:52.6395482Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/kgen.c",
+      "bytes": 4929,
+      "sha256": "1ec403caa6b258597495c410cc0c7200b97324a55d9c6906e341565781b19265",
+      "last_write_utc": "2026-10-11T16:07:52.6372258Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/aes.c",
+      "bytes": 28025,
+      "sha256": "f851c275fb938a66d7f34f9204ea4c4a865c29878d36a50f444c28bcd59c2b60",
+      "last_write_utc": "2026-10-11T16:07:52.6259080Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/aes_xts.c",
+      "bytes": 1509,
+      "sha256": "a6f88ce482892b23536a481b742464e93d8a3a34f306072c1349075842accea8",
+      "last_write_utc": "2026-10-11T16:07:52.6269186Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/util.c",
+      "bytes": 3594,
+      "sha256": "2c50aee112e32a50b5640e33a2e639b8b32930ba66ea72148849aaa886979389",
+      "last_write_utc": "2026-10-11T16:07:52.6405547Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/dir.h",
+      "bytes": 6012,
+      "sha256": "720efa08892d643a5ed5b05f76b93274829e30b3d7ef4b6ebbeda26fe7b30c0a",
+      "last_write_utc": "2026-10-11T16:07:52.6347129Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/fs.h",
+      "bytes": 29052,
+      "sha256": "1644d037dce4d8a3e74b37237b612d7acb117787b8d20bd2ebcdfd811ec227de",
+      "last_write_utc": "2026-10-11T16:07:52.6372258Z"
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/misc.c",
+      "bytes": 5067,
+      "sha256": "a7bd91f877a2fa635c07303f26aeb0c5b7e272ede792364dcbd32390a605bfd1",
+      "last_write_utc": "2026-10-11T16:07:52.6283765Z"
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-v1/prefix-bound-proof.json",
+      "bytes": 3712,
+      "sha256": "56cdba3842df3978dbc1b5c8c705df95ec92a5631803ff42816abf665cbe0d12",
+      "last_write_utc": "2026-10-20T10:02:13.7109194Z"
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-v1/prefix-source/UFS2-initialized-prefix.txt",
+      "bytes": 103,
+      "sha256": "ecdae9029f63977255431da848b0520b48b51b872531d4a29921912069a2ce83",
+      "last_write_utc": "2026-10-20T10:02:13.0853525Z"
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-v1/prefix-source/group-initial-and-trimmed-prefix.txt",
+      "bytes": 5771,
+      "sha256": "0c100ad468148c9eb2fb6270431ffff211f8ebe7c33706086d5487fb3fdc97ca",
+      "last_write_utc": "2026-10-20T10:02:13.0843526Z"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# P7 native-observer review
+
+Exact PUP9dcc7410f4f14afea5e0ab389b466e6498b9f5fb783b508ba40022c98d2cf07b,215765852bytes. SELF798627986def3bc2bb9fac44b8f815479c775043794d39a2f4c7e2ac66f99267,78167bytes; ELF58c09d901e978befd567d0c3f7f005ba6154168b5fd351ac257556df8ce2a7be. Review provenance: primary agent code/protocol review plus separate parser/crypto/scope models; no separate human or agent review. All checks are offline, with Sony execution left to hardware gates.
+
+## Prerequisite evidence
+
+HW002E preserves four user photographs, approximately39-second repair/all-checks-green report,272-byte P6 USB record and two unchanged complete controls. The record confirms callback-capable export budget128MiB/status0 and compiled synthetic component execution. It does not identify exact arguments/caller, native peak, or whole-disk integrity. P7 reuses that compiled core and owned layout without changing any P6 source/release asset.
+
+## Hook scope and ABI
+
+The callback entry/return instructions at10ea0/10ec8 are replaced, plus native createea58→215e8, malloce6f8→214a8, freee788→21568, deletee9d8→215c8, and the full-worker call186f0→1f230. All original native calls run exactly once with their original r3..r10 arguments and full64-bit return preserved. This covers the identified malloc/free wrappers, their calloc/realloc/tail aliases and full-work call. It does not prove all indirect calls or external uses of the same heap are covered. Default creationead0 and other exports/heaps remain unobserved.
+
+Each native helper uses a256-byte aligned frame. It preserves SP, LR, r2, r13..r31 and CR2..4. Saving r2 in the original caller's28 slot preserves the original import's TOC publication; nested imports use the helper frame's28 slot and r2 is restored before returning. Argument spills begin at70 beyond the native callee's eight-register parameter area. The unchanged compiled core uses only volatile GPRs, no TOC/TLS/stack/undefined helpers/vector/FPU/64-bit memory; its existing static ABI and58000-plus host-event validation remain bound. The return helper restores the overwritten li r0,0 behavior and retains the original utility status/cleanup.
+
+The one-shot callback claim captures actual backing/budget/callback/opaque plus argc/argv pointer; it never dereferences argv. Create matching additionally checks budget, the exact local8-byte parameter structure at originalSP+70, backing identity and80150000flags before initializing the observer with the returned heap handle. Failed or unmatched creation does not initialize accounting. A matching delete freezes accounting before native heap deletion, retaining any remaining chunks as bulk-reclaimed rather than inventing individual frees. Final export return stores its actual status; missing deletion or failed final lock remains explicit.
+
+## Prefix authorization and incomplete coverage
+
+Only two helper instructions read native memory: malloc's header after tm_header_address authorization, and free's header after tm_prepare_free has validated heap identity, geometry and known live-slot identity. The prefix address is pointer-4; retail free's allocated-bit2 and chunk-size-maskfffffffc evidence is preserved in heap-telemetry/retail-free-chunk-header.txt and the historical design. Null/invalid/unknown-free cases never authorize a read. The free header is captured before the native operation can coalesce/change it. Observer code never writes heap contents or changes allocator behavior.
+
+The observer try-lock is nonblocking and spans original malloc/free mutation plus accounting. Contention invokes the original operation without observation and sets sticky incomplete coverage. The fixed4096-slot tracking table performs no allocation and flags saturation, unknown free, duplicate, range/header/accounting failures. Invalid records cannot certify a metric. Initialization always uses coverage0, deliberately retaining TM_INCOMPLETE_COVERAGE512 because indirect reachability remains unproven.
+
+Even with internally consistent known-hook accounting, the recorded peak is neither a certified native peak nor a guaranteed lower/upper bound: unobserved frees could inflate the accounting total and unobserved allocations could reduce it. It excludes heap administration, fragmentation and other heaps. A full-worker counter distinguishes entry into the scan call beyond the quick-check branch; it does not establish data integrity or complete filesystem coverage.
+
+## Logging and failure behavior
+
+Only after original export return, the helper creates `/dev_usb000/HDD2TB-P7.bin` using CREATE|EXCL|WRONLY, mode0666. It writes128-byte route header plus128-byte accounting summary, then a16-byte P7FT footer only if the first write returned0 and a full64-bit256 count. Every opened descriptor gets one close on all write paths. Open/short/write/footer/close failures preserve the original utility return; the record does not serialize close outcome. Existing P6/P7 files are never overwritten. Logger absence is inconclusive about export execution or USB mount visibility.
+
+## Validation and packaging
+
+Concrete helper-byte model123cases at three independent segment-base pairs verifies ABI, TOC publication, full argument/result preservation, exactly-once native forwarding, realloc-overlap accounting, prefix-read authorization, native pre-free header mutation, identity/create failure, foreign owner, invalid/null pointers, unknown free, contention, missing delete, reused frame and all logger failures. Native imports/syscalls are mocks and C executes on the host; this is not target-runtime proof. The15-case parser test rejects malformed/truncated output and invalidates metrics on inconsistent flags/counts/state. Its176-byte peak fixture is artificial.
+
+Two complete builds with the final source bindings produce identical PUP bytes and manifests; they also equal the initial two builds. A wording-only correction removed an unjustified lower-bound claim without changing executable bytes. Separate-parser audit verifies PUP HMAC, PKG HMAC/ECDSA/required sizes, SELF section HMAC/digest2, matching SPKG header, native/Python whole-ELF equality, and four independent loaded-base comparisons. Only the declared utility file changes from P5; full CoreOS, sysconf, versions, other packages/tar entries/padding/trailer remain intact. All2086 original relocations remain unchanged;16 owned-address relocations are added. Required SELF size/PHDR/HMAC/digest fields are updated; original SELF signature bytes rely on inherited CFW acceptance and do not authenticate modified contents. No Sony SELF authenticity/SPKG-signature claim is made.
+
+The next approved hardware scope is HW002F Crucial-fitted Recovery6 installation, XMB/capacity/ordinary restart and fixed installed-file/optional USB readback. Manual Recovery3 repair requires the subsequent separately bound experiment after identity/boot confirmation. This review does not authorize ad hoc console memory/code/kernel probes. Stable support remains false; full-capacity/high-LBA I/O, populated repair, durability, migration, other drives and>2TiB remain pending.

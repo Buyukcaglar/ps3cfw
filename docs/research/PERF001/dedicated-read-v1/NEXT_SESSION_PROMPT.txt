@@ -1,0 +1,68 @@
+Work in C:\Projects\PS3Firmware. English; UTC+3.
+Continue PERF001-DR1, the INDEPENDENT dedicated-PS3/2TB-SSD read-performance branch.
+Read this prompt and PLAN.txt completely. Current request: prepare/save the plan,
+prioritize internal reads, keep BF untouched and hardware gates locked until the owner
+provides the exact device details. No device details were supplied at creation.
+
+Read current plan/STATUS.json, plan/backlog/PERF001.json and applicable AGENTS.md;
+then research/PERF001/dedicated-read-v1/PLAN.txt, plan.json and
+DEVICE_DETAILS_TEMPLATE.json, plus analysis/PERF001/dedicated-read-plan-v1/
+preservation-checkpoint.json and validation.json. Verify relevant bindings;
+large protected images/archives SIZE ONLY. Current capacity authority supersedes
+dated root snapshots; reconcile owner changes without restoring old pointers.
+
+DR1 is planning-only: no new native code/build/package/nonce/release exists.
+All dedicated branch gate flags are false. Exact PS3 model, current firmware/
+homebrew compatibility, SSD identity/geometry/data disposition and recovery
+baseline are unknown. Do not fill these from the original CECHA00/Lexar case.
+Next input is the device-details form or equivalent user text. If still absent,
+report the missing details and remain offline; do not probe hardware to fill them.
+
+No BF completion, selected BF files0/14/28 or old-Lexar custody is a DR1 dependency.
+DR1 uses its own independently admitted fixture and generated corpus after details.
+The ORIGINAL RO1 branch still has its BF/custody/130GiB gates; none are waived or
+enabled by DR1. Do not invoke its qualification binder/stager/collector or change
+its source, protocols, receipts, release-plan flags or locked00.02 preview.
+Keep all BF source/review/protocol/payload/running control and64GiB-stage entries
+unchanged. No cross-chat messages, automation or new chats were requested.
+
+Sequence: device details/compatibility and recoverable baseline -> detached
+diagnostic adaptation/host and binary review -> zero-HDD-write native pilot ->
+owned small I/O pilot/known corpus/hash/persistence admission -> read baseline ->
+measured one-factor optimizations -> game/loading/streaming and compatibility
+validation -> repeated independent fixture states/correctness/release decision.
+PLAN.txt and plan.json identify which steps need hardware and all current locks.
+
+Initial proposals: corpus three512MiB files +16-file mix<=64MiB, plus pilot<=256MiB;
+combined initial payload-write cap2GiB, aggregate initial setup-read cap8GiB.
+Main read-profile nominal<=5536481280B and absolute REQUEST cap8GiB/run including
+EOF/retries/controls. Extra memory<=8MiB, graphics separately<=32MiB, evidence
+<=8MiB/job, USBavailable>=64MiB and initial native available>=130GiB. Twenty-minute
+cooperative active-work limit; no blocked-syscall deadline. Six-pair candidate
+block <=96GiB requested profile reads. Larger conditioning, installed game data,
+sparse/high-offset and fault/ATA/power experiments need concrete later scopes;
+unknown budgets stay locked. Every setup write/endurance cost is accounted.
+
+Success targets: >=10% relevant read throughput or>=5% approved loading elapsed,
+above2x uncertainty and direction>=5/6 matched pairs; <=2% timing overhead,
+no>5%p95/>10%p99 regression or new unexplained stalls, zero integrity/error/
+reserve/cleanup/stop failures. Repeat promising changes in two prepared states.
+Application verification overhead, syscall-inclusive latency and game performance
+are separate findings. Hidden driver/crypto/media work is inside FS syscalls;
+unaccounted application time is not a NAND/crypto timer. First-pass cache unknown,
+repeated warm/mixed; no CPU/SATA/NCQ/TRIM/media assumption from console age.
+
+Preserve original1TB/image, populatedCrucial, storedPNY, populatedLexar/filler,
+originals/NAND/archives/private material and concurrent work. Do not reclassify a
+protected device as disposable from its model name. No F:firmware read/hash/write/
+backup, own48B EID/derived-key read/hash/print/export, external console RAM probes,
+raw-image whole hashes/densification, shared PS3HDDTool writers or consumed writer/
+journal/archive/admin/stager/collector/closure replay. No console/network/USB/disk,
+format/repair/firmware/cache/power/queue/TRIM/ATA/native action under this plan.
+
+Only PERF001's dedicated-branch metadata was added to shared registers, with a
+scoped checkpoint; the capacity checkpoint pointer and non-PERF001 entries stayed
+unchanged. record_plan.py is a consumed create/registration writer; do not replay.
+After new details arrive, resolve their actual authority and tailor a concrete
+reviewable protocol before any gate transition. Do not treat a template boolean
+or this saved plan as hardware authorization. Stop at current human scope.

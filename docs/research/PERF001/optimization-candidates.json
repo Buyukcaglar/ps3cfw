@@ -1,0 +1,128 @@
+{
+  "id":"PERF001-E",
+  "date_local":"2026-10-16",
+  "state":"ranked_proposals_only",
+  "ranking_basis":"Evidence strength, measurable ordinary-workload relevance, effort/dependencies and correctness/recovery exposure. Rank is investigation/decision order, not an asserted speedup.",
+  "shared_validation":"measurement-plan.json decision_criteria and matched >=6-pair baseline method apply to every experimental candidate. Native measurements/qualification and owner acceptance remain separate. All effort is relative scope, not a delivery estimate.",
+  "candidates":[
+    {
+      "rank":1,"id":"O01","name":"Component timing and retained-file read comparison","layer":"Application diagnostic; read and write attribution",
+      "evidence":"Saved BF rates include CPU/guard/UI/USB; no syscall timings. Same read+verify rate can mask media changes. Exact source overhead is known.",
+      "benefit_hypothesis":"Resolve which layer deserves optimization; no immediate speedup promised. Prevent spending effort on an unsupported TRIM/media diagnosis.",
+      "workloads":"Retained sequential/random/small-file reads first; disposable save/install/write timing later.",
+      "effort":"Small-to-medium diagnostic engineering/review; no firmware change. Depends on BF qualification and separate native implementation/release.",
+      "costs":"<=8MiB extra memory, timer/event CPU cost measured <=2%, bounded USB output; retain stop/UI schedule and full content controls. Read-only opens may incur OS metadata side effects.",
+      "baseline":"Frozen BF algorithm used as reference in a fresh fixed read-only A/B diagnostic; no BF relaunch. CPU-only and syscall-only versus verified-read.",
+      "success":"Instrumented scope coverage with unexplained application residual<=2% and timing overhead<=2%, exact bytes/hashes and complete rc/latency distributions; hidden syscall subcomponents remain unknown. Subsequent improvements require>=10% throughput or>=5% approved workload latency gain.",
+      "regression":"Shared tail/correctness thresholds; no current BF edit or reduced guards."
+    },
+    {
+      "rank":2,"id":"O02","name":"Optimize pattern/SHA/comparison and rendering in a future diagnostic","layer":"Application CPU/UI only",
+      "evidence":"Write generates+hashes; read regenerates+compares+hashes. BF uses software SHA and periodic UI. Actual CPU shares remain unmeasured.",
+      "benefit_hypothesis":"Potentially faster integrity diagnostics if CPU timers dominate; ordinary games benefit only if their own measured work shares the optimized component.",
+      "workloads":"Capacity/readback tool, not automatically game/save/install stack.",
+      "effort":"Small-to-medium after O01; independent known vectors, compiler/ABI and full cancellation/error review required.",
+      "costs":"Bounded extra buffers or CPU/vector state; possible PPU/SPU transfer/scheduling overhead. No integrity sampling or weakened full hashes; same content and exact pattern domains/high offsets. UI can suppress redundant redraws while keeping accepted service cadence.",
+      "baseline":"Unmodified algorithm/UI in a new separately reviewed tool, paired CPU-only and verified-read runs at identical buffers/order.",
+      "success":">=10% end-to-end diagnostic gain, >=5/6 paired direction, independent full vectors/content equality and <=2% instrumentation cost.",
+      "regression":"No tail/stop/UI/cleanup regression; no game speedup claim absent a relevant workload result."
+    },
+    {
+      "rank":3,"id":"O03","name":"Tune ordinary read request size, alignment and locality","layer":"Application/libfs buffering and copies",
+      "evidence":"BF submits1MiB serial operations; user-visible512B sectors,4KiB fragments and16KiB blocks differ from unknown NAND geometry. Native device queue depth and copy cost unmeasured.",
+      "benefit_hypothesis":"Reduce syscall/copy overhead for sequential loads/installs; could worsen small/random latency or memory use.",
+      "workloads":"Game streaming/read-only retained data, file installs and metadata mixes tested separately.",
+      "effort":"Small application experiment; medium if changed in shared libfs/driver. First measure4KiB/64KiB/1MiB at QD1.",
+      "costs":"Larger buffers use scarce memory and delay cooperative cancellation; preserve <=1MiB service boundaries using slicing. No bypass of cache coherence, fsync/flush or error paths.",
+      "baseline":"Exact same immutable ranges and QD1, fixed cache-state labels/compiler/UI; counterbalanced buffer sweep.",
+      "success":">=10% throughput or>=5% approved game/load/install elapsed reduction; no>5%p95/>10%p99 regression for small reads/save-like workloads.",
+      "regression":"Full content/offset/EOF equality, no memory-budget increase without benefit and no queue-depth claims from app thread count."
+    },
+    {
+      "rank":4,"id":"O04","name":"Reduce diagnostic guard/USB overhead only with equivalent safety","layer":"Application free-space/STOP/progress",
+      "evidence":"Two syscall840 calls per1MiB write, STOP-file open per1MiB, progress fsync every256MiB plus boundaries. Repeated call count is confirmed; time dependence is unmeasured.",
+      "benefit_hypothesis":"Remove redundant work only if timers show meaningful share; guard call count alone cannot explain the write step without rising call cost.",
+      "workloads":"Future integrity diagnostic only; normal games do not run these guards.",
+      "effort":"Medium because ownership/reserve/cancellation invariants need new proof and fault cases. Current BF remains immutable.",
+      "costs":"Caching free-space values or STOP handles can hide background allocation or token delivery; cannot reduce reserve enforcement/stop responsiveness/publication reliability. Rank measurement before any cadence proposal.",
+      "baseline":"Exact current guard frequency in future disposable app; individual free/STOP/USB timers.",
+      "success":">=10% diagnostic end-to-end gain while retaining every existing per-write reserve check and accepted cancellation/receipt guarantees; otherwise reject cadence change.",
+      "regression":"No reserve/cancel/integrity/USB failure regression, tails within shared thresholds; no ordinary-storage speed claim."
+    },
+    {
+      "rank":5,"id":"O05","name":"Allocation search and metadata locality","layer":"LV2 UFS allocator/buffer cache",
+      "evidence":"Actual kernel has preferred/quadratic/linear group search and fragment/cluster bitmap paths; exhausted searches can grow with fragmentation. No current BF per-allocation timing/extents or occupancy threshold proof.",
+      "benefit_hypothesis":"Reduce fresh-file/install/write latency if group search or metadata I/O dominates. Read benefits only through measured locality/cache effects.",
+      "workloads":"New installs, fresh file creation, fragmented near-full writes; existing sequential reads are separate.",
+      "effort":"Large firmware engineering after attribution; requires exact P13 kernel mapping, lock/soft-update/free-counter/rollback and repair compatibility proof.",
+      "costs":"Hints/index caches consume memory and can become stale under allocate/free/recovery; preallocation shifts work and consumes reserve, layout changes require migration. Do not reclaim reserved space or perform populated defragmentation.",
+      "baseline":"Matched disposable available-space and extent-shape states, timers/operation counts; distinguish host bytes/time from physical/NAND writes.",
+      "success":">=10% create/install throughput or>=5% install/save latency gain across independent fixture states and no shared read/save-tail regression.",
+      "regression":"Exact allocation ownership/counts/alias controls, full rereads, flush/error/cleanup and separately authorized ordinary restart/recovery acceptance. No >=2TB or repair parity inference."
+    },
+    {
+      "rank":6,"id":"O06","name":"Driver/crypto copying, batching and scheduling","layer":"LV2/LV1 encrypted storage transport",
+      "evidence":"Mapped synchronous filesystem requests and ATA DMA EXT builders; encryption is below filesystem mapping. No separate native crypto, copy or device-busy timers.",
+      "benefit_hypothesis":"Reduce copy/crypto/queue overhead if proven; read/write benefit cannot be predicted from link marketing.",
+      "workloads":"Bulk reads/installs and concurrent storage; QD1 diagnostic does not assess real game concurrency.",
+      "effort":"Large firmware work; exact object lifetime, DMA/cache alignment, locks/completion/error retirement and selected backend proof needed before native fixture.",
+      "costs":"Buffers/pinned memory, CPU/SPU scheduling, lock contention, cancellation stalls, ordering and compatibility risk. Never enable asynchronous/NCQ merely because SSD advertises it; retain flush/ordering contract.",
+      "baseline":"Current exact firmware on disposable fixtures; one factor at a time and actual command selection/static proof before changing queue implementation.",
+      "success":">=10% relevant throughput or>=5% approved game/install/save elapsed gain across at least2 fixture states with shared tails/correctness thresholds.",
+      "regression":"No ordering/alias/coherence/retirement/resource leaks; full data/persistence/recovery gates separate from performance."
+    },
+    {
+      "rank":7,"id":"O07","name":"SSD revision/workspace and ordinary idle comparisons","layer":"Device/media/configuration selection",
+      "evidence":"Vendor sources establish generic GC/cache/overprovisioning behavior; installed Lexar controller/NAND/cache and fill temperature unknown. Filesystem-free bytes do not prove erased flash blocks.",
+      "benefit_hypothesis":"Different sustained-write behavior or ordinary idle recovery could matter after software bottlenecks are separated; no current replacement recommendation or cache-size inference.",
+      "workloads":"Sustained installs/writes; game reads/save latency measured separately.",
+      "effort":"Medium measurement/logistics, separate genuinely disposable fixture; no forced power/cache/HPA/DCO setting changes.",
+      "costs":"Drive cost/endurance/time and new migration/compatibility qualification; leaving filesystem reserve may help allocation but is not guaranteed controller OP. Idle can change temperature/history.",
+      "baseline":"Exact model/firmware, occupancy/history/extent/environment matched; balanced immediate-vs30min idle and independent drive-state repeats.",
+      "success":">=10% relevant write throughput or>=5% install/save elapsed improvement with shared read/tail/correctness criteria, reproducible exact-drive result.",
+      "regression":"No unsupported model-wide recommendation, no sample substitutions, no reuse of real populated drives as disposable fixtures."
+    },
+    {
+      "rank":8,"id":"O08","name":"Review flush/error propagation before performance-sensitive firmware work","layer":"Durability prerequisites, not a speed optimization",
+      "evidence":"Saved exact kernel fsync/flush analysis distinguishes file fsync from ATA barrier and identifies ignored error returns in bounded paths. Application API success alone is not media persistence.",
+      "benefit_hypothesis":"Correctness gate for future save/install optimizations; may increase latency. No faster-by-skipping-flush proposal.",
+      "workloads":"Save/install/fsync and shutdown; no causal claim for BF slowdown.",
+      "effort":"Large independent firmware correctness project; reuse static evidence only, no implementation released here.",
+      "costs":"Potential performance regression for required durability, complicated locks/lifetime/retirement/soft-update integration and recovery qualification.",
+      "baseline":"Current exact fsync/close semantics and required durable contract, not merely current API time.",
+      "success":"First prove/check intended ordering and error propagation. Any performance comparison must meet shared thresholds against equally correct semantics; unavoidable durability cost documented, not suppressed.",
+      "regression":"No successful-return claim under ambiguous publication/retirement or failed barrier; no power-loss experiments without a separate disposable protocol."
+    },
+    {
+      "rank":9,"id":"O09","name":"TRIM/discard feasibility research","layer":"Filesystem -> encrypted LBA mapping -> permitted ATA DSM path",
+      "evidence":"Exact Lexar word169 advertises TRIM and word69 DRAT/RZAT. PS3 end-to-end issuance/runtime support remains separately classified in capability matrix; absence of observed DSM is not universal absence.",
+      "benefit_hypothesis":"Possible sustained-write/GC benefit only if erased-block pressure is proven and safe end-to-end implementation feasible. Not necessary or sufficient just because no issuance is found.",
+      "workloads":"Reused/freed-space writes; initial monotonically allocating fill is not an isolated TRIM experiment.",
+      "effort":"Very large/high uncertainty. Requires exact dead/free ownership (including soft updates and pending I/O), nested region/address translation, encrypted read semantics, allocation races, durable commit/flush ordering, errors/fsck/recovery lifecycle and device behavior proof.",
+      "costs":"Irreversible data loss if ranges/ownership/order wrong. Zero ciphertext after device TRIM does not imply zero decrypted plaintext in CBC path. Advertised read-zero semantics do not prove safe filesystem behavior.",
+      "baseline":"No-discard disposable matched states only after all static/correctness gates and separate explicit implementation/hardware authorization; no command experiment now.",
+      "success":"Prove safety/compatibility first, then >=10% sustained-write or>=5% approved install/save latency improvement across matched independent states with no shared tails/read/correctness regression.",
+      "regression":"No whole-drive/live-data TRIM, raw pass-through probes, repair lifecycle bypass or populated Lexar experiment."
+    },
+    {
+      "rank":10,"id":"O10","name":"Keep current stack and capacity workflow unchanged","layer":"No-change baseline",
+      "evidence":"Historical write slowdown is real at application level; cause/universal benefit not isolated. Current capacity qualification remains open.",
+      "benefit_hypothesis":"Avoid unmeasured compatibility/durability regressions and preserve usable current behavior while obtaining attribution.",
+      "workloads":"All current games/saves/installs and capacity qualification.",
+      "effort":"No firmware work; research/measurement proposal only.",
+      "costs":"Observed diagnostic runtime may persist; no performance claim.",
+      "baseline":"Existing reviewed P13/final-v16 and saved evidence; ordinary runtime gates stay with capacity owner.",
+      "success":"Adopt unless another option meets measured gain/correctness/tail criteria. Keep stable_storage_support false until independent qualification.",
+      "regression":"No new commands/settings/app releases or historical workflow replay."
+    }
+  ],
+  "rejected_or_unreleased":[
+    {"option":"Skip full hashes/pattern verification, reserve checks or safe stop","decision":"Rejected","reason":"Changes the integrity/capacity qualification rather than optimizing equivalent work."},
+    {"option":"Disable flushes/write ordering or enable volatile cache for speed","decision":"Rejected","reason":"Durability and recovery regression; PC-side cache state cannot establish PS3 state."},
+    {"option":"Enable NCQ/SATA6Gb/s/FUA by changing settings","decision":"Not proposed for implementation","reason":"Drive advertisement does not establish host path/queue/link feasibility. Static proof and compatibility review precede any separately authorized experiment."},
+    {"option":"TRIM/free all currently filesystem-free sectors or whole populated drive","decision":"Rejected","reason":"Ownership/encrypted mapping/pending metadata/recovery semantics unproved; destructive and unauthorized."},
+    {"option":"Reformat, enlarge fragments, reclaim Sony/UFS reserve, defragment or delete filler","decision":"Rejected for this investigation/current drives","reason":"Changes capacity workflow/data/layout and cannot isolate cause; larger-layout4TB research remains separate."},
+    {"option":"Infer cache size/NAND/controller/thermal throttling from32GiB or336GiB step","decision":"Rejected as conclusion","reason":"Allocation, time, host writes and occupancy co-vary; generic SSD examples are not exact Lexar revision evidence."},
+    {"option":"Assume SATA generation/absence of advanced commands from console age","decision":"Rejected","reason":"Exact saved firmware/device evidence is required; declared drive interface and actual negotiated PS3 link are separate."}
+  ]
+}

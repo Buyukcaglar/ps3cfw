@@ -1,0 +1,129 @@
+PERF001-RO1 offline implementation and review
+16 October 2026, UTC+3
+
+Implemented in analysis/PERF001/ro1-offline-v1/src. The native application,
+host backend, saved-file analyzer and offline build helpers are complete.
+All required offline checks pass within the evidence boundaries below.
+STOP: no hardware release, staging, deployment or native execution occurred.
+BF, P13, their namespaces/protocols and the capacity workflow are preserved.
+
+What the implementation does
+----------------------------
+The actual shared C core implements the proposed106-run schedule:
+4 calibration runs (10000 empty/event brackets before/after),12 CPU arms,
+12 balanced syscall-only/verified-read arms plus2 independent retained-slice
+verification reads,9 buffer comparisons,9 logical-placement comparisons,
+6 fixed-seed random/locality passes,4 timing-on/off4KiB controls,48 game-file
+hash passes. Native request sizes are4KiB,64KiB and1MiB; both data buffers
+are4096-byte aligned. Existing-file opens are read-only and allowlisted.
+
+The initial5,595,315,008B proposal remains the main read workload. Explicit
+4KiB timing controls add64MiB. A complete normal run returns5,662,423,872B;
+90 one-byte EOF requests also consume admission budget even when returning0.
+The absolute8GiB cap is charged BEFORE every requested byte, including EOF,
+controls, short-read retries and errors; actual returned bytes are tracked
+separately. All requests must fit the remaining charged budget. At most64
+positive short-read fragments are accepted for one logical request; zero
+progress, overreporting, offsets/sizes/hash mismatches and errors stop the run.
+
+Cancellation is serviced at the first of1MiB,64operations or250ms, and before
+open. Native syscall stalls have no hard cancellation/time guarantee. The
+20minute limit is cooperative.128GiB+2GiB available-space floor is retained.
+Close errors preserve the first workload error and separately mark uncertain
+cleanup. No automatic deletion, resume, existing-file append or retry is provided.
+Read-only opens can still cause filesystem housekeeping; physical zero writes
+are not claimed. No ATA, TRIM, cache, power, queue or firmware operations exist.
+
+Ticks use the native timebase/frequency. Per-component histograms use exact
+small buckets and <=1.563% relative-width larger buckets, with quantile bounds.
+The core stores exclusive scopes; native USB/controller/STOP/render subscopes
+are explicitly inclusive and must not be added to their parents. The analyzer
+reports syscall-active versus end-to-end rates, paired ratios, CPU and4KiB
+instrumentation overhead and unaccounted application time. Hidden filesystem,
+driver, crypto and media work remains inside syscall elapsed time.
+
+Each run emits a65536B checksummed record with nonce, stage/range, counters,
+timer summaries and complete read/seek histograms.106records occupy6,946,816B.
+An8192B receipt,4096B final-publication timing witness and64B DONE token keep
+output below8MiB (7,876,672B even at120maximum records). The witness includes
+result write/sync/close/reread timings; its own final write/close and DONE are
+outside that snapshot. A DONE token can remain after its final sync/close fails;
+presence is not proof of process return, final persistence or power-loss safety.
+All those failures return error. No collector or stager is supplied.
+
+Release locks
+-------------
+The candidate has separate titleID PFR100001 /APP_VER00.01, labeled
+PERF001 RO1 OFFLINE LOCKED. Both hardware authorization and fixture qualification
+are zero. The three proposed BF whole-file SHA bindings deliberately remain
+unadmitted/zero because final qualification is unavailable. The first gate
+precedes all I/O and graphics calls; host native-adapter tests observe zero
+syscalls with either default gate, and saved ELF assignments/branches are audited.
+The package is an offline review artifact, not an installation instruction.
+No READY/STOP/DONE tokens, staging script or hardware protocol was released.
+
+Checks and review evidence
+-------------------------
+- checks/host-reviewed/result.json:35 actual integrated-C scenarios, covering
+  default/qualification/config/path guards, serial read/seek/stat/EOF behavior,
+  short reads/zero progress/overreported or error-returned bytes, content errors,
+  cancellation/limits, clock regression, space faults, close/cleanup failures,
+  publication failure and overflow. Handles close in the memory model; native
+  close failure still has an explicitly uncertain process-cleanup outcome.
+- checks/native-adapter-final/result.json:36 actual native-adapter cases with
+  mocked raw syscalls/graphics. They cover locked gates, READY/nonce/length errors,
+  held-X refusal, fresh-X/stop, USBspace, exclusive outputs, write/sync/close/
+  reread/witness/DONE failures and readonly HDD adapters. This suite uses a
+  bounded callback driver; it does not replace the separate integrated-core test.
+- Independent Python/numpy/hashlib references:24 cross-offset/file vectors,
+  including unaligned tails,4GiB and16GiB boundaries, plus both complete256MiB
+  slice SHA values. No retained data or original image was read for this oracle.
+- checks/full-scale-checked.json:the real native-size C schedule with generated
+  in-memory files and synthetic game-file sizes/hashes,106runs/5,662,423,872B,
+  status0 and no leaked mock handles. This is host exercise, not console I/O.
+- checks/host-reviewed/parser-checks.json:1013 parser checks, including1000
+  corruption cases and rehashed inconsistent caps/counts/records. Additional
+  receipt tests check13 changed-byte locations. Nonces/sequence/full SHA and
+  read/seek histogram counts are checked. Hashes are integrity evidence, not
+  authentication against an actor who can replace both data and manifests.
+- attempts/native-checked/binary-review.json:two identical GNU links;20 exact
+  SDK imports,99OPD32 descriptors,365direct calls; standard startup/exit3;
+  extra static BSS2,573,980B (<8MiB), graphics allocation separately32MiB.
+  Independent free-NPDRM CMAC/segment-HMAC decoding agrees on all loadable bytes;
+  package padding/payloads/SFO/CID match. ECDSA was not independently revalidated;
+  authentic Sony signatures and native loader acceptance are not claimed.
+
+Source and linked-artifact review was performed by the primary agent. Separate
+Python oracles/parser and C fault backends provide differential checks; no
+separate human/subagent review is claimed. The final REVIEW.json and scoped
+checkpoint bind the reviewed source, build, tests and package.
+
+Review corrections retained in earlier attempt directories
+----------------------------------------------------------
+The first compile used the wrong context field for a random-range offset.
+Old PPU GCC required explicit structure clearing and a freestanding memcpy.
+The clock-regression mock initially did not move far enough backward. Windows
+stdout text mode expanded binary receipt LF bytes; binary capture now sets
+O_BINARY. Record magic lengths and READY/STOP/DONE fixed magic were corrected.
+Package EBOOT zero padding is now checked separately from signed wrapper bytes.
+Request-budget charging was tightened to count EOF/retries conservatively;
+admission-failure journals now finalize the empty SHA; deliberately uninstrumented
+and calibration runs do not automatically fail ordinary-loop coverage.
+Earlier source/build/test outputs remain preserved, not counted as final passes.
+
+Remaining gates
+---------------
+No native throughput, timer accuracy, <=2% instrumentation overhead, coverage,
+UI acceptance, XMB return, durability or improvement is established. Synthetic
+clock models deliberately show overhead/coverage failures, and the analyzer
+correctly leaves qualification false; those percentages are not host/PS3
+performance measurements. Real calibration and balanced controls are required.
+No root-cause fix or storage speedup follows from this diagnostic implementation.
+
+Before a later release:capacity-owner BF qualification and current custody;
+exact final BF receipt/file hashes, current file/extent bindings and owner scope;
+fresh reviewed release source/nonce/package; explicit bounded hardware protocol
+and authorization. Gate removal is a separate change. Preserve all real data,
+filler, original images/archives, P13 and current qualification workflow.
+
+Complete continuation:research/PERF001/RO1/NEXT_SESSION_PROMPT.txt.

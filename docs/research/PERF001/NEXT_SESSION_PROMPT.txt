@@ -1,0 +1,149 @@
+Work in C:\Projects\PS3Firmware. English; UTC+3.
+Continue PERF001 only within the NEW human request's authorization. This saved
+prompt authorizes no firmware implementation/deployment or hardware action.
+
+Read completely, in this order:
+1. plan\PERF001_SESSION_HANDOFF.txt (original scope/preservation rules).
+2. plan\backlog\PERF001.json, README.md, plan\STATUS.json, plan\ROADMAP.md and
+   plan\INITIAL_TASK_PROMPT.txt. The latter belongs to the capacity workflow;
+   its historical permission does not transfer hardware custody to PERF001.
+3. research\PERF001\findings.txt and this entire prompt.
+4. research\PERF001\evidence-index.json,
+   storage-path-and-capabilities.json, ata-device-and-primary-sources.json,
+   diagnostic-cost-audit.json, measurement-plan.json and optimization-candidates.json.
+5. analysis\PERF001\preservation-checkpoint.json and validation.json. Verify
+   the explicit current file bindings; listed large artifacts SIZE ONLY.
+   Refresh any changed roots/owners. Do not overwrite a newer root pointer.
+6. analysis\PERF001\bf-analysis\summary.json and proposal-review.json;
+   analysis\PERF001\ata-research\validation-receipt.json;
+   analysis\PERF001\storage-static\final-verification-v2.json (v1 retained).
+7. Applicable AGENTS.md if added. None existed at the2026-10-16 investigation.
+   The workspace was not a Git repository; use explicit scoped preservation.
+
+Completed work and exact evidence boundary
+------------------------------------------
+PERF001 research/proposal deliverables complete. No optimization/native diagnostic
+implementation, firmware build/deployment, console contact, disk/USB operation,
+TRIM/ATA experiment or cross-chat message occurred. Original handoff/current
+capacity prompts, BF sources/reviews/receipts, P13 and capacity ownership remain.
+Only task\PERF001 metadata and STATUS's PERF001 entries were scoped updates;
+root current_checkpoint stayed under capacity custody. Follow the PERF001 scoped
+checkpoint for these expected root deltas; do not mistake them for frozen-source
+changes or rerun a consumed registration writer.
+
+Initial root checkpoint analysis\dev006\perf001-backlog-handoff-checkpoint.json
+had5107 SHA bindings and11 large size-only checks, all passed. Its full check
+receipt and initial roots are preserved under analysis\PERF001\authority\.
+Fresh independent BF helper revalidated3859x256B journal records and reproduced
+all original per-file/stage medians exactly. Repeated derived JSON/CSV identical.
+Use the fresh helper with a NEW output subdirectory if another host-only repeat
+is useful; inspect its arguments/source first. Do not invoke original assessment
+writer or Read/Snapshot/Stage/Deliver tools. No new snapshot is needed for research.
+
+Historical observation used:2026-10-16T06:51:49.666849UTC /09:51:49 UTC+3.
+Phase3/status0,480GiB written,29 complete file verifications,current index29
+13GiB read,3GiB remaining. It is not a present-state report or final qualification.
+Write medians11.5876195 ->9.9599745 ->7.541732MB/s (decimal),34.9156054% drop;
+verified-read medians14.8407425 ->14.83528 ->14.8303475MB/s,0.0700437% drop.
+Ranges0..32,32..336,336..480GiB are newly added filler, not total occupancy.
+Some rolling windows overlap, not uniformly. No native timestamps in journal;
+exact whole-file/phase rates and component costs cannot be reconstructed.
+Rolling write samples incompletely cover per-file fsync/close cost.
+
+Findings that future work must preserve
+--------------------------------------
+- Exact saved Lexar NQ1002TB SN21128/ATA <serial> advertises DSM/TRIM
+  (169=0001), deterministic+zero read-after-TRIM(69=4d20), NCQ/depth32, LBA48,
+  cache flush and WRITE DMA/MULTIPLE FUA EXT. PC/SAT advertisement is not PS3
+  forwarding, filesystem issuance, actual discard behavior, usefulness or safety.
+- Saved PC cache was disabled and link6Gb/s; current PS3 cache/link is unknown.
+  Queued DSM/NCQ-FUA not established. Obsolete84:7 does not resolve NCQ-FUA.
+  Advertised512/512 is not NAND page/erase geometry or partition/4KiB alignment.
+  Full raw IDENTIFY checksum was not available from the compact word listing.
+- Saved LV1 has IDENTIFY/flush/SMART/SET FEATURES/power command builders and
+  48-bit DMA EXT read/write. Blanket advanced-command absence is contradicted.
+  No complete ordinary-filesystem DSM caller/forwarding/runtime proof was found;
+  unknown is not proof of unsupported or filtered. Generic taskfile plumbing is
+  not an authorized pass-through recipe.
+- Raw840 free-space route reaches bounded UFS summary/reservation arithmetic
+  2b1940..2b1a4c, not a whole bitmap scan. Public libfs GetFreeSize also has
+  fcntl817 c0000002 fast path. BF uses two calls to the SAME840 per1MiB, plus
+  post-open checks. Allocation group/bitmap work is a separate write-path cost.
+- Pattern/SHA/copy/UI/STOP/USB costs are known statically but unmeasured. Flat
+  read+verify may be a CPU ceiling; faster diagnostic does not imply faster games.
+  Extra reciprocal-median cost48.545ms/MiB is arithmetic, not causal attribution.
+- Allocation/fragmentation/metadata, hidden driver/crypto, SSD GC/cache/history,
+  variable guard/USB/UI and temperature remain candidates. No cause fixed.
+  Exact Lexar controller/NAND/cache and native fill temperature remain unknown.
+- File fsync vs lower ATA barrier/error propagation remains a correctness gate.
+  No flush removal, unsafe cache settings or API-success-as-durability claim.
+- Static saved package lineage is not complete installed LV1/LV2 readback.
+  AH proves exact installed78487B utility only. Native/hash/persistence/physical
+  placement/repair/power-loss/user acceptance remain distinct gates.
+
+Concrete next proposal (not released)
+-------------------------------------
+measurement-plan.json PERF001-RO1 specifies a FRESH app-owned retained-file
+reader and CPU-only controls, zero intentional HDD payload writes. About5.21GiB
+planned reads (5595315008B),8GiB absolute inclusive cap,8MiB extra working memory,
+8MiB newUSB evidence/64MiB USBavailable,128GiB available+2GiB margin,20min
+cooperative elapsed limit. OS read-only opens may still trigger metadata work.
+Six balanced256MiB syscall-only/verified-read pairs,4KiB/64KiB/1MiB sweep,
+early/middle/late logical ranges, deterministic small/random reads and immutable
+16BA executable controls. No raw LBA, mutable saves, games or current BF writes.
+Independently precompute slice SHA/pattern references; whole-file hashes are not
+slice references. Syscall-only returned bytes lack transient full verification;
+later checks establish only later retained content. Cache state remains labeled.
+
+Timers use calibrated native ticks/frequency, independent total elapsed and
+nonoverlapping component scopes. Driver/crypto/media are included in syscall
+time, not whole-minus-components residual. Bound memory/logs, retain rc/short
+I/O/latency distributions,<=2% timing overhead and disclosed residual coverage.
+Fine bins/exact samples must resolve tail thresholds or results are inconclusive.
+Before EVERY read check requested<=remaining cap, including EOF/control/retries.
+Stop at whichever comes first:1MiB,64 random ops or UI interval; keep first and
+cleanup errors. A stuck syscall has no guaranteed wall-clock cancellation.
+
+NEXT GATE: refresh actual BF qualification through existing owner evidence,
+without contacting/control from this research session. Require the capacity
+owner's required final receipt/global reread/controls/reserve/XMB/persistence/
+game/extent qualification and human custody coordination. Then obtain separate
+explicit authorization to IMPLEMENT this fresh application, with source/import/
+package/fault/cancel review. Only a later explicit reviewed bounded hardware
+protocol may release its launch/staging/collection. Research completion releases
+none of these actions. APP_VER>=01.15 was only a historical future minimum;
+refresh the current version/namespace rather than assuming it is still free.
+
+Minimum proposed gain:>=10% paired throughput or>=5% approved brief game/install/
+save elapsed gain above uncertainty,>=5/6 paired direction, no>5%p95/>10%p99
+regression and zero new integrity/reserve/cleanup/cancel failures. These are
+decision thresholds, not measured performance. Later controlled writes require
+independently admitted genuinely disposable fixtures; protected Lexar/Crucial/
+PNY and old images/journals do not become disposable. Each conditioning/occupancy/
+write/endurance budget must be explicit. No fixed roundtrip/time promise or
+repeated lengthy LBP3 level/trophy chores.
+
+Absolute limits
+---------------
+Preserve original1TB/image,populatedCrucial,storedPNY,populatedLexar/filler,
+originals/NAND/archives and concurrent work. No F: firmware read/hash/write/backup;
+no48B EID/derived-key read/hash/print/export; no external console process/kernel/
+VSH RAM probes. No raw-image whole hash/densification; large list size-only.
+Do not replay consumed writers/stagers/collectors/journals/migrations/launches/
+closure scripts. Shared publication\PS3HDDTool and tools\PS3HDDTool-local writers
+off limits; keep approved file-level migration route. No administrator needed.
+No hardware setting/cache/power/queue change, new fill, deletion, defrag, repair,
+format, rollback, fault/power experiment or TRIM/discard. No automation/thread/
+messages to other chats without explicit human request. Stop at authorized scope.
+
+Any future discard proposal must first prove dead-extent ownership, pending I/O/
+soft-update/recovery lifecycle, encrypted-LBA translation and decrypted reads,
+allocation serialization, durable metadata/flush ordering and partial-error
+handling. Physicalzero after TRIM is not necessarily decrypted logicalzero;
+failed DSM may already have changed ranges. No whole-drive/live-data discard.
+Capability absence alone makes no safe/necessary/useful optimization argument.
+
+If no new implementation/hardware authority is supplied, continue only useful
+host-only research or proposal correction and stop when complete. Report exact
+evidence limitations and next specific gate; never declare stable support or
+runtime gains from this investigation.

@@ -1,0 +1,24 @@
+{
+  "schema": "HDD2TB-RDI12-PNY-READY-v1",
+  "maximum_bytes": 16384,
+  "filename": "HDD2TB-RDI12-PNY-READY.json",
+  "fixed": {
+    "candidate_sha256": "2a1e3738a687a9e2114c7b45cd0a09b039bb473c79cb9872aa8a871e88ce091a",
+    "source_plan_identity": "4016e70c4ea98f44b2e5419d5a3aaa68c26819a447f8952ae14cd3464cc7e65b",
+    "nonce": 551293953,
+    "fixture": "PNY <serial> HT3C09BA 2000398934016B 512/512"
+  },
+  "fresh_staging_fields": [
+    "proposal_sha256",
+    "preservation_manifest_sha256",
+    "independent_archive_audit_sha256",
+    "two_live_comparison_receipt_hashes",
+    "fresh_opened_identity_receipt_sha256",
+    "full_installer_manifest_verification_sha256",
+    "exact_control_file_states_and_hashes",
+    "USB_identity",
+    "receipt_paths_required_absent"
+  ],
+  "derivation": "Canonical JSON; freeze exact staged bytes/length/hash and read back; no previous firmware read/hash/backup",
+  "no_existing_USB_firmware_read_or_backup": true
+}

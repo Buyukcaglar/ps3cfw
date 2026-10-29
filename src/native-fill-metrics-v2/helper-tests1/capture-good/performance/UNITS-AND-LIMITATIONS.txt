@@ -1,0 +1,6 @@
+Filesystem-call timing is not raw SSD throughput; returned bytes include HDD EOF calls in call timing.
+Application window rates include pattern generation, SHA, space guards, UI, USB receipts and waits; phase-transition windows are unreported.
+Fill percentage uses native first-space-output minus available; includes reserved/unavailable space, not NAND occupancy or exact allocated blocks.
+GB=1000000000 bytes; GiB=1073741824 bytes; MB/s=1000000 bytes/second.
+Cache state, flash garbage collection and temperature are uncontrolled; no causal optimization claim. Samples are checkpoints, not continuous trace.
+Final metrics stop before result receipt publication. Raw monotonic times are elapsed, not UTC.

@@ -1,0 +1,312 @@
+{
+  "schema": "PERF001-exact-device-and-primary-sources-v1",
+  "date_local": "2026-10-16",
+  "scope": "Saved PC-side evidence, independent host-only decode and public primary-document research. No console, disk, ATA or TRIM command was issued.",
+  "owned_analysis": [
+    "analysis/PERF001/ata-research/decode_saved_lexar.py",
+    "analysis/PERF001/ata-research/lexar-selected-word-decode.json"
+  ],
+  "exact_device": {
+    "model": "Lexar SSD NQ100 2TB",
+    "serial": "<serial>",
+    "firmware": "SN21128",
+    "capacity_bytes": 2048408248320,
+    "sector_count": 4000797360,
+    "identity_capture": "observations/HW002Y/read-only-preflight-v1/identify-before.json",
+    "raw_word_listing": "observations/HW002Y/read-only-preflight-v1/identify-words.txt",
+    "later_matching_identity": "analysis/dev006/lexar-population-v1/copy-run/ATA-identify.stdout.json",
+    "capture_context": "Historical Windows11 smartctl7.5 SAT/USB-to-ATA acquisition, October13 and14. The old PC disk numbers are not current device selectors.",
+    "capture_times": {
+      "first_pc_unix_seconds": 1791909668,
+      "first_pc_local_as_recorded": "Tue Oct 13 19:41:08 2026 TST",
+      "later_pc_unix_seconds": 1792003486,
+      "later_pc_local_as_recorded": "Wed Oct 14 21:44:46 2026 TST"
+    },
+    "proof_level": "runtime-observed PC device advertisement; statically decoded saved report; not PS3 transport observation",
+    "whole_IDENTIFY_checksum_verified": false
+  },
+  "capability_findings": [
+    {
+      "feature": "ATA DATA SET MANAGEMENT/TRIM",
+      "evidence": "word169=0x0001, bit0=1; word105=0x0008",
+      "finding": "The exact saved Lexar advertises ordinary DSM/TRIM and up to8 descriptor blocks of512B per DSM command.",
+      "device_status": "advertised-supported",
+      "PS3_forwarding": "unknown",
+      "PS3_OS_issuance": "unknown",
+      "PS3_runtime_result": "unknown",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY", "SMARTCTL-7.5-TRIM"]
+    },
+    {
+      "feature": "Deterministic and zero read-after-TRIM advertisement",
+      "evidence": "word69=0x4d20: bit14=1 and bit5=1; smartctl JSON trim.supported/deterministic/zeroed alltrue",
+      "finding": "The drive advertises deterministic read-after-TRIM and zeroed data. No discard was executed or read back in PERF001.",
+      "limits": "Not a filesystem-zero guarantee across PS3 encryption; not proof every requested LBA was trimmed, host forwarding, OS issuance, timing, usefulness or safety.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY", "SMARTCTL-7.5-TRIM"]
+    },
+    {
+      "feature": "NCQ versus queued DSM",
+      "evidence": "word76=0x850e bit8=1; word75=0x001f => maxdevice depth32; word77=0x0006 bit6=0",
+      "finding": "NCQ is advertised, but SEND/RECEIVE FPDMA QUEUED is not advertised. NCQ support alone does not establish queued DSM/TRIM.",
+      "PS3_use_or_effective_queue_depth": "unknown; a synchronous application loop does not prove the entire driver has depth1",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "Address width and capacity",
+      "evidence": "word83=0x7401 bit10=1; word86=0xb401 bit10=1; words100..103=0x52b0:ee77:0000:0000",
+      "finding": "LBA48 is advertised. User-sector count is4000797360, maximumuserLBA4000797359, capacity2048408248320B. It exceeds28-bit addressing and stays below2^32 sectors.",
+      "limits": "Not proof of PS3 high-LBA placement or correct forwarding of every extent; native capacity qualification remains separate.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "SATA signaling",
+      "evidence": "word76 bits1/2/3=1; word77 bits3:1=3",
+      "finding": "Device advertises1.5/3/6Gb/s; saved PC capture reports current6Gb/s. Exact console negotiated signal rate remains unknown from these captures.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "DMA",
+      "evidence": "word49=0x2f00 bit8=1; word63=0x0007; word53=0x0007; word88=0x407f",
+      "finding": "DMA advertised; MWDMA0..2 and UDMA0..6 advertised; PC report selectsUDMA6. This legacy transfer-mode field is not the PS3 SATA signal rate or a measured throughput ceiling.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "Flush and FUA",
+      "evidence": "word83 bits12/13=1; word84=0x4163 bit6=1; word87=0x4163 bit6=1",
+      "finding": "FLUSH CACHE, FLUSH CACHE EXT, WRITE DMA FUA EXT and WRITE MULTIPLE FUA EXT are advertised. PS3 issuance and completion/durability chain remain unknown.",
+      "limits": "word84bit7=0 is obsolete in ACS-3/4, despite legacy Microsoft WriteQueuedFua field; it does not settle contemporary NCQ-FUA. Do not bypass or change cache/flush behavior.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "Volatile cache, read look-ahead and SMART",
+      "evidence": "word82=0x706b; word85=0x7049; word87 validitymarker=01",
+      "finding": "Volatile write cache supported (82:5=1) but disabled in saved PC capture(85:5=0). Read look-ahead and SMART supported/enabled(82/85:6 and:0=1).",
+      "limits": "Historical PC cache state cannot be transferred to current PS3 state. A volatile ATA cache capability is not identification of DRAM, pseudo-SLC cache, or power-loss protection.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "Power-management advertisement",
+      "evidence": "82:3=1;83:3=0;119:7=0;76:9=0;78:3=0;79:3=0",
+      "finding": "ATA Power Management advertised; APM/EPC/HIPM/DIPM not advertised in selected fields; DIPM not enabled in PC capture.",
+      "limits": "Both HIPM and DIPM bits beingclear conflicts with the ACS-3 expectation that at leastone is supported; report the bits rather than invent support or conformance. PS3 behavior remainsunknown; no settings changes proposed.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    },
+    {
+      "feature": "Logical/physical sectors and alignment",
+      "evidence": "word106=0x4000 validmarker; bit12=0, bit13=0;117..118 compactzero;209=0x4000",
+      "finding": "Advertised logical512B and one logical per physical sector=>512B physical. Words117..118 lengthfield is not applicable.209 offsetbits are0 but209 is not applicable under word106:13=0.",
+      "limits": "Does not identify NAND program/erase geometry, partitionalignment, filesystemextent alignment, encryption-unit boundaries or4KiB read-modify-write amplification.",
+      "sources": ["ATA-ACS3-R5", "MS-ATA-IDENTIFY"]
+    }
+  ],
+  "saved_health_scope": {
+    "artifact": "observations/HW002Y/read-only-preflight-v1/health.json",
+    "identity_matches": true,
+    "historical_temperature_C": 24,
+    "reported_min_max_C": [16,43],
+    "historical_SMART_overall_pass": true,
+    "historical_error_log_count": 0,
+    "historical_selftest_log_count": 0,
+    "smartctl_database_match": false,
+    "limits": [
+      "This is an October13 PC preflight, not BF-fill temperature or present health.",
+      "No SMART test or setting change was started in this research.",
+      "Do not convert vendor attributes241/242 raw4/6 into host/NAND bytes without documented units for this exact revision.",
+      "Do not infer NAND/controller/cache from unknown SMART attributes164..167 or generic model reports."
+    ]
+  },
+  "primary_sources": [
+    {
+      "id": "ATA-ACS3-R5",
+      "title": "T13/2161-D ATA/ATAPI Command Set-3, Revision5",
+      "document_date": "2013-10-28",
+      "access_date_local": "2026-10-16",
+      "url": "https://read.seas.harvard.edu/cs161/2019/pdf/ata-atapi-8.pdf",
+      "primary_authority": "T13 draft specification; full document mirrored by Harvard course site. Despite URL filename, title page is ACS-3 Revision5, not ATA8-ACS.",
+      "proof_level": "primary normative draft; generic command and IDENTIFY semantics; exact Lexar advertises ACS-4",
+      "sections": [
+        "7.5, printedpp81..83(PDFpp104..106): DSM06h,48-bit,DMA,TRIM bit and ranges; Table33 read semantics; partial ranges may be trimmed before command-aborted error",
+        "7.10..7.11, printedpp101..102(PDFpp124..125): FLUSH CACHE/E7h and FLUSH CACHE EXT/EAh",
+        "7.12.7.30,.33..37, printedpp127..129:69,queue75,SATA76..79",
+        "7.12.7.40..42, printedpp131..134:82..88 support/enabled validity and FUA",
+        "7.12.7.53,.55..56, printedp136:100..103,105,106",
+        "7.12.7.70, printedp137:169",
+        "7.12.7.75, printedp138:209",
+        "7.43.4, printedp224:SFQ DSM requires SEND/RECEIVE queued and logsupport",
+        "A.11.4.3..4, printedpp432..434:sector relationship/size",
+        "A.11.5.2.22, printedp440:FUA command pair",
+        "A.11.6.2.4, printedp450:volatile-cache enabledbit"
+      ],
+      "short_paraphrase": "IDENTIFY fields distinguish support, enabled state, sector counts/geometry and SATA/queue capability. DSM carries host LBA ranges; deterministic/zero read semantics depend on advertised bits. A command-aborted DSM can already have trimmed ranges, so an error is not proof nothing changed. Flush completion waits for nonvolatile-media persistence or error. These generic definitions do not demonstrate PS3 issuance or forwarding."
+    },
+    {
+      "id": "MS-ATA-IDENTIFY",
+      "title": "Microsoft IDENTIFY_DEVICE_DATA structure(ata.h)",
+      "document_date": "2022-09-01",
+      "access_date_local": "2026-10-16",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ata/ns-ata-_identify_device_data",
+      "sections": ["Syntax:AdditionalSupported,SerialAtaCapabilities,CommandSetSupport/Active,PhysicalLogicalSectorSize,DataSetManagementFeature,BlockAlignment"],
+      "proof_level": "primary SDK structure documentation; corroborating field layout, not PS3 implementation or normative conformance proof",
+      "short_paraphrase": "The ATA IDENTIFY structure maps DSM/TRIM, deterministic and zero-after-TRIM, SATA/NCQ, LBA48, flush/FUA, cache, DMA and logical/physical fields. Legacy field names require specification-version checks, especially obsolete queued-FUA bits."
+    },
+    {
+      "id": "SMARTCTL-7.5-TRIM",
+      "title": "smartmontools RELEASE_7_5 ataprint.cpp",
+      "document_date": "7.5 release as saved tool banner2025-04-30",
+      "access_date_local": "2026-10-16",
+      "url": "https://raw.githubusercontent.com/smartmontools/smartmontools/RELEASE_7_5/smartmontools/ataprint.cpp",
+      "sections": ["lines709..721:TRIM JSON extraction"],
+      "proof_level": "primary implementation of saved report decoder",
+      "short_paraphrase": "smartctl7.5 generates supported/deterministic/zeroed from169bit0,69bit14 and69bit5, matching the independent saved-word decode. It reports advertisement rather than executing TRIM."
+    },
+    {
+      "id": "SMARTCTL-7.5-WORDS",
+      "title": "smartmontools RELEASE_7_5 ataidentify.cpp",
+      "document_date": "7.5 release2025-04-30",
+      "access_date_local": "2026-10-16",
+      "url": "https://raw.githubusercontent.com/smartmontools/smartmontools/RELEASE_7_5/smartmontools/ataidentify.cpp",
+      "sections": ["word69,75..88,100..106,169 and209 labeltables"],
+      "proof_level": "primary decoder metadata; corroboration, not device behavior",
+      "short_paraphrase": "Versioned decoder labels distinguish current-signaling and device capabilities and identify several historical bits as obsolete. The saved compact report does not provide a full raw-sector checksum witness."
+    },
+    {
+      "id": "KINGSTON-GC-TRIM",
+      "title": "The importance of Garbage Collection and TRIM processes for SSD performance",
+      "document_date": "2022-07",
+      "access_date_local": "2026-10-16",
+      "url": "https://www.kingston.com/en/blog/pc-performance/ssd-garbage-collection-trim-explained",
+      "sections": ["What is Garbage Collection?", "What is TRIM?"],
+      "proof_level": "primary SSD-manufacturer generic mechanism explanation; no exact-Lexar evidence",
+      "short_paraphrase": "NAND programming and erasing use different granularities. GC copies still-valid pages before erasing blocks; host discard informs the drive which LBAs are no longer needed. Filesystem deletion alone does not necessarily convey this information. Background/idle GC is controller-dependent."
+    },
+    {
+      "id": "KINGSTON-OP",
+      "title": "Understanding SSD Over-provisioning(OP)",
+      "document_date": "2019-05",
+      "access_date_local": "2026-10-16",
+      "url": "https://www.kingston.com/unitedkingdom/en/blog/pc-performance/overprovisioning",
+      "sections": ["Benefits of Over-Provisioning(OP)", "Maintaining Performance and Endurance via Over-Provisioning(OP)"],
+      "proof_level": "primary manufacturer explanation plus Kingston-specific examples; no Lexar sizing or outcome evidence",
+      "short_paraphrase": "Controller-reserved non-user capacity supplies workspace for GC/wear management and can improve sustained/random writes. OS free bytes, host-unused LBAs, factory spare capacity and already-erased NAND are different quantities. Kingston's enterprise examples do not quantify this Lexar."
+    },
+    {
+      "id": "SAMSUNG-870QVO-R1.1",
+      "title": "Samsung V-NAND SSD870QVO Data Sheet Revision1.1",
+      "document_date": "2020-06",
+      "access_date_local": "2026-10-16",
+      "url": "https://image.semiconductor.samsung.com/resources/data-sheet/Samsung_SSD_870_QVO_Data_Sheet_Rev1.1.pdf",
+      "sections": ["p4:Optimal Performance for Everyday Computing Experience", "p5:Technical Specifications andnotes2..5"],
+      "proof_level": "primary manufacturer example for a different SSD; not installed-Lexar evidence",
+      "short_paraphrase": "Advertised870QVO sequential-write performance uses Intelligent TurboWrite. The sheet separately specifies80MB/s(1TB) and160MB/s(2/4/8TB) after TurboWrite and differentiatesQD1/QD32. TRIM requiresOS support. This demonstrates why cache state and queue depth need controls; none of these controller/NAND/cache numbers apply to the Lexar."
+    },
+    {
+      "id": "LEXAR-NQ100-GLOBAL",
+      "title": "Lexar NQ1002.5-inch SATA III SSD product page",
+      "document_date": "undated current page",
+      "access_date_local": "2026-10-16",
+      "url": "https://www.lexar.com/global/products/Lexar-NQ100-2-5%E2%80%9D-SATA-III-6Gb-s-SSD/",
+      "sections": ["Features", "Specifications", "performance footnote"],
+      "proof_level": "primary product-family marketing/specification; no serial/FW-revision characterization",
+      "short_paraphrase": "NQ100 family includes2TB SATA6Gb/s and advertises up-to550MB/s reads; write rates are lower and actual performance varies. Product performance may vary by shippingdate/inventory. The inspected page does not identify the installed SN21128 controller, NAND, DRAM, SLC cache size or sustained-write floor."
+    }
+  ],
+  "additional_primary_command_and_OtherOS_references": [
+    {
+      "id": "LINUX-6.16-LV1CALL",
+      "title": "Linux v6.16 arch/powerpc/include/asm/lv1call.h",
+      "access_date_local": "2026-10-16",
+      "url": "https://github.com/torvalds/linux/blob/v6.16/arch/powerpc/include/asm/lv1call.h",
+      "sections": ["LV1_CALL definitions: storage_read, storage_write, storage_send_device_command, storage_get_async_status, storage_check_async_status"],
+      "proof_level": "primary Linux/OtherOS ABI definition; corroborate against exact saved CEX callsites before binding names",
+      "short_paraphrase": "Storage ABI IDs are read245(6inputs,1output),write246(6,1),send-device-command248(6,1),get-async-status249(1,2),check-async-status254(2,1). OtherOS declarations do not prove current CEX forwarding or filters."
+    },
+    {
+      "id": "LINUX-6.16-PS3DISK",
+      "title": "Linux v6.16 drivers/block/ps3disk.c",
+      "access_date_local": "2026-10-16",
+      "url": "https://github.com/torvalds/linux/blob/v6.16/drivers/block/ps3disk.c",
+      "sections": ["LV1_STORAGE constants and lv1_ata_cmnd_block", "ps3disk_identify", "ps3disk_submit_flush_request and ps3disk_sync_cache", "ps3disk_do_request and ps3disk_probe"],
+      "proof_level": "primary Sony-authored Linux/OtherOS storage driver; not installed GameOS driver",
+      "short_paraphrase": "OtherOS uses a64KiB bounce buffer and a single-request tag set. READ/WRITE use LV1 sector calls; flush uses LV1 device-command0x23(HDDOUT). IDENTIFY uses device-command2 with an ATA taskfile. Request dispatch has READ/WRITE/FLUSH and a rejecting default, without discard. These are documentary Linux constraints, not measured or static CEX constraints."
+    },
+    {
+      "id": "LINUX-6.16-PS3STOR",
+      "title": "Linux v6.16 drivers/ps3/ps3stor_lib.c",
+      "access_date_local": "2026-10-16",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/v6.16/drivers/ps3/ps3stor_lib.c",
+      "sections": ["ps3stor_read_write_sectors", "ps3stor_send_command", "ps3stor_setup"],
+      "proof_level": "primary Sony-authored Linux/OtherOS library; not runtime evidence on current console",
+      "short_paraphrase": "The sector wrapper sends deviceID,regionID,start,count,flags0,LPARbuffer and receives a tag; the command wrapper sends deviceID,command,four arguments and receives a tag. Completion/status are handled separately. DMA setup checks bounce-buffer alignment. This supports ABI interpretation only."
+    }
+  ],
+  "ATA_command_name_cross_reference": {
+    "scope": "Normative/primary decoder names for independently observed command bytes; does not show any current command execution",
+    "EC": "IDENTIFY DEVICE; ACS-3 section7.12",
+    "EA": "FLUSH CACHE EXT; section7.11, printedp102",
+    "E7": "FLUSH CACHE; section7.10, printedp101",
+    "B0_D8_C24F": "SMART ENABLE OPERATIONS; section7.48.4, printedp256",
+    "B0_D2": "SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE; section7.48.3, printedp254; COUNT00disables/F1enables",
+    "B0_D3": "Obsolete SMART subcommand under ACS-3 Table123, printedp252; smartctl7.5 ataprint.cpp lines256..258 names legacy SMART SAVE ATTRIBUTE VALUES (ATA-3). Not attribute autosave.",
+    "EF": "SET FEATURES; section7.45, printedp227; need exact feature argument to infer behavior",
+    "E0": "STANDBY IMMEDIATE; section7.50, printedp270",
+    "35": "WRITE DMA EXT; section7.59",
+    "25": "READ DMA EXT; section7.22",
+    "06_feature_bit0": "DATA SET MANAGEMENT/TRIM; section7.5; absence of an immediate constant alone is not proof that a generic taskfile forwarding path filters it"
+  },
+  "unavailable_primary_documents": [
+    {
+      "title": "Official T13 ACS-4 draft PDF",
+      "index_url": "https://www.t13.org/docsearch?field_document_stage_target_id=All&field_document_type_target_id_1=All&title=ATA%2FATAPI+Command+Set+-+4",
+      "attempted_urls": [
+        "https://www.t13.org/system/files/Project%20Drafts/2017/di529r20-ATA/ATAPI%20Command%20Set%20-%204_2.pdf",
+        "https://www.t13.org/system/files/Project%20Drafts/2015/di529r8-ATA/ATAPI%20Command%20Set%20-%204_1.pdf",
+        "https://standards.incits.org/apps/group_public/download.php/93215/livelink"
+      ],
+      "result": "Official index reopened; PDF retrieval403 or tool inaccessible. Use successfully reopened primary ACS-3 draft mirrored by Harvard for shared fields, Microsoft SDK and versioned smartctl corroboration. No claim of exact ACS-4 minor revision compliance."
+    }
+  ],
+  "SSD_hypotheses_and_controls": [
+    {
+      "hypothesis": "Pseudo-SLC/cache exhaustion or changing available cache",
+      "status": "plausible generic mechanism, exact Lexar cache presence/size/type unknown",
+      "current_signal_limit": "BF stepchanges after32/336GiB added payload are not identification of cache boundaries; prior migration and nativewrites already changed device state.",
+      "later_control": "Disposable matching-revision drive only: record every conditioning/write byte and sustained latency curve at fixed occupancy/placement; compare controlled idle intervals; retain data caps and recovery protocol. No current Lexar conditioning or clearing."
+    },
+    {
+      "hypothesis": "GC/write-amplification pressure as controller-visible invalid/free blocks change",
+      "status": "generic mechanism supported, current cause unknown",
+      "later_control": "Separate filesystemfree bytes from host addresscoverage and vendor-confirmed erased/spare state; fixedworkload repeated comparisons with predeclared conditioning. Never equate a filesystem-free extent to a safe raw discard extent."
+    },
+    {
+      "hypothesis": "Thermal or elapsed-time effects",
+      "status": "unknown;24C historical PC preflight cannot explain a later native fill",
+      "later_control": "Initially use owner-available external thermal/context observations only if approved; record elapsed/idle time and test order. Avoid new SMART pass-through probes until exact route and safety reviewed. Temperature correlation alone does not prove throttling."
+    },
+    {
+      "hypothesis": "Alignment-sensitive mapping/read-modify-write costs",
+      "status": "unknown;512/512ATA advertisement is not NAND geometry",
+      "later_control": "Read-only retained-file offset/buffer-size comparisons can test alignment sensitivity without editing layout. Writes and format/alignment changes require separate disposable fixtures and protocol."
+    },
+    {
+      "hypothesis": "Queueing/link or driver limit",
+      "status": "LexarNCQ/depth32 supports device capability only; actual console queue/link unknown",
+      "later_control": "First compare bounded retained-file synchronous/syscall-only versus verified reads with fixedbuffer and accesspattern. Concurrency adds CPU/memory/scheduling variables and needs separate reviewed instrumentation. Never force link,queue,power orcache settings on populateddrive."
+    }
+  ],
+  "discard_proposal_requirements": [
+    "Prove exact filesystem dead/free-extent ownership, metadata exclusion, allocation-race exclusion and crash/fsck/recovery lifecycle.",
+    "Prove logical filesystem extent to encrypted-sector and physicalATA-LBA translation and command-width/bounds checks.",
+    "Prove device capability plus exact LV2/LV1/SATA forwarding, filtering, addressing and completion/error path; advertisement does not prove transport.",
+    "Define postdiscard reads through encryption; physicalzero advertisement need not yield decryptedlogicalzeros.",
+    "Define flush/data/metadata ordering and partial-error recovery; command-aborted DSM can have already changed some ranges.",
+    "Quantify benefit on ordinarygame/save/install workloads before recommending complexity; retain no-change option.",
+    "Only after explicit separate authorization, reviewed design and disposablefixture; never populateddrive orwhole-drive experiment."
+  ],
+  "unresolved": [
+    "Exact installed-drive controller/NAND/cache/DRAM/firmware behavior and thermal limits",
+    "Actual console SATA signaling/queue depth/transfer mode and any ATA command filtering",
+    "PS3 OS issuance and runtime effect of DSM/TRIM,FUA,flush,SMART or power management",
+    "Current on-console write-cache state, read-ahead state and device idle/GC state",
+    "BF SSD temperature, media-only throughput, controllerinternal erasedblocks, writeamplification and cumulative NANDwrites",
+    "Physicalextent placement and relationship of filesystemfree bytes to controllervisible unusedspace"
+  ]
+}

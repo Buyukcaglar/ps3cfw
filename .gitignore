@@ -1,0 +1,24 @@
+# Protected and large data (never commit, never push)
+/vault/
+/archive/
+/build/
+*.PUP
+*.pkg
+*.raw
+*.img
+*.bin
+*.elf
+*.self
+*.sprx
+*.dmp
+
+# Third-party tools (each is its own git clone or vendored download)
+/tools/*/
+!/tools/README.md
+
+# Python / editor noise
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+!/tools/data/

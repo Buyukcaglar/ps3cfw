@@ -1,0 +1,2449 @@
+{
+  "id": "PERF001-evidence-index",
+  "utc": "2026-10-16T07:43:16.257979+00:00",
+  "scope": "Saved local evidence/static/primary sources; no hardware activity",
+  "historical_BF_snapshot_utc": "2026-10-16T06:51:49.666849+00:00",
+  "initial_checkpoint_verification": "analysis/PERF001/authority/initial-verification.json",
+  "local_artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 4571,
+      "sha256": "342e999827a3c8e1d5ad214b2f0c629b58d8200f02828dd5a16c4f08845b238d",
+      "evidence_level": "authority",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": true
+    },
+    {
+      "path": "analysis/PERF001/ata-research/decode_saved_lexar.py",
+      "bytes": 8728,
+      "sha256": "2d4218608daded506484ea6db89eda566cda2ea4b99b86f1a48d88f079883e8e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/ata-research/lexar-selected-word-decode.json",
+      "bytes": 6457,
+      "sha256": "58f4e7a0796ffcacf9f80444e6c413946803c6684211dbafd7884f182c969d54",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/decoded-progress.csv",
+      "bytes": 402396,
+      "sha256": "f319058495d03b0072c230687daa3c4783ee557e489c510a76e12378144ae336",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/reproduce_saved_progress.attempt-first.py",
+      "bytes": 11958,
+      "sha256": "99ab17628b7495c0a468f190b31a4a2ce16ac42e043b4a8e622ecfe2f0e817d2",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/reproduce_saved_progress.py",
+      "bytes": 12481,
+      "sha256": "e001fabdd18bd94df2be62546b918bfa4c1a54e8e67643176e93abaf9679f797",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/summary.json",
+      "bytes": 44166,
+      "sha256": "2c501004e4b7fb7a5a9a693580f7332caf7a6f66fc192c27120a8cd83e607b11",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/READ-ME-FIRST.txt",
+      "bytes": 1470,
+      "sha256": "dea2d32de7b21e7542dbbe0aa9afd6edae25f01c750031c10454f834c3a886e3",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-command-builder-callers.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-command-candidates.json",
+      "bytes": 1056,
+      "sha256": "ab65011c3bd7423ba73dfc1975e0b56f8f1749cf9fd222af72c7e645a60ada37",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-generic-taskfile-callers.json",
+      "bytes": 178,
+      "sha256": "5298c424c7729f7d93c498ed8327e569a56402d9d8dfb4b408f71058b1543b5f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-immediate-discovery-v2.json",
+      "bytes": 17679,
+      "sha256": "5cfbf823fb1ac464a4b615e373a87a937a1c8f504d4dd3b4b21f5b6cf3f31fe6",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-immediate-discovery-v3.json",
+      "bytes": 35194,
+      "sha256": "91938cf5c8993a3e2c3862bdba194176ee307f865b71626eab10cf7d61db4202",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-immediate-discovery.json",
+      "bytes": 3869,
+      "sha256": "50d2e1f7a5148941d2547c7832d76ccd2b8edd1dd5bf694363b0b96a6d241479",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-resolved-builder-callers.json",
+      "bytes": 1570,
+      "sha256": "942e6cac89930bd0a4d80174b106acb0f5d0f1f2e782145a1379261f2da05e21",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/evidence-manifest-v2.json",
+      "bytes": 44128,
+      "sha256": "a05d961a957242ac676c952defe26a2101a044b3846b2f127c2a69781527a9b9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/evidence-manifest.json",
+      "bytes": 41342,
+      "sha256": "7d560e1c03d748c91e413ae5b7bea65c1381f3be71bc0d471ee692a2f87edcfa",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/final-verification.json",
+      "bytes": 2491,
+      "sha256": "28e0a9daacc088a02d38a31582472c49f21de9716a3320f5a5a608683181bd5d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/finalize_static.py",
+      "bytes": 24899,
+      "sha256": "818995ea58d4d8932874f940de49a06f8c213f46eb08820065c75725445891be",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup.py",
+      "bytes": 1961,
+      "sha256": "021abd80a356f76830c258f07a69f105342f8ce7550b4090751dbdb894717b8b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup2.py",
+      "bytes": 1392,
+      "sha256": "928b628eee8887ee80fe1adaf3337c174d3d972d987fd31bf6601c9af4dd3eca",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup3.py",
+      "bytes": 2458,
+      "sha256": "7bbccbec98806b92667d13ee152edb0802703cccba893e3ec05bedb12e914f39",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup4.py",
+      "bytes": 1063,
+      "sha256": "be3bf6189244906f9c977ba736882d14cad4724113ffd2fb06ea2e50339c9534",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup5.py",
+      "bytes": 982,
+      "sha256": "1cd67756f451bac5a20490148ab07b72445af97983c73bc26f9b4fe4b4925c32",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup6.py",
+      "bytes": 1301,
+      "sha256": "c3833bdb059decb65b0e58d5f2121cca248dc53af6ef04e5dcde105f9a3d5ce8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup7.py",
+      "bytes": 1871,
+      "sha256": "bd64b1a62ddd0055fa0e5c5278f3a7c730e8adb5cd0664e57684452cf778aea5",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_static.py",
+      "bytes": 6609,
+      "sha256": "08c74c73cdc8d0be9f52d1f833fa3a26d7888ab95bf401ebdc50e50a52579aa3",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/integration_v2.py",
+      "bytes": 7241,
+      "sha256": "2ce5234fcf1eae71211f2aa2fbd0cee3599fcfca255041317dae493d9cead216",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-c0000002-neighborhood.txt",
+      "bytes": 1437,
+      "sha256": "c2d25bdadd681c2bf76d102e7b15e71622fb79ef4ea581e595d74fad92faf864",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-c0000002-select.txt",
+      "bytes": 1804,
+      "sha256": "bd02f3cee8ef30d0a8dc71b13c1b330bdf3c948f505d59311001160dd3d495da",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-entry-full.txt",
+      "bytes": 18156,
+      "sha256": "dc0e940b3fa0475dbc84022f1980cf7b07e15a8ecb614c0a59beca826828fe98",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-free-size-body.txt",
+      "bytes": 14441,
+      "sha256": "df183ef4548dece26543dff268acbe4aedda419d1b2afb56dfa51c5b2a7c5141",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-global-dispatch.txt",
+      "bytes": 16787,
+      "sha256": "539e74710b7680c94d7fec3700f6f5c5566485e0bdeb1fda19fc6b354a2fe38e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-path-dispatch.txt",
+      "bytes": 19002,
+      "sha256": "4d4b7be43726318e8ece807849478f3e06cbcb72f96d63b45d138b34880a32fe",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-path-helper.txt",
+      "bytes": 8900,
+      "sha256": "eac83916707acffa7e57b20445f75cb8b6e26ee36f1c816836e816b0b8fb8dfb",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-file-io-generic-dispatch.txt",
+      "bytes": 13905,
+      "sha256": "4cd1239b897688da64035da1995ae3a8c57c32e853a12e8ef694ef34bd1aecc0",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-file-read-method.txt",
+      "bytes": 6966,
+      "sha256": "6f7505f4aed2b31da6fb8e00d7446ea3b6bdecfe30367f648407be9b2fb553b5",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-file-write-method.txt",
+      "bytes": 5238,
+      "sha256": "7c105af2e28bd15441823dab33ddd299b17fdfb5be00aa6042a7cf86f3e1ab16",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-freesize-path-object.txt",
+      "bytes": 1098,
+      "sha256": "406e89c754997dc40db51eed59c79eef7f6113c15ed59500983a628adaa369cf",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-generic-file-rw.txt",
+      "bytes": 35469,
+      "sha256": "cc3014b36169f36310caa711407a7091951bcc760980277099e35e98dea33223",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-generic-read-dispatch.txt",
+      "bytes": 8191,
+      "sha256": "c4a3f7d696913be68d1aa25d8c0ca63671bb668956741e61951f7f76dd61e5c9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-generic-write-dispatch.txt",
+      "bytes": 5352,
+      "sha256": "7ec5e205cedbfb6f52a4ea859bcaefab0c72d06baaa2b8c84fd6b544dcaadb72",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv245-at-aacbc.txt",
+      "bytes": 3578,
+      "sha256": "3a8f11a93ee997d30b8268768fe0588b39c503b58b9e85cb3e0d45ee864a05f8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv245-at-ae3f0.txt",
+      "bytes": 3518,
+      "sha256": "bcbab0a90319d7eb417c70ea57d5adf24c2ad764434c27328dc731c2d6756fdd",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv246-at-aac14.txt",
+      "bytes": 3608,
+      "sha256": "8be25bf524d1d03e787a5d6eaf94fd6657344d89775d223aad57f962c5347b0e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv246-at-ae238.txt",
+      "bytes": 3483,
+      "sha256": "a9b8b322486ae196a2254cd1bd0b923ef6d0a864474150b5dd99e75d989df47a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv248-at-ab384.txt",
+      "bytes": 3757,
+      "sha256": "b03bfd179ea76ee5479bd2b76d116aa243b07fbf04eea578ba0469a92a6d15fd",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv248-at-ab514.txt",
+      "bytes": 3836,
+      "sha256": "9b3a980c9872e0f7213041bc851f838830f40d4b0c5c7be42f7628eb9e67edba",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv249-at-ac4e8.txt",
+      "bytes": 3772,
+      "sha256": "8bb67c52f4b02dc62721eec3ecea1cac81746033fa226ea9c2a16fac1465112f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv249-at-ae51c.txt",
+      "bytes": 3764,
+      "sha256": "4b0c5f367f02117a3505e74786c62f732d4cc0cb2b8971b1bb3fe5843542b254",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv250-at-aa7ac.txt",
+      "bytes": 3785,
+      "sha256": "886c5dcba32e18817c2444aa06dc56a26523e64f49a2f93e0b2e20b12a71182d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv251-at-aafdc.txt",
+      "bytes": 3826,
+      "sha256": "48f9c479a6eee96359071b2927c341070fa795029a6a72f2db0cdecc0b4fec5b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-backend.txt",
+      "bytes": 39591,
+      "sha256": "d637ae3658df2ef090ac956e579239d3098bc4a2efd4a280b9dd67daf15aa035",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-hypercall-sites-rw.json",
+      "bytes": 391,
+      "sha256": "6a87b54bf6726b837f670145d65f70729b4ce7048fbbb0ae5a38eb6654509e7a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-hypercall-sites.json",
+      "bytes": 585,
+      "sha256": "504aa590a10623bcbad8cb07bc110cc912601d31a46efd70084e9238dde1cf17",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-request-bound.txt",
+      "bytes": 4071,
+      "sha256": "2e9e4d1721d82d1b24161022a9bb6d1c3ed9609c8d1b2ce6e48a535a7cc7011e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-sys-read.txt",
+      "bytes": 8562,
+      "sha256": "13b3eaa7b297f739fa8d39dfeee2323b10391b030817ea10b0eb10a6014aaa04",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-sys-write.txt",
+      "bytes": 8241,
+      "sha256": "3ec2fe8e28b8658819247f385cd4ffcc3d225cb0ec132f2ac5698d22703d50ac",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-802-table-resolved.txt",
+      "bytes": 8040,
+      "sha256": "03de706e43184d2abc7a17a24d5472dc09c1f15549706d25ef3fb76a2747820c",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-803-table-resolved.txt",
+      "bytes": 8136,
+      "sha256": "4042e16c66461d547115f5f21db2402582732ebb909b928a19bff88527a06f5d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-817-table-resolved.txt",
+      "bytes": 8114,
+      "sha256": "1a0c65b18ba5d9b46dd80a82eca9578d0c82cb4be8f0e7c9f1d4e8333b75889d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-840-table-resolved.txt",
+      "bytes": 8047,
+      "sha256": "7273e0ed067f42bc646725404a75d64c1dfd6601390740a07b6e00556bf7f743",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-ufs-freesize-arithmetic.txt",
+      "bytes": 7553,
+      "sha256": "197b7f00bbc9927f242bc1da8e944c0d1d76d0bc60dd5f849bd213ebc007b34f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-ufs-freesize-method.txt",
+      "bytes": 8795,
+      "sha256": "8304fc2c47a38d3eb79e98bb3f748f05dacf3ef77038fed428b21d84c279ad10",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-ufs-freesize-neighborhood.txt",
+      "bytes": 10189,
+      "sha256": "5cbd2c8bb2e7b2b6dd4e7f4d3ff5022cd746e1fbe0228acfb86bed141a992dc1",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-volume-freesize-dispatch.txt",
+      "bytes": 9864,
+      "sha256": "c84d9611c65a802b66322f6d46ab3cdc1039f95e592d7963b84df97530a3f3ad",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-volume-freesize-real-dispatch.txt",
+      "bytes": 6825,
+      "sha256": "40bd603cc62dc7b3490ec827f128db8a73660198171f31d7f1ecd524838abda9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-aio-submit.txt",
+      "bytes": 5513,
+      "sha256": "aac7bdc2c3b0ede3b0fbaf168929bd805d07b8741ce750cc020a03840daa74d8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-export-bindings.json",
+      "bytes": 1384,
+      "sha256": "65161a8ec5dc3c45ecf8702a47633233535b642f2c224ddf0b260718756a70a8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-free-size-geometry-helper.txt",
+      "bytes": 6055,
+      "sha256": "5f6b0e846b51bbb28bb29ec4a4f1c024ba7dd365d8053a118fb173fa3ed60a8d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-get-free-size.txt",
+      "bytes": 12990,
+      "sha256": "c2f58d00ddb9776c33ff9c55ee4528d3bbf66f0bfe90ceff78fdfbb890cc90d1",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-lseek.txt",
+      "bytes": 876,
+      "sha256": "69e5befa688b644e0ced2c95c173069d8c146c198696496915ba0a9c9e6b0d28",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-open.txt",
+      "bytes": 7104,
+      "sha256": "a3ca50c1a1e1d9a83c493b11d61330a536b9d5ab429a1ac5e19d63c6efff2918",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-read-write-close.txt",
+      "bytes": 2495,
+      "sha256": "5d18d75f49d296e4e8c65f3e5e97437b618007bd5f08c7a6c17513d34b5a5ef7",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-builders-lower.txt",
+      "bytes": 13518,
+      "sha256": "ae03bbecdb2a869f255c21c6f0e0e2230c0d4943d4026113ed6ba9fd537b39cd",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-builders-upper.txt",
+      "bytes": 59580,
+      "sha256": "72e1350e78d15637fd1562bee33d0dd969a3c2f6e560a49e83dec7e4e0d3d14f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-builders.txt",
+      "bytes": 23827,
+      "sha256": "25e9e9014fc5563ffa36ba02ddd0afa01cc0a66313e9dc94bb35bfde302bdd02",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-cache-wrapper-callers.json",
+      "bytes": 1279,
+      "sha256": "ac00060a2d184f539788a02fe3a3e44616c1954a298f2fbbffe9f6db3ad378a2",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-control.txt",
+      "bytes": 10608,
+      "sha256": "58344f79af16bcd87888afda1e5600d941dca0bbc01104cfdf86b0aa1d9d60ca",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-generic-entry.txt",
+      "bytes": 2584,
+      "sha256": "670996386a17674e66c55cb0d45f1ea0bf90b540dcd8f0ed959854b9d2380885",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-submission-v2.txt",
+      "bytes": 16737,
+      "sha256": "89e9e508ce85b4584adf1afe175b99d27c736b3bff94ec8444118620f0e33ca8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-submit.txt",
+      "bytes": 16737,
+      "sha256": "89e9e508ce85b4584adf1afe175b99d27c736b3bff94ec8444118620f0e33ca8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-switch-v2.json",
+      "bytes": 3951,
+      "sha256": "9b33e5c7f1e9b1ed99779c250a67e70db307427ec0e631dad8b5495624ac6444",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-switch.json",
+      "bytes": 6957,
+      "sha256": "d1b7bf2c9101aae306bc5b6ee6cb9824905dc16d7d15c734fa4f018661498533",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-dispatch-commands-v2.txt",
+      "bytes": 58573,
+      "sha256": "333fa0efd983317b8d6a99cc598ccc75e49d7347aefcf6e8ca84f97a6c0d9d57",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-dispatch-commands.txt",
+      "bytes": 1648,
+      "sha256": "3319cf11d8416d130bc8716f8518e186425a6611b39666daca26d7ec081e2d50",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-extended-dispatch.txt",
+      "bytes": 9226,
+      "sha256": "c6a68ee75c460e86e0e42db1aeaa69660034f4232066047a5c04d1793d6ca3f8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-flush-control-callers.txt",
+      "bytes": 19776,
+      "sha256": "ccd19cb4c2f9516db50adeca488d61bf747574b65ffdf46526052cd78e43f5da",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-flush-selector.txt",
+      "bytes": 7904,
+      "sha256": "2dd89d1e6bee9c7366e7af4acb8928f7b589bd4182762529cc7fa958308b2c66",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-generic-entry-full.txt",
+      "bytes": 8350,
+      "sha256": "7b68e7cbf7b7737080bea5ff53e55f79c481f471ae2307fe25a181b28a7fdf7b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-generic-submit.txt",
+      "bytes": 10212,
+      "sha256": "39fa8e5d802decae34bc68e1e4c9be629a9327c484e39a6f2aee905b20c7d9f8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-identify-flush-power-builders.txt",
+      "bytes": 31311,
+      "sha256": "f16d7a1b8604d4a6136d0485b29f667991b977514f98ace69090be37adf5fcc8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-init-parser.txt",
+      "bytes": 34219,
+      "sha256": "dd3a6662311e9c34a49e9a4c4b232dbf5cff5cbb6c74cab6c5edb89677c73f09",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-passthrough-wrapper.txt",
+      "bytes": 6363,
+      "sha256": "699f13fe1ffcb29625918612b0d8877c89dcde77e6302f520dbfe2467e692e66",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-request-launch.txt",
+      "bytes": 8224,
+      "sha256": "13d9f15fac0f963931752bf32c87c20453cd56ccc5e72e6dbefc06c56f72de5e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-device-read-write.txt",
+      "bytes": 15976,
+      "sha256": "10a238d7ddc3fdee85bc24fdffff198578854fb059a5f787e24e3ae4cb76a16c",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-encrypted-rw.txt",
+      "bytes": 11609,
+      "sha256": "516c8b85f8ceae05edad705a231215e6fca730a0bf5aa6a6302a2ae3b2ea8ad1",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-read-translation-full.txt",
+      "bytes": 7039,
+      "sha256": "404bcff4a52ea7e95fbafb4b40a8ff686988ed205d162686a96c4c3fbabc343e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-region-translation.txt",
+      "bytes": 1827,
+      "sha256": "6eba13753d72c3bcde8458e6fd42b29b600b2bb22010d743854f7c6d0f8ec9fb",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-sector-crypto-generator.txt",
+      "bytes": 3852,
+      "sha256": "a0ff7dbd78507b4029423ff8d752e0e95f44f1d0228fed52d90040902aa22339",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-sector-crypto-input.txt",
+      "bytes": 3411,
+      "sha256": "6b5c434ca4adabb5e98f9ebc5824308934e8c12adbdcb12b9174eb06f545a488",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-smart-identify-cache-builders.txt",
+      "bytes": 14622,
+      "sha256": "6e9b3fbad102d258a6e33b57ba68c118d4f4cfb1f558d08add977b4330b25742",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-write-translation-full.txt",
+      "bytes": 7699,
+      "sha256": "f0e8da76263c20b655c97cc808bff325fe6baeadf0dad094c479318bb307a8d0",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/p13-kernel-lineage.json",
+      "bytes": 7323,
+      "sha256": "16089d04c80600d43ccdfd0f9db9e7ac50d3c369c16bba3d7397dfc7e077dd93",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/polish_map.py",
+      "bytes": 4517,
+      "sha256": "b49f44a4a3a9e6a6adf73b295174abbaefdadcc9f70b71b18ff2c0971a6e791d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/source-pins.json",
+      "bytes": 646,
+      "sha256": "2bfda5cab8c03b6ff4917be3fbada42a0bfa5c08a9e4a47005090f15ccf78872",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/storage-map-before-integration-v2.json",
+      "bytes": 20160,
+      "sha256": "a9f6be10c8d57c4a9847e3e7a178c84177f767c8b782d07982a9f65f344603d1",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/storage-map-v1-draft.json",
+      "bytes": 19778,
+      "sha256": "f9a7ea0805b995e79f0cee06152393dfd26c1e45150fab5b084a0a736ed8747e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/syscall-bindings.json",
+      "bytes": 3195,
+      "sha256": "f495b39c7bd6eeb4578e02abb04d8ad5c9395ae514feb61a7d40b08dccfb3ebf",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ufs-vtable-bindings.json",
+      "bytes": 3137,
+      "sha256": "20d8fc8174b37863057aceeaaec069f9a517abfed088f64125b82b8352e6486f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/verify_final.py",
+      "bytes": 2882,
+      "sha256": "b818563c9d68b6a184cefa58569d56d224791ff4714a36bcb9d167cfd7733a3f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/PERF001/storage-static/verify_lineage.py",
+      "bytes": 2597,
+      "sha256": "a9d450e60b14ab631e1fd265c96c6cfd95333eefe57cb34908e59b7ce83fea6e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/build-p13-first/candidate.self",
+      "bytes": 78487,
+      "sha256": "7a57307b62aed291803b22a4db5da6d541c004f699368957a266e7f2442b6389",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/build-p4-v3/lv2-patched.elf",
+      "bytes": 3641960,
+      "sha256": "dc9d6e24fb5bd9eaa15678e8fc1b2076cc0358a1be574d87a9f14e0fa468280a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/candidate-review/lv1.elf",
+      "bytes": 4130048,
+      "sha256": "dec10390c6617078b693ffd859598ce96e81d8c0de37ae34e4e95d2563f0cef3",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/checker-audit/libfs.sprx.elf",
+      "bytes": 108600,
+      "sha256": "b927cab05973ef71fbcd6103f1e44f498de0a0c21300c32d7fd7807e006e0e7e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/checker-audit/libfs.sprx.elf.exports.json",
+      "bytes": 11818,
+      "sha256": "27df0c9ee707c30a4e5de7f24935ad1d7bfddb6b41308b9abf15260e406fffae",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/coreos/lv2_kernel.elf",
+      "bytes": 3641960,
+      "sha256": "3aaab44f55c2187864e758d84e9db022f1a9e40465addf06d95b15b0723122a9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/assess_bf_write_slowdown_20261016.py",
+      "bytes": 12158,
+      "sha256": "5235ba6fdfb6d49b3b656a7b1362385090bd38b16d0ce2a88613c324ac141857",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/lexar-population-v1/copy-run/ATA-identify.stdout.json",
+      "bytes": 1769,
+      "sha256": "cb382ca62bb6c9d978b3192036ff6531e79fc89f9e5f0ce3d7f2d3fedf6f9039",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/HDD2TB-BF.READY",
+      "bytes": 64,
+      "sha256": "69637b674903dfafbe9aee2035667a82daf57c3728f66e356b32eff16caa403a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/fill_eta_v1.c",
+      "bytes": 2009,
+      "sha256": "32ea259778a58b506be987c37c80070735124a2e96f67a720314569a3f36cff0",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/fill_io_ui_v1.h",
+      "bytes": 2106,
+      "sha256": "905b0d192a689896e4eeedc9d21a4bff1b1d60b4bae26b0629860d710ebe2202",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/fill_ui_canvas_v1.c",
+      "bytes": 5355,
+      "sha256": "f6d02a13a75e69d5317dac2d5c1ed393a9b4b2875a17e086006821ae9ffa8e5b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/fill_ui_ps3_v1.c",
+      "bytes": 6194,
+      "sha256": "686ff288f098a802ccf418a3866b1cdf59bc9c6e97b525def35e062e8bb20fae",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/main.c",
+      "bytes": 15462,
+      "sha256": "e99f796e60a6446bd7494786e246f1df23a2a92a055e311dad1ce04a87df9a2c",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/session.h",
+      "bytes": 1516,
+      "sha256": "069cb7395f7b7edc470cf379fc2a190cc90b2d883c49045e557274bbf5bb224f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/native-fill-final-v16/sha256.h",
+      "bytes": 2416,
+      "sha256": "c899a6a64fcd0efb58ba9b806ea13d28fcd2260c266422e535de5ab92013f293",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/dev006/p13-read-seek-v1/libfs_utility_init-p13.elf",
+      "bytes": 224208,
+      "sha256": "e34e18aed90eecf11fe311137b0c6e1054689fd5b019fb27a001a57542973c86",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-addressing-offline-20261014/REPORT.md",
+      "bytes": 16236,
+      "sha256": "5f172c61bfdb3b69aa72e45358dc632f1c746f5cadd0dab3b718b0ad7215bac9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-addressing-offline-20261014/lv1-ata-rw.txt",
+      "bytes": 11469,
+      "sha256": "7082d293f254ab103089038090b2cf400c2f8b73c09261270d47173abb8fbe47",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-addressing-offline-20261014/model-results-v4.json",
+      "bytes": 2999380,
+      "sha256": "f57a990252e00bcfe921b36f8e9094caab53d16c23e5dc3e13ab1cf8a4caaa7d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-alloc-cache-offline-20261014/REPORT.md",
+      "bytes": 16780,
+      "sha256": "9124e4815c53cb3b99fce11220958e2f092669d801cd9f9c49442f4e0dbb8941",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-alloc-cache-offline-20261014/alloc-full.txt",
+      "bytes": 55640,
+      "sha256": "459060e761ea8f84007db663ece8c4bb1460e903814d9d4ab22cfa824368224e",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-alloc-cache-offline-20261014/allocation-group-search.txt",
+      "bytes": 18554,
+      "sha256": "deadb066aef74d7fbed9271e8273de9fa15d72badff26f6d5b3b16d4aa871b2b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-alloc-cache-offline-20261014/cylinder-group-allocator.txt",
+      "bytes": 19214,
+      "sha256": "a221b1e0a1bb01cae10b925a25c241c01790f9e7099446a3251e6e5106fa59b5",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-ata-delivery-offline-20261016/DEVELOPMENT-NOTES.txt",
+      "bytes": 2972,
+      "sha256": "6d9566cf5c4f2c7175229b75336b1c609cc8e4f918285e55ce69ad3cefd6a0c8",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-ata-delivery-offline-20261016/REPORT.txt",
+      "bytes": 15488,
+      "sha256": "b64437caa045f0f5c4bac950f8702aacc8c3e6208dda482dde6867adc5556a26",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/REPORT.md",
+      "bytes": 16521,
+      "sha256": "77fe1331d574c05e8bc57be69e3e25ad836411e97c129b2ec101f8f87ae4d2f6",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/device-read-submit.txt",
+      "bytes": 4004,
+      "sha256": "4cdda2368e5fdb7dc31c54d3e77c87dcfb85a8aed5138fd2cf029d7796ba48d5",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/device-write-submit.txt",
+      "bytes": 3982,
+      "sha256": "c09532b4ebfed4206bc819017fa5e7708a5ec0308081ca1777d6a84336c6f3d6",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/disk-device-rw.txt",
+      "bytes": 14749,
+      "sha256": "ce43c5afe3a19b970545e4c25c712344a39ec9da65c69b90d3efda087c16538a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/model-results-v5.json",
+      "bytes": 7091539,
+      "sha256": "eac18cc91f5a0abf0b90ce44231e138c1d01ed660c0372b8ec12735e2ce29ee5",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/ufs-bmap.txt",
+      "bytes": 24959,
+      "sha256": "1cf8d7f129f3d9f28c19032e840de736c01c92cc73d8b9e5ed05a6e9a49e1304",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/ufs-rw-strategy-resolved-labels.json",
+      "bytes": 2393,
+      "sha256": "0280ba69e45afd7b5433900ec62e87ee94f3241e56b962d1d7e626baa65f132c",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/ufs-strategy-full.txt",
+      "bytes": 5964,
+      "sha256": "3488dd531169325522baa0b471e6ccabc43a7457f8e9889864f2743bb4ad6b8a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fsync-flush-offline-20261014/REPORT.md",
+      "bytes": 11136,
+      "sha256": "3e38b4640a3fe791bffb9ba1e4085f98094a130e37daa3258b3677ca5ef3419c",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fsync-flush-offline-20261014/lower-results-v1.json",
+      "bytes": 241112,
+      "sha256": "fbbe21c9def44b3e84d55bbfe2c1069af43c1e25c8340647107ab8686543fc8f",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fsync-flush-offline-20261014/model-results-v2.json",
+      "bytes": 898322,
+      "sha256": "b55904fec3e4a77e169fe0a7b95c34d882e52ad61ae35b450ac1284784f739ad",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/four-tb-fsync-flush-offline-20261014/static-bindings.json",
+      "bytes": 1837,
+      "sha256": "c04ad6194ff1f2ef15bb7fd35347c5c8fccaaa7f3e81fb871ea2c39aa10fb7ae",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p10-review/final-audit.json",
+      "bytes": 9319,
+      "sha256": "941113a858596dfc76cbda6b89f5e0b58105b29bac8b82234177683c9e35d1d4",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p11-review/final-audit.json",
+      "bytes": 9319,
+      "sha256": "d81432545fb3cd5a6aac8b5a1de06e8504cac7e3fc1afa27a0ecf6d51b11ec24",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p12-review/final-audit.json",
+      "bytes": 9320,
+      "sha256": "e39ff9670efba7c5c93dbdf6511b602e6c979347c09256ad67daaed2d5bbbb47",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p13-review/final-audit.json",
+      "bytes": 9322,
+      "sha256": "343f42470fb2d7bf1468db3eea63c17e004ca50f71895ba54ec54006f33705ae",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p4-review/final-audit.json",
+      "bytes": 9699,
+      "sha256": "2fa948693c04a7250a3b5bfa3ae2bb23f707b3a5d86ea2620e24a661a2bbcc34",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p5-review/final-audit.json",
+      "bytes": 10076,
+      "sha256": "378cbbcacd851320ffb31c5dc703e29bcee44829b0f7e21289562fbaabccdd31",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p8-review/final-audit.json",
+      "bytes": 9320,
+      "sha256": "329f839b547d1d3dd0d7de311b52a59867bf390b4eb4f912e40ba3ba92367567",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "analysis/p9-review/final-audit.json",
+      "bytes": 9317,
+      "sha256": "a0050a2da187fadc3abd1488baf324fe3b9290c3659666c87b4c634ef01d466d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P10/build-manifest.json",
+      "bytes": 3380,
+      "sha256": "559e04fe7fb9a3edd70e44ed88e516c71fc4467ae1f8ef7b8be99225083f3845",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P11/build-manifest.json",
+      "bytes": 3474,
+      "sha256": "f1867b0c960c39c39b4715d7d411e5c9b9b19fd9a80cf754111e252d28095512",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P12/build-manifest.json",
+      "bytes": 3450,
+      "sha256": "c15e16c684a345bf0557452db7692c2b6f2c68f2a93bc149030ec086071ff715",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P13/PS3/UPDATE/PS3UPDAT.PUP",
+      "bytes": 215765852,
+      "sha256": "652c0c0312cd51283473e653df6e2cdfd874a674f6fb7e83979c45d28fed066d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P13/build-manifest.json",
+      "bytes": 3474,
+      "sha256": "4f2d9ce33475ddb81718237658f74d022681e280c8dce384d062045c891a1e9d",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P4/build-manifest.json",
+      "bytes": 2260,
+      "sha256": "09dcd38b55fd53593030619cf130a88ff006074e040e7ed7c6f0d83fb1c596c9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P5/build-manifest.json",
+      "bytes": 2593,
+      "sha256": "aa50755590d5309c28a0c49556cacbd8d408f1fb6d3686038820e28ced68f93a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P8/build-manifest.json",
+      "bytes": 2747,
+      "sha256": "9ac48d65f219eb89b9f0811685ab4c6175f4e6bc88be3d87197c4cd88bf56a78",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "candidates/HDD2TB-P9/build-manifest.json",
+      "bytes": 3374,
+      "sha256": "f9fa5c94bd060004bef12c7774afbf6a73707ae9c7218532e4084753dac7e68a",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002AH/installed-byte-verification.json",
+      "bytes": 391,
+      "sha256": "1864ab00f29d2f92bdf9beaf340f1a4471829736f6694a050ebb79975839c630",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002AY/RESULT.md",
+      "bytes": 2374,
+      "sha256": "1775cd33db46234a01b0d61f30884c830b18b30ca0c4336cd48777df3b17cf3e",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BA/RESULT.md",
+      "bytes": 1307,
+      "sha256": "bc7da2b35577cd06cd45562da280a477827794e5894299d8a51a2f8d2f512fab",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/PROTOCOL.md",
+      "bytes": 3687,
+      "sha256": "cfe0e196864ba961d9262e97b20be7c444711344e7f6558b017b90fe0f66b7b2",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/budget.json",
+      "bytes": 407,
+      "sha256": "340c0854c0b946a4705125e7d0d48707d0d11e2c2a59de707aff74363df405c7",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/native-start.json",
+      "bytes": 1522,
+      "sha256": "4ae0646f553148c1a3f7c7b857a2f2303eb62d63491040ee202375207736a4ee",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/network-snapshots/38ee64d4195043cd9ac8ecb1838338a7/progress.bin",
+      "bytes": 987904,
+      "sha256": "72decc85c60f05542d032f0b09bdda24f79907f56063f5fc146db73445f23a5c",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/network-snapshots/38ee64d4195043cd9ac8ecb1838338a7/result.json",
+      "bytes": 503,
+      "sha256": "929e89d2af0294a554a61b567b792c9c4091bc4bd338fcf538876808ae032fd7",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/performance-assessment-20261016T065149Z/assessment.json",
+      "bytes": 11591,
+      "sha256": "841b4afb99456155cf247b71832ad09633bd83a718af5697dd3d45426a5c29f8",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002BF/final-v16/software-review.json",
+      "bytes": 27527,
+      "sha256": "26d21848791079bf0d17d22e375e44a2eab225ea71bdde85db4e1fc394132d9e",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002Y/preflight-verification.json",
+      "bytes": 2797,
+      "sha256": "29ba42af016fd7e4503a1ba842fb3f1748d46acb5e326441e6dbd8eb99104f14",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002Y/read-only-preflight-v1/health.json",
+      "bytes": 13864,
+      "sha256": "7f89534795c878499556099235f6e8d1cc285d969b6f35a959d67268f02249f4",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002Y/read-only-preflight-v1/identify-after.json",
+      "bytes": 1769,
+      "sha256": "b314b17b1ea942b25c3a39c5eae5e80cb64e3a4c484f4937541a354c7dee60d0",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002Y/read-only-preflight-v1/identify-before.json",
+      "bytes": 1769,
+      "sha256": "b314b17b1ea942b25c3a39c5eae5e80cb64e3a4c484f4937541a354c7dee60d0",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002Y/read-only-preflight-v1/identify-words.txt",
+      "bytes": 6793,
+      "sha256": "ef5c2c0ac96d2d6e64f753be2ca5932891ad872c85abc4541e57bc21946fd688",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "observations/HW002Z/geometry-verification.json",
+      "bytes": 1902,
+      "sha256": "dc074f4422ed2ef77dc51b6514ec876bc641f4854fb48541ef8631d9e0dbc5c9",
+      "evidence_level": "saved_native_observation",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "plan/INITIAL_TASK_PROMPT.txt",
+      "bytes": 8547,
+      "sha256": "d0f200940b6b5083088fe43e790012a78395cb8ac005eef80f4ee94ded5f9fdf",
+      "evidence_level": "authority",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": true
+    },
+    {
+      "path": "plan/PERF001_SESSION_HANDOFF.txt",
+      "bytes": 14531,
+      "sha256": "e51dbbf6f1ece5f604bdf2fab004ee37636f63be752e87b016e9b613845bb6e9",
+      "evidence_level": "authority",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": true
+    },
+    {
+      "path": "plan/ROADMAP.md",
+      "bytes": 13634,
+      "sha256": "cc2abeebb878dffd70619124d24cd47a02eb0a4bed42f32c1543580a2d221849",
+      "evidence_level": "authority",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": true
+    },
+    {
+      "path": "plan/STATUS.json",
+      "bytes": 77923,
+      "sha256": "0e8411e6dc829d11a6bd4e76aedc962a95b6034bf30b529f92da615e6d76891e",
+      "evidence_level": "authority",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": true
+    },
+    {
+      "path": "plan/backlog/PERF001.json",
+      "bytes": 11369,
+      "sha256": "d61fe69bb4fb2c85788458f3436a662dae942a674d0a22cb47b04d953f82dcae",
+      "evidence_level": "authority",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": true
+    },
+    {
+      "path": "research/PERF001/NEXT_SESSION_PROMPT.txt",
+      "bytes": 10142,
+      "sha256": "1b7726ad350f839e4e0da2332d4c56f8549ea90bd5bbf84bd5e4a020cdc9c1d7",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/PERF001/ata-device-and-primary-sources.json",
+      "bytes": 23308,
+      "sha256": "499d88363175706dacf91dd1b24efc17a562a22ae3b4dfcf6fe8cc7903e46d01",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/PERF001/diagnostic-cost-audit.json",
+      "bytes": 20585,
+      "sha256": "1ffecd6e9a7f29188e98db93595dda5a6ab39a80c94c9ed074723b933e28da23",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/PERF001/findings.txt",
+      "bytes": 14819,
+      "sha256": "8b51786fd28d4a73206c02b2b2727e9a73746354b23660d03378e3f6a6ebe6d7",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/PERF001/measurement-plan.json",
+      "bytes": 17927,
+      "sha256": "7a9d6b2edaef906b61f9d0657d92bfd7bba022905554f3b824fc056893101102",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/PERF001/optimization-candidates.json",
+      "bytes": 16759,
+      "sha256": "919a355df7f5e6aa9ff6b3f9905dbbe2a5852f6e40e08e3d11ab05a1febc6c82",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/PERF001/storage-path-and-capabilities.json",
+      "bytes": 22485,
+      "sha256": "cac9a868e0d39f2fbb47b1fdf1a8964631147f766bf00acdac337dd35344ace1",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/dev006-adaptive-fill-design-v1.md",
+      "bytes": 5927,
+      "sha256": "93c4049bbc1e67b8912edc5c4e1abb7fdc8064043147578330a5918fed4bceb5",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/dev006-populated-lexar-fill-plan.md",
+      "bytes": 5606,
+      "sha256": "1090f9bca697298a461518d2777bd0a65e7fd558bbe0f6e14d34ba6a99d155db",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/dev006-post-migration-measurement-plan.md",
+      "bytes": 4534,
+      "sha256": "c9ed97909b68d62d5a7160bfd8a718efd5e398fd08f3a140e6d4ae736ebb4aae",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/dev006-sustained-io-plan.md",
+      "bytes": 4575,
+      "sha256": "3095c4dba1a97de08c443861cb6330bffbaa72d412688268b01edc2760958686",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/filesystem-review.md",
+      "bytes": 9468,
+      "sha256": "5c492073459b0e2731ff027a8d8561635127bf950402e667c24a0e927142346b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/four-tb-self-check-findings.txt",
+      "bytes": 15569,
+      "sha256": "bac83106bc6238542facf520672746cfd72db03058d86fd17709a693b2bc89ae",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/hardware-matrix.md",
+      "bytes": 10109,
+      "sha256": "df4ed2ae6bf2056bac434c842ab45bc789641151a2c6fd0ddcd237ca2e35052b",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "research/p2-storage-review.md",
+      "bytes": 15191,
+      "sha256": "2ea9314b58e395837066cfb5e50d887b5ad56064a6b29710ec6349d2da92f5ec",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "tools/Read-HW002BF-Fill.py",
+      "bytes": 7783,
+      "sha256": "5522ab2ff750f1b3f27d34db95ba18560543c77694689f79e33d1b557c6104f0",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "tools/psl1ght-reference-20261014/source/ppu/include/lv2/sysfs.h",
+      "bytes": 2659,
+      "sha256": "01d55ae1e9ccd7581da87f3f26bdcaf6af65a0824cd10f5e5f97785ed5912f38",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "tools/psl1ght-reference-20261014/source/ppu/sprx/libsysfs/exports.h",
+      "bytes": 976,
+      "sha256": "f4601d50a47f559b0135007c2a6f55c8613aa2204cc6e7bb80ef74c1a932761c",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    },
+    {
+      "path": "tools/psl1ght-reference-20261014/source/ppu/sprx/libsysfs/sysfs_wrapper.c",
+      "bytes": 444,
+      "sha256": "3f3f6182d070ea0f155ad1ed8ad93cb28d658028f729405e1c50f242038f17c9",
+      "evidence_level": "exact_static_artifact_or_prior_local_analysis",
+      "content_rehashed_here": true,
+      "captured_before_scoped_task_registration": false
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "ATA-ACS3-R5",
+      "title": "T13/2161-D ATA/ATAPI Command Set-3, Revision5",
+      "document_date": "2013-10-28",
+      "access_date_local": "2026-10-16",
+      "url": "https://read.seas.harvard.edu/cs161/2019/pdf/ata-atapi-8.pdf",
+      "primary_authority": "T13 draft specification; full document mirrored by Harvard course site. Despite URL filename, title page is ACS-3 Revision5, not ATA8-ACS.",
+      "proof_level": "primary normative draft; generic command and IDENTIFY semantics; exact Lexar advertises ACS-4",
+      "sections": [
+        "7.5, printedpp81..83(PDFpp104..106): DSM06h,48-bit,DMA,TRIM bit and ranges; Table33 read semantics; partial ranges may be trimmed before command-aborted error",
+        "7.10..7.11, printedpp101..102(PDFpp124..125): FLUSH CACHE/E7h and FLUSH CACHE EXT/EAh",
+        "7.12.7.30,.33..37, printedpp127..129:69,queue75,SATA76..79",
+        "7.12.7.40..42, printedpp131..134:82..88 support/enabled validity and FUA",
+        "7.12.7.53,.55..56, printedp136:100..103,105,106",
+        "7.12.7.70, printedp137:169",
+        "7.12.7.75, printedp138:209",
+        "7.43.4, printedp224:SFQ DSM requires SEND/RECEIVE queued and logsupport",
+        "A.11.4.3..4, printedpp432..434:sector relationship/size",
+        "A.11.5.2.22, printedp440:FUA command pair",
+        "A.11.6.2.4, printedp450:volatile-cache enabledbit"
+      ],
+      "short_paraphrase": "IDENTIFY fields distinguish support, enabled state, sector counts/geometry and SATA/queue capability. DSM carries host LBA ranges; deterministic/zero read semantics depend on advertised bits. A command-aborted DSM can already have trimmed ranges, so an error is not proof nothing changed. Flush completion waits for nonvolatile-media persistence or error. These generic definitions do not demonstrate PS3 issuance or forwarding."
+    },
+    {
+      "id": "MS-ATA-IDENTIFY",
+      "title": "Microsoft IDENTIFY_DEVICE_DATA structure(ata.h)",
+      "document_date": "2022-09-01",
+      "access_date_local": "2026-10-16",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ata/ns-ata-_identify_device_data",
+      "sections": [
+        "Syntax:AdditionalSupported,SerialAtaCapabilities,CommandSetSupport/Active,PhysicalLogicalSectorSize,DataSetManagementFeature,BlockAlignment"
+      ],
+      "proof_level": "primary SDK structure documentation; corroborating field layout, not PS3 implementation or normative conformance proof",
+      "short_paraphrase": "The ATA IDENTIFY structure maps DSM/TRIM, deterministic and zero-after-TRIM, SATA/NCQ, LBA48, flush/FUA, cache, DMA and logical/physical fields. Legacy field names require specification-version checks, especially obsolete queued-FUA bits."
+    },
+    {
+      "id": "SMARTCTL-7.5-TRIM",
+      "title": "smartmontools RELEASE_7_5 ataprint.cpp",
+      "document_date": "7.5 release as saved tool banner2025-04-30",
+      "access_date_local": "2026-10-16",
+      "url": "https://raw.githubusercontent.com/smartmontools/smartmontools/RELEASE_7_5/smartmontools/ataprint.cpp",
+      "sections": [
+        "lines709..721:TRIM JSON extraction"
+      ],
+      "proof_level": "primary implementation of saved report decoder",
+      "short_paraphrase": "smartctl7.5 generates supported/deterministic/zeroed from169bit0,69bit14 and69bit5, matching the independent saved-word decode. It reports advertisement rather than executing TRIM."
+    },
+    {
+      "id": "SMARTCTL-7.5-WORDS",
+      "title": "smartmontools RELEASE_7_5 ataidentify.cpp",
+      "document_date": "7.5 release2025-04-30",
+      "access_date_local": "2026-10-16",
+      "url": "https://raw.githubusercontent.com/smartmontools/smartmontools/RELEASE_7_5/smartmontools/ataidentify.cpp",
+      "sections": [
+        "word69,75..88,100..106,169 and209 labeltables"
+      ],
+      "proof_level": "primary decoder metadata; corroboration, not device behavior",
+      "short_paraphrase": "Versioned decoder labels distinguish current-signaling and device capabilities and identify several historical bits as obsolete. The saved compact report does not provide a full raw-sector checksum witness."
+    },
+    {
+      "id": "KINGSTON-GC-TRIM",
+      "title": "The importance of Garbage Collection and TRIM processes for SSD performance",
+      "document_date": "2022-07",
+      "access_date_local": "2026-10-16",
+      "url": "https://www.kingston.com/en/blog/pc-performance/ssd-garbage-collection-trim-explained",
+      "sections": [
+        "What is Garbage Collection?",
+        "What is TRIM?"
+      ],
+      "proof_level": "primary SSD-manufacturer generic mechanism explanation; no exact-Lexar evidence",
+      "short_paraphrase": "NAND programming and erasing use different granularities. GC copies still-valid pages before erasing blocks; host discard informs the drive which LBAs are no longer needed. Filesystem deletion alone does not necessarily convey this information. Background/idle GC is controller-dependent."
+    },
+    {
+      "id": "KINGSTON-OP",
+      "title": "Understanding SSD Over-provisioning(OP)",
+      "document_date": "2019-05",
+      "access_date_local": "2026-10-16",
+      "url": "https://www.kingston.com/unitedkingdom/en/blog/pc-performance/overprovisioning",
+      "sections": [
+        "Benefits of Over-Provisioning(OP)",
+        "Maintaining Performance and Endurance via Over-Provisioning(OP)"
+      ],
+      "proof_level": "primary manufacturer explanation plus Kingston-specific examples; no Lexar sizing or outcome evidence",
+      "short_paraphrase": "Controller-reserved non-user capacity supplies workspace for GC/wear management and can improve sustained/random writes. OS free bytes, host-unused LBAs, factory spare capacity and already-erased NAND are different quantities. Kingston's enterprise examples do not quantify this Lexar."
+    },
+    {
+      "id": "SAMSUNG-870QVO-R1.1",
+      "title": "Samsung V-NAND SSD870QVO Data Sheet Revision1.1",
+      "document_date": "2020-06",
+      "access_date_local": "2026-10-16",
+      "url": "https://image.semiconductor.samsung.com/resources/data-sheet/Samsung_SSD_870_QVO_Data_Sheet_Rev1.1.pdf",
+      "sections": [
+        "p4:Optimal Performance for Everyday Computing Experience",
+        "p5:Technical Specifications andnotes2..5"
+      ],
+      "proof_level": "primary manufacturer example for a different SSD; not installed-Lexar evidence",
+      "short_paraphrase": "Advertised870QVO sequential-write performance uses Intelligent TurboWrite. The sheet separately specifies80MB/s(1TB) and160MB/s(2/4/8TB) after TurboWrite and differentiatesQD1/QD32. TRIM requiresOS support. This demonstrates why cache state and queue depth need controls; none of these controller/NAND/cache numbers apply to the Lexar."
+    },
+    {
+      "id": "LEXAR-NQ100-GLOBAL",
+      "title": "Lexar NQ1002.5-inch SATA III SSD product page",
+      "document_date": "undated current page",
+      "access_date_local": "2026-10-16",
+      "url": "https://www.lexar.com/global/products/Lexar-NQ100-2-5%E2%80%9D-SATA-III-6Gb-s-SSD/",
+      "sections": [
+        "Features",
+        "Specifications",
+        "performance footnote"
+      ],
+      "proof_level": "primary product-family marketing/specification; no serial/FW-revision characterization",
+      "short_paraphrase": "NQ100 family includes2TB SATA6Gb/s and advertises up-to550MB/s reads; write rates are lower and actual performance varies. Product performance may vary by shippingdate/inventory. The inspected page does not identify the installed SN21128 controller, NAND, DRAM, SLC cache size or sustained-write floor."
+    },
+    {
+      "id": "LINUX-6.16-LV1CALL",
+      "title": "Linux v6.16 arch/powerpc/include/asm/lv1call.h",
+      "access_date_local": "2026-10-16",
+      "url": "https://github.com/torvalds/linux/blob/v6.16/arch/powerpc/include/asm/lv1call.h",
+      "sections": [
+        "LV1_CALL definitions: storage_read, storage_write, storage_send_device_command, storage_get_async_status, storage_check_async_status"
+      ],
+      "proof_level": "primary Linux/OtherOS ABI definition; corroborate against exact saved CEX callsites before binding names",
+      "short_paraphrase": "Storage ABI IDs are read245(6inputs,1output),write246(6,1),send-device-command248(6,1),get-async-status249(1,2),check-async-status254(2,1). OtherOS declarations do not prove current CEX forwarding or filters."
+    },
+    {
+      "id": "LINUX-6.16-PS3DISK",
+      "title": "Linux v6.16 drivers/block/ps3disk.c",
+      "access_date_local": "2026-10-16",
+      "url": "https://github.com/torvalds/linux/blob/v6.16/drivers/block/ps3disk.c",
+      "sections": [
+        "LV1_STORAGE constants and lv1_ata_cmnd_block",
+        "ps3disk_identify",
+        "ps3disk_submit_flush_request and ps3disk_sync_cache",
+        "ps3disk_do_request and ps3disk_probe"
+      ],
+      "proof_level": "primary Sony-authored Linux/OtherOS storage driver; not installed GameOS driver",
+      "short_paraphrase": "OtherOS uses a64KiB bounce buffer and a single-request tag set. READ/WRITE use LV1 sector calls; flush uses LV1 device-command0x23(HDDOUT). IDENTIFY uses device-command2 with an ATA taskfile. Request dispatch has READ/WRITE/FLUSH and a rejecting default, without discard. These are documentary Linux constraints, not measured or static CEX constraints."
+    },
+    {
+      "id": "LINUX-6.16-PS3STOR",
+      "title": "Linux v6.16 drivers/ps3/ps3stor_lib.c",
+      "access_date_local": "2026-10-16",
+      "url": "https://raw.githubusercontent.com/torvalds/linux/v6.16/drivers/ps3/ps3stor_lib.c",
+      "sections": [
+        "ps3stor_read_write_sectors",
+        "ps3stor_send_command",
+        "ps3stor_setup"
+      ],
+      "proof_level": "primary Sony-authored Linux/OtherOS library; not runtime evidence on current console",
+      "short_paraphrase": "The sector wrapper sends deviceID,regionID,start,count,flags0,LPARbuffer and receives a tag; the command wrapper sends deviceID,command,four arguments and receives a tag. Completion/status are handled separately. DMA setup checks bounce-buffer alignment. This supports ABI interpretation only."
+    },
+    {
+      "id": "FREEBSD55-FFS-ALLOC",
+      "title": "FreeBSD releng/5.5 ffs_alloc.c",
+      "url": "https://raw.githubusercontent.com/freebsd/freebsd-src/releng/5.5/sys/ufs/ffs/ffs_alloc.c",
+      "access_date_local": "2026-10-16",
+      "proof_level": "primary upstream comparative source, not Sony binary equivalence",
+      "sections": [
+        "ffs_hashalloc1117..1174",
+        "ffs_mapsearch1954 onward"
+      ],
+      "finding": "Preferred/quadratic/linear group fallback and bitmap search motivate allocation tests; exact PS3 paths require local binary bindings."
+    },
+    {
+      "id": "FREEBSD55-FFS-STATFS",
+      "title": "FreeBSD releng/5.5 ffs_vfsops.c",
+      "url": "https://raw.githubusercontent.com/freebsd/freebsd-src/releng/5.5/sys/ufs/ffs/ffs_vfsops.c",
+      "access_date_local": "2026-10-16",
+      "proof_level": "primary upstream comparative source, not Sony binary equivalence",
+      "sections": [
+        "ffs_statfs1015..1054"
+      ],
+      "finding": "Statistics derive from summary/free-reserve fields; corroborative context only, exact Sony arithmetic traced separately."
+    }
+  ],
+  "source_provenance_limits": [
+    "Installed P13 utility readback is exact for that SELF only; saved package lineage is not whole installed LV1/LV2 readback.",
+    "Lexar selected words and PC reports establish historical advertisement, not PS3 negotiated link/cache state or command issuance.",
+    "No raw full IDENTIFY sector checksum, native TRIM trace or media-only performance is available.",
+    "Generic manufacturer and upstream source mechanisms are not exact Lexar/Sony runtime behavior."
+  ],
+  "unresolved": [
+    "PS3 DSM forwarding/issuance/effect",
+    "Actual console SATA/NCQ/FUA/cache state",
+    "Current BF completion/qualification",
+    "Native syscall/component timing",
+    "BF physical extents",
+    "Exact Lexar NAND/controller/cache/temperature/GC history",
+    "End-to-end durability/recovery and safe dead-extent discard semantics"
+  ],
+  "large_artifacts": "11 entries in initial verification were stat sizes only; not consumed as analysis inputs",
+  "host_analysis_outputs": [
+    {
+      "path": "analysis/PERF001/bf-analysis/decoded-progress.csv",
+      "bytes": 402396,
+      "sha256": "f319058495d03b0072c230687daa3c4783ee557e489c510a76e12378144ae336"
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/proposal-review.json",
+      "bytes": 3182,
+      "sha256": "41e43a84f7c10df85c0a713bf0681b2dde4a13835a0d7732c27af5d131d01a77"
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/repeat-validation/decoded-progress.csv",
+      "bytes": 402396,
+      "sha256": "f319058495d03b0072c230687daa3c4783ee557e489c510a76e12378144ae336"
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/repeat-validation/summary.json",
+      "bytes": 44166,
+      "sha256": "2c501004e4b7fb7a5a9a693580f7332caf7a6f66fc192c27120a8cd83e607b11"
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/reproduce_saved_progress.attempt-first.py",
+      "bytes": 11958,
+      "sha256": "99ab17628b7495c0a468f190b31a4a2ce16ac42e043b4a8e622ecfe2f0e817d2"
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/reproduce_saved_progress.py",
+      "bytes": 12481,
+      "sha256": "e001fabdd18bd94df2be62546b918bfa4c1a54e8e67643176e93abaf9679f797"
+    },
+    {
+      "path": "analysis/PERF001/bf-analysis/summary.json",
+      "bytes": 44166,
+      "sha256": "2c501004e4b7fb7a5a9a693580f7332caf7a6f66fc192c27120a8cd83e607b11"
+    },
+    {
+      "path": "analysis/PERF001/ata-research/decode_saved_lexar.py",
+      "bytes": 8728,
+      "sha256": "2d4218608daded506484ea6db89eda566cda2ea4b99b86f1a48d88f079883e8e"
+    },
+    {
+      "path": "analysis/PERF001/ata-research/lexar-selected-word-decode-repeat.json",
+      "bytes": 6457,
+      "sha256": "58f4e7a0796ffcacf9f80444e6c413946803c6684211dbafd7884f182c969d54"
+    },
+    {
+      "path": "analysis/PERF001/ata-research/lexar-selected-word-decode.json",
+      "bytes": 6457,
+      "sha256": "58f4e7a0796ffcacf9f80444e6c413946803c6684211dbafd7884f182c969d54"
+    },
+    {
+      "path": "analysis/PERF001/ata-research/validate_saved_decode.py",
+      "bytes": 2544,
+      "sha256": "ad682cfac5f295bf80d842136913660a6ec76c0d2a9d3c17d7a34a866def95ac"
+    },
+    {
+      "path": "analysis/PERF001/ata-research/validation-receipt.json",
+      "bytes": 1593,
+      "sha256": "0374722c89152a17941dc0d147ddb6dcbde3b0c5a675cade93e8a9dad7b47743"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-command-builder-callers.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-command-candidates.json",
+      "bytes": 1056,
+      "sha256": "ab65011c3bd7423ba73dfc1975e0b56f8f1749cf9fd222af72c7e645a60ada37"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-generic-taskfile-callers.json",
+      "bytes": 178,
+      "sha256": "5298c424c7729f7d93c498ed8327e569a56402d9d8dfb4b408f71058b1543b5f"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-immediate-discovery-v2.json",
+      "bytes": 17679,
+      "sha256": "5cfbf823fb1ac464a4b615e373a87a937a1c8f504d4dd3b4b21f5b6cf3f31fe6"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-immediate-discovery-v3.json",
+      "bytes": 35194,
+      "sha256": "91938cf5c8993a3e2c3862bdba194176ee307f865b71626eab10cf7d61db4202"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-immediate-discovery.json",
+      "bytes": 3869,
+      "sha256": "50d2e1f7a5148941d2547c7832d76ccd2b8edd1dd5bf694363b0b96a6d241479"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ata-resolved-builder-callers.json",
+      "bytes": 1570,
+      "sha256": "942e6cac89930bd0a4d80174b106acb0f5d0f1f2e782145a1379261f2da05e21"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/evidence-manifest-v2.json",
+      "bytes": 44128,
+      "sha256": "a05d961a957242ac676c952defe26a2101a044b3846b2f127c2a69781527a9b9"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/evidence-manifest.json",
+      "bytes": 41342,
+      "sha256": "7d560e1c03d748c91e413ae5b7bea65c1381f3be71bc0d471ee692a2f87edcfa"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/final-verification-v2.json",
+      "bytes": 570,
+      "sha256": "b5fd9c85639c25c78cfe8d6347b8a4dae49080c740a710e3d2687fb4eb04da49"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/final-verification.json",
+      "bytes": 2491,
+      "sha256": "28e0a9daacc088a02d38a31582472c49f21de9716a3320f5a5a608683181bd5d"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/finalize_static.py",
+      "bytes": 24899,
+      "sha256": "818995ea58d4d8932874f940de49a06f8c213f46eb08820065c75725445891be"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup.py",
+      "bytes": 1961,
+      "sha256": "021abd80a356f76830c258f07a69f105342f8ce7550b4090751dbdb894717b8b"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup2.py",
+      "bytes": 1392,
+      "sha256": "928b628eee8887ee80fe1adaf3337c174d3d972d987fd31bf6601c9af4dd3eca"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup3.py",
+      "bytes": 2458,
+      "sha256": "7bbccbec98806b92667d13ee152edb0802703cccba893e3ec05bedb12e914f39"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup4.py",
+      "bytes": 1063,
+      "sha256": "be3bf6189244906f9c977ba736882d14cad4724113ffd2fb06ea2e50339c9534"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup5.py",
+      "bytes": 982,
+      "sha256": "1cd67756f451bac5a20490148ab07b72445af97983c73bc26f9b4fe4b4925c32"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup6.py",
+      "bytes": 1301,
+      "sha256": "c3833bdb059decb65b0e58d5f2121cca248dc53af6ef04e5dcde105f9a3d5ce8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_followup7.py",
+      "bytes": 1871,
+      "sha256": "bd64b1a62ddd0055fa0e5c5278f3a7c730e8adb5cd0664e57684452cf778aea5"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/inspect_static.py",
+      "bytes": 6609,
+      "sha256": "08c74c73cdc8d0be9f52d1f833fa3a26d7888ab95bf401ebdc50e50a52579aa3"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/integration_v2.py",
+      "bytes": 7241,
+      "sha256": "2ce5234fcf1eae71211f2aa2fbd0cee3599fcfca255041317dae493d9cead216"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-c0000002-neighborhood.txt",
+      "bytes": 1437,
+      "sha256": "c2d25bdadd681c2bf76d102e7b15e71622fb79ef4ea581e595d74fad92faf864"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-c0000002-select.txt",
+      "bytes": 1804,
+      "sha256": "bd02f3cee8ef30d0a8dc71b13c1b330bdf3c948f505d59311001160dd3d495da"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-entry-full.txt",
+      "bytes": 18156,
+      "sha256": "dc0e940b3fa0475dbc84022f1980cf7b07e15a8ecb614c0a59beca826828fe98"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-free-size-body.txt",
+      "bytes": 14441,
+      "sha256": "df183ef4548dece26543dff268acbe4aedda419d1b2afb56dfa51c5b2a7c5141"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-global-dispatch.txt",
+      "bytes": 16787,
+      "sha256": "539e74710b7680c94d7fec3700f6f5c5566485e0bdeb1fda19fc6b354a2fe38e"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-path-dispatch.txt",
+      "bytes": 19002,
+      "sha256": "4d4b7be43726318e8ece807849478f3e06cbcb72f96d63b45d138b34880a32fe"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-fcntl-path-helper.txt",
+      "bytes": 8900,
+      "sha256": "eac83916707acffa7e57b20445f75cb8b6e26ee36f1c816836e816b0b8fb8dfb"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-file-io-generic-dispatch.txt",
+      "bytes": 13905,
+      "sha256": "4cd1239b897688da64035da1995ae3a8c57c32e853a12e8ef694ef34bd1aecc0"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-file-read-method.txt",
+      "bytes": 6966,
+      "sha256": "6f7505f4aed2b31da6fb8e00d7446ea3b6bdecfe30367f648407be9b2fb553b5"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-file-write-method.txt",
+      "bytes": 5238,
+      "sha256": "7c105af2e28bd15441823dab33ddd299b17fdfb5be00aa6042a7cf86f3e1ab16"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-freesize-path-object.txt",
+      "bytes": 1098,
+      "sha256": "406e89c754997dc40db51eed59c79eef7f6113c15ed59500983a628adaa369cf"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-generic-file-rw.txt",
+      "bytes": 35469,
+      "sha256": "cc3014b36169f36310caa711407a7091951bcc760980277099e35e98dea33223"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-generic-read-dispatch.txt",
+      "bytes": 8191,
+      "sha256": "c4a3f7d696913be68d1aa25d8c0ca63671bb668956741e61951f7f76dd61e5c9"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-generic-write-dispatch.txt",
+      "bytes": 5352,
+      "sha256": "7ec5e205cedbfb6f52a4ea859bcaefab0c72d06baaa2b8c84fd6b544dcaadb72"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv245-at-aacbc.txt",
+      "bytes": 3578,
+      "sha256": "3a8f11a93ee997d30b8268768fe0588b39c503b58b9e85cb3e0d45ee864a05f8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv245-at-ae3f0.txt",
+      "bytes": 3518,
+      "sha256": "bcbab0a90319d7eb417c70ea57d5adf24c2ad764434c27328dc731c2d6756fdd"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv246-at-aac14.txt",
+      "bytes": 3608,
+      "sha256": "8be25bf524d1d03e787a5d6eaf94fd6657344d89775d223aad57f962c5347b0e"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv246-at-ae238.txt",
+      "bytes": 3483,
+      "sha256": "a9b8b322486ae196a2254cd1bd0b923ef6d0a864474150b5dd99e75d989df47a"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv248-at-ab384.txt",
+      "bytes": 3757,
+      "sha256": "b03bfd179ea76ee5479bd2b76d116aa243b07fbf04eea578ba0469a92a6d15fd"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv248-at-ab514.txt",
+      "bytes": 3836,
+      "sha256": "9b3a980c9872e0f7213041bc851f838830f40d4b0c5c7be42f7628eb9e67edba"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv249-at-ac4e8.txt",
+      "bytes": 3772,
+      "sha256": "8bb67c52f4b02dc62721eec3ecea1cac81746033fa226ea9c2a16fac1465112f"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv249-at-ae51c.txt",
+      "bytes": 3764,
+      "sha256": "4b0c5f367f02117a3505e74786c62f732d4cc0cb2b8971b1bb3fe5843542b254"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv250-at-aa7ac.txt",
+      "bytes": 3785,
+      "sha256": "886c5dcba32e18817c2444aa06dc56a26523e64f49a2f93e0b2e20b12a71182d"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-hv251-at-aafdc.txt",
+      "bytes": 3826,
+      "sha256": "48f9c479a6eee96359071b2927c341070fa795029a6a72f2db0cdecc0b4fec5b"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-backend.txt",
+      "bytes": 39591,
+      "sha256": "d637ae3658df2ef090ac956e579239d3098bc4a2efd4a280b9dd67daf15aa035"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-hypercall-sites-rw.json",
+      "bytes": 391,
+      "sha256": "6a87b54bf6726b837f670145d65f70729b4ce7048fbbb0ae5a38eb6654509e7a"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-hypercall-sites.json",
+      "bytes": 585,
+      "sha256": "504aa590a10623bcbad8cb07bc110cc912601d31a46efd70084e9238dde1cf17"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-storage-request-bound.txt",
+      "bytes": 4071,
+      "sha256": "2e9e4d1721d82d1b24161022a9bb6d1c3ed9609c8d1b2ce6e48a535a7cc7011e"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-sys-read.txt",
+      "bytes": 8562,
+      "sha256": "13b3eaa7b297f739fa8d39dfeee2323b10391b030817ea10b0eb10a6014aaa04"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-sys-write.txt",
+      "bytes": 8241,
+      "sha256": "3ec2fe8e28b8658819247f385cd4ffcc3d225cb0ec132f2ac5698d22703d50ac"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-802-table-resolved.txt",
+      "bytes": 8040,
+      "sha256": "03de706e43184d2abc7a17a24d5472dc09c1f15549706d25ef3fb76a2747820c"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-803-table-resolved.txt",
+      "bytes": 8136,
+      "sha256": "4042e16c66461d547115f5f21db2402582732ebb909b928a19bff88527a06f5d"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-817-table-resolved.txt",
+      "bytes": 8114,
+      "sha256": "1a0c65b18ba5d9b46dd80a82eca9578d0c82cb4be8f0e7c9f1d4e8333b75889d"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-syscall-840-table-resolved.txt",
+      "bytes": 8047,
+      "sha256": "7273e0ed067f42bc646725404a75d64c1dfd6601390740a07b6e00556bf7f743"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-ufs-freesize-arithmetic.txt",
+      "bytes": 7553,
+      "sha256": "197b7f00bbc9927f242bc1da8e944c0d1d76d0bc60dd5f849bd213ebc007b34f"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-ufs-freesize-method.txt",
+      "bytes": 8795,
+      "sha256": "8304fc2c47a38d3eb79e98bb3f748f05dacf3ef77038fed428b21d84c279ad10"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-ufs-freesize-neighborhood.txt",
+      "bytes": 10189,
+      "sha256": "5cbd2c8bb2e7b2b6dd4e7f4d3ff5022cd746e1fbe0228acfb86bed141a992dc1"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-volume-freesize-dispatch.txt",
+      "bytes": 9864,
+      "sha256": "c84d9611c65a802b66322f6d46ab3cdc1039f95e592d7963b84df97530a3f3ad"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/kernel-volume-freesize-real-dispatch.txt",
+      "bytes": 6825,
+      "sha256": "40bd603cc62dc7b3490ec827f128db8a73660198171f31d7f1ecd524838abda9"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-aio-submit.txt",
+      "bytes": 5513,
+      "sha256": "aac7bdc2c3b0ede3b0fbaf168929bd805d07b8741ce750cc020a03840daa74d8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-export-bindings.json",
+      "bytes": 1384,
+      "sha256": "65161a8ec5dc3c45ecf8702a47633233535b642f2c224ddf0b260718756a70a8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-free-size-geometry-helper.txt",
+      "bytes": 6055,
+      "sha256": "5f6b0e846b51bbb28bb29ec4a4f1c024ba7dd365d8053a118fb173fa3ed60a8d"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-get-free-size.txt",
+      "bytes": 12990,
+      "sha256": "c2f58d00ddb9776c33ff9c55ee4528d3bbf66f0bfe90ceff78fdfbb890cc90d1"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-lseek.txt",
+      "bytes": 876,
+      "sha256": "69e5befa688b644e0ced2c95c173069d8c146c198696496915ba0a9c9e6b0d28"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-open.txt",
+      "bytes": 7104,
+      "sha256": "a3ca50c1a1e1d9a83c493b11d61330a536b9d5ab429a1ac5e19d63c6efff2918"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/libfs-read-write-close.txt",
+      "bytes": 2495,
+      "sha256": "5d18d75f49d296e4e8c65f3e5e97437b618007bd5f08c7a6c17513d34b5a5ef7"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-builders-lower.txt",
+      "bytes": 13518,
+      "sha256": "ae03bbecdb2a869f255c21c6f0e0e2230c0d4943d4026113ed6ba9fd537b39cd"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-builders-upper.txt",
+      "bytes": 59580,
+      "sha256": "72e1350e78d15637fd1562bee33d0dd969a3c2f6e560a49e83dec7e4e0d3d14f"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-builders.txt",
+      "bytes": 23827,
+      "sha256": "25e9e9014fc5563ffa36ba02ddd0afa01cc0a66313e9dc94bb35bfde302bdd02"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-cache-wrapper-callers.json",
+      "bytes": 1279,
+      "sha256": "ac00060a2d184f539788a02fe3a3e44616c1954a298f2fbbffe9f6db3ad378a2"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-control.txt",
+      "bytes": 10608,
+      "sha256": "58344f79af16bcd87888afda1e5600d941dca0bbc01104cfdf86b0aa1d9d60ca"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-generic-entry.txt",
+      "bytes": 2584,
+      "sha256": "670996386a17674e66c55cb0d45f1ea0bf90b540dcd8f0ed959854b9d2380885"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-submission-v2.txt",
+      "bytes": 16737,
+      "sha256": "89e9e508ce85b4584adf1afe175b99d27c736b3bff94ec8444118620f0e33ca8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-submit.txt",
+      "bytes": 16737,
+      "sha256": "89e9e508ce85b4584adf1afe175b99d27c736b3bff94ec8444118620f0e33ca8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-switch-v2.json",
+      "bytes": 3951,
+      "sha256": "9b33e5c7f1e9b1ed99779c250a67e70db307427ec0e631dad8b5495624ac6444"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-command-switch.json",
+      "bytes": 6957,
+      "sha256": "d1b7bf2c9101aae306bc5b6ee6cb9824905dc16d7d15c734fa4f018661498533"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-dispatch-commands-v2.txt",
+      "bytes": 58573,
+      "sha256": "333fa0efd983317b8d6a99cc598ccc75e49d7347aefcf6e8ca84f97a6c0d9d57"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-dispatch-commands.txt",
+      "bytes": 1648,
+      "sha256": "3319cf11d8416d130bc8716f8518e186425a6611b39666daca26d7ec081e2d50"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-extended-dispatch.txt",
+      "bytes": 9226,
+      "sha256": "c6a68ee75c460e86e0e42db1aeaa69660034f4232066047a5c04d1793d6ca3f8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-flush-control-callers.txt",
+      "bytes": 19776,
+      "sha256": "ccd19cb4c2f9516db50adeca488d61bf747574b65ffdf46526052cd78e43f5da"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-flush-selector.txt",
+      "bytes": 7904,
+      "sha256": "2dd89d1e6bee9c7366e7af4acb8928f7b589bd4182762529cc7fa958308b2c66"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-generic-entry-full.txt",
+      "bytes": 8350,
+      "sha256": "7b68e7cbf7b7737080bea5ff53e55f79c481f471ae2307fe25a181b28a7fdf7b"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-generic-submit.txt",
+      "bytes": 10212,
+      "sha256": "39fa8e5d802decae34bc68e1e4c9be629a9327c484e39a6f2aee905b20c7d9f8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-identify-flush-power-builders.txt",
+      "bytes": 31311,
+      "sha256": "f16d7a1b8604d4a6136d0485b29f667991b977514f98ace69090be37adf5fcc8"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-init-parser.txt",
+      "bytes": 34219,
+      "sha256": "dd3a6662311e9c34a49e9a4c4b232dbf5cff5cbb6c74cab6c5edb89677c73f09"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-passthrough-wrapper.txt",
+      "bytes": 6363,
+      "sha256": "699f13fe1ffcb29625918612b0d8877c89dcde77e6302f520dbfe2467e692e66"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-ata-request-launch.txt",
+      "bytes": 8224,
+      "sha256": "13d9f15fac0f963931752bf32c87c20453cd56ccc5e72e6dbefc06c56f72de5e"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-device-read-write.txt",
+      "bytes": 15976,
+      "sha256": "10a238d7ddc3fdee85bc24fdffff198578854fb059a5f787e24e3ae4cb76a16c"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-encrypted-rw.txt",
+      "bytes": 11609,
+      "sha256": "516c8b85f8ceae05edad705a231215e6fca730a0bf5aa6a6302a2ae3b2ea8ad1"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-read-translation-full.txt",
+      "bytes": 7039,
+      "sha256": "404bcff4a52ea7e95fbafb4b40a8ff686988ed205d162686a96c4c3fbabc343e"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-region-translation.txt",
+      "bytes": 1827,
+      "sha256": "6eba13753d72c3bcde8458e6fd42b29b600b2bb22010d743854f7c6d0f8ec9fb"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-sector-crypto-generator.txt",
+      "bytes": 3852,
+      "sha256": "a0ff7dbd78507b4029423ff8d752e0e95f44f1d0228fed52d90040902aa22339"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-sector-crypto-input.txt",
+      "bytes": 3411,
+      "sha256": "6b5c434ca4adabb5e98f9ebc5824308934e8c12adbdcb12b9174eb06f545a488"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-smart-identify-cache-builders.txt",
+      "bytes": 14622,
+      "sha256": "6e9b3fbad102d258a6e33b57ba68c118d4f4cfb1f558d08add977b4330b25742"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/lv1-write-translation-full.txt",
+      "bytes": 7699,
+      "sha256": "f0e8da76263c20b655c97cc808bff325fe6baeadf0dad094c479318bb307a8d0"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/p13-kernel-lineage.json",
+      "bytes": 7323,
+      "sha256": "16089d04c80600d43ccdfd0f9db9e7ac50d3c369c16bba3d7397dfc7e077dd93"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/polish_map.py",
+      "bytes": 4517,
+      "sha256": "b49f44a4a3a9e6a6adf73b295174abbaefdadcc9f70b71b18ff2c0971a6e791d"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/READ-ME-FIRST.txt",
+      "bytes": 1470,
+      "sha256": "dea2d32de7b21e7542dbbe0aa9afd6edae25f01c750031c10454f834c3a886e3"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/source-pins.json",
+      "bytes": 646,
+      "sha256": "2bfda5cab8c03b6ff4917be3fbada42a0bfa5c08a9e4a47005090f15ccf78872"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/storage-map-before-integration-v2.json",
+      "bytes": 20160,
+      "sha256": "a9f6be10c8d57c4a9847e3e7a178c84177f767c8b782d07982a9f65f344603d1"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/storage-map-v1-draft.json",
+      "bytes": 19778,
+      "sha256": "f9a7ea0805b995e79f0cee06152393dfd26c1e45150fab5b084a0a736ed8747e"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/syscall-bindings.json",
+      "bytes": 3195,
+      "sha256": "f495b39c7bd6eeb4578e02abb04d8ad5c9395ae514feb61a7d40b08dccfb3ebf"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/ufs-vtable-bindings.json",
+      "bytes": 3137,
+      "sha256": "20d8fc8174b37863057aceeaaec069f9a517abfed088f64125b82b8352e6486f"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/verify_final.py",
+      "bytes": 2882,
+      "sha256": "b818563c9d68b6a184cefa58569d56d224791ff4714a36bcb9d167cfd7733a3f"
+    },
+    {
+      "path": "analysis/PERF001/storage-static/verify_lineage.py",
+      "bytes": 2597,
+      "sha256": "a9d450e60b14ab631e1fd265c96c6cfd95333eefe57cb34908e59b7ce83fea6e"
+    }
+  ],
+  "derived_proof": "BF and ATA repeats reproduce values/bytes; exact static review has separate verification receipt. This does not validate native measurements or stability."
+}

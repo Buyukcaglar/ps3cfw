@@ -1,0 +1,127 @@
+Work in C:\Projects\PS3Firmware. English; UTC+3.
+Continue as the CAPACITY workflow owner. Coordinate through the owner; do not message
+other chats. This handoff requests the ordering/evidence below. It does not
+authorize RO1 gate enablement, staging, installation or native execution, or
+implicitly release a new disk operation or the64GiB fill.
+
+Read current authority before acting:
+- C:\Projects\PS3Firmware\plan\STATUS.json and its CURRENT capacity checkpoint.
+- C:\Projects\PS3Firmware\plan\INITIAL_TASK_PROMPT.txt and plan\ROADMAP.md.
+- C:\Projects\PS3Firmware\observations\HW002BF\final-v16\PROTOCOL.md and software-review.json.
+- C:\Projects\PS3Firmware\plan\backlog\PERF001.json.
+- C:\Projects\PS3Firmware\research\PERF001\RO1\release-prep-v1\PLAN.txt,
+  PROTOCOL.txt, HELPERS.txt and NEXT_SESSION_PROMPT.txt.
+- C:\Projects\PS3Firmware\analysis\PERF001\ro1-release-prep-v1\preservation-checkpoint.json,
+  qualification-template.json and selected-extents-template.json.
+- Applicable AGENTS.md if added. Current authority supersedes dated handoffs.
+Verify relevant bindings; listed large images/archives SIZE ONLY. Do not replay
+consumed closure/registration/staging/launch/collection/migration writers.
+
+Saved state, not a live console report: at 16 October 2026 09:51:49 UTC+3, BF
+was phase3/status0,480GiB written,29complete per-file checks/current30th-file
+verification. Current saved authority still has native_first_fill_passed=false,
+BF_final_USB_collector_consumed=false and second_stage_released=false. Refresh
+existing owner evidence first; never infer present state/completion from this.
+P13 remains the target on CECHA00, with populated Lexar NQ1002TB/SN21128,
+ATA serial<serial>,2048408248320B. Disk numbers are stale identifiers.
+
+Required sequence
+BF first checkpoint -> receipt qualification -> ordinary restart/persistence/
+brief game -> selected-file read-only extent mapping -> same-drive refit/boot
+if needed and idle custody handoff -> separately released RO1 once/capture/review
+-> custody returned -> capacity owner's separately released64GiB fill.
+Hold the64GiB stage until this RO1 window is resolved. Its existing later broad
+physical-coverage gate can remain separate; selected-file mapping moves to the
+FIRST checkpoint. Any hardware mapping/drive movement must follow actual current
+capacity authorization and a reviewed bounded procedure; prepare missing steps
+offline if they are not already released.
+
+1. Qualify BF first checkpoint.
+Let the existing run finish under its own protocol; do not relaunch/restage it.
+Obtain the owner's actual completion/error and responsive-XMB report. Only after
+the app is finished and USB returned to PC, use the capacity-owned final collector
+ONCE if still unused. If consumed, use its existing evidence instead of replaying.
+Check exact session/nonce, READY, final8192B receipt, progress journal/checksums/
+sequence and DONE against final-v16. Require per-file full pattern/SHA/size/EOF,
+the complete global reread/alias checks, all16after-controls, valid final reserve,
+success/cleanup/publication conditions and owner XMB return. DONE/counters/
+100%written alone do not qualify completion, process return or durability.
+Error/cancellation/missing/inconsistent evidence: retain all files; stop for
+bounded read-only validation. No automatic retry, restart, resume, repair or next
+fill. After accepted receipt, complete the required ordinary restart/persistence
+checks and one brief existing-game check. Record exact scope; no repeated lengthy
+LBP3 level/trophy chores and no power-loss experiment.
+
+2. Apply RO1's130GiB floor explicitly.
+RO1 requires139586437120B =130GiB available:128GiB reserve+2GiB margin. Record
+BOTH final BF available_after_bytes and current exact native available bytes at
+handoff/admission. A rounded XMB number or old BA baseline is insufficient.
+Use a currently approved capacity measurement path; do not replay a consumed app
+to obtain it. If that path is missing, identify the gap and prepare it offline.
+BF's valid reserve-stop can finish >=128GiB but BELOW130GiB. Therefore BF success
+does not imply RO1 admission. If either value is below130GiB, keep RO1 locked,
+retain filler and report the blocker. Do not delete filler, lower guards, reclaim
+reserved space or invent qualification. Resolving it requires a separately
+reviewed change; this handoff authorizes no workaround.
+
+3. Bind and map these retained files before64GiB:
+/dev_hdd0/tmp/HDD2TB-BF-c2773e7c49901095-fill-00.bin
+/dev_hdd0/tmp/HDD2TB-BF-c2773e7c49901095-fill-14.bin
+/dev_hdd0/tmp/HDD2TB-BF-c2773e7c49901095-fill-28.bin
+Each must be complete17179869184B(16GiB), with final state7, full verification
+and matching nonzero write/read SHA256 in the qualified BF receipt. Record the
+full BF nonce, indices, exact paths/sizes/hashes and relevant persistence evidence.
+If any selected file is absent/incomplete or changed, stop; do not substitute
+files silently. Whole-file hashes and independently derived slice SHA references
+serve different purposes; keep both bindings distinct.
+Use a fresh read-only selected-file metadata/extent mapping, with freshly checked
+ATA identity before any PC device access. Preserve raw mapping evidence and its
+coordinate convention; normalize to whole-device byte offsets. For each file,
+map all logical bytes0..17179869184 without holes, overlaps, sector misalignment
+or device overrun; check cross-file overlap too. Record file_offset,device_byte,
+bytes per extent. Logical file order is not physical placement; device extents
+are not NAND placement. No whole-image hash/densification, payload rewrite,
+defrag, TRIM, repair or forced placement. After any authorized movement/refitting,
+confirm the same Lexar/P13 and responsive ordinary boot before custody handoff.
+
+4. Produce a fresh saved evidence packet for RO1.
+Use a new capacity-owned output directory; preserve all earlier reports. Follow
+qualification-template.json, schema RO1-capacity-handoff-v1. Include capacity_owner,
+console="CECHA00", firmware="HDD2TB-P13", the exact drive identity/capacity,
+current_available_bytes and selected_files[{index,path,bytes,sha256}] for 0/14/28.
+Set assertions true ONLY where evidence supports them:
+bf_final_global_controls; responsive_xmb; ordinary_restart; retained_persistence;
+brief_existing_game; selected_extents; idle_custody_handoff; before_64GiB_stage.
+Evidence keys: bf_receipt,bf_ready,bf_done,bf_progress,controls_digest,current_status,
+responsive_xmb,ordinary_restart,retained_persistence,brief_existing_game,
+selected_extents,idle_custody_handoff,before_64GiB_stage. Each reference is
+{path:workspace-relative,sha256:64lowercasehex}. controls_digest binds
+observations/HW002BA/controls-digest.json; current_status binds actual plan/STATUS.json.
+Selected extent report schema RO1-selected-extents-v1 includes passed,drive_serial,
+bf_nonce,files and extents keyed"0","14","28"; retain its source evidence.
+Update capacity authority truthfully: native_first_fill_passed=true and native
+execution running=false only after qualification; second_stage_released stays
+false. Preserve PERF001 entries and other owners' work. Advance your capacity
+checkpoint only through your own scoped process; never restore a dated RO1 root
+snapshot or rerun a consumed registration writer.
+
+5. Hand idle custody through the owner and stop at the release boundary.
+Record that BF/collectors/PC device handles are finished, same Lexar/P13 is fitted,
+filler and real data are retained, USB location is known, and no game/download/
+install/copy/fill is active or scheduled. Keep the64GiB fill unreleased. Give the owner
+the evidence packet path/hash, selected extent report, final/current available
+bytes, remaining uncertainties and a pasteable RO1 continuation.
+RO1 offline preparation is complete but BOTH native gates remain0/0. The00.02
+PFR100001 PREP LOCKED package must not be installed. Evidence qualification does
+not enable gates. Final exact source/package/nonce/helper/protocol/USB bindings,
+native gate-change review and explicit human hardware authorization are still
+required before staging/launch. After the authorized RO1 run/capture/review,
+require explicit custody return before considering a separately released64GiB fill.
+
+Preserve original1TB/image,populatedCrucial,storedPNY,populatedLexar/filler,
+originals/NAND/archives/private material/concurrent work. No F:firmware read/hash/
+write/backup, own48B EID/derived-key read/hash/print/export, external console RAM
+probes, shared PS3HDDTool writers, consumed migrations/journals/archives/admin jobs,
+cache/power/queue changes, format/fault/TRIM/ATA experiment or firmware update.
+Do not equate host tests/builds/saved records with native acceptance, stable
+storage, physical coverage, power-loss durability or a performance improvement.

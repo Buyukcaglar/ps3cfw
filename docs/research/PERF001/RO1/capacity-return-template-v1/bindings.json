@@ -1,0 +1,13 @@
+{
+  "scope": "Fill-in return handoff template only; no qualification/custody/authorization asserted",
+  "bindings": {
+    "research/PERF001/RO1/capacity-return-template-v1/RETURN_TEMPLATE.txt": "7b02e2635cf12d1fd2edda95c4b55b0fcd3538d07344c6fe6b084d9f9145af38",
+    "research/PERF001/RO1/capacity-handoff-v1/HANDOFF.txt": "96c6d413fd287f21847b095e63bbb6e00485680905c4771f9100321095ccc07f",
+    "analysis/PERF001/ro1-release-prep-v1/qualification-template.json": "ceecb7969d99851a2bd993cb52255f29e47a328176ddd6a0475243ceeabaadfb",
+    "analysis/PERF001/ro1-release-prep-v1/selected-extents-template.json": "40164568114efd1977bff145e73159cf3568a2ac7a3ae40822fba072900cb2a7",
+    "analysis/PERF001/ro1-release-prep-v1/qualification.py": "6a83a31735750e5be183feb78a384f226cd794414bfabc1e94a5a3d8d8ec5160",
+    "plan/STATUS.json": "3b534d55362af68cab6d3b6b4c2663eca93937b133390ea381e4d5be623752e6"
+  },
+  "shared_register_changes": false,
+  "hardware_operations": false
+}

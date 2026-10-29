@@ -1,0 +1,21 @@
+# P4 exact firmware rebuild and protocol review
+
+Primary-agent review plus a separate parser/crypto implementation,2026-10-11. No separate human/agent review or hardware execution is claimed.
+
+PUP SHA256 `d5dd8c6e34a1ac02f1e7706308df7f8c55bbcd882cd3447363aa97f17c7c67af`,215764316bytes. Two complete builds produce identical PUP bytes. The parent is exact reviewed P3 SHA2569197335b04b6cdf8c40393d6375dd6ee77d2f62fc85da5cac0989d012ed00eaa.
+
+`tools/build_hdd2tb_p4.py` changes only the LV2 aggregate mount limit described in `research/hw001h-mount-review.md`. Final decoded LV2 SHA256dc9d6e24fb5bd9eaa15678e8fc1b2076cc0358a1be574d87a9f14e0fa468280a. Its only differing byte is ELF2dac77,02→03; the full instruction at VA80000000002cac74 is3c000002→3c000003. Both P3 admission modules remain byte-identical. Relative to the supplied baseline, the three earlier emergency/sysconf admission bytes and this one LV2 byte are the complete behavioral change.
+
+The focused SELF writer preserves original length, section offsets, metadata wrapping, keys, IVs, capabilities, original4.93 public version and unchanged section ciphertexts. It updates the first compressed section's size/HMAC, public section length and matched full-ELF SHA1 digest. Native compression stays1497622bytes inside the1497632-byte slot. No-change SELF and PKG reconstruction controls are byte-identical. Native scetool and the Python decoder agree on the full final ELF.
+
+Native encoder key selection initially failed because its version-selection database stops before4.93 for LV2. Those failed attempts emitted no candidate firmware. The final builder uses a scratch template with its public application version4.82 solely to obtain the native compressed stream; its CLI version flags otherwise lose to template values. That scratch header is never used in the release. The focused writer starts from the original4.93 SELF and the separate audit explicitly confirms4.93 remains present. This changes no firmware version/admission policy.
+
+The baseline LV2 SELF already has an invalid ECDSA signature under its matching available keyset. P4 retains those signature bytes, relying on the supplied CFW's existing loader acceptance; it does not claim a newly valid Sony signature or an exhaustively audited loader. The package's regenerated retail PKG signature verifies, all affected section HMACs pass, and companion SPKG plaintext header matches. SPKG signature remains invalid under its distinct public key, as in the supplied CFW. P3's actual control boot supports inherited CFW behavior, but P4's changed kernel still needs its own installation/boot test.
+
+`analysis/p4-review/audit_p4.py` does not import the builder. It uses separate PUP/TAR/SCE parsing, native/Python whole-ELF decode, ECDSA/HMAC verification and exact independent byte allowlists. It reuses only reviewed generic function definitions from the earlier audit, without replaying historical writers. The first audit attempt encountered an API tuple-unpacking error; after correcting that audit adapter, the complete audit passed. The imported historical source-header report was regenerated identically in that first attempt; final preservation readback checks its pinned hash.
+
+Only update_files.tar and spkg_hdr.tar differ from P3; only CORE_OS_PACKAGE.pkg and its header differ in those archives. All25 CoreOS names/offsets/sizes are preserved; only lv2_kernel.self changes. Every dev_flash package, updater and other PUP entry remains byte-identical to P3. Exact report: `analysis/p4-review/final-audit.json`.
+
+HW001I protocol uses Recovery6 on the working1TB HDD, requires a successful control XMB boot, then tests the **preserved already formatted** Crucial. It authorizes no new format, repair, database rebuild or restore operation. Unexpected prompts stop for evidence. First XMB, reported capacity, ordinary shutdown and one clean restart are the required observations. Neither software audit nor this narrow test qualifies full-capacity I/O, repair, durability, other SSDs or>2TiB.
+
+Reviewed for release solely as the P4/HW001I experiment. Automatic F: staging must follow exact manifest/report/protocol binding and full readback; never back up F: firmware.

@@ -1,0 +1,15 @@
+{
+  "scope": "Ready-to-paste capacity handoff only; no hardware authorization or operation",
+  "bindings": {
+    "research/PERF001/RO1/capacity-handoff-v1/HANDOFF.txt": "96c6d413fd287f21847b095e63bbb6e00485680905c4771f9100321095ccc07f",
+    "research/PERF001/RO1/release-prep-v1/PLAN.txt": "ffa2e586a2ba22a964ddf648f50c795b80abcd6f57b28615c7ac26d98181ecc8",
+    "research/PERF001/RO1/release-prep-v1/PROTOCOL.txt": "e2ebe9a0114d5571943d5074fdae7b4a5b878820bda71d4ff5cd0a5341737478",
+    "research/PERF001/RO1/release-prep-v1/HELPERS.txt": "e124188573bb3b03c334537656adaedbc53a2f54949e5b09d47e46acfc8e5d4a",
+    "analysis/PERF001/ro1-release-prep-v1/qualification-template.json": "ceecb7969d99851a2bd993cb52255f29e47a328176ddd6a0475243ceeabaadfb",
+    "analysis/PERF001/ro1-release-prep-v1/selected-extents-template.json": "40164568114efd1977bff145e73159cf3568a2ac7a3ae40822fba072900cb2a7",
+    "plan/STATUS.json": "4d59d2c9e4ae24186f8fc2e0d3d3d83610570f1d99736e442ddc9f745035cf65",
+    "plan/backlog/PERF001.json": "bcf375a3b15e0f33682ed8bfc1c88da88ccd960e742538ec1eb28ab15711f07f"
+  },
+  "hardware_operations": false,
+  "shared_register_changes": false
+}

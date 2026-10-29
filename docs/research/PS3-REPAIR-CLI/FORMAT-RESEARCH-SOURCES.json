@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-20",
+  "packet": "remaining_ps3_format_research",
+  "scope": "Source research and planning only; no code incorporation or execution, no private keys or media",
+  "prior_manifests": [
+    "SOURCE-SNAPSHOT.json",
+    "RESEARCH-SOURCES.json"
+  ],
+  "prior_packet_archive": "history/20261020-initial-research",
+  "external_files": [
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ffs/fs.h",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ffs/fs.h",
+      "bytes": 26896,
+      "sha256": "472af41620c6382bc508749df9797cb6184e148d162a2499c3563c3358ce4170",
+      "line_count": 617,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ffs/ffs_vfsops.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ffs/ffs_vfsops.c",
+      "bytes": 51405,
+      "sha256": "2eb31955748cd5906075a9df275c18372272f890455edaceaff6af79e6f50230",
+      "line_count": 1988,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent",
+      "notice": "Regents three-condition notice with clauses numbered 1, 2, 4"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/main.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/main.c",
+      "bytes": 16132,
+      "sha256": "56564231a39454fb357ea487b0e9eccdf90c3e3e7084c9e0e45ac1ebad885971",
+      "line_count": 614,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent",
+      "notice": "Regents three-condition notice with clauses numbered 1, 2, 4"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/setup.c",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/setup.c",
+      "bytes": 15966,
+      "sha256": "c3b010271c6f9439b0cb7345385faf49f6d102006d455a17fc245354629c102e",
+      "line_count": 534,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent",
+      "notice": "Regents three-condition notice with clauses numbered 1, 2, 4"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sys/ufs/ffs/fs.h",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sys/ufs/ffs/fs.h",
+      "bytes": 32903,
+      "sha256": "4cd11b5b9dda128bc8834ee890645014b5d365dfef0d0416dc1453972e782991",
+      "line_count": 775,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sbin/fsck_ffs/setup.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/setup.c",
+      "bytes": 33460,
+      "sha256": "ba75c47cda3de759e86eefb7046759f62886d2b70be448fe39d759493c6fac0a",
+      "line_count": 1184,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sbin/fsck_ffs/main.c",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/main.c",
+      "bytes": 13874,
+      "sha256": "02646a8c47175a0daf724852b8477405d3066ae7f28e8ec93e69fdcd65ca2c33",
+      "line_count": 618,
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by parent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ffs/ffs_vnops.c",
+      "bytes": 44704,
+      "sha256": "96e61a1e8079a59cd063886035627842ec86e728fc037fbb4843c0a8251d925d",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ffs/ffs_vnops.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Network Associates two-condition and Regents three-condition notices"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ufs/extattr.h",
+      "bytes": 6068,
+      "sha256": "615f0b769c6a1438ddfaa13320c14c95bb13ab3be1aa5170dbd0942472b5dec5",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ufs/extattr.h",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Robert N. M. Watson two-condition notice"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/sys/extattr.h",
+      "bytes": 4114,
+      "sha256": "6edf6d1ab94f265deb005895ff2bdf61d9853cc9dd72fcec6b6c0d43602a1457",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/sys/extattr.h",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Robert N. M. Watson two-condition notice"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/sys/acl.h",
+      "bytes": 14501,
+      "sha256": "c13e5021b8e6c29f7856f9ab7ad034df1f9d4514077fad92b19f950dffed89ab",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/sys/acl.h",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Robert N. M. Watson and Edward Tomasz Napierała two-condition notices"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ufs/ufs_acl.c",
+      "bytes": 12065,
+      "sha256": "1256bc554f905091975ad1713c19e24820bc7a1caf0540a3f67e0c43fcea83e7",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ufs/ufs_acl.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Robert N. M. Watson two-condition notice"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ufs/ufs_extattr.c",
+      "bytes": 34990,
+      "sha256": "a73cdc5c61e3acb16e655a912a173e60d8b96be1be9828c06c7290696a57200a",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ufs/ufs_extattr.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Robert N. M. Watson and Network Associates two-condition notices"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sys/ufs/ufs/extattr.h",
+      "bytes": 5988,
+      "sha256": "f015dabf3817270a29d0bc849ca8b434b044b4cc6205ebee83ba1ea0dfb1a2f0",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sys/ufs/ufs/extattr.h",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Watson two-condition notice"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sys/ufs/ffs/ffs_extattr.c",
+      "bytes": 24991,
+      "sha256": "8791c16d1ffd7bba932939a09b07c927e5302f72c8ba919bd70eb3a539ce0a91",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sys/ufs/ffs/ffs_extattr.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "SPDX BSD-2-Clause-FreeBSD AND BSD-3-Clause"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "bytes": 16014,
+      "sha256": "6187d643d4b2e5e975dab2f75f4535db3c417e5c606404d14984d71c43830253",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass1.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sbin/fsck_ffs/pass5.c",
+      "bytes": 15546,
+      "sha256": "804d56d4665ba01ba1f978e4793bffb461d2fe28eb07d4abcda6d71a621df0a0",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/pass5.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sbin/fsck_ffs/utilities.c",
+      "bytes": 18655,
+      "sha256": "54208cd66799cc63e1893207da4ad69a367df85f7bc00c114f95d62030277bd3",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sbin/fsck_ffs/utilities.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sys/ufs/ffs/ffs_alloc.c",
+      "bytes": 63550,
+      "sha256": "d66522c5d3c7f8019c8c55b30a9af6fa0281577a8188320a1e54e2a8589b4c38",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sys/ufs/ffs/ffs_alloc.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "97570233e1d596cda4d80e34fef0b2d53a7fb154",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "bytes": 15461,
+      "sha256": "1e6026e155e844da528bf8cb60b7879f36a6342829a132b79164bd4da096bebe",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/97570233e1d596cda4d80e34fef0b2d53a7fb154/sbin/fsck_ffs/pass1.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "bytes": 14566,
+      "sha256": "26f9fa7eb2fc837218352da4096673507d70d7e4e28e7f10426193196d21c2c8",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/pass1.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/pass5.c",
+      "bytes": 15900,
+      "sha256": "32dfb26391e049c5c557fa90f0a1727bb35c32dc81d1782f53aa1e1b7defe6de",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/pass5.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/inode.c",
+      "bytes": 18443,
+      "sha256": "1e43b6a92c14798dd5a431f9d34ff54619959ac78f263cc8b5ab563bf6c992c7",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/inode.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/fsck_ffs/fsutil.c",
+      "bytes": 18891,
+      "sha256": "1654feee3c3abc9890dfb9d903466cb13b39f25fcc2b09dbf9ce4cc88e441478",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/fsck_ffs/fsutil.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent",
+      "notice": "Regents three-condition notice with clauses numbered 1, 2, 4"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sbin/newfs/mkfs.c",
+      "bytes": 32169,
+      "sha256": "40283b5a1b2239d03e99f1a94e599c4d36208044d15ef56522fcab1769b678ab",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sbin/newfs/mkfs.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/ufs/ffs/ffs_alloc.c",
+      "bytes": 71562,
+      "sha256": "3b5313c696e09745ee9e168b6e1c28990939bc39197758e8d39d9d4b9e24f336",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/ufs/ffs/ffs_alloc.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "d4c364b3dcf6dfe4e20c70d31912aad7e6219c14",
+      "path": "sbin/fsck_ffs/pass1.c",
+      "bytes": 13096,
+      "sha256": "c0ced5771c9d9ea96a8cc55f334511dc5695e7ab79a9a10070ffbc0ae8b6f34e",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/d4c364b3dcf6dfe4e20c70d31912aad7e6219c14/sbin/fsck_ffs/pass1.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "d4c364b3dcf6dfe4e20c70d31912aad7e6219c14",
+      "path": "sbin/fsck_ffs/pass5.c",
+      "bytes": 15371,
+      "sha256": "d407a44105bbfce6623778c2a7a12f52b738e909d8ca93e6ce3203499b0d77a3",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/d4c364b3dcf6dfe4e20c70d31912aad7e6219c14/sbin/fsck_ffs/pass5.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "d4c364b3dcf6dfe4e20c70d31912aad7e6219c14",
+      "path": "sys/ufs/ffs/ffs_alloc.c",
+      "bytes": 68578,
+      "sha256": "57623ee628b2e2a1975c55f73ca53c21209275cfa359fd93b51e04bcaa3604b9",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/d4c364b3dcf6dfe4e20c70d31912aad7e6219c14/sys/ufs/ffs/ffs_alloc.c",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "FreeBSD/freebsd-src",
+      "revision": "5381b89e043e6a4c0316344f7fe8272596d3011c",
+      "path": "sys/sys/param.h",
+      "bytes": 10506,
+      "sha256": "705a3949733781940f97d32ecf83d3cd867b5260d36cfa9ba9264ad8538db273",
+      "url": "https://raw.githubusercontent.com/FreeBSD/freebsd-src/5381b89e043e6a4c0316344f7fe8272596d3011c/sys/sys/param.h",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    },
+    {
+      "repository": "NetBSD/src",
+      "revision": "acb07d978136d3b5a8032fe3dac4b7321db4da1f",
+      "path": "sys/sys/param.h",
+      "bytes": 18193,
+      "sha256": "41b02cd328575d2ce744954b02c288275005ab762206bac91359b10e6eadb2b5",
+      "url": "https://raw.githubusercontent.com/NetBSD/src/acb07d978136d3b5a8032fe3dac4b7321db4da1f/sys/sys/param.h",
+      "method": "Raw HTTPS response bytes read and SHA-256 hashed in memory by research subagent"
+    }
+  ],
+  "native_binary_provenance_from_existing_text": [
+    {
+      "path": "analysis/p13-review/utility-P13.native.elf",
+      "bytes": 224208,
+      "sha256": "e34e18aed90eecf11fe311137b0c6e1054689fd5b019fb27a001a57542973c86",
+      "provenance": "analysis/four-tb-checker-cleanup-offline-20261016/preservation-before.json:19418-19421",
+      "opened_or_rehashed_this_pass": false
+    },
+    {
+      "path": "analysis/build-p4-v3/lv2-patched.elf",
+      "sha256": "dc9d6e24fb5bd9eaa15678e8fc1b2076cc0358a1be574d87a9f14e0fa468280a",
+      "provenance": "existing allocator-analysis listing provenance",
+      "opened_or_rehashed_this_pass": false
+    }
+  ],
+  "limits": [
+    "Selected file inventory, not complete inclusion or transitive licensing clearance.",
+    "BSD comparator framing and masks are not qualified Sony EA/flag semantics.",
+    "Saved native instructions establish only the identified source paths, not cross-firmware or runtime acceptance.",
+    "No fixtures, models, writers or consumed hardware jobs were run."
+  ],
+  "additional_local_files": [
+    {
+      "path": "research/hw001h-mount-review.md",
+      "bytes": 5400,
+      "sha256": "518a9382037d94aeaa410255be94db0fb676c1f178f2bce8ed43c5eb385196e4",
+      "last_write_utc": "2026-10-11T16:35:33.1000151Z"
+    },
+    {
+      "path": "analysis/four-tb-checker-cleanup-offline-20261016/checker-range-198b0-1adf4.txt",
+      "bytes": 54386,
+      "sha256": "bcd5777c5df7dc28747a7e37e13afa0744c1ada232f87747c06bfb73a40979e2",
+      "last_write_utc": "2026-10-16T06:06:36.3350474Z"
+    },
+    {
+      "path": "analysis/four-tb-checker-cleanup-offline-20261016/checker-range-194f8-198b0.txt",
+      "bytes": 9550,
+      "sha256": "bdd5782c681a2dc999b093572537f27e62a1a9814791f599f29a43f76b7fdb98",
+      "last_write_utc": "2026-10-16T06:06:36.3174512Z"
+    },
+    {
+      "path": "analysis/four-tb-checker-cleanup-offline-20261016/preservation-before.json",
+      "bytes": 913095,
+      "sha256": "9171a5b67c84c94953f07054e38db3feeedf60accc2fdafc61bc0e6cc66b46d8",
+      "last_write_utc": "2026-10-16T06:06:17.7673971Z"
+    },
+    {
+      "path": "analysis/four-tb-alloc-cache-offline-20261014/alloc-full.txt",
+      "bytes": 55640,
+      "sha256": "459060e761ea8f84007db663ece8c4bb1460e903814d9d4ab22cfa824368224e",
+      "last_write_utc": "2026-10-14T10:17:25.7150949Z"
+    },
+    {
+      "path": "analysis/four-tb-alloc-cache-offline-20261014/model.py",
+      "bytes": 30969,
+      "sha256": "95dcda83558d021b71615c825144cd1b9d3332c871161ce034baa8d7aa88187a",
+      "last_write_utc": "2026-10-14T10:43:03.9090170Z"
+    },
+    {
+      "path": "analysis/four-tb-8k-offline-20261014/checker-review/normalization.txt",
+      "bytes": 9999,
+      "sha256": "43de7085db860a32cb705c06c00a27f4bd2365c39cf02b0636861118669cd9e0",
+      "last_write_utc": "2026-10-14T07:30:44.7704361Z"
+    },
+    {
+      "path": "analysis/four-tb-8k-offline-20261014/checker-review/readsb-variable-device-unit.txt",
+      "bytes": 1912,
+      "sha256": "780d423cfcf138ae380ef204e839cdac33b34e338d6ec213a8928029ae2e6466",
+      "last_write_utc": "2026-10-14T07:30:44.7714384Z"
+    },
+    {
+      "path": "analysis/four-tb-fileio-offline-20261014/ufs-labels.json",
+      "bytes": 2306,
+      "sha256": "77e4b44cc3adceb844ec6c9346083c683532f41c053e29af84f59b6b54201677",
+      "last_write_utc": "2026-10-14T09:37:41.6639848Z"
+    }
+  ]
+}

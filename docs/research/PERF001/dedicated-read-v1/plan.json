@@ -1,0 +1,247 @@
+{
+  "schema": "PERF001-dedicated-read-plan-v1",
+  "id": "PERF001-DR1",
+  "date_local": "2026-10-17",
+  "timezone": "UTC+3",
+  "state": "planned_only_device_details_pending",
+  "objective": "Optimize ordinary internal read throughput, small/random latency and game loading/streaming with integrity and compatibility preserved",
+  "current_authorization": "Prepare/save independent plan only; no implementation/build/staging/device/console/native action; hardware gates locked until user supplies details",
+  "BF_dependency": false,
+  "BF_and_original_RO1_mutation_allowed": false,
+  "branch_boundary": "Separate exact fixture admission/custody/manifests. Original RO1/BF prerequisites remain unchanged for original branch; no inherited BF files, keys, nonces or receipts",
+  "device_details_template": "research/PERF001/dedicated-read-v1/DEVICE_DETAILS_TEMPLATE.json",
+  "device_details": null,
+  "native_application_exists": false,
+  "native_package": null,
+  "native_nonce": null,
+  "gates": {
+    "device_details_received": false,
+    "firmware_compatibility_reviewed": false,
+    "fixture_admitted": false,
+    "native_pilot_released": false,
+    "hardware_authorized": false,
+    "payload_writer_released": false,
+    "storage_optimization_released": false
+  },
+  "gate_transition_rule": "Device details are necessary; resolve actual compatibility, identity/data disposition, exact reviewed bounded protocol and current human authorization before any released action. No automatic self-unlock or templates-as-proof.",
+  "stages": [
+    {
+      "id": "DR1-00",
+      "name": "Device details and compatible baseline",
+      "hardware": "Future bounded identity/provisioning preflight after owner details; current planning only",
+      "depends_on": [],
+      "state": "pending_device_details",
+      "work": "Bind exact CECH/current firmware/homebrew/recovery/SSD identity/data disposition; no assumed P13/model compatibility or protected-drive reuse"
+    },
+    {
+      "id": "DR1-01",
+      "name": "Detached diagnostic adaptation and host/binary review",
+      "hardware": "No",
+      "depends_on": [
+        "DR1-00"
+      ],
+      "state": "not_implemented",
+      "work": "New manifests/paths/public references/nonce/title/version and ABI/layout/space checks; retain caps, stop, errors and publication; no BF/old RO1 writer replay"
+    },
+    {
+      "id": "DR1-02",
+      "name": "Native zero-payload pilot",
+      "hardware": "Yes",
+      "depends_on": [
+        "DR1-01"
+      ],
+      "state": "locked",
+      "work": "Actual loader/timer/CPU/UI/controller/exit/XMB acceptance; zero intentional HDD payload writes"
+    },
+    {
+      "id": "DR1-03",
+      "name": "Owned I/O pilot and known-data fixture admission",
+      "hardware": "Yes",
+      "depends_on": [
+        "DR1-02"
+      ],
+      "state": "locked",
+      "work": "New owned <=256MiB pilot then three512MiB/16-file mix corpus; full initial/global/ordinary-restart verification and explicit cumulative setup ledger"
+    },
+    {
+      "id": "DR1-04",
+      "name": "Internal read baseline",
+      "hardware": "Yes",
+      "depends_on": [
+        "DR1-03"
+      ],
+      "state": "locked",
+      "work": "CPU/FS decomposition, balanced reads, buffer/locality/random/file-mix/timing controls; retain latency/rc/bytes/cleanup and cache-state limits"
+    },
+    {
+      "id": "DR1-05",
+      "name": "Attribution and one-factor read optimizations",
+      "hardware": "PC analysis/development; targeted native A/B required",
+      "depends_on": [
+        "DR1-04"
+      ],
+      "state": "locked_after_baseline",
+      "work": "Prioritize ordinary read buffering/locality/read-ahead/copies; deeper shared FS/driver/crypto only with evidence and exact firmware/ABI/locking/error review"
+    },
+    {
+      "id": "DR1-06",
+      "name": "Game/loading/streaming and compatibility validation",
+      "hardware": "Yes",
+      "depends_on": [
+        "DR1-05"
+      ],
+      "state": "locked_pending_exact_game_scope",
+      "work": "Owner-selected titles/scenes; matched baseline/candidate loading/stalls; content, ordinary restart, save/install and relevant error checks"
+    },
+    {
+      "id": "DR1-07",
+      "name": "Independent prepared states and release decision",
+      "hardware": "Yes plus PC analysis",
+      "depends_on": [
+        "DR1-06"
+      ],
+      "state": "locked_pending_concrete_conditioning_scope",
+      "work": "Repeat in >=2 independently prepared states; all provisioning/conditioning/verification counted; no general device/model/stability claim from one sample"
+    }
+  ],
+  "fixture": {
+    "schema_proposed": "DR1-owned-fixture-v1",
+    "pilot_payload_max_bytes": 268435456,
+    "large_files": 3,
+    "large_file_bytes": 536870912,
+    "mix_files_max": 16,
+    "mix_total_max_bytes": 67108864,
+    "initial_setup_payload_request_cap_bytes": 2147483648,
+    "nominal_initial_payload_max_bytes": 1946157056,
+    "nominal_initial_three_read_passes_bytes": 5838471168,
+    "initial_setup_requested_read_cap_bytes": 8589934592,
+    "new_paths_only": true,
+    "automatic_resume_delete_or_reuse": false,
+    "provisioning_format_metadata_scope": "Not part of payload count and not authorized now. Bind exact dedicated SSD, retained data, firmware compatibility and recovery procedure separately before any formatting.",
+    "data_manifest": "Fresh exact paths/IDs/public seed/pattern version/full SHA/slice SHA/size/offset/owner and evidence bindings; independently checked references; no real saves or old source image required",
+    "pilot_and_setup_budget": "One cumulative ledger across pilot/main/pre-post-restart jobs; charge requests before reads/writes incl short fragments/retries/EOF; actual returned/written tracked separately; <=64positive fragments, zero/overreport/errors stop; partial files retained"
+  },
+  "baseline_read": {
+    "workloads": [
+      {
+        "id": "CPU_CAL",
+        "purpose": "CPU pipeline/calibration and monotonic native ticks; no storage",
+        "planned_returned_bytes": 0
+      },
+      {
+        "id": "SEQ",
+        "purpose": "6 balanced 256MiB A/B read-only vs verified pairs plus2 independent256MiB post-checks",
+        "planned_returned_bytes": 3758096384
+      },
+      {
+        "id": "BUF",
+        "purpose": "3 repeats x3 request sizes(4KiB/64KiB/1MiB) x64MiB",
+        "planned_returned_bytes": 603979776
+      },
+      {
+        "id": "RANGE",
+        "purpose": "3 repeats x3 logical file ranges x64MiB; bind extents if claiming allocation location",
+        "planned_returned_bytes": 603979776
+      },
+      {
+        "id": "RANDOM",
+        "purpose": "3 repeats of8192x4KiB and1024x64KiB deterministic/locality traces",
+        "planned_returned_bytes": 301989888
+      },
+      {
+        "id": "TIMING",
+        "purpose": "4x16MiB timing-off/on read controls; exact timers and coverage",
+        "planned_returned_bytes": 67108864
+      },
+      {
+        "id": "MIX",
+        "purpose": "3 passes over16 owned files, aggregate<=64MiB per pass",
+        "planned_returned_bytes": 201326592
+      }
+    ],
+    "planned_returned_bytes_upper": 5536481280,
+    "requested_read_cap_bytes": 8589934592,
+    "payload_write_bytes": 0,
+    "extra_working_memory_cap_bytes": 8388608,
+    "graphics_cap_bytes_provisional": 33554432,
+    "USB_evidence_cap_bytes_per_job": 8388608,
+    "USB_available_floor_bytes": 67108864,
+    "native_available_floor_bytes": 139586437120,
+    "buffer_alignment_bytes": 4096,
+    "initial_request_sizes_bytes": [
+      4096,
+      65536,
+      1048576
+    ],
+    "application_readers": 1,
+    "actual_transport_queue_depth_link_NAND_geometry": "unknown, not inferred from app QD1, SSD advertisement,512B sector report or console age",
+    "time_limit": "1200s cooperative active work/job; READY and cleanup/publication separately disclosed; no blocked-syscall deadline",
+    "cancellation": "Before opens and earliest1MiB/64ops/250ms service; controller stop and accepted process-exit route; preserve first and cleanup errors",
+    "space_semantics": "130GiB conservative DR1 guard, independent of BF. Rebind actual native FS API/units/geometry; do not hardcode old RAW_FREE or BA values. Setup additionally checks next-write headroom.",
+    "cache_policy": "First-pass unknown, repeated warm/mixed; no initial cache dropping/reboot-to-claim-cold or settings change. Later matched ordinary-cycle controls require actual labels.",
+    "timers": "Actual native ticks/frequency, pre/post10000empty/event calibrations, independent elapsed, exclusive scopes, explicitly inclusive subscopes and bounded percentile intervals",
+    "measurements": [
+      "read/seek/open/stat/close requests,rcs,bytes",
+      "end-to-end and syscall-active rates",
+      "CPU/pattern/SHA/compare",
+      "space/UI/controller/USB publication",
+      "p50/p90/p95/p99/max and residual/coverage uncertainty"
+    ],
+    "interpretation": "OS housekeeping may write; syscall-only transient bytes not certified by later verification; hidden driver/crypto/media inside FS call, residual is not a media timer"
+  },
+  "candidate_comparison": {
+    "matched_pairs_min": 6,
+    "balanced_AB_BA": true,
+    "direction_consistency_min_pairs": 5,
+    "profile_jobs_max_per_block": 12,
+    "requested_profile_read_cap_bytes_per_block": 103079215104,
+    "new_payload_writes_per_read_block": 0,
+    "repeat_blocks_automatic": false,
+    "independent_prepared_states_min": 2,
+    "state_control": "Same firmware baseline lineage, files/extents/occupancy,compiler/UI/timers/order; record cache,elapsed/idle/thermal/history confounding; one factor at a time"
+  },
+  "success_criteria": {
+    "target_read_throughput_gain_percent": 10,
+    "target_approved_loading_time_reduction_percent": 5,
+    "gain_above_uncertainty_multiplier": 2,
+    "native_timing_overhead_max_percent": 2,
+    "p95_regression_max_percent": 5,
+    "p99_regression_max_percent": 10,
+    "new_unexplained_stalls_above_seconds": 1,
+    "maximum_latency_doubling": "reject pending explained baseline outlier",
+    "correctness_failures_allowed": 0,
+    "coverage_and_quantile_bins": "Disclose inconclusive coverage or tail resolution; no confidence claims from correlated rolling/call samples",
+    "benefit_scope": "Diagnostic-only improvements labeled separately; shared storage/game claim needs relevant game data/loading/streaming result and CPU/memory costs"
+  },
+  "priority_candidates": [
+    "request size/alignment/locality with actual timing",
+    "read-ahead/batching if measured relevant",
+    "copies/cache behavior with correctness proof",
+    "shared FS/driver/crypto only after exact firmware/lock/lifetime/coherence/retirement/flush/error review"
+  ],
+  "later_scopes_locked": {
+    "game_titles_scenes_install_bytes_and_budget": null,
+    "occupancy_fragmentation_prefill_endurance_budget": null,
+    "large_sparse_high_offset_scope_and_budget": null,
+    "fault_powerloss_recovery_scope": null,
+    "ATA_TRIM_cache_power_queue_changes": null,
+    "rule": "Unknown scopes stay locked. Every conditioning/install/format/verify/cleanup cost declared before release; no silent TB fill, raw pass-through or removal of integrity/flush/reserve guards"
+  },
+  "preservation": [
+    "BF source/review/protocol/current run/control/filler untouched; no collectors/STOP/restage/launch",
+    "Original RO1 source/locked flags/packages unchanged",
+    "Original1TB/image,Crucial,PNY,populatedLexar,originals/NAND/archives/private material/concurrent work protected",
+    "No F:firmware access; own48B EID/derived-key read/hash/export; external RAM probes; raw-image whole hashing/densification",
+    "No shared PS3HDDTool writers or consumed migrations/journals/archives/admin/stager/collector/closure replay; no cross-chat messages/automation"
+  ],
+  "source_references": [
+    "research/PERF001/findings.txt",
+    "research/PERF001/storage-path-and-capabilities.json",
+    "research/PERF001/optimization-candidates.json",
+    "research/PERF001/measurement-plan.json",
+    "research/PERF001/RO1/REVIEW.json",
+    "research/PERF001/RO1/release-prep-v1/REVIEW.json"
+  ],
+  "next_input": "Dedicated PS3 exact model/current firmware and SSD manufacturer/model/details; no live query to fill absent data",
+  "evidence_boundary": "Planning only; no new implementation, build, host diagnostic run, native measurement, speedup, full-capacity/durability or user acceptance claimed"
+}

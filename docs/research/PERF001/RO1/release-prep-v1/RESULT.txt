@@ -1,0 +1,43 @@
+PERF001-RO1 offline release preparation complete -- LOCKED
+16 October 2026; UTC+3
+
+Prepared detached qualification/binding helpers, future gated exclusive stager,
+bounded read-only collector, saved-file decoder, concrete protocol and custody
+sequence before64GiB fill. Original RO1/BF/P13 and historical attempts preserved.
+Native gates0/0; hardware authorityfalse; BF whole hashes unadmitted. No actual
+USB staging, console contact, native run, disk/ATA/TRIM or firmware action.
+
+Fresh00.02 PFR100001 preview: analysis/PERF001/ro1-release-prep-v1/attempts/
+native-prep2/PERF001-RO1-OFFLINE-LOCKED.pkg. Two identical GNU links; linked/import/
+OPD32/NPDRM MAC/segment/package audit passes. Do not install the locked preview.
+ECDSA, native loader/UI/XMB/timers/overhead/performance/persistence remain untested.
+
+Final validation:227helper/receiver/fault cases on memory USB backend;26synthetic
+capacity-envelope/extent cases;36actual native-adapter mock cases, including both
+locked gates with zero syscalls. Actual unchanged shared C core completed106runs/
+5,662,423,872 returned bytes on generated memory files. No synthetic owner report
+or packet is admitted as BF qualification. Capture never infers native exit or
+durability from DONE. Failed attempts preserved; final named reports only count.
+
+Current saved BF qualification is unavailable. Template reports all eight owner
+gates pending. Qualification intake requires final/global/controls/XMB/restart/
+persistence/brief-game/selected-extents/current idle custody evidence from capacity
+owner. Selected files0/14/28 must be complete and exactly bound. No cross-chat
+message or capacity workflow action was taken.
+
+Scheduling: firstBF checkpoint/persistence/game -> owner read-only selected extent
+mapping before64GiB -> same-drive boot/idle custody -> final RO1 release review
+and separate explicit hardware authorization -> oneRO1/capture/review -> custody
+back to capacity owner. General capacity/finalCrucial/>2TB gates remain separate.
+RO1 requires130GiB available. BF success may end below130GiB: that blocks RO1;
+do not delete filler, lower guards or presume success implies admission.
+
+Only remaining data-dependent work: actual qualified BF/extent/owner bindings,
+current native available and USB identity, fresh exact final release change/
+gate1 binary review and explicit human staging/launch/capture authorization.
+bind_qualified.py can prepare a fresh hash-bound source only after evidence;
+it never enables gates. No unlock tool/remote STOP delivery is released.
+
+Read PLAN.txt, PROTOCOL.txt, HELPERS.txt and NEXT_SESSION_PROMPT.txt here.
+Current capacity checkpoint pointer remains unchanged; PERF001 updates are scoped
+and covered by the new preservation-checkpoint. Stable storage support isfalse.

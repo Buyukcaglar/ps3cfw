@@ -1,0 +1,80 @@
+RO1 release preparation helper guide -- offline defaults; no current hardware use
+
+Files: analysis/PERF001/ro1-release-prep-v1/ (relative to workspace).
+Use python -B to avoid bytecode side effects. New outputs always use fresh names.
+
+Current safe offline inspection:
+ python -B analysis/PERF001/ro1-release-prep-v1/release_helpers.py inspect --plan analysis/PERF001/ro1-release-prep-v1/release-plan.locked.json
+Expected LOCKED; no USB path is resolved or queried. Stage/capture reject this
+plan before any USB backend call, even if a USB root argument is supplied.
+
+qualification.py --evidence <saved owner handoff JSON> --out <fresh report>
+ Validates saved BF receipt/progress/session/controls, first checkpoint space,
+ owner assertions and evidence bindings, current capacity authority, files0/14/28
+ and complete selected extent maps. It collects nothing and changes no gates.
+ qualification-template.json has all eight owner assertions FALSE and no hashes.
+ Required evidence keys: bf_receipt,bf_ready,bf_done,bf_progress,controls_digest,
+ current_status,responsive_xmb,ordinary_restart,retained_persistence,
+ brief_existing_game,selected_extents,idle_custody_handoff,before_64GiB_stage.
+ Every reference is {path:workspace-relative,sha256:64lowercasehex}.
+ current_status must bind actual plan/STATUS.json for release admission.
+ Reports of behavior are capacity-owner evidence, not observations by this tool.
+
+ Selected extent report schema RO1-selected-extents-v1:
+ passed:true,drive_serial,bf_nonce,files:[index,path,bytes,sha256] for0/14/28,
+ extents:{"0":[{file_offset,device_byte,bytes},...],"14":[...],"28":[...]}.
+ Cover each complete16GiB file without holes, overlaps, misalignment or drive
+ overrun; bind underlying read-only mapping/source evidence in owner record.
+
+bind_qualified.py --evidence <qualified owner handoff> --output-name <freshname>
+ Refuses absent/unqualified evidence before creating a candidate. Otherwise
+ writes a fresh source copy under qualified-candidates/, with fresh nonce and
+ exact selected whole hashes. Native gates remain0. Never edits previous source.
+ build_native.py <freshattempt> <absolute qualified-candidate src path> builds
+ two identical GNU links and a LOCKED package. Default source is current preview.
+ audit_binary.py <attempt> audits the locked linked bytes/imports/MACs/package.
+ Both helpers are detached copies; consumed original builders/registrars unused.
+
+release_helpers.py stage/capture are future gated operations, not authorized now.
+ They require --plan, --approval, --approved-plan-sha256, --usb-root F:\; capture
+ also needs --owner-xmb-confirmed. Approval schema RO1-hardware-authorization-v1:
+ plan_sha256,nonce,before_64GiB_stage:true,actions:[stage_once,launch_once,capture_once],
+ human_request_reference,protocol_sha256. The canonical plan hash is SHA256 of
+ JSON with sort_keys=True,separators=(',',':') plus one LF. No approval exists now.
+ Human authorization must come from the actual user; filling booleans is not it.
+
+ Final release plan must bind qualification, exact selected_files, package,
+ native_source,binary_review,protocol and all six helper code hashes; names/nonce,
+ immutable budget and USB volume identity must agree. Admission independently
+ rejects native source gates0 and absent final release binary review. A simple
+ plan flag flip cannot admit the current locked preview. Gate1 source/binary
+ review is a FUTURE separately authorized change; this prep has no unlock tool.
+ The future review must bind native_source_sha256,package_sha256,nonce and set
+ hardware_release,fixture_qualified,native_gate_reviewed,helper_contract_reviewed
+ only after actual review. These JSON records are integrity/custody, not signatures.
+
+ stage creates ONLY nonce-specific PKG and READY, exclusive-create, READY last.
+ All seven possible namespace paths must be absent. One durable workspace intent
+ per nonce forbids retries, including ambiguous failures. No broad USB scan,
+ firmware read, prior receipt read, overwrite/delete/rename or network operation.
+ capture reads only fixed bounded files after confirmed app return, preserves
+ partial/error data, checks stable rereads/identity and saves one capture intent.
+ Actual Win32/removable-media behavior is not exercised in the offline tests.
+
+validate_capture.py --saved-directory <workspace directory> --nonce <64hex> --out <fresh report>
+ Decodes saved bytes without USB APIs. Exact run/receipt/witness/DONE coupling,
+ native-size success totals, reserve/cleanup and first-error fields are checked.
+ Formats: journal65536B/record<=120; result8192B; witness4096B; tokens64B.
+ Existing native witness magic copies19bytes from20byte"PERF001-RO1-FINAL-v1",
+ ending at"v"; decoder intentionally matches these exact existing wire bytes.
+ Hashing is SHA256 for integrity only; output cannot authenticate replacement of
+ all manifests/bytes. record_consistent_success never qualifies native exit,
+ instrumentation, performance, persistence or power-loss durability.
+
+No STOP network delivery helper is included or released. Controller Circle is
+the protocol's cancellation route. token() documents exact native USB token
+formats for fixture tests; never stage STOP/DONE. Unexpected files block staging.
+
+Failed attempts are retained. bootstrap.py is consumed; do not rerun it.
+run_full_capture.py is a once-per-named-host-attempt generated-memory exercise.
+Tests use memory USB backends and synthetic owner evidence; they never qualify BF.

@@ -1,0 +1,229 @@
+PERF001 -- PS3 internal read/write investigation
+16 October 2026, UTC+3. Investigation and proposals complete within
+saved-evidence/static/primary-source scope. No optimization is implemented,
+built, deployed, natively measured or qualified by this report.
+
+The observed write slowdown is real at the guarded application level; its
+cause remains unisolated. The exact Lexar advertises TRIM. The saved firmware
+also contains several advanced ATA command builders. Neither fact establishes
+that the PS3 filesystem issues or safely forwards TRIM. A firmware change is
+not justified before component attribution and the separate correctness gates.
+
+Scope and custody
+=================
+Read the complete PERF001 handoff/backlog and current roots. The initial root
+checkpoint's 5107 bindings passed; all11 listed large artifacts passed SIZE-ONLY
+checks. No raw image/archive content or unique key was opened for that check.
+The workspace has no Git repository; preservation uses explicit file bindings.
+See analysis/PERF001/authority/initial-verification.json and the final scoped
+preservation checkpoint. PERF001 owns only its new analysis/research outputs
+and its scoped task-register entries. The capacity workflow retains custody.
+
+The latest authoritative BF observation used here is HISTORICAL:
+2026-10-16 06:51:49.666849 UTC /09:51:49.666849 UTC+3. It reported phase3,
+status0,480GiB written,29 complete per-file verifications and13GiB read from
+file index29. No current console state was queried. Full global reread/final
+receipt/reserve/XMB/persistence/game/physical-placement qualification is not
+established by that snapshot. P13 and stable_storage_support=false remain.
+No console contact, disk/USB operation, firmware build/deployment, new native
+app, TRIM/ATA experiment, capacity-run control or cross-chat message occurred.
+
+Saved performance result
+========================
+Fresh helper: analysis/PERF001/bf-analysis/reproduce_saved_progress.py.
+Source journal: observations/HW002BF/final-v16/network-snapshots/
+38ee64d4195043cd9ac8ecb1838338a7/progress.bin,987904B,3859x256B,
+SHA25672decc85c60f05542d032f0b09bdda24f79907f56063f5fc146db73445f23a5c.
+All sequence/session/policy/checksum/status checks and the saved per-file/stage
+medians reproduce. A fresh repeat produced identical JSON and decoded CSV.
+
+New filler range       Write median      Read+verify median    Samples W/R
+0..32GiB               11.5876195MB/s      14.8407425MB/s        128/126
+32..336GiB              9.9599745MB/s      14.8352800MB/s        1216/1197
+336..480GiB             7.5417320MB/s      14.8303475MB/s        576/556
+
+MB/s is decimal1000000B/s; GiB is1073741824B. Write reduction34.9156054%;
+verified-read reduction0.0700437%. These are descriptive recent-rate medians,
+not isolated SSD throughput, mean operation times or independent trial results.
+Some <=30s windows overlap; overlap is not uniform at256MiB journal spacing.
+File29 verification is incomplete (52 measured samples,63 for earlier files).
+No native elapsed timestamp is stored, so exact file/phase wall-clock rates
+cannot be recovered. Rates sampled before progress USB fsync and before final
+write-file fsync/close incompletely capture completion cost.
+
+The extra reciprocal-median write cost is48.545ms/MiB. Were two reserve queries
+alone responsible, their incremental cost would need24.273ms EACH; this is a
+timer-design magnitude, not measured overhead or causal attribution. Occupancy,
+allocation position, cumulative writes, elapsed time and device history co-vary.
+
+Storage path and capability result
+==================================
+Machine-readable map: storage-path-and-capabilities.json. Exact binary hashes,
+ELF virtual addresses/file offsets, syscall/NID/vtable links, source captures,
+lineage limits and capability statuses are recorded there and in evidence-index.
+
+Ordinary app/libfs read/write (or BF's direct syscalls802/803)
+ -> LV2 syscall/generic file dispatch
+ -> UFS vnode/read-write, allocation, metadata and buffer/VM/cache paths
+ -> LV2 encrypted-storage device/region request dispatch
+ -> LV1 storage wrappers, bounds and nested region/address translation
+ -> encrypted sector processing and ATA device request/command machinery
+ -> SATA transport -> Lexar controller/FTL/cache/GC -> NAND.
+
+Public libfs read NID4d5ff8e2 at0x1154 calls802; write NIDecdcf2ab at0x11ac
+calls803. Public sysFsGetFreeSize is more complex than raw840: its fast route
+uses fcntl817 commandc0000002, with fallback840 and adjustment/division logic.
+BF directly calls840 twice per1MiB, plus a post-open check. Do not silently
+equate an SDK declaration, public wrapper or checker utility with the full
+ordinary filesystem path. The installed78487B P13 utility readback is exact
+for that file; it is not whole installed LV1/LV2 readback. Saved package lineage
+and comparison ELF evidence support the mapped code, with that provenance limit.
+
+The traced raw840 route reaches UFS2b1940..2b1a4c. That bounded body computes
+from in-memory filesystem summary/reservation fields; it has no bitmap walk
+or I/O call. Therefore 'a whole bitmap scan for every BF free-space query' is
+contradicted in this path. Lookup/locking/syscall latency still costs time and
+is unmeasured. Actual allocation is different: ffs_alloc1f3e00, group search
+1f1540, alloccg1f4a4c/full-block1f3c0c and cluster1f4640 have group/bitmap and
+metadata work. Its cost may vary with fragmentation/available blocks, but no
+BF allocation trace or extent map attributes either32GiB/336GiB step to it.
+
+LV1 contains48-bit DMA EXT read/write builders (0x25/0x35), selected using the
+device's IDENTIFY-derived flag, plus IDENTIFY0xec, FLUSH CACHE0xe7/EXT0xea,
+SMART0xb0, SET FEATURES0xef and STANDBY IMMEDIATE0xe0 builders/callers.
+This contradicts a blanket absence of advanced commands. It does not prove
+every function is reachable through ordinary OS requests or used at runtime.
+Generic taskfile plumbing is not proof of a permitted end-to-end DSM route.
+No complete filesystem discard caller/forwarding proof or native command trace
+is available; mark PS3 TRIM forwarding/issuance/effect UNKNOWN. No explicit
+filter/unsupported response or universal absence is inferred from a search.
+Exact console link rate, effective device queue depth and NCQ/FUA use remain
+unknown; synchronous BF application depth1 does not establish controller depth.
+
+Durability must remain separate. Existing exact-kernel evidence distinguishes
+file fsync from lower storage flush and identifies unchecked returns in bounded
+whole-sync/rollback paths. The mapped file fsync route is not a completed
+end-to-end ATA barrier proof. API success/full reread is not sudden-power-loss
+durability. Do not skip sync or alter volatile cache to obtain better numbers.
+
+Exact device evidence
+=====================
+Independent saved-word decoder: analysis/PERF001/ata-research/decode_saved_lexar.py.
+Detailed report: ata-device-and-primary-sources.json. Evidence is historical
+PC/SAT capture, matched model/serial/firmware/capacity, not console transport.
+
+Lexar SSD NQ1002TB, FW SN21128,2048408248320B,4000797360 sectors of512B:
+ - word169=0001: ordinary DSM/TRIM advertised; word105=0008: descriptor budget.
+ - word69=4d20: deterministic and zero read-after-TRIM advertised. No TRIM ran.
+ - words83/86 LBA48 fields set;100..103 assemble4000797360 sectors. This count
+   exceeds28-bit addressing and is below2^32; capacity arithmetic is not full
+   high-LBA/cross-file-alias qualification.
+ - word76=850e: NCQ and1.5/3/6Gb/s advertised;75=001f: device depth32.
+   Word77 SEND/RECEIVE QUEUED bit6 clear: NCQ alone does not prove queued DSM.
+ - FLUSH CACHE/EXT and WRITE DMA/MULTIPLE FUA EXT advertised. Obsolete84:7
+   does not settle modern NCQ-FUA. Saved PC current SATA6Gb/s/UDMA6 is not PS3
+   negotiated speed. Volatile cache advertised but disabled in that PC capture;
+   present PS3 cache state remains unknown. SMART/read look-ahead PC states are
+   also historical, not console settings.
+ - word106=4000 reports512B logical/512B physical.209 offsetbits0 do not prove
+   partition/4KiB alignment;209 is not applicable with106:13 clear. The compact
+   listing does not establish a complete raw IDENTIFY-sector checksum witness.
+
+Neither512/512 nor the NQ100 name identifies NAND page/erase geometry, exact
+controller/NAND/DRAM/pseudo-SLC cache or thermal/idle-GC policy. October13 PC
+24C/SMART-pass evidence is not fill temperature/current health. No exact-revision
+vendor characterization was found. Kingston documents generic GC/TRIM/workspace;
+Samsung870QVO separately documents post-cache writes for a DIFFERENT device.
+Those mechanisms are hypotheses here, never Lexar measurements or cache sizes.
+Filesystem-free bytes, factory spare capacity, host-unused LBAs and already
+erased NAND blocks are distinct quantities. Migration/native history matters.
+
+Read versus write bottleneck assessment
+======================================
+Confirmed measurement limitations:1MiB serial guarded operations; scalar
+pattern/SHA, extra comparison/regeneration on reads; two raw840 calls perMiB
+write; absent STOP-file lookup perMiB; controller/callback work; time-based
+UI rendering/flip;256MiB progress write/fsync and per-file sync/close. See
+diagnostic-cost-audit.json for exact source locators/counts. Buffers are128B
+aligned in BF, not proven4KiB pointers; logical sizes/offsets are4KiB multiples.
+No kernel bounce-buffer/copy/crypto time or physical read-modify-write is measured.
+
+Reads:14.84MB/s verified-read may be a CPU/copy/UI ceiling. Syscall-only reads,
+small/random latency, game-asset streaming and metadata/open costs are unknown.
+Flat verified reads cannot exclude slower media hidden below that ceiling.
+
+Writes: fixed per-byte pattern/hash work cannot by itself explain a new step
+unless its native timing changes. Allocation/metadata/cache contention, variable
+guard/USB/UI time and SSD GC/cache/temperature/history remain candidates.
+Time-based UI work perMiB can grow as the loop slows. No evidence ranks SSD GC
+above allocator/driver causes or proves thermal throttling/cache exhaustion.
+Pure write bandwidth, syscall tails and sync/close completion remain unmeasured.
+
+Ordinary games do not run BF's reserve/STOP/pattern loop; a faster diagnostic
+does not imply faster games. Installs emphasize creation/allocation/metadata and
+sustained writes. Saves emphasize short writes, ordered sync/close and latency
+tails. Streaming emphasizes locality, small/random reads and memory scheduling.
+Each needs its own comparable workload before a practical improvement claim.
+
+Ranked decisions and concrete next gate
+=======================================
+optimization-candidates.json ranks ten options with baseline, paired repeats,
+minimum gain, tail/error criteria, effort/dependencies and CPU/memory/cancellation/
+compatibility/durability/recovery costs. The first actions are component timing,
+conditional diagnostic CPU/UI efficiency and request-size/locality comparisons.
+Guard/USB changes need equivalent safety; allocator and driver/crypto changes
+need attribution and correctness proof. Exact-drive/idle comparisons require
+separate disposable states. Flush correctness is a prerequisite, not a speedup.
+TRIM is high-uncertainty feasibility work; keeping the current stack is valid.
+Rejected options include dropping integrity/reserve/flush guards, live defrag,
+discarding filesystem-free/live sectors and assuming link/command limitations
+from age. Existing reserve/layout/filler and all protected drives remain intact.
+
+Next concrete proposal: PERF001-RO1 in measurement-plan.json, a FRESH application
+proposal using read-only retained files and in-memory CPU controls; no firmware
+change. Six balanced256MiB syscall-only/verified-read pairs, buffer sweep,
+early/middle/late logical-range samples, fixed-seed small/random and immutable
+game-executable controls total at most5595315008B planned reads (~5.21GiB),
+8GiB absolute cap including control/EOF/readbacks, zero HDD payload writes,
+8MiB extra memory and8MiB USB evidence cap.20min cooperative time limit is
+not a blocked-syscall cancellation guarantee. Read-only opens may induce OS
+metadata housekeeping; do not claim physical zero writes.
+
+Timers distinguish native syscall-active and end-to-end work, calibrate ticks,
+retain bounded fine latency distributions and avoid double counting. Hidden
+driver/crypto/media work is INCLUDED in syscall time; unaccounted application
+residual is not an SSD timer. Cache state remains unknown/warm-mixed without
+approved cache controls. Full-file hashes do not validate arbitrary slices:
+independent public-pattern slice references are required. No transient content
+integrity is inferred for the deliberately syscall-only arm.
+
+Proposal thresholds, not observed gains:>=10% median paired throughput or>=5%
+approved brief game/install/save elapsed improvement above uncertainty, direction
+consistent in>=5/6 pairs, no>5%p95/>10%p99 regression and zero new correctness,
+reserve, cleanup or cancellation failures. Sparse/binned tails may be inconclusive.
+Later disposable tests must separately control/record occupancy, extent shape,
+cumulative host writes, elapsed/idle time, drive revision and temperature; each
+preparation/write/endurance budget needs its own reviewed scope. No lengthy
+LBP3 level/trophy task, fixed remaining roundtrip count or duration is promised.
+
+PERF001-RO1 implementation and native execution are UNRELEASED. First require
+capacity-owner qualification and refreshed custody, then separate implementation
+authorization and source/package/fault review, then an explicit bounded hardware
+protocol. This session completes the evidence/proposal deliverables; it does not
+request immediate console evidence, interrupt BF or declare cause fixed/stable.
+
+Any future discard design additionally needs proof of dead-extent ownership,
+pending soft updates/I/O and recovery/fsck lifecycle, nested encrypted-LBA bounds,
+post-discard decrypted semantics (zero ciphertext need not be zero plaintext),
+allocation serialization, durable free-before-discard/flush ordering and partial
+command-error recovery. A failed DSM can already have discarded some ranges.
+Device advertisement or apparent absence is not a safe implementation recipe.
+
+Primary sources reopened16October2026 and exact sections/proof levels are in
+ata-device-and-primary-sources.json and evidence-index.json. Upstream FreeBSD5.5
+allocator/statfs are comparative source, not proof of Sony binary equivalence:
+https://raw.githubusercontent.com/freebsd/freebsd-src/releng/5.5/sys/ufs/ffs/ffs_alloc.c
+https://raw.githubusercontent.com/freebsd/freebsd-src/releng/5.5/sys/ufs/ffs/ffs_vfsops.c
+
+Complete continuation: NEXT_SESSION_PROMPT.txt. No action beyond investigation
+and proposals is authorized by these deliverables.

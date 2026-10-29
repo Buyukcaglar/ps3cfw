@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "samples": 8,
+  "destination": "C:\\Projects\\PS3Firmware\\analysis\\dev006\\native-fill-64-metrics-v2\\helper-tests1\\capture-good\\performance",
+  "host_model": true,
+  "capture_read_only": true,
+  "USB_identity": {
+    "volume_guid": "\\\\?\\Volume{00000000-0000-0000-0000-000000000000}\\",
+    "volume_serial": "<volume-serial>",
+    "filesystem": "FAT32",
+    "volume_bytes": 125129687040
+  },
+  "firmware_access": false
+}

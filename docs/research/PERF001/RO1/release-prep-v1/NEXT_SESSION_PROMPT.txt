@@ -1,0 +1,93 @@
+Work in C:\Projects\PS3Firmware. English; UTC+3.
+Read this complete prompt and current authority before substantive work.
+
+Latest human authorization: prepare EVERYTHING still needed OFFLINE for RO1,
+including release helpers and bounded protocol; plan before64GiB fill; keep gates
+locked pending BF qualification; stop before staging/hardware. This preparation
+does not authorize any hardware operation, app launch or native gate enablement.
+
+Read completely
+1. research/PERF001/RO1/release-prep-v1/RESULT.txt, REVIEW.json, PLAN.txt,
+   PROTOCOL.txt and HELPERS.txt; this prompt.
+2. Current plan/STATUS.json and plan/backlog/PERF001.json, capacity roots README.md,
+   plan/ROADMAP.md and plan/INITIAL_TASK_PROMPT.txt. Refresh ownership; historic
+   capacity permission does not transfer hardware custody to PERF001.
+3. analysis/PERF001/ro1-release-prep-v1/preservation-checkpoint.json and validation.json.
+   Verify exact current bindings; eleven protected large artifacts SIZE ONLY.
+   Current capacity pointer remains owned by capacity workflow; never replace it.
+4. Original complete boundaries plan/PERF001_SESSION_HANDOFF.txt,
+   research/PERF001/NEXT_SESSION_PROMPT.txt and research/PERF001/RO1/NEXT_SESSION_PROMPT.txt.
+   Original RO1 RESULT.txt/REVIEW.json and preservation-checkpoint remain preserved.
+5. Applicable AGENTS.md if added; none existed when this preparation began.
+
+New owned namespace
+analysis/PERF001/ro1-release-prep-v1/
+research/PERF001/RO1/release-prep-v1/
+Detached locked source under src; fresh00.02 titlePFR100001 preview at
+attempts/native-prep2/PERF001-RO1-OFFLINE-LOCKED.pkg. Both native gates0, BF whole
+hashes0/unadmitted, hardware authorityfalse. No READY/STOP/DONE was staged and
+no USB/console/disk command was executed. Never install this preview.
+
+Fresh nonce/prefix is in session.json; release-plan.locked.json binds prepared
+artifacts/helpers/protocol but has hardware_authorized=false,fixture_qualified=false.
+USB identity and final BF evidence are unavailable, not fabricated. qualification-
+template.json has eight assertionsfalse; current qualification report lists them.
+
+Helpers
+qualification.py evaluates SAVED owner evidence, not hardware; bf_saved.py is a
+detached pure decoder, not the consumed BF collector. bind_qualified.py can later
+create a fresh admitted-hash source copy but STILL leaves both native gates0.
+build_native.py and audit_binary.py are detached LOCKED-candidate helpers; fresh
+attempt names only. No unlock helper is supplied.
+release_helpers.py inspect is offline/default. Future stage/capture require an
+explicit exact-plan approval, actual BF qualification, reviewed gate1 release
+source/binary/package, helper/protocol pins and current exact removableFAT32 USB
+identity. Both deny BEFORE USB calls while locked. Tests use memory backends.
+Future stage creates PKG then READY only, exclusive-create; capture saves fixed
+bounded files read-only. Durable per-nonce intents prevent retry/replay after
+failure. No broad USB scan/F:firmware access/network/ATA/cleanup/delete path.
+validate_capture.py decodes SAVED bytes, including partial/error evidence; it
+never infers native exit, final token persistence, durability or speedup.
+
+Ordering and genuine blocker
+BF first final/global/after-control/reserve/receipt/XMB qualification -> ordinary
+restart/persistence/brief existing-game check -> owner-approved read-only selected
+extent mapping BEFORE64GiB -> same-drive refit/boot if needed and idle human custody
+handoff -> fresh RO1 release review/explicit authorization -> RO1 once/capture/
+analysis/custody return -> capacity owner's separately released64GiB stage.
+No mapping, drive move or stage is authorized or executed by this prompt.
+
+RO1 requires >=139586437120B(130GiB) native available. BF's successful reserve
+stop may end >=128GiB but BELOW130GiB. Check BOTH final BF and current admission;
+if too low, stay locked. Do not delete filler, reduce reserve or waive proof.
+General capacity stability/finalCrucial/>2TB/power-loss claims remain separate.
+
+Bounds unchanged: expected5,662,423,872 returned bytes,8GiB requested-read cap
+including EOF/retries/controls,0 intentional HDD payload writes,8MiB evidence,
+64MiB USBavailable,130GiB HDDavailable;20min cooperative core limit plus up to
+10min READY and cleanup/publication. No hard blocked-syscall deadline. Circle is
+the protocol's operator stop route; no network STOP route is released.
+Physical zero writes, cold cache, NAND placement and hidden media/crypto times
+are not inferred. Logical-range comparisons and later retained-content checks
+retain their exact scope. Native timer/overhead/coverage/UI/loader/XMB gates remain.
+
+Evidence/validation
+Final counts and paths in RESULT/REVIEW/validation. Host helper faults use only
+memory USB backends; qualification tests use synthetic owner/extent/BF evidence,
+not actual BF completion. The real shared core was exercised at native sizes
+on generated memory files; this is no native throughput or real content witness.
+Locked linked-package audit validates reproducibility/imports/ABI/NPDRM MACs and
+loadable bytes; ECDSA/Sony signatures/native loader acceptance not established.
+No separate human/subagent reviewer claimed. Failed attempts are preserved;
+only final named checks count. bootstrap.py and finalize.py are consumed writers;
+never replay them or old PERF001/capacity registrars/build outputs.
+
+Absolute preservation
+Keep originals1TB/image, populatedCrucial, storedPNY, populatedLexar/filler,
+originals/NAND/archives/private keys/concurrent work. No F:firmware read/hash/
+write/backup, own48B EID/derived-key read/hash/print/export, external console RAM,
+raw-image whole hash/densification, shared PS3HDDTool writers, migrations/archive/
+journal replay, admin job replay, hardware cache/power/queue settings, repair,
+format/fault/TRIM/ATA/firmware action, console contact, automation or cross-chat
+message. Only PERF001 register entries were updated; capacity roots otherwise
+preserved. Future new user authority governs further work; stop at its boundary.

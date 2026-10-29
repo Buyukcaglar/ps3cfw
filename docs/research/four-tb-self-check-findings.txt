@@ -1,0 +1,252 @@
+RIGOROUS SELF-CHECK OF THE 4 TB OFFLINE INVESTIGATION
+2026-10-15 -- analysis only; no implementation
+
+Assessment
+==========
+The principal conclusions survive this review within their stated scope:
+the proposed 8 KiB-fragment / 1 MiB-per-inode geometry remains arithmetically
+plausible; the examined wide-address paths remain consistent with 4 TB; and
+W/M alone do not prevent callback replacement. A binding that is immutable
+from fresh UFS initialization remains a coherent way to exclude the examined
+replacement races.
+
+The work is NOT a completed proof of a safe native fsync implementation or
+general 4 TB support. This self-check found a factual classification error,
+an abstract-model defect, omitted contract checks in the semantic models, and
+two concrete native integration paths requiring more evidence. It also found
+an ordering ambiguity in the accumulated design documents. These findings
+qualify the previous assurance level; reproducing its passing counts does not
+remove them. No new ordinary runtime UFS rebinder or actual console deadlock
+was established.
+
+All fifteen core offline reports were reviewed, from fragment/checker geometry
+through callback binding. Nineteen earlier saved model suites were rerun with
+fresh redirected outputs, and their JSON values exactly matched the canonical
+results. The latest binding, scheduling and arithmetic results also matched
+exactly. Fourteen key native listings were regenerated from the saved ELF.
+Fifty independent integer/rational checks found no discrepancy in geometry,
+population estimates, margins or addressing relations.
+
+Findings requiring correction or further closure
+================================================
+1. The proposed common setter does not yet have a concrete lifetime guarantee
+   merely by looking up a raw handle.
+
+Native 277eb4 returns the raw node pointer through 277f70/277f78. Its body has
+no lock service or reference increment; its resolved key getter is ld/blr.
+2789ac performs this lookup before acquiring D. Moving D earlier in the
+setter still leaves the lookup-to-D interval and unresolved-unlock ownership
+dependent on a caller lifetime guarantee or a separately designed pin.
+
+The contract's words "resolve ... using existing ownership rules" and
+"retain the live node owner" are therefore requirements, not operations that
+277eb4 already supplies. The cold initializer or the helper's scoped M/ref/W
+ownership can supply an admitted caller premise. A standalone runtime setter
+cannot acquire a reference merely by calling the lookup. A future integration
+must name the actual owner/serialization for every admitted caller, covering
+registration, replay and every error exit. D does not itself pin its object.
+This does not invalidate the ordinary helper ownership argument or demonstrate
+an existing stock use-after-free; exceptional parent teardown remains excluded.
+
+Evidence: static/static-review.txt, static/fn-277eb4.txt,
+static/fn-27b4c0.txt, original fn-2789ac.txt.
+
+2. An identical registration preserves the pair but can perform additional
+   native work whose complete wait/cleanup behavior has not been qualified.
+
+After releasing D, 2789ac calls physical readiness at 278afc and 27fa9c at
+278b10. The latter dispatches a backend virtual method. The saved LV1 storage
+wrapper table 355f90+40 points through OPD 3146c8 to ab860. On particular region
+flags, ab860 creates a stack completion context (ab95c ->285450), submits a
+request (ab968 ->ab700), calls native wait (ab970 ->2852e8), samples status,
+then destroys its primitives. This backend request uses a separate pool,
+not the helper's raw-node pool. The constructor identifies this as the
+lv1_wrapper/_storage_lv1_ family, relevant to the internal storage chain.
+
+The exact CECHA00 selected object and flags taking this branch have not been
+established here. Neither a W/M dependency nor a deadlock was proved. It is a
+real remaining path for the claim that all admitted duplicate-registration
+processing is safe. The original policy cases stop at 278ac4. This review's
+24 extra native replay cases also mock 27fa9c, so they do not close this branch.
+Resolving the actual backend and its admission/completion/retirement rules is
+necessary before treating unrestricted duplicate replay as qualified. Rejecting
+duplicates instead would itself require compatibility analysis; silently
+skipping native replay is not established as safe.
+
+Evidence: static/static-review.txt, static/fn-27fa9c.txt,
+static/fn-ab860.txt, static/fn-ab700.txt, static/fn-a9884.txt.
+
+3. The passing policy model is incomplete relative to its written contract.
+
+Three deliberately adversarial input groups expose omissions:
+  - Classes -2, 4 and 5 can be accepted as identical pairs by guarded_setter,
+    then clear pending-event bytes outside the four-slot callback table.
+    The contract explicitly requires class-range validation; the model omits it.
+  - A mocked D-unlock failure that retains ownership still permits model
+    success, busy, or preflight-good returns. The written contract prohibits
+    ordinary return under unresolved ownership. The previous report already
+    disclosed successful-unlock mocks; this remains an unqualified requirement.
+  - preflight returns true with changed synthetic target/handle or with a
+    foreign-then-restored callback history. It checks active/table state, not
+    owner identity or history. Those were admitted premises, not proved checks.
+
+These are nine model-omission witnesses, not vulnerabilities demonstrated in
+an implemented patch: there is no patch. They prevent interpreting the 126
+policy cases as qualification of the entire stated safety contract. A native
+adapter would need actual checks and an ownership/error design, not simply
+translation of the Python guard or preflight.
+
+Evidence: models/model-review.txt, models/adversarial-results.json.
+
+4. The finite scheduler has an actual abstraction defect outside its original
+   scenario list.
+
+binding_schedules.py marks extra=True for every admitted nonzero class,
+including an unchanged NULL/zero pair. Adding legitimate identical empty-slot
+registrations for classes 1, 2 and 3 produces false invariant failures. These
+cases were absent from the original 36 scenarios. This does not falsify the
+reported 669-state protected subset or reveal an unsafe native execution, but
+the abstraction cannot be generalized unchanged to all accepted registrations.
+The old script remains preserved; the new review records the counterexamples.
+
+Evidence: models/coverage-extension-results-v2.json (canonical extension),
+models/model-review.txt. The retained v1 differs by a corrected line locator.
+
+5. One native field classification in the earlier report is wrong.
+
+The fourteen scanned store sites are TWO node callback-pair stores, ELEVEN
+request-object stores and ONE physical-parent mutex store. Address 281dfc
+initializes parent+d8 in constructor 281da8; it is not a request field. The
+old static_audit.py checks a handwritten address classification rather than
+independently proving each object type. No additional callback writer follows
+from correcting that classification; stores 278aac/278ab8 remain the pair writes.
+
+Evidence: static/fn-281da8.txt, static/static-review.txt.
+
+6. The successive contracts must not be combined literally as one recipe.
+
+The first fsync design's native 279048 call is superseded by the retirement
+investigation: the intended private helper calls 2817e8 once, observes checked
+retirement, and does not use 279048/2852e8 as its own safe-wait implementation.
+The first design's abstract lifetime pin was later narrowed to the concrete
+ordinary registry-reference/M/W owner scope, not to universal teardown safety.
+
+The latest binding contract's heading says entry retains W before listing
+VOP/unlock/Giant prerequisites. Those are earlier prerequisites, not work to
+perform while holding W. The intended order is stated explicitly below.
+There is still no single native end-to-end adapter/lock-error implementation
+or composed native execution test. Earlier isolated counts cannot fill that gap.
+
+Evidence: lineage/review.txt; original fsync design PROPOSED-CONTRACT.txt,
+fsync lifetime REVISED-CONTRACT.txt, COMMAND3-CONTRACT.txt and
+latest BINDING-CONTRACT.txt.
+
+Clarified cumulative ordering -- interpretation, not new implementation
+======================================================================
+For the ordinary admitted sys_fs_fsync path only:
+  1. Inherit M and the registry reference from generic dispatch; establish
+     matching provider/context/wrapper ownership while those guards are active.
+  2. Finish required VOP_FSYNC/soft-update work and dirty/output checks. Preserve
+     the first error; normalize required-stage ENOTSUP as previously specified.
+  3. Perform the original vnode unlock exactly once. Skip new publication on
+     any earlier error. Drop all Giant recursion before acquiring W.
+  4. Acquire W with checked ownership. Validate the current backing target and
+     handle; under checked D validate active state and all four callback pairs.
+     Cold initialization, lifetime seal and caller ownership must already be
+     established. A pointer snapshot cannot establish their history.
+  5. Initialize checked private completion primitives before publication; submit
+     2817e8 exactly once. Retain M/reference/W. Hold neither Giant, G nor C
+     through retirement waiting. Use checked D->P observations, releasing both
+     between pending observations. Never wait for deferred UFS queues to empty.
+  6. Only after valid own-request retirement sample final status and flag;
+     destroy condition before C with checked results. Unresolved publication,
+     retirement or ownership does not authorize ordinary cleanup/return.
+  7. Release W successfully before restoring the exact prior Giant recursion.
+     Continue original cleanup; generic dispatch owns M/reference release.
+
+This is a consolidated reading of existing constraints, not a complete
+failure-recovery or quarantine design. It preserves the explicit exclusions
+for failed lower lock contracts, exceptional teardown and permanent failures.
+
+What the broader 4 TB review confirms and still leaves open
+=========================================================
+The nominal geometry remains 4,000,000,000,000 bytes, 512-byte sectors,
+8 KiB fragments, 16 KiB blocks and 1 MiB capacity per inode. The selected
+nominal model has 4,007,872 inode slots and mount aggregate 126,769 bytes,
+leaving 69,839 bytes against the examined 192 KiB mount allowance.
+
+The retained population projection with 20% density margin is 1,844,391 files
+and 73,362 directories for 4 TB nominal logical content. The planning target of
+3,000,000 files and 100,000 large-cost directories charges 96,311,496 bytes in
+the chosen model; after 26,843,546 bytes reserved as 20% of 128 MiB, 11,062,686
+bytes remain. These are planning envelopes from saved aggregates, not enforced
+limits or a complete checker peak-memory/corruption-work proof. The 1 TB image
+was not reopened. The earlier 16 KiB-per-inode geometry is historical.
+
+All fifty independently recomputed numeric relations pass. The old 166.1875 MiB
+parent-memory snapshot still does not establish availability of 164/192 MiB in
+repair context. The CBC192 conclusion for the examined CECHA00 path remains
+compatible with the 32-bit encryption-index repeat; no universal XTS result or
+4Kn change follows. Nominal whole-device geometry and the smaller projected
+HDD0 extent remain separate fixtures, not one validated formatted filesystem.
+
+The remaining engineering gates are still substantive:
+  - complete checker allocation/fragmentation/corruption bounds and native peak;
+  - actual selected backend and all applicable formatter/checker copies;
+  - populated soft-update ordering beyond the empty-hook/mocked cases;
+  - lower admission/completion service failures and exceptional teardown;
+  - whole-filesystem sync/shared storage_flush error losses;
+  - transport/cache-barrier durability, SMP, restart and power-loss acceptance.
+Callback immutability and a returned raw pool slot do not close these gates.
+
+The original nine-word capacity inventory and conditional one-to-two-week
+estimate predate the expanded fsync/retirement/setter work. They must not be
+presented as the total current change set or a new complete delivery estimate.
+
+Review coverage and evidence
+============================
+lineage/review.txt contains the fifteen-package coverage matrix and precise
+prior-report locators. Its arithmetic-results.json records fifty independent
+checks. static/static-review.txt contains the native findings and fourteen
+fresh-listing comparisons. models/model-review.txt contains the adversarial
+findings and the limits of the extended fixtures.
+
+reproduction/ contains 19 earlier model-suite outputs and exact-value comparison
+receipts: addressing, ordinary I/O, allocation/cache, four soft-update suites,
+six writeback/VM suites, two fsync-flush suites, design, lifetime, retirement and
+mixed callbacks. The latest package's three result sets were reproduced under
+models/: 23 native cases, 126 policy cases, 36 finite scenarios/3,342 states/
+6,174 transitions, and 136 arithmetic cases. Reproduction is not an independent
+oracle for shared assumptions or mocked dependencies.
+
+New adversarial evidence comprises 9 omission witnesses, 24 native replay cases,
+80 stronger unprotected-store checks, 3 abstract false-positive witnesses and
+1 checked-acquisition test. The replay tests intentionally do not qualify the
+backend getter identified above. The prior negative-ADDIC correction was also
+reviewed against 17 canonical files/644,848 recorded addresses; no affected
+prior ADDIC/SUBFE execution was found, and 11 ADDZE sites had shift predecessors.
+This does not turn the bounded interpreter into a fully qualified emulator.
+
+Preservation and scope
+======================
+This review authored only analysis files in this new self-check directory.
+No original report/model, firmware/source implementation, hardware protocol,
+current launch, collector, stop control or test order was changed. No network,
+device, key or real-image content access was used. No firmware build occurred.
+The current saved authority still names BF final-v16; its live console progress
+was not polled or inferred during this review.
+
+The closeout receipts recheck 1,335 file/input bindings across 15 prior packages,
+including 1,293 prior package files. Fourteen existing manifests bind 1,179
+entries; all match. The ordinary-file-I/O package has no artifact-manifest,
+so it is covered by the new before/after snapshot and canonical reproduction,
+not an invented historic manifest. The current checkpoint's 5,060 regular
+bindings match; 11 large archives/images are checked by size only. Three tool
+key-bundle bindings and unique console material remain unread.
+See preservation-comparison.json, authority-entry.json and authority-exit.json
+for exact receipts, and package-verification.json for the final artifact check.
+
+The appropriate disposition is: offline feasibility and the conditional
+callback-stability argument retained; analysis corrections recorded; full
+native integration and failure-path qualification remain open. The current
+2 TB firmware and hardware test sequence continue unchanged.

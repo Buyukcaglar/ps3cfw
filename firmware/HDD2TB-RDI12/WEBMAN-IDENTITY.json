@@ -1,0 +1,28 @@
+{
+  "savedCapture": "RDI6-PNY-v1",
+  "title": "webMAN MOD 1.47",
+  "titleID": "UPDWEBMOD",
+  "appVersion": "01.00",
+  "version": "01.00",
+  "files": 4150,
+  "logicalBytes": 1789199,
+  "manifest": "WEBMAN-INSTALLER-FILES.json",
+  "manifestSHA256": "b28cc6cf8e22a05bd1c461cf34632c42f9ba199e35a494dde8e170271401bdb3",
+  "EBOOT": {
+    "path": "game/UPDWEBMOD/USRDIR/EBOOT.BIN",
+    "inode": 139464462,
+    "bytes": 102576,
+    "sha256": "72881dd66a6f2f474ea8b447217c1afb1ac30837a2f27c103a2dba3a752ce18d",
+    "text": null
+  },
+  "PARAM_SFO": {
+    "path": "game/UPDWEBMOD/PARAM.SFO",
+    "inode": 139464470,
+    "bytes": 4100,
+    "sha256": "ed5f560ade586d7a63fbe7529fd34ea2f2f43d73c7076bd3965bccae9e7ae6df",
+    "text": null
+  },
+  "currentIdentityMustBeFreshlyVerified": true,
+  "installerRunAndAnyAutomaticRestartMustBeExplicitlyRecorded": true,
+  "installerBehaviorNotExecutedOffline": true
+}

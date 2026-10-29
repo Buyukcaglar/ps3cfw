@@ -1,0 +1,10 @@
+EXPORT(gcmInitBodyEx, 0x15bae46b);
+EXPORT(gcmSetDisplayBuffer, 0xa53d12ae);
+EXPORT(gcmGetControlRegister, 0xa547adde);
+EXPORT(gcmAddressToOffset, 0x21ac3697);
+EXPORT(gcmGetConfiguration, 0xe315a0b2);
+EXPORT(gcmSetFlipMode, 0x4ae8d215);
+EXPORT(gcmGetFlipStatus, 0x72a577ce);
+EXPORT(gcmResetFlipStatus, 0xb2e761d4);
+EXPORT(gcmSetFlip, 0xdc09357e);
+EXPORT(gcmSetWaitFlip, 0x983fb9aa);

@@ -1,0 +1,103 @@
+CROSS PLATFORM C/C++ PS3 REPAIR CLI
+Research and planning continuation updated 20 October 2026, UTC+3.
+
+LOCATION
+C:/Projects/PS3Firmware/research/PS3-REPAIR-CLI
+Start with ROADMAP.md and INITIAL-RESEARCH.md. Then read LICENSING-REUSE.md,
+FORMAT-FINDINGS.md, SOURCE-REUSE.md, RESEARCH-REGISTER.md, VALIDATION-GATES.md,
+TASKS.json, SOURCE-SNAPSHOT.json, RESEARCH-SOURCES.json and PLAN-VALIDATION.json.
+
+AUTHORITY
+The latest user instruction authorizes the initial source-reuse, licensing and
+PS3-format research plus planning-document updates. Research and planning only;
+no development. Public source HTTP reads, ordinary local source reads/hashes
+and document-integrity checks are allowed. This does not authorize product
+source edits, builds/product tests, dependencies, source incorporation,
+hardware/device/USB/console actions, private keys, firmware changes, drive
+copying/repair or publication. No author contact/messages are implied.
+
+This research branch is separate from the active firmware plan and all consumed
+hardware/migration jobs. Do not alter root README, plan/STATUS.json,
+plan/ROADMAP.md, plan/INITIAL_TASK_PROMPT.txt, shared PS3HDDTool, existing
+candidates, PERF001/DR1, private data, firmware, source images or memories.
+
+BASELINE
+UFS2Xplorer 565ba57e6aabf6996ed4e0512548f4b697183ace.
+NetBSD trunk acb07d978136d3b5a8032fe3dac4b7321db4da1f.
+NetBSD-6 comparator 97570233e1d596cda4d80e34fef0b2d53a7fb154.
+Local selected sources are hash-bound in SOURCE-SNAPSHOT.json. Reconcile source
+drift before relying on a locator. Never whole-hash sparse/private source media.
+RESEARCH-SOURCES.json adds selected hashes and pins without replacing that
+baseline. The original eight documents are preserved in
+history/20261020-planning-baseline. New comparators: FreeBSD 8
+5381b89e043e6a4c0316344f7fe8272596d3011c and FreeBSD 5.5
+d4c364b3dcf6dfe4e20c70d31912aad7e6219c14; kpartx PS3 parser
+4cacf3347a51a7975d36109e29c15614bf7fb2ee. None is Sony source.
+The latest reviewed CFW handoff was metadata-budget-workload-v2/CONTINUATION.txt;
+all broader native resource/profile/stable gates remain open. Refresh only if
+relevant to later source research; do not continue that separate task implicitly.
+
+ENGINEERING DIRECTION
+Study native crypto/disk structure in UFS2Xplorer as reference-only pending
+source terms/provenance. Our PS3HDDTool is a documented combined-terms donor;
+selected BSD C checking algorithms remain adaptation candidates under a PS3
+dialect policy. Neither missing notices nor C++ translation removes obligations.
+Do not adopt any donor unchanged. Native code can operate above user-space
+encrypted sectors; no kernel mount, .NET, Qt or BSD VM is required at runtime.
+
+KNOWN CRITICAL ISSUES
+- Short/failed reads must never become zero-filled successful metadata.
+- Incomplete ownership/traversal must never authorize reclaim or clean markers.
+- Current NetBSD EA handling and older disabled EA ownership need adaptation.
+- cg_initediblk is an exclusive inode-slot prefix; corrupt-prefix arbitration is
+  still open. Our migration core uses /512 di_blocks and does not automatically
+  support the published 4096-unit accounting case.
+- The real disklabel has full BE64 signatures and 0x30/0x90 entries; discovery
+  heuristics in native and C# donors cannot authorize bounded repair.
+- Fat NOR outer CBC and nested XTS need named profiles and explicit origins.
+- FreeBSD 8 EA ownership is useful, but its EA content scan is a stub.
+- Donor flag bits conflict; preserve/refuse before PS3 semantics are established.
+- Key kind/layer must be explicit; exclude legacy UI secret logging.
+- Orphan/duplicate preservation policy must precede destructive disposition.
+- Generic repair journals must cover dirty originals and directory/EA payload.
+- No hidden writes from destructors; every durable transition needs recovery.
+- FAT/VFLASH, physical hosts and native console profiles qualify independently.
+- Complete suite includes acquisition/recovery/backup/migration and FAT/VFLASH;
+  a first UFS2 milestone cannot silently drop those tracks.
+
+STATUS
+Eight research tasks are in progress: CLI-002/007/008/009/010/011/012/014.
+Their execution_authorized=true permits only listed source-research/document
+actions. Acceptance remains incomplete; dependencies are not released.
+The other 75 tasks remain planned with execution_authorized=false. All 13 gates
+remain not_assessed and passed=false. No product, compiler result, executed
+fixture, image/device repair or native acceptance was created. Source review and
+planning-document integrity checks are the evidence earned by this phase.
+
+NEXT RESEARCH
+Finish CLI-001/003 support contracts and CLI-002 incorporation route. Complete
+R03-R05 reserved-region/roles, key-kind/layer/origin, accounting profiles,
+damaged-prefix arbitration, replicas, EA payload and flag/dirty-state rules.
+Then refine R06/R07 coverage and repair policy with R14 independent oracle design.
+Do not rediscover the pinned constants and source exclusions already recorded.
+Keep stable IDs, consistent scope and checks of graphs, links and preservation.
+
+STOP RULE
+If asked only to continue planning, remain in planning. If the next requested step
+would develop, build, run tests, install tools, incorporate source, access keys or
+operate devices/console/publication, determine whether the user has explicitly
+authorized that scope. Otherwise report the concrete dependency; do not execute.
+No named old hardware writer, migration journal, collector or admin job is reusable.
+
+PASTEABLE PROMPT
+Continue source research and planning for the cross-platform C/C++ PS3 repair CLI from
+C:/Projects/PS3Firmware/research/PS3-REPAIR-CLI/ROADMAP.md. Read the complete
+planning package, INITIAL-RESEARCH.md, LICENSING-REUSE.md, FORMAT-FINDINGS.md and
+both source manifests. Work on requirements, provenance,
+PS3 format/profile/unit specifications, repair decisions, dependencies and
+validation design only. Preserve all source code, active firmware authority,
+hardware protocols, private data and concurrent work. Do not develop, compile,
+run product tests, install dependencies, access keys/drives/USB/console, change
+firmware, reuse consumed jobs or publish. Keep TASKS.json and the detailed
+documents consistent; save planning changes and validate only the documents.
+

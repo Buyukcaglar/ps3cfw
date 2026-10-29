@@ -1,0 +1,11 @@
+HDD2TB-RDI12 EXACT OFFLINE DIAGNOSTIC READY FOR OWNER REVIEW
+RDI11 unchanged. Original once/init route and shared-static ownership diagnosed.
+Private copies bracket original mutex-create helper, retaining args/status/ID.
+52 actual-instruction model cases plus52 classifications/14 refusals,210 original
+words,20 arming cases and complete composed cleanup/export checks pass. Native
+workload/kernel/storage are explicit mocks; no new hardware result is claimed.
+One preservation/staging/update,at most one explicit Restore File System,
+at most two same existing ordinary installer restorations,11 early+11 final GETs.
+No postcheck PC drive trip. Review exact TEST-PLAN and release-proposal first.
+Candidate SHA256 2a1e3738a687a9e2114c7b45cd0a09b039bb473c79cb9872aa8a871e88ce091a
+Broader ownership, lifetime, workload and continuous-resource gates remain open.

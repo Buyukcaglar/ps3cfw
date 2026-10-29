@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "staged_files": [
+    "HDD2TB-BH-FILL-v2.pkg",
+    "HDD2TB-BH-bab693d274eed6a0-STOP-SOURCE.bin",
+    "HDD2TB-BH-bab693d274eed6a0.READY"
+  ],
+  "USB_identity": {
+    "volume_guid": "\\\\?\\Volume{00000000-0000-0000-0000-000000000000}\\",
+    "volume_serial": "<volume-serial>",
+    "filesystem": "FAT32",
+    "volume_bytes": 125129687040
+  },
+  "no_firmware_access": true,
+  "native_execution": false
+}

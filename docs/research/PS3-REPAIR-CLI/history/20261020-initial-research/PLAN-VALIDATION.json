@@ -1,0 +1,424 @@
+{
+  "schema_version": 2,
+  "validated_on": "2026-10-20",
+  "timezone": "UTC+3",
+  "scope": "planning_document_integrity_only",
+  "result": "passed",
+  "counts": {
+    "planning_files_including_this_record": 12,
+    "tasks": 83,
+    "gates": 13,
+    "research_entries": 16,
+    "in_progress_research_tasks": 8,
+    "planned_tasks": 75,
+    "passed_technical_gates": 0,
+    "local_markdown_links": 62,
+    "protected_source_context_files": 33,
+    "external_raw_hashes": 37,
+    "external_git_blob_records": 4,
+    "preserved_baseline_documents": 8
+  },
+  "checks": {
+    "json_readback": true,
+    "unique_task_ids": true,
+    "valid_task_gate_research_finding_references": true,
+    "task_dependency_graph_acyclic": true,
+    "gate_dependency_graph_acyclic": true,
+    "eight_research_tasks_in_progress_with_bounded_authority": true,
+    "other_75_tasks_planned_and_unauthorized": true,
+    "all_gate_statuses_not_assessed_and_unpassed": true,
+    "development_and_product_actions_unauthorized": true,
+    "local_links_and_line_targets_valid": true,
+    "selected_protected_files_unchanged": true,
+    "original_source_snapshot_unchanged": true,
+    "preserved_history_matches_original_receipt": true,
+    "independent_document_review_completed": true
+  },
+  "independent_review": {
+    "reviewer": "initial_ufs_format_research",
+    "actionable_finding": "Roadmap wording independent upstream parser overstated evidence independence because sources share lineage",
+    "disposition": "Corrected to additional upstream parser with shared source lineage; detailed format document already bounded the evidence",
+    "remaining_actionable_findings": []
+  },
+  "source_and_context_preservation": [
+    {
+      "path": "README.md",
+      "sha256": "87675c4d1f16249cb12909acf6a0562a71a152e2c9699d7bdfd16bf84420b6d3",
+      "matches_before": true
+    },
+    {
+      "path": "plan/STATUS.json",
+      "sha256": "ebadc06864abf8e0d7dc3329e6375ede0cd922a734f3687d16ef396204e44da3",
+      "matches_before": true
+    },
+    {
+      "path": "plan/ROADMAP.md",
+      "sha256": "d81232d87587463a3dfb7cbb89dc64fb67b37969446912e2e90ca00928d6cbb5",
+      "matches_before": true
+    },
+    {
+      "path": "plan/INITIAL_TASK_PROMPT.txt",
+      "sha256": "ae1559f1c904a726f3397cdd4bec8e13bb6ed6ef2cecc04e96d35640e9441726",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/UfsVolume.cs",
+      "sha256": "b7866aa399011d0eff71264cc71fce149fa6b8053e5849a9d53ef3567c15ab3c",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/DirectJournal.cs",
+      "sha256": "905da47cb919266de6d396e5cc271f5d13dee85ead09830d1cda6f8c7a72cc69",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/DirectDisk.cs",
+      "sha256": "c34d6b9ed7bab90da746802c031f8ca422dfbddd9e15eac694c481377c93e605",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/SourceRecovery.cs",
+      "sha256": "810ccca479a8cfe25d5ca0ed727adb256a8b23fec1b02370954db20b3d228f71",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/LICENSE.md",
+      "sha256": "8762838014ec18c9f09bda91783ec32c48dde43541fcdda2bab10ccbcc2dc8e3",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/NOTICE.md",
+      "sha256": "ac1005030d695032d1a4ebf663a5d77ccef62d05c4ea375975cdacc3347485ba",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/device.c",
+      "sha256": "f6164c1095c1ee92b1eb96b29533b6a73dbf3c2edfd9d4f4081f12ed7e9478f6",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/ps3.h",
+      "sha256": "efe07472db5096fbf9e3a962f4e385e2c6adae0ce9872018c9227cbced0fd65b",
+      "matches_before": true
+    },
+    {
+      "path": "tools/build_hdd2tb_p13.py",
+      "sha256": "b057ab59e35b03372da88d386c0c03b53a2b3928e071ff12441a1da71c2bec53",
+      "matches_before": true
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-workload-v2/CONTINUATION.txt",
+      "sha256": "877c9a9e4561069c08abe1f8cbd9f4ec7167986c403144713d84e89bfdbc7c7d",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/THIRD-PARTY-NOTICES.md",
+      "sha256": "15e121ddd5e08355872e221974b604c099a8268183d7741ab70afeb5d502c6b9",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Disk/Ps3DiskLayout.cs",
+      "sha256": "1fa29a5893328b3d08f90c9d56f662598801f129165341a6820377c5a1fc1309",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Crypto/Ps3KeyDerivation.cs",
+      "sha256": "cdd0f20842924cd8f31590622c9485b5342f5d8d298032144a1ff33bd1508a5a",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/RegularImage.cs",
+      "sha256": "d3c7248d5f62ea78e812b06d62148178d822ec53797e2fba2f1d8e911e846e78",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.MigrationTests/Oracle.cs",
+      "sha256": "f8e331fe742f5cbb629b88b4061c4c6e86b3d630323b01d45d91029a161dbbbb",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Avalonia/ViewModels/MainViewModel.cs",
+      "sha256": "481f101cebb7751a92e86c1b87389bfd9bafd7725e975fba4d6efcc386fb35b5",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Avalonia/Views/MainWindow.axaml.cs",
+      "sha256": "a8aa14bd0fb04f55434a2fbd767a55ee0fdc9880cbb325c3c109684c8407afd3",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/LICENSE",
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/types.h",
+      "sha256": "b4d06e0236ad6340ee89fdc4cdd617832b957444712475893c02b8baef545c12",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/kgen.c",
+      "sha256": "1ec403caa6b258597495c410cc0c7200b97324a55d9c6906e341565781b19265",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/aes.c",
+      "sha256": "f851c275fb938a66d7f34f9204ea4c4a865c29878d36a50f444c28bcd59c2b60",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/aes_xts.c",
+      "sha256": "a6f88ce482892b23536a481b742464e93d8a3a34f306072c1349075842accea8",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/util.c",
+      "sha256": "2c50aee112e32a50b5640e33a2e639b8b32930ba66ea72148849aaa886979389",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/dir.h",
+      "sha256": "720efa08892d643a5ed5b05f76b93274829e30b3d7ef4b6ebbeda26fe7b30c0a",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/fs.h",
+      "sha256": "1644d037dce4d8a3e74b37237b612d7acb117787b8d20bd2ebcdfd811ec227de",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/misc.c",
+      "sha256": "a7bd91f877a2fa635c07303f26aeb0c5b7e272ede792364dcbd32390a605bfd1",
+      "matches_before": true
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-v1/prefix-bound-proof.json",
+      "sha256": "56cdba3842df3978dbc1b5c8c705df95ec92a5631803ff42816abf665cbe0d12",
+      "matches_before": true
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-v1/prefix-source/UFS2-initialized-prefix.txt",
+      "sha256": "ecdae9029f63977255431da848b0520b48b51b872531d4a29921912069a2ce83",
+      "matches_before": true
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-v1/prefix-source/group-initial-and-trimmed-prefix.txt",
+      "sha256": "0c100ad468148c9eb2fb6270431ffff211f8ebe7c33706086d5487fb3fdc97ca",
+      "matches_before": true
+    }
+  ],
+  "planning_file_manifest_excluding_this_record": [
+    {
+      "file": "CONTINUATION.txt",
+      "bytes": 6302,
+      "sha256": "a110c7d01f032ae88e47f811bca6df4b7ff3d00770c6f5e94dda5e88f948d7ac"
+    },
+    {
+      "file": "FORMAT-FINDINGS.md",
+      "bytes": 15497,
+      "sha256": "f96760a70a429e11c3ae99560943715524f775add886b7815a3a4092b3ac1f8c"
+    },
+    {
+      "file": "INITIAL-RESEARCH.md",
+      "bytes": 9664,
+      "sha256": "fce11ea9b03f5743a3ad58dd5cdad4bfc98c9163f42d69b427800b39999b1f18"
+    },
+    {
+      "file": "LICENSING-REUSE.md",
+      "bytes": 10071,
+      "sha256": "7d44602fae99dd54494e63ed4f306a46def8e40f347bc0a1c0ed8ccc65fffced"
+    },
+    {
+      "file": "RESEARCH-REGISTER.md",
+      "bytes": 12264,
+      "sha256": "717dc827e85754ba58aad13462e66017ec32a6e93c04fa2dbc291c3dac4353ab"
+    },
+    {
+      "file": "RESEARCH-SOURCES.json",
+      "bytes": 27634,
+      "sha256": "c96fd50b589bbfbc0f032dc066ea42623610e93bfb692aa1b25ec485771fb973"
+    },
+    {
+      "file": "ROADMAP.md",
+      "bytes": 16760,
+      "sha256": "ce72457095638268e6764adc7347242f704f270373728d78dcfb9a0b3bb37ece"
+    },
+    {
+      "file": "SOURCE-REUSE.md",
+      "bytes": 18669,
+      "sha256": "18a86edc846dea5a1266e4a415d9efcf1cd10c3f5ff1f37b9bc966761da6dc32"
+    },
+    {
+      "file": "SOURCE-SNAPSHOT.json",
+      "bytes": 4582,
+      "sha256": "c2e4ab9c1a93bf547d50e567a5def628287f19c74d2a9544ab52a2638b383711"
+    },
+    {
+      "file": "TASKS.json",
+      "bytes": 84751,
+      "sha256": "29d550c73a4470856905f799a8fefa2aebfa580912f86b77fa6997b09fb50108"
+    },
+    {
+      "file": "VALIDATION-GATES.md",
+      "bytes": 17294,
+      "sha256": "b5bab183f1e8c3c6c38bac34406d8895ecbbfb4f0a65348ef988fed7524e271c"
+    }
+  ],
+  "history_manifest_checks": [
+    {
+      "file": "CONTINUATION.txt",
+      "matches_original_receipt": true
+    },
+    {
+      "file": "RESEARCH-REGISTER.md",
+      "matches_original_receipt": true
+    },
+    {
+      "file": "ROADMAP.md",
+      "matches_original_receipt": true
+    },
+    {
+      "file": "SOURCE-REUSE.md",
+      "matches_original_receipt": true
+    },
+    {
+      "file": "SOURCE-SNAPSHOT.json",
+      "matches_original_receipt": true
+    },
+    {
+      "file": "TASKS.json",
+      "matches_original_receipt": true
+    },
+    {
+      "file": "VALIDATION-GATES.md",
+      "matches_original_receipt": true
+    }
+  ],
+  "task_topological_order": [
+    "CLI-001",
+    "CLI-002",
+    "CLI-003",
+    "CLI-004",
+    "CLI-005",
+    "CLI-006",
+    "CLI-007",
+    "CLI-008",
+    "CLI-009",
+    "CLI-010",
+    "CLI-016",
+    "CLI-018",
+    "CLI-023",
+    "CLI-011",
+    "CLI-017",
+    "CLI-012",
+    "CLI-013",
+    "CLI-014",
+    "CLI-015",
+    "CLI-020",
+    "CLI-019",
+    "CLI-022",
+    "CLI-021",
+    "CLI-024",
+    "CLI-025",
+    "CLI-026",
+    "CLI-049",
+    "CLI-027",
+    "CLI-028",
+    "CLI-029",
+    "CLI-030",
+    "CLI-031",
+    "CLI-067",
+    "CLI-032",
+    "CLI-033",
+    "CLI-034",
+    "CLI-038",
+    "CLI-035",
+    "CLI-057",
+    "CLI-061",
+    "CLI-036",
+    "CLI-037",
+    "CLI-039",
+    "CLI-040",
+    "CLI-041",
+    "CLI-042",
+    "CLI-059",
+    "CLI-062",
+    "CLI-075",
+    "CLI-076",
+    "CLI-077",
+    "CLI-043",
+    "CLI-063",
+    "CLI-044",
+    "CLI-045",
+    "CLI-046",
+    "CLI-047",
+    "CLI-048",
+    "CLI-050",
+    "CLI-051",
+    "CLI-058",
+    "CLI-064",
+    "CLI-073",
+    "CLI-074",
+    "CLI-052",
+    "CLI-053",
+    "CLI-054",
+    "CLI-055",
+    "CLI-056",
+    "CLI-065",
+    "CLI-066",
+    "CLI-078",
+    "CLI-081",
+    "CLI-060",
+    "CLI-068",
+    "CLI-069",
+    "CLI-079",
+    "CLI-082",
+    "CLI-070",
+    "CLI-083",
+    "CLI-071",
+    "CLI-080",
+    "CLI-072"
+  ],
+  "gate_topological_order": [
+    "G00",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G09",
+    "G08",
+    "G10",
+    "G11",
+    "G12"
+  ],
+  "authority": {
+    "current_scope": "research_and_planning_only",
+    "planning_documents_authorized": true,
+    "development_authorized": false,
+    "builds_or_product_tests_authorized": false,
+    "physical_device_actions_authorized": false,
+    "console_actions_authorized": false,
+    "private_key_access_authorized": false,
+    "publication_authorized": false,
+    "rule": "Only bounded source research and planning updates are authorized. No development, incorporation, build/product test, installation, keys, device/console or publication action is authorized. Dependencies gate deliverable acceptance and downstream work; preliminary research does not close them.",
+    "source_research_authorized": true,
+    "authorized_actions": [
+      "read_only_public_and_local_source_research",
+      "planning_document_updates",
+      "planning_document_integrity_checks"
+    ]
+  },
+  "limits": [
+    "Document references, graphs, bounded authorization, manifests and selected preservation only; no product tests.",
+    "Static source findings and published experiments are distinct from profile/runtime/native qualification.",
+    "No implementation, incorporation, compilation, dependency installation, private-key/media/console action or publication occurred.",
+    "Hashes cover 33 named ordinary source/context files, not all workspace/media/private files.",
+    "External source bytes were read during research; document validation did not re-fetch every remote URL or audit all history/transitive dependencies.",
+    "This record excludes its own hash; JSON readback is performed after saving.",
+    "Original planning baseline and its receipt remain in history/20261020-planning-baseline."
+  ],
+  "issues": []
+}

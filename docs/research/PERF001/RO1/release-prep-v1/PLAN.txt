@@ -1,0 +1,51 @@
+PERF001-RO1 offline release preparation
+16 October 2026; UTC+3; English
+
+Human scope: prepare all remaining offline release helpers and a bounded
+protocol; schedule RO1 before the64GiB fill; keep gates locked pending BF
+qualification; stop before staging or hardware execution.
+
+Order under capacity-owner custody
+1. Finish and qualify BF first128GiB-reserve fill: final receipt, full global
+   reread, after-controls, final reserve and responsive XMB report.
+2. Capacity owner completes ordinary-restart/persistence and brief existing-game
+   acceptance. Retain all filler and real data; no repeated LBP3 chores.
+3. Capacity owner obtains read-only selected-file extent evidence at THIS first
+   checkpoint, before the64GiB stage. Its existing later full-coverage mapping
+   can remain a separate capacity gate. Mapping/drive movement is NOT executed
+   or authorized by this preparation. If required, the owner coordinates safe
+   shutdown, PC mapping and refitting, then records responsive ordinary boot.
+4. Capacity owner supplies a current, idle, before64GiB custody handoff and the
+   evidence schema in qualification-template.json. Physical file extents, full
+   hashes and slice references are different bindings.
+5. Recheck actual native available bytes. RO1 requires139586437120B =130GiB.
+   BF success alone allows >=128GiB and its reserve-stop can be below130GiB.
+   If either final BF space or current admission is below130GiB, RO1 stays
+   blocked. No filler deletion, guard reduction or automatic scope waiver.
+6. Qualify saved evidence offline, bind exact files0/14/28 into a FRESH locked
+   source copy with bind_qualified.py, and review/build the exact final change.
+   The helper never enables either native gate. No admission is fabricated now.
+7. A later explicit human hardware authorization and reviewed release change
+   must bind final package/source/nonce/helpers/protocol/USB identity before
+   either gate is enabled in a separately reviewed release. Current00.02 is an
+   OFFLINE PREP LOCKED preview, not that release. No staging occurs here.
+8. After authorized one-run RO1 completion/capture/review and return of custody,
+   the capacity owner can consider its separately released64GiB stage.
+
+This records the user's requested ordering within PERF001 only. It does not
+rewrite capacity-owned checkpoint pointers, mark BF passed, release64GiB or
+send instructions to another chat. Coordinate the actual handoff via the owner.
+
+Offline work completed by this preparation
+- Detached fresh-nonce locked source/00.02 package; original00.01 preserved.
+- Saved BF qualification validator, exact selected-file binding generator.
+- Gated exclusive-create stager; read-only bounded capture; saved-file decoder.
+- Host-memory stage/capture faults, actual native-size core capture, native
+  adapter mocks and linked-package audit. Tests are not console qualification.
+- Concrete protocol, evidence/authorization schemas, continuation and scoped
+  preservation verification. Both native gates and hardware authority remain0.
+
+Remaining data-dependent work cannot be prefilled: actual BF final evidence,
+selected full hashes/current extents, owner acceptance/custody, current native
+available bytes and USB identity. Final gate enablement/release review and
+explicit staging/launch authorization follow those inputs.

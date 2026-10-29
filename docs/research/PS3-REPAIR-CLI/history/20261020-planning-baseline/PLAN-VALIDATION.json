@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "validated_on": "2026-10-20",
+  "timezone": "UTC+3",
+  "scope": "planning_document_integrity_only",
+  "result": "passed",
+  "counts": {
+    "planning_files_including_this_record": 8,
+    "tasks": 83,
+    "gates": 13,
+    "research_entries": 16,
+    "local_markdown_links": 23,
+    "protected_source_context_files": 14
+  },
+  "checks": {
+    "json_readback": true,
+    "unique_task_ids": true,
+    "valid_task_gate_research_references": true,
+    "task_dependency_graph_acyclic": true,
+    "gate_dependency_graph_acyclic": true,
+    "all_future_tasks_planned": true,
+    "all_gate_statuses_not_assessed": true,
+    "all_execution_authorizations_false": true,
+    "local_links_and_line_targets_valid": true,
+    "selected_protected_files_unchanged": true,
+    "independent_document_review_completed": true
+  },
+  "independent_review": {
+    "initial_findings": [
+      "Add explicit capture and archive integrity/resume corruption cases",
+      "Require export and restore destination confinement",
+      "Remove later and optional tasks from the early M1 milestone"
+    ],
+    "disposition": "All three addressed and read back by an independent planning reviewer; CLI-081/082/083 also added for native FAT32, native input hardening and confinement/archive validation.",
+    "remaining_actionable_findings": []
+  },
+  "source_and_context_preservation": [
+    {
+      "path": "README.md",
+      "sha256": "87675c4d1f16249cb12909acf6a0562a71a152e2c9699d7bdfd16bf84420b6d3",
+      "matches_before": true
+    },
+    {
+      "path": "plan/STATUS.json",
+      "sha256": "ebadc06864abf8e0d7dc3329e6375ede0cd922a734f3687d16ef396204e44da3",
+      "matches_before": true
+    },
+    {
+      "path": "plan/ROADMAP.md",
+      "sha256": "d81232d87587463a3dfb7cbb89dc64fb67b37969446912e2e90ca00928d6cbb5",
+      "matches_before": true
+    },
+    {
+      "path": "plan/INITIAL_TASK_PROMPT.txt",
+      "sha256": "ae1559f1c904a726f3397cdd4bec8e13bb6ed6ef2cecc04e96d35640e9441726",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/UfsVolume.cs",
+      "sha256": "b7866aa399011d0eff71264cc71fce149fa6b8053e5849a9d53ef3567c15ab3c",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/DirectJournal.cs",
+      "sha256": "905da47cb919266de6d396e5cc271f5d13dee85ead09830d1cda6f8c7a72cc69",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/DirectDisk.cs",
+      "sha256": "c34d6b9ed7bab90da746802c031f8ca422dfbddd9e15eac694c481377c93e605",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/PS3HddTool.Core/Migration/SourceRecovery.cs",
+      "sha256": "810ccca479a8cfe25d5ca0ed727adb256a8b23fec1b02370954db20b3d228f71",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/LICENSE.md",
+      "sha256": "8762838014ec18c9f09bda91783ec32c48dde43541fcdda2bab10ccbcc2dc8e3",
+      "matches_before": true
+    },
+    {
+      "path": "publication/PS3HDDTool/NOTICE.md",
+      "sha256": "ac1005030d695032d1a4ebf663a5d77ccef62d05c4ea375975cdacc3347485ba",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/device.c",
+      "sha256": "f6164c1095c1ee92b1eb96b29533b6a73dbf3c2edfd9d4f4081f12ed7e9478f6",
+      "matches_before": true
+    },
+    {
+      "path": "tools/PS3-HDD-Reader/src/fs/ufs/ps3.h",
+      "sha256": "efe07472db5096fbf9e3a962f4e385e2c6adae0ce9872018c9227cbced0fd65b",
+      "matches_before": true
+    },
+    {
+      "path": "tools/build_hdd2tb_p13.py",
+      "sha256": "b057ab59e35b03372da88d386c0c03b53a2b3928e071ff12441a1da71c2bec53",
+      "matches_before": true
+    },
+    {
+      "path": "analysis/dev006/metadata-budget-workload-v2/CONTINUATION.txt",
+      "sha256": "877c9a9e4561069c08abe1f8cbd9f4ec7167986c403144713d84e89bfdbc7c7d",
+      "matches_before": true
+    }
+  ],
+  "planning_file_manifest_excluding_this_record": [
+    {
+      "file": "CONTINUATION.txt",
+      "bytes": 4548,
+      "sha256": "cf13a6c9658ab91cf3545c5f6133834c23c73441b138b33a3e5f079836fa3896"
+    },
+    {
+      "file": "RESEARCH-REGISTER.md",
+      "bytes": 10434,
+      "sha256": "f9c4894ea82e0394ccd5867cf028e5def976df630ecbb039ac81c9fa1fce1906"
+    },
+    {
+      "file": "ROADMAP.md",
+      "bytes": 15001,
+      "sha256": "bf132ab68c98fe1fbd1ac6932815b8eac3f635b046b1af4be1c80cc755712bf2"
+    },
+    {
+      "file": "SOURCE-REUSE.md",
+      "bytes": 15055,
+      "sha256": "c6e25b049aa270ccf59d36d2f4148c4ae240d672ffebbd2bb98ca610a2e71c87"
+    },
+    {
+      "file": "SOURCE-SNAPSHOT.json",
+      "bytes": 4582,
+      "sha256": "c2e4ab9c1a93bf547d50e567a5def628287f19c74d2a9544ab52a2638b383711"
+    },
+    {
+      "file": "TASKS.json",
+      "bytes": 76098,
+      "sha256": "e0059b5670cdfbb1b596e7d0e8af2ce4e4ce70faebf904386d064d077ac9c5bc"
+    },
+    {
+      "file": "VALIDATION-GATES.md",
+      "bytes": 16244,
+      "sha256": "1fb55aa5ab8fd775f7108062f28f37e028df83fb5edfa4ae3e7f6a41d7e92a03"
+    }
+  ],
+  "task_topological_order": [
+    "CLI-001",
+    "CLI-002",
+    "CLI-003",
+    "CLI-004",
+    "CLI-005",
+    "CLI-006",
+    "CLI-007",
+    "CLI-008",
+    "CLI-009",
+    "CLI-010",
+    "CLI-016",
+    "CLI-018",
+    "CLI-023",
+    "CLI-011",
+    "CLI-017",
+    "CLI-012",
+    "CLI-013",
+    "CLI-014",
+    "CLI-015",
+    "CLI-020",
+    "CLI-019",
+    "CLI-022",
+    "CLI-021",
+    "CLI-024",
+    "CLI-025",
+    "CLI-026",
+    "CLI-049",
+    "CLI-027",
+    "CLI-028",
+    "CLI-029",
+    "CLI-030",
+    "CLI-031",
+    "CLI-067",
+    "CLI-032",
+    "CLI-033",
+    "CLI-034",
+    "CLI-038",
+    "CLI-035",
+    "CLI-057",
+    "CLI-061",
+    "CLI-036",
+    "CLI-037",
+    "CLI-039",
+    "CLI-040",
+    "CLI-041",
+    "CLI-042",
+    "CLI-059",
+    "CLI-062",
+    "CLI-075",
+    "CLI-076",
+    "CLI-077",
+    "CLI-043",
+    "CLI-063",
+    "CLI-044",
+    "CLI-045",
+    "CLI-046",
+    "CLI-047",
+    "CLI-048",
+    "CLI-050",
+    "CLI-051",
+    "CLI-058",
+    "CLI-064",
+    "CLI-073",
+    "CLI-074",
+    "CLI-052",
+    "CLI-053",
+    "CLI-054",
+    "CLI-055",
+    "CLI-056",
+    "CLI-065",
+    "CLI-066",
+    "CLI-078",
+    "CLI-081",
+    "CLI-060",
+    "CLI-068",
+    "CLI-069",
+    "CLI-079",
+    "CLI-082",
+    "CLI-070",
+    "CLI-083",
+    "CLI-071",
+    "CLI-080",
+    "CLI-072"
+  ],
+  "gate_topological_order": [
+    "G00",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G09",
+    "G08",
+    "G10",
+    "G11",
+    "G12"
+  ],
+  "authority": {
+    "current_scope": "planning_only",
+    "planning_documents_authorized": true,
+    "development_authorized": false,
+    "builds_or_product_tests_authorized": false,
+    "physical_device_actions_authorized": false,
+    "console_actions_authorized": false,
+    "private_key_access_authorized": false,
+    "publication_authorized": false,
+    "rule": "No task definition or dependency closure grants execution authority. Obtain a later explicit user instruction for development and exact hardware/publication scope."
+  },
+  "limits": [
+    "This validates planning documents, references and dependency graphs only.",
+    "No implementation, compilation, product tests, dependency installation, private-key or physical-media access, console action or publication was performed.",
+    "Existing donor test/hardware results do not qualify the proposed C/C++ suite.",
+    "External source references are pinned assessment inputs; availability of every remote URL was not rechecked during document validation.",
+    "This record excludes its own hash to avoid a recursive manifest; the record itself is parsed after saving.",
+    "Preservation hashes cover the 14 named ordinary source/context files only, not all workspace/private/media files."
+  ],
+  "issues": []
+}
