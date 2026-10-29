@@ -26,6 +26,11 @@ Mode, installing, fitting a new drive, maintenance, performance, rollback and br
 > CECHA00 only. Never install over official or hybrid firmware, and never install an
 > official Sony update afterwards.
 
+![XMB System Information on the test CECHA00: System Software Version 4.93, Free Space 65 GB / 1907 GB on a Lexar NQ100 2TB](docs/images/xmb-system-information.png)
+
+*The CECHA00 test console's System Information with HDD2TB-P13 and a Lexar NQ100 2TB, during
+the near-full repair test (65 GB free of 1907 GB). IP and MAC addresses blurred.*
+
 ## Status
 
 **v1.0 = HDD2TB-P13**, accepted 2026-10-29 after hardware tests on a real CECHA00. It is in
